@@ -6,7 +6,7 @@ title: Luka Sikic
 superuser: true
 
 # Role/position
-role: Professor
+role: Professor of Statistics
 
 # Organizations/Affiliations
 organizations:
@@ -14,7 +14,7 @@ organizations:
   url: "https://www.hrstud.unizg.hr/"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: Moji interesi uključuju *Data Science*, *Big Data*, ekonomiku rasta, ekonometriju i primjenjene kvantitativne metode.
 
 interests:
 - Data Science
@@ -72,6 +72,6 @@ user_groups:
 - Visitors
 ---
 
-Luka je profesor statistike na Fakultetu hrvatskih studija u Zagrebu. Njegovi istraživački interesi uključuju *Data Science*,*Big Data*, ekonomiku rasta, ekonometriju i primjenjene kvantitativne metode. Trenutno se bavi izradom niza novih kolegija iz područja kvantitativnih metoda u društvenim znanostima i surađuje na nekoliko *Data Science* tržišnih projekata.
+Luka je profesor statistike na Fakultetu hrvatskih studija u Zagrebu. Njegovi istraživački interesi uključuju *Data Science*, *Big Data*, ekonomiku rasta, ekonometriju i primjenjene kvantitativne metode. Trenutno se bavi izradom niza novih kolegija iz područja kvantitativnih metoda u društvenim znanostima i surađuje na nekoliko *Data Science* tržišnih projekata.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
