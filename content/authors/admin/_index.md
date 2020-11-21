@@ -18,8 +18,9 @@ bio: Moji interesi uključuju *Data Science*, *Big Data*, ekonomiku rasta, ekono
 
 interests:
 - Data Science
-- Economics, Econometrics
-- Statistics, ML, DL
+- Statistics
+- Economics 
+- Econometrics
 
 education:
   courses:
