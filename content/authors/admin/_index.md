@@ -6,7 +6,7 @@ title: Luka Sikic
 superuser: true
 
 # Role/position
-role: Profesor statistike
+role: Professor
 
 # Organizations/Affiliations
 organizations:
@@ -72,6 +72,6 @@ user_groups:
 - Visitors
 ---
 
-Luka is a professor of artificial intelligence at the Stanford AI Lab. His research interests include distributed robotics, mobile computing and programmable matter. He leads the Robotic Neurobiology group, which develops self-reconfiguring robots, systems of self-organizing robots, and mobile sensor networks.
+Luka je profesor statistike na Fakultetu hrvatskih studija u Zagrebu. Njegovi istraživački interesi uključuju *Data Science*,*Big Data*, ekonomiku rasta, ekonometriju i primjenjene kvantitativne metode. Trenutno se bavi izradom niza novih kolegija iz područja kvantitativnih metoda u društvenim znanostima i surađuje na nekoliko *Data Science* tržišnih projekata.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
