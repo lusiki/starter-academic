@@ -6,7 +6,7 @@ title: Luka Sikic
 superuser: true
 
 # Role/position
-role: Professor of Statistics
+role: Asistant professor of Statistics
 
 # Organizations/Affiliations
 organizations:
@@ -25,17 +25,17 @@ interests:
 education:
   courses:
   - course: PhD in Economics
-    institution: Ekonomski fakultet Zagreb + Universität Wien
+    institution: Ekonomski fakultet Zagreb, HR + Universität Wien, AT
     year: 2018
   - course: Msc in International Economics
-    institution: Kiel Institute for the World Economy 
+    institution: Kiel Institute for the World Economy, DE 
     year: 2015
   - course: Msc in Finance
-    institution: Ekonomski fakultet Zagreb 
+    institution: Ekonomski fakultet Zagreb, HR 
     year: 2010
-  - course: BSc Business economy
-    institution: Ekonomski fakultet Zagreb
-    year: 2008
+  - course: BSc in Business 
+    institution: Ekonomski fakultet Zagreb, HR
+    year: 2009
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
@@ -73,6 +73,6 @@ user_groups:
 - Visitors
 ---
 
-Luka je profesor statistike na Fakultetu hrvatskih studija u Zagrebu. Njegovi istraživački interesi uključuju *Data Science*, *Big Data*, ekonomiku rasta, ekonometriju i primjenjene kvantitativne metode. Trenutno se bavi izradom niza novih kolegija iz područja kvantitativnih metoda u društvenim znanostima i surađuje na nekoliko *Data Science* tržišnih projekata.
+I am a proffesor of statistics at the Faculty of Cratian Studies in Zagreb. My research interests include  *Data Science*, *Big Data*, macroeconomics, econometrics and applied quantitative method. These days I`m working on several new university courses like *Big Data in social sciences* and *Natural Language Processing in communicology research* and also freelancing on two *Data Science* projects.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate.
+I`m enthusiastic about academic research in economics and data science, teaching, technology and acquiring new qunatitative skills. I like all data related things like (beautiful) visualizations, models and ecosystems... In my free time I enjoy sports, ice baths and consume lots of veggies, coffee, and computational power.
