@@ -10,7 +10,7 @@ role: Asistant professor of Statistics
 
 # Organizations/Affiliations
 organizations:
-- name: Fakultet hrvatskih studija
+- name: Faculty of Croatian Studies
   url: "https://www.hrstud.unizg.hr/"
 
 # Short bio (displayed in user profile at end of posts)
@@ -25,16 +25,16 @@ interests:
 education:
   courses:
   - course: PhD in Economics
-    institution: Ekonomski fakultet Zagreb, HR + Universität Wien, AT
+    institution: Faculty of Economics and Business, Zagreb + Universität Wien, AT
     year: 2018
   - course: Msc in International Economics
     institution: Kiel Institute for the World Economy, DE 
     year: 2015
   - course: Msc in Finance
-    institution: Ekonomski fakultet Zagreb, HR 
+    institution: Faculty of Economics and Business, Zagreb 
     year: 2010
   - course: BSc in Business 
-    institution: Ekonomski fakultet Zagreb, HR
+    institution: Faculty of Economics and Business, Zagreb
     year: 2009
 
 # Social/Academic Networking
