@@ -1,132 +1,132 @@
 - id: toggle_navigation
-  translation: Navigation einblenden
+  translation: Skupi navigaciju
 - id: table_of_contents
-  translation: Inhaltsverzeichnis
+  translation: Sadržaj
 - id: on_this_page
-  translation: Auf dieser Seite
+  translation: Na ovoj stranici
 - id: back_to_top
-  translation: Zurück zum Anfang
+  translation: Na početak
 - id: related
-  translation: Ähnliches
+  translation: Povezano
 - id: minute_read
-  translation: min Lesezeit
+  translation: Vrijeme čitanja
 - id: previous
-  translation: Zurück
+  translation: Natrag
 - id: next
-  translation: Weiter
+  translation: Naprijed
 - id: figure
-  translation: 'Abbildung %d:'
+  translation: Grafikon
 - id: edit_page
-  translation: Seite editieren
+  translation: Uredi
 - id: btn_preprint
-  translation: Vorabdruck
+  translation: Predprint
 - id: btn_pdf
   translation: PDF
 - id: btn_cite
-  translation: Zitieren
+  translation: Zitiraj
 - id: btn_slides
-  translation: Folien
+  translation: Slajdovi
 - id: btn_video
   translation: Video
 - id: btn_code
   translation: Code
 - id: btn_dataset
-  translation: Datensatz
+  translation: Podatci
 - id: btn_project
   translation: Projekt
 - id: btn_poster
   translation: Poster
 - id: btn_source
-  translation: Quelldokument
+  translation: Izvor
 - id: btn_copy
-  translation: Kopie
+  translation: Kopija
 - id: btn_download
-  translation: Download
+  translation: Preuzmi
 - id: interests
-  translation: Interessen
+  translation: Interesi
 - id: education
-  translation: Bildung
+  translation: Obrazovanje
 - id: user_profile_latest
-  translation: Aktuellste
+  translation: Aktualnosti
 - id: see_certificate
-  translation: Zertifikat anzeigen
+  translation: Certifikat
 - id: present
-  translation: Aktuell
+  translation: Trenutno
 - id: more_pages
-  translation: Alle anzeigen
+  translation: Prikaži još
 - id: more_posts
-  translation: Weitere Blogbeiträge
+  translation: Još objava
 - id: more_talks
-  translation: Weitere Vorträge
+  translation: Još izlaganja
 - id: more_publications
-  translation: Weitere Publikationen
+  translation: Još članaka
 - id: contact_name
-  translation: Name
+  translation: Ime
 - id: contact_email
   translation: E-Mail
 - id: contact_message
-  translation: Nachricht
+  translation: Poruka
 - id: contact_send
-  translation: Senden
+  translation: Pošalji
 - id: book_appointment
-  translation: Termin vereinbaren
+  translation: Dogovori termin
 - id: abstract
-  translation: Zusammenfassung
+  translation: Sažetak
 - id: publication
-  translation: Publikation
+  translation: Publikacija
 - id: publication_type
-  translation: Typ
+  translation: Vrsta
 - id: date
   translation: Datum
 - id: last_updated
-  translation: Zuletzt aktualisiert am
+  translation: Osvježeno
 - id: event
-  translation: Veranstaltung
+  translation: Događaj
 - id: location
-  translation: Ort
+  translation: Lokacija
 - id: pub_uncat
-  translation: Unkategorisiert
+  translation: Nekategorizirano
 - id: pub_conf
-  translation: Konferenzpapier
+  translation: Članak sa konferencije
 - id: pub_journal
-  translation: Journalartikel
+  translation: Članak iz časopisa
 - id: pub_preprint
-  translation: Preprint
+  translation: Predprint
 - id: pub_report
-  translation: Bericht
+  translation: Izvještaj
 - id: pub_book
-  translation: Buch
+  translation: Knjiga
 - id: pub_book_section
-  translation: Buchkapitel
+  translation: Poglavlje knjige
 - id: pub_thesis
-  translation: Thesis
+  translation: Disertacija
 - id: pub_patent
   translation: Patent
 - id: open_project_site
-  translation: Zur Projektseite
+  translation: Na projekte
 - id: posts
   translation: Blog
 - id: publications
-  translation: Publikationen
+  translation: Publikacije
 - id: talks
-  translation: Vorträge
+  translation: Izlaganja
 - id: projects
-  translation: Projekte
+  translation: Projekti
 - id: search
-  translation: Suche
+  translation: Traži
 - id: search_placeholder
-  translation: Suche...
+  translation: Traži...
 - id: search_results
-  translation: Suchergebnisse
+  translation: Rezultati
 - id: search_no_results
-  translation: Nichts gefunden
+  translation: Nije nađeno
 - id: page_not_found
-  translation: Seite nicht gefunden
+  translation: Stranica nije pronađena
 - id: 404_recommendations
-  translation: Suchen Sie vielleicht nach einer der folgenden Seiten?
+  translation: Tražite li neku od sljedećih stranica?
 - id: cookie_message
   translation: Um unsere Webseite für Sie optimal zu gestalten und fortlaufend verbessern zu können, verwenden wir Cookies.
 - id: cookie_dismiss
-  translation: Verstanden!
+  translation: Suglasna/an
 - id: cookie_learn
-  translation: Mehr erfahren
+  translation: Saznaj više

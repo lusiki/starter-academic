@@ -1,0 +1,49 @@
+# Navigation Links
+#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
+#     desired widget in your `content/home/` folder.
+#   The weight parameter defines the order that the links will appear in.
+
+[[main]]
+  name = "Početna"
+  url = "#po"
+  weight = 10
+
+[[main]]
+  name = "Iskustvo"
+  url = "#exp"
+  weight = 20
+
+[[main]]
+  name = "Predavanja"
+  url = "#teac"
+  weight = 30
+
+[[main]]
+  name = "Radovi"
+  url = "#feat"
+  weight = 40
+
+
+[[main]]
+  name = "Blog"
+  url = "#pos"
+  weight = 50
+
+[[main]]
+  name = "Projekti"
+  url = "#proj"
+  weight = 60
+
+[[main]]
+  name = "Kontakt"
+  url = "#cont"
+  weight = 70
+
+
+
+# Link to a PDF of your resume/CV from the menu.
+# To enable, copy your resume/CV to `static/media/cv.pdf` and uncomment the lines below.
+# [[main]]
+#    name = "CV"
+#    url = "media/cv.pdf"
+#    weight = 70
