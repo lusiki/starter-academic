@@ -12,9 +12,9 @@
  languageCode = "hr"
   contentDir = "content/hr"
   title = "Hrvatski"
-  [hr.params]
-    description = "Site description in Chinese..."
-  [[hr.menu.main]]
-    name = "Wo"
-    url = "#po"
-    weight = 1
+#  [hr.params]
+#    description = "Site description in Chinese..."
+#  [[hr.menu.main]]
+#    name = "Wo"
+#    url = "#po"
+#    weight = 1
