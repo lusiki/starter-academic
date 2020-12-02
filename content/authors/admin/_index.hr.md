@@ -1,16 +1,16 @@
 ---
 # Display name
-title: Chiki Lukas
+title: Luka Šikić
 
 # Is this the primary user of the site?
 superuser: true
 
 # Role/position
-role: Asistant professor of Statistics
+role: Profesor statistike
 
 # Organizations/Affiliations
 organizations:
-- name: Faculty of Croatian Studies
+- name: Fakultet hrvatskih studjija
   url: "https://www.hrstud.unizg.hr/"
 
 # Short bio (displayed in user profile at end of posts)
@@ -18,23 +18,23 @@ bio: Moji interesi uključuju *Data Science*, *Big Data*, ekonomiku rasta, ekono
 
 interests:
 - Data Science
-- Statistics
-- Economics 
-- Econometrics
+- Statistika
+- Ekonomika 
+- Ekonometrija
 
 education:
   courses:
-  - course: PhD in Economics
-    institution: Faculty of Economics and Business, Zagreb + Universität Wien, AT
+  - course: PhD iz Ekonomike
+    institution: Ekonomski fakultet Zagreb, HR + Sveučilište u Beču, AT
     year: 2018
-  - course: Msc in International Economics
-    institution: Kiel Institute for the World Economy, DE 
+  - course: Msc iz Međunarodne ekonomije
+    institution: Institut za svjetsku ekonomiju Kiel, DE 
     year: 2015
-  - course: Msc in Finance
-    institution: Faculty of Economics and Business, Zagreb 
+  - course: Msc iz Financija
+    institution: Ekonomski fakultet Zagreb, HR 
     year: 2010
-  - course: BSc in Business 
-    institution: Faculty of Economics and Business, Zagreb
+  - course: BSc iz Poslovne ekonomije 
+    institution: Ekonomski fakultet Zagreb, HR
     year: 2009
 
 # Social/Academic Networking
@@ -73,6 +73,6 @@ user_groups:
 - Visitors
 ---
 
-I am a professor of statistics at the Faculty of Cratian Studies in Zagreb. My research interests include  *Data Science*, *Big Data*, macroeconomics, econometrics and applied quantitative method. These days I`m working on several new university courses like *Big Data in social sciences* and *Natural Language Processing in communicology research* and also freelancing on two *Data Science* projects.
+Ja sam znanstvenik i profesor statistike na Fakultetu hrvatskih studija u Zagrebu. Po obrazovanju sam ekonomist, a moji israživački interesi uključuju *podatkovnu znanost*, *računarstvo*, *primjenjene kvantitativne metode* i *makroekonomiju*. Trenutno radim na izradi kolegija *Obrada podataka* i *Strojna obrada teksta*, pišem `bookdown` knjigu na temu tehnološkog transfera i surađujem na tržišnim projektima iz *podatkovne znanosti*.
 
-I`m enthusiastic about academic research in economics and data science, teaching, technology and acquiring new qunatitative skills. I like all data related things like (beautiful) visualizations, models and ecosystems...In my free time I enjoy sports, ice baths and consume lots of veggies, coffee, and computational power...
+Volim se baviti znanstveno istraživačkim radom, predavati, učiti nove kvanitativne metode, i IT vještine, pogotovo u području podatkovne znanosti. U slobodno vrijeme rado vozim bicikl, kuham i čitam...

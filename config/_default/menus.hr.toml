@@ -5,17 +5,17 @@
 
 [[main]]
   name = "Početna"
-  url = "#po"
+  url = "#about"
   weight = 10
 
 [[main]]
   name = "Iskustvo"
-  url = "#exp"
+  url = "#experience"
   weight = 20
 
 [[main]]
   name = "Predavanja"
-  url = "#teac"
+  url = "#teaching"
   weight = 30
 
 [[main]]

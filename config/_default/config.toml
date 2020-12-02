@@ -29,6 +29,24 @@ hasCJKLanguage = false  # Set `true` for Chinese/Japanese/Korean languages.
 defaultContentLanguageInSubdir = false
 removePathAccents = true  # Workaround for https://github.com/gohugoio/hugo/issues/5687
 
+[Languages]
+[Languages.en]
+title = "Luka Sikic"
+weight = 1
+languageName = "English"
+
+[Languages.hr]
+title = "Luka Šikić"
+weight = 2
+languageName = "Hrvatski"
+
+#[params]
+  # When using mulitlingual website, disable the switch language button.
+ # disableLanguageSwitchingButton = true
+
+
+
+
 summaryLength = 30  # Listing summary length in words. Also, see `abstract_length` in `params.toml`.
 paginate = 10  # Number of items per page in paginated lists.
 enableEmoji = true

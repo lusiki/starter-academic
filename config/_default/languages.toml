@@ -10,7 +10,7 @@
 # Uncomment the lines below to configure your website in a second language.
 [hr]
  languageCode = "hr"
-  contentDir = "content/hr"
+  contentDir = "content"
   title = "Hrvatski"
 #  [hr.params]
 #    description = "Site description in Chinese..."
