@@ -73,6 +73,6 @@ user_groups:
 - Visitors
 ---
 
-I am a professor of statistics at the Faculty of Cratian Studies in Zagreb. My research interests include  *Data Science*, *Big Data*, macroeconomics, econometrics and applied quantitative method. These days I`m working on several new university courses like *Big Data in social sciences* and *Natural Language Processing in communicology research* and also freelancing on two *Data Science* projects.
+I am a professor of statistics at the Faculty of Cratian Studies in Zagreb. My research interests include  *Data Science*, *Big Data*, macroeconomics, econometrics and applied quantitative methods. These days I`m working on several new university courses like *Big Data in social sciences* and *Natural Language Processing in communicology research* and also freelancing on two *Data Science* projects.
 
 I`m enthusiastic about academic research in economics and data science, teaching, technology and acquiring new quantitative skills. I like all data related things like (beautiful) visualizations, models and ecosystems...In my free time I enjoy sports, ice baths and consume lots of veggies, coffee, and computational power...
