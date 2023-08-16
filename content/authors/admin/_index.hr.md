@@ -10,17 +10,20 @@ role: Profesor statistike
 
 # Organizations/Affiliations
 organizations:
-- name: Fakultet hrvatskih studjija
-  url: "https://www.hrstud.unizg.hr/"
+- name: Hrvatsko katoličko sveučilište
+  url: "https://www.unicath.hr/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: Moji interesi uključuju *Data Science*, *Big Data*, ekonomiku rasta, ekonometriju i primjenjene kvantitativne metode.
 
 interests:
-- Data Science
+- Znanost o podacima
 - Statistika
-- Ekonomika 
 - Ekonometrija
+- Financijska tržišta
+- Algo trgovanje
+
+
 
 education:
   courses:
@@ -73,6 +76,6 @@ user_groups:
 - Visitors
 ---
 
-Ja sam znanstvenik i profesor statistike na Fakultetu hrvatskih studija u Zagrebu. Po obrazovanju sam ekonomist, a moji israživački interesi uključuju *podatkovnu znanost*, *računarstvo*, *primjenjene kvantitativne metode* i *makroekonomiju*. Trenutno radim na izradi kolegija *Obrada podataka* i *Strojna obrada teksta*, pišem `bookdown` knjigu na temu tehnološkog transfera i surađujem na tržišnim projektima iz *podatkovne znanosti*.
+Ja sam znanstvenik i profesor statistike na Hrvatskom katoličkom sveučilištu u Zagrebu. Po obrazovanju sam ekonomist, a moji israživački interesi uključuju *podatkovnu znanost*, *računarstvo*, *primjenjene kvantitativne metode* i *makroekonomiju*. Trenutno radim na izradi kolegija *Obrada podataka* i *Strojna obrada teksta* i surađujem na tržišnim projektima iz *podatkovne znanosti*.
 
 Volim se baviti znanstveno istraživačkim radom, predavati, učiti nove kvanitativne metode, i IT vještine, pogotovo u području podatkovne znanosti. U slobodno vrijeme rado vozim bicikl, kuham i čitam...
