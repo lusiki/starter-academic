@@ -10,8 +10,8 @@ role: Asistant professor of Statistics
 
 # Organizations/Affiliations
 organizations:
-- name: Faculty of Croatian Studies
-  url: "https://www.hrstud.unizg.hr/"
+- name: Croatian Catholic University
+  url: "https://www.unicath.hr/eng/home"
 
 # Short bio (displayed in user profile at end of posts)
 bio: Moji interesi uključuju *Data Science*, *Big Data*, ekonomiku rasta, ekonometriju i primjenjene kvantitativne metode.
@@ -73,6 +73,6 @@ user_groups:
 - Visitors
 ---
 
-I am a professor of statistics at the Faculty of Cratian Studies in Zagreb. My research interests include  *Data Science*, *Big Data*, macroeconomics, econometrics and applied quantitative methods. These days I`m working on several new university courses like *Big Data in social sciences* and *Natural Language Processing in communicology research* and also freelancing on two *Data Science* projects.
+I serve as a Professor of Statistics at the Croatian Catholic University in Zagreb. My academic journey has led me to delve into areas such as Data Science, Big Data, Macroeconomics, Econometrics, and other applied quantitative methods. Currently, I'm in the process of designing new university courses, notably "Big Data in Social Sciences" and "Natural Language Processing in Communicology Research". Alongside my academic commitments, I'm also freelancing on a pair of Data Science initiatives.
 
-I`m enthusiastic about academic research in economics and data science, teaching, technology and acquiring new quantitative skills. I like all data related things like (beautiful) visualizations, models and ecosystems...In my free time I enjoy sports, ice baths and consume lots of veggies, coffee, and computational power...
+My passion lies at the intersection of economics, data science, and education. I'm always eager to explore the latest in technology and to hone my quantitative skills further. Data, in all its facets—from compelling visualizations to intricate models—fascinates me. When I step away from the academic world, I indulge in sports, rejuvenate with ice baths, and savor a mix of veggies, coffee, and the thrill of computational challenges.
