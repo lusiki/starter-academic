@@ -7,17 +7,17 @@ weight: 50
 ---
 **Undergraduate:**  
 
-- [Applied statistics in R](https://github.com/BrbanMiro/Statistika)
+- [Applied statistics in R](https://lusiki.github.io/WebStatistika/)
 
 
 **Graduate:** 
 
-- [*Big Data* in social scieneces](https://github.com/BrbanMiro/Obrada-podataka)
+- [Data Sceience for Social Scientists](https://lusiki.github.io/WebObradaPodataka/)
 
-- [Natural Language Processing for social sciences](https://github.com/BrbanMiro/Analiza-teksta)
+- [Natural Language Processing for social sciences](https://lusiki.github.io/WebObradaPodataka/)
 
-- [Multivariate statistics](https://rpubs.com/shichich)
+- [Multivariate Statistics](https://lusiki.github.io/WebMultiVar/)
 
-
+- [Learning Social Media Analytics](https://lusiki.github.io/Learning-Social-Media-Analytics/)
 
 

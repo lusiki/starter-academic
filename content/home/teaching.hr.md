@@ -7,16 +7,17 @@ weight: 50
 ---
 **Dodiplomska:**  
 
-- [Primjena statistike u društvenim istraživanjima](https://github.com/BrbanMiro/Statistika)
+- [Primjena statistike u društvenim istraživanjima](https://lusiki.github.io/WebStatistika/)
 
 
 **Diplomska:** 
 
-- [Obrada podataka](https://github.com/BrbanMiro/Obrada-podataka)
+- [Obrada podataka](https://lusiki.github.io/WebObradaPodataka/)
 
-- [Procesuiranje prirodnog jezika](https://github.com/BrbanMiro/Analiza-teksta)
+- [Obrada prirodnog jezika](https://github.com/lusiki/Analiza-teksta)
 
-- [Multivarijatna statistika](https://rpubs.com/shichich)
+- [Multivarijatne statističke metode](https://lusiki.github.io/WebMultiVar/)
+
 
 
 
