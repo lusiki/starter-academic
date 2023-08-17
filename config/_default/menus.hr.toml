@@ -25,16 +25,6 @@
 
 
 [[main]]
-  name = "Blog"
-  url = "#pos"
-  weight = 50
-
-[[main]]
-  name = "Projekti"
-  url = "#proj"
-  weight = 60
-
-[[main]]
   name = "Kontakt"
   url = "#cont"
   weight = 70
