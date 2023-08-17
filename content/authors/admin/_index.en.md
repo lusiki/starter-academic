@@ -14,7 +14,7 @@ organizations:
   url: "https://www.unicath.hr/eng/home"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Moji interesi uključuju *Data Science*, *Big Data*, ekonomiku rasta, ekonometriju i primjenjene kvantitativne metode.
+bio: Moji interesi uključuju *Data Science*, *Big Data* i primjenjene kvantitativne metode.
 
 interests:
 - Data Science
@@ -74,6 +74,6 @@ user_groups:
 - Visitors
 ---
 
-I serve as a Professor of Statistics at the Croatian Catholic University in Zagreb. My academic journey has led me to delve into areas such as Data Science, Big Data, Macroeconomics, Econometrics, and other applied quantitative methods. Currently, I'm in the process of designing new university courses, notably "Big Data in Social Sciences" and "Natural Language Processing in Communicology Research". Alongside my academic commitments, I'm also freelancing on a pair of Data Science initiatives.
+I serve as a Professor of Statistics at the Croatian Catholic University in Zagreb. My academic journey has led me into areas such as Data Science, Big Data, Econometrics and Finanance. Currently, I'm in the process of designing new university courses, notably "Data Science for Social Scientists" and "Applied Statistics". Alongside my academic commitments, I'm also freelancing on a pair of Data Science initiatives.
 
 My passion lies at the intersection of economics, data science, and education. I'm always eager to explore the latest in technology and to hone my quantitative skills further. Data, in all its facets—from compelling visualizations to intricate models—fascinates me. When I step away from the academic world, I indulge in sports, rejuvenate with ice baths, and savor a mix of veggies, coffee, and the thrill of computational challenges.

@@ -18,13 +18,13 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "Assistant professor"
-  company = "Faculty of Croatian Studies"
-  company_url = "https://www.hrstud.unizg.hr/en"
+  title = "Assistant Proffesor"
+  company = "Croatian Catholic University"
+  company_url = "https://www.unicath.hr/eng/home"
   location = "Zagreb"
-  date_start = "2020-08-01"
+  date_start = "2023-01-01"
   date_end = ""
-  description = """Teaching statistics and writing academic papers.
+  description = """Teaching statistics and doing research.
   <br>
   <br>
   Responsibilities include:
@@ -34,6 +34,20 @@ date_format = "Jan 2006"
   * Writing academic papers
   """
 
+
+[[experience]]
+  title = "Postdocoral Researcher"
+  company = "Faculty of Croatian Studies"
+  company_url = "https://www.hrstud.unizg.hr/en"
+  location = "Zagreb"
+  date_start = "2020-08-01"
+  date_end = "2023-01-01"
+  description = """Teaching statistics and doing research.
+  <br>
+  <br>
+  
+  """
+
 [[experience]]
   title = "Researcher"
   company = "Institute Ivo Pilar"
@@ -41,6 +55,6 @@ date_format = "Jan 2006"
   location = "Zagreb"
   date_start = "2012-01-01"
   date_end = "2020-08-01"
-  description = """Research in macroeconomics and econometrics for publication and academic projects."""
+  description = """Research in financial econometrics for publication and academic projects."""
 
 +++
