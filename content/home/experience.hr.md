@@ -18,35 +18,13 @@ date_format = "Jan 2006"
 #   Leave `date_end` empty if it's your current employer.
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
-  title = "Docent"
-  company = "Hrvatsko katoličko sveučilište"
-  company_url = "https://www.unicath.hr/"
-  location = "Zagreb"
-  date_start = "2023-01-01"
-  date_end = ""
-  description = """Teaching statistics and doing research.
-  <br>
-  <br>
-  Responsibilities include:
-  
-  * Izvođenje nastave
-  * Razvoj novih kolegija
-  * Istraživački rad
-
-  """
-
-[[experience]]
   title = "Postdoktorand"
   company = "Fakultet hrvatskih studija"
   company_url = "https://www.hrstud.unizg.hr/en"
   location = "Zagreb"
   date_start = "2020-08-01"
-  date_end = "2023-01-0"
-  description = """KOlegiji iz statistike i istraživački rad.
-  <br>
-  <br>
-  
-  """
+  date_end = "2023-01-01"
+  description = """KOlegiji iz statistike i istraživački rad."""
 
 [[experience]]
   title = "Istraživač"
