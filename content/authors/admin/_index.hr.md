@@ -28,17 +28,17 @@ interests:
 education:
   courses:
   - course: PhD iz Ekonomike
-    institution: Ekonomski fakultet Zagreb, HR + Sveučilište u Beču, AT
-    year: 2018
+#    institution: Ekonomski fakultet Zagreb, HR + Sveučilište u Beču, AT
+#    year: 2018
   - course: Msc iz Međunarodne ekonomije
-    institution: Institut za svjetsku ekonomiju Kiel, DE 
-    year: 2015
+#    institution: Institut za svjetsku ekonomiju Kiel, DE 
+#    year: 2015
   - course: Msc iz Financija
-    institution: Ekonomski fakultet Zagreb, HR 
-    year: 2010
+#    institution: Ekonomski fakultet Zagreb, HR 
+ #   year: 2010
   - course: BSc iz Poslovne ekonomije 
-    institution: Ekonomski fakultet Zagreb, HR
-    year: 2009
+#    institution: Ekonomski fakultet Zagreb, HR
+#    year: 2009
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
