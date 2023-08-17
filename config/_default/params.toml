@@ -88,23 +88,23 @@ show_related = {book = true, page = false, post = true, project = true, publicat
 ############################
 
 # Enter contact details (optional). To hide a field, clear it to "".
-email = "lsikic@hrstud.hr"
+email = "luka.sikic@unicath.hr"
 phone = "00 385 98 162 30 52"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
-address = {street = "Borongajska cesta 83d", city = "Zagreb", postcode = "10000", country = "Craoatia", country_code = "HR"}
+address = {street = "Ilica 242", city = "Zagreb", postcode = "10000", country = "Croatia", country_code = "HR"}
 
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
-coordinates = {latitude = "45.806550", longitude = "16.036000"}
+#coordinates = {latitude = "45.806550", longitude = "16.036000"}
 
 # Directions for visitors to locate you.
-directions = "I. kat, soba 18"
+directions = "II. kat, soba 218"
 
 # Office hours
 # A list of your office hours. To remove, set to an empty list `[]`.
-office_hours = ["Četvrtkom od 17:30 to 18:30"]
+office_hours = [""]
 
 # Enter an optional link for booking appointments (e.g. calendly.com).
 appointment_url = ""
