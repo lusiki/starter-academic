@@ -75,6 +75,6 @@ user_groups:
 - Researchers
 - Visitors
 ---
-Radim kao profesor statistike na Hrvatskom katoličkom sveučilištu u Zagrebu, specijaliziran za područja poput Data Science-a, Big Data, Ekonometrije i Financija. Trenutačno razvijam nove sveučilišne kolegije, uključujući "Znanost o podacima za društvene znanstvenike" i "Primijenjena statistika". Pored akademskih obveza, angažiran sam na nekoliko Data Science projekata.
+Radim kao profesor statistike na Hrvatskom katoličkom sveučilištu u Zagrebu, specijaliziran za područja poput Data Science-a, Big Data, Strojnog Učenja, Ekonometrije i Financija. Trenutačno razvijam nove sveučilišne kolegije, uključujući "Znanost o podacima za društvene znanstvenike" i "Primijenjena statistika". Pored akademskih obveza, angažiran sam na nekoliko Data Science projekata.
 
 Moja strast leži na raskrižju ekonomije, znanosti o podacima i obrazovanja. Neprestano sam motiviran istraživanjem najnovijih tehnologija i usavršavanjem svojih kvantitativnih sposobnosti. Fasciniran sam svim dimenzijama podataka - od jednostavnih vizualizacija do kompleksnih modela. Izvan akademske sfere, bavim se sportom,  volim ledene kupke i uživam u zelno povrće, rado ali oprezno pijem kavu...
