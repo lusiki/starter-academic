@@ -27,7 +27,7 @@ interests:
 
 education:
   courses:
-  - course: PhD iz Ekonomike
+  - course: PhD iz Makroekonomije
 #    institution: Ekonomski fakultet Zagreb, HR + Sveučilište u Beču, AT
 #    year: 2018
   - course: Msc iz Međunarodne ekonomije

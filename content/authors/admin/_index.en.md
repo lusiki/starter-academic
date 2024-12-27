@@ -26,17 +26,17 @@ interests:
 education:
   courses:
   - course: PhD in Economics
-    institution: Faculty of Economics and Business, Zagreb + Universität Wien, AT
-    year: 2018
+#    institution: Faculty of Economics and Business, Zagreb + Universität Wien, AT
+#    year: 2018
   - course: Msc in International Economics
-    institution: Kiel Institute for the World Economy, DE 
-    year: 2015
+#    institution: Kiel Institute for the World Economy, DE 
+#    year: 2015
   - course: Msc in Finance
-    institution: Faculty of Economics and Business, Zagreb 
-    year: 2010
+#   institution: Faculty of Economics and Business, Zagreb 
+#    year: 2010
   - course: BSc in Business 
-    institution: Faculty of Economics and Business, Zagreb
-    year: 2009
+#    institution: Faculty of Economics and Business, Zagreb
+#    year: 2009
 
 # Social/Academic Networking
 # For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
