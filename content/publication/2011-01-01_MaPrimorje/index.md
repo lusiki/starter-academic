@@ -1,7 +1,7 @@
 +++
 title = "Makarsko Primorje-od rivijere do mikroregije"
 date = "2011-01-01"
-authors = ["Sasa Poljanec Boriz" , "Luka Sikic"]
+authors = ["Sasa Poljanec Boric" , "Luka Sikic"]
 publication_types = ["2"]
 publication = "NA, _pp. 480_"
 publication_short = "NA, _pp. 480_"
