@@ -74,8 +74,13 @@ user_groups:
 - Visitors
 ---
 
-I am a Professor of Statistics at the Croatian Catholic University in Zagreb, where my work spans Data Science, Big Data, Machine Learning, Econometrics, and Finance. Through my freelance engagements in Data Science, I bring real-world insights and cutting-edge analytics into both my research and classroom. In addition to teaching, I actively collaborate with colleagues across various disciplines, developing innovative statistical methodologies to tackle complex data challenges.
+I am a Professor of Statistics at the Croatian Catholic University in Zagreb, where my work spans Data Science, Big Data, Machine Learning, Econometrics, and Finance. 
+In addition to teaching, I actively collaborate with colleagues across various disciplines, developing innovative statistical methodologies to tackle complex data challenges. 
+My passion lies at the intersection of economics/finance, data science, and education. Through my freelance engagements in Data Science, I bring real-world insights and cutting-edge analytics into both my research and classroom. 
 
-My passion lies at the intersection of economics, data science, and education. I frequently speak at conferences and workshops on topics such as advanced analytics and data-driven decision-making, always striving to bridge the gap between theoretical frameworks and practical applications. From designing intricate models to producing compelling visualizations, I find every aspect of data exploration irresistible.
+Recently, I have initiated an academic project that analyzes Catholic themes in the Croatian digital media landscape, spanning from January 2025 to December 2027. 
+This project aims to collect and organize publications into a comprehensive database and conduct thematic research on various topics. Explore the [Project](https://lusiki.github.io/DigiKat/). 
+Additionally, I am actively working on an open source project which investigates Croatia's income convergence from 2000 to 2024 across various country groups using time-series methodologies like fractional integration. Visit the [GitHub Repository](https://github.com/lusiki/Convergence) .
+I support and advocate for open source initiatives because they foster collaboration, transparency, and innovation within the academic community. By making our research tools and data openly accessible, we enable others to replicate studies, build upon our work, and contribute to the collective advancement of knowledge.
 
 Beyond academia, I stay active through sports and embrace the rejuvenating challenge of ice baths. I’m equally fond of fueling my creativity with vegetables, coffee, and computational problem-solving. Ultimately, my mission is to empower students, professionals, and organizations with robust, data-informed insights that shape a more informed and impactful future.
