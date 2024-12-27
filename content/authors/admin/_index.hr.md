@@ -76,5 +76,7 @@ user_groups:
 - Visitors
 ---
 Ja sam profesor statistike na Hrvatskom katoličkom sveučilištu u Zagrebu. Bavim se istraživanjima iz znanosti o podacima, velikim podatcima, strojnim učenjem, ekonometrijom i financijama. Moj rad kombinira teorijska istraživanja s praktičnim primjenama, uvijek tražeći inovativna rješenja za složene podatkovne izazove.
-Posebno me inspiriraju teme i područja na sjecištu ekonomije, znanosti o podacima i obrazovanja. Redovito održavam predavanja i radionice na temu podatkovne analitike i donošenja odluka temeljenih na podacima, vjerujući da je svijet podataka neiscrpan izvor inspiracije. Bilo da se radi o oblikovanju složenih modela ili stvaranju jasnih i privlačnih vizualizacija, nastojim poticati kritičko razmišljanje i inovativnost kod svojih studenata i suradnika.
+
+Posebno me inspiriraju teme i područja na raskrižju ekonomije, znanosti o podacima i obrazovanja. Redovito održavam predavanja i radionice na temu podatkovne analitike i donošenja odluka temeljenih na podacima, vjerujući da je svijet podataka neiscrpan izvor inspiracije. Bilo da se radi o oblikovanju složenih modela ili stvaranju jasnih i privlačnih vizualizacija, nastojim poticati kritičko razmišljanje i inovativnost kod svojih studenata i suradnika.
+
 Na ovoj stranici možete pronaći informacije o mojim istraživanjima, publikacijama, predavanjima i projektima. Radujem se vašem posjetu i potencijalnoj suradnji u istraživanju i primjeni naprednih statističkih metoda. Kontaktirajte me kako bismo zajedno istražili mogućnosti primjene statistike i analitike u vašim projektima.

@@ -14,7 +14,7 @@ weight: 50
 
 - [Data Sceience for Social Scientists](https://lusiki.github.io/WebObradaPodataka/)
 
-- [Natural Language Processing for social sciences](https://lusiki.github.io/WebObradaPodataka/)
+- [Natural Language Processing for social sciences](https://github.com/lusiki/Analiza-teksta)
 
 - [Multivariate Statistics](https://lusiki.github.io/WebMultiVar/)
 
