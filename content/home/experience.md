@@ -24,7 +24,7 @@ date_format = "Jan 2006"
   company_url = "https://www.unicath.hr/eng/home"
   location = "Zagreb"
   date_start = "2023-01-01"
-  date_end = "2023-01-01"
+  date_end = "-"
   description = """Teaching statistics and doing research.
   <br>
   <br>
