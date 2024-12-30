@@ -79,7 +79,7 @@ In addition to teaching, I actively collaborate with colleagues across various d
 My passion lies at the intersection of economics/finance, data science, and education. Through my freelance engagements in Data Science, I bring real-world insights and cutting-edge analytics into both my research and classroom. 
 
 Recently, I have initiated an academic project that analyzes Catholic themes in the Croatian digital media landscape, spanning from January 2025 to December 2027. 
-This project aims to collect and organize publications into a comprehensive database and conduct thematic research on various topics. Explore the [Project](https://lusiki.github.io/DigiKat/). 
+This project aims to collect and organize digital media publications into a comprehensive database and conduct thematic research on various topics. Explore the [project](https://lusiki.github.io/DigiKat/). 
 Additionally, I am actively working on an open source project which investigates Croatia's income convergence from 2000 to 2024 across various country groups using time-series methodologies like fractional integration. Visit the [GitHub Repository](https://github.com/lusiki/Convergence) .
 I support and advocate for open source initiatives because they foster collaboration, transparency, and innovation within the academic community. By making our research tools and data openly accessible, we enable others to replicate studies, build upon our work, and contribute to the collective advancement of knowledge.
 
