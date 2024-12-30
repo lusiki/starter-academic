@@ -1,5 +1,5 @@
 ---
-title: Publications
+title: Proba
 
 # View.
 #   1 = List
