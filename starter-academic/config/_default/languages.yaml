@@ -1,0 +1,14 @@
+# Languages
+# Documentation: https://docs.hugoblox.com/reference/language/
+
+en:
+  languageCode: en-us
+  languageName: English
+  weight: 1
+  title: "Luka Sikic"
+
+hr:
+  languageCode: hr
+  languageName: Hrvatski
+  weight: 2
+  title: "Luka Šikić"
