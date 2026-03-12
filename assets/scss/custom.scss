@@ -4,11 +4,54 @@
 // =============================================================================
 
 // ---------------------------------------------------------------------------
+// COLOR OVERRIDES - Override the default theme primary to our blue
+// ---------------------------------------------------------------------------
+$sta-primary: #1a56db;
+
+// Ensure body text is always dark on light backgrounds
+body {
+  color: #1f2937;
+}
+
+.dark body,
+body.dark {
+  color: #e5e7eb;
+}
+
+// Explicit text color for all major content areas
+.article-container,
+.home-section,
+.universal-wrapper {
+  color: #1f2937;
+  .dark & {
+    color: #e5e7eb;
+  }
+}
+
+p, li, td, th, dd, dt, blockquote {
+  color: #374151;
+  .dark & {
+    color: #d1d5db;
+  }
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #111827;
+  .dark & {
+    color: #f9fafb;
+  }
+}
+
+// ---------------------------------------------------------------------------
 // TYPOGRAPHY
 // ---------------------------------------------------------------------------
 .article-title {
   font-weight: 700;
   letter-spacing: -0.02em;
+  color: #111827;
+  .dark & {
+    color: #f9fafb;
+  }
 }
 
 h1, h2, h3, h4 {
