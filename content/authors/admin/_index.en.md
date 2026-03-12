@@ -6,60 +6,50 @@ title: Luka Sikic
 superuser: true
 
 # Role/position
-role: Asistant professor of Statistics
+role: Assistant Professor
 
 # Organizations/Affiliations
 organizations:
 - name: Croatian Catholic University
-  url: "https://www.unicath.hr/eng/home"
+  url: "https://www.unicath.hr/odjeli-i-fakultet/nastavnici/luka-sikic"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Moji interesi uključuju *Data Science*, *Big Data* i primjenjene kvantitativne metode.
+bio: My research spans data science, machine learning, econometrics, and natural language processing.
 
 interests:
-- Data Science
-- Statistics
-- Econometrics
-- Financial markets
-- Algo trading
+- Machine Learning and Data Science
+- Econometrics and Quantitative Modeling
+- Natural Language Processing
+- Macroeconomics and Financial Markets
 
 education:
   courses:
   - course: PhD in Economics
-#    institution: Faculty of Economics and Business, Zagreb + Universität Wien, AT
-#    year: 2018
-  - course: Msc in International Economics
-#    institution: Kiel Institute for the World Economy, DE 
-#    year: 2015
-  - course: Msc in Finance
-#   institution: Faculty of Economics and Business, Zagreb 
-#    year: 2010
-  - course: BSc in Business 
-#    institution: Faculty of Economics and Business, Zagreb
-#    year: 2009
+    institution: Faculty of Economics and Business, Zagreb & Universitat Wien
+    year: 2018
+  - course: MSc in International Economics
+    institution: Kiel Institute for the World Economy
+    year: 2015
+  - course: MSc in Finance
+    institution: Faculty of Economics and Business, Zagreb
+    year: 2010
+  - course: BSc in Business
+    institution: Faculty of Economics and Business, Zagreb
+    year: 2009
 
-# Social/Academic Networking
-# For available icons, see: https://sourcethemes.com/academic/docs/page-builder/#icons
-#   For an email link, use "fas" icon pack, "envelope" icon, and a link in the
-#   form "mailto:lsikic@hrstud.hr" or "#contact" for contact widget.
 social:
 - icon: envelope
   icon_pack: fas
-  link: '/#contact'  # For a direct email link, use "mailto:test@example.org".
-- icon: twitter
-  icon_pack: fab
-  link: https://twitter.com/Luka_Sikic
+  link: '/#contact'
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=qOGfRvkAAAAJ&hl=en
 - icon: github
   icon_pack: fab
   link: https://github.com/lusiki
-# Link to a PDF of your resume/CV from the About widget.
-# To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
-# - icon: cv
-#   icon_pack: ai
-#   link: files/cv.pdf
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/luka-sikic-662ba869/
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ""
@@ -74,13 +64,10 @@ user_groups:
 - Visitors
 ---
 
-I am a Professor of Statistics at the Croatian Catholic University in Zagreb, where my work spans Data Science, Big Data, Machine Learning, Econometrics, and Finance. 
-In addition to teaching, I actively collaborate with colleagues across various disciplines, developing innovative statistical methodologies to tackle complex data challenges. 
-My passion lies at the intersection of economics/finance, data science, and education. Through my freelance engagements in Data Science, I bring real-world insights and cutting-edge analytics into both my research and classroom. 
+I am an Assistant Professor at the [Department of Communication Sciences](https://www.unicath.hr/), Croatian Catholic University in Zagreb. My work sits at the intersection of data science, econometrics, and applied statistics. I teach courses in statistics, data science, multivariate methods, and natural language processing, and I bring applied research into the classroom through ongoing work in machine learning, financial econometrics, and computational text analysis.
 
-Recently, I have initiated an academic project that analyzes Catholic themes in the Croatian digital media landscape, spanning from January 2025 to December 2027. 
-This project aims to collect and organize digital media publications into a comprehensive database and conduct thematic research on various topics. Explore the [project](https://lusiki.github.io/DigiKat/). 
-Additionally, I am actively working on an open source project which investigates Croatia's income convergence from 2000 to 2024 across various country groups using time-series methodologies like fractional integration. Visit the [GitHub Repository](https://github.com/lusiki/Convergence) .
-I support and advocate for open source initiatives because they foster collaboration, transparency, and innovation within the academic community. By making our research tools and data openly accessible, we enable others to replicate studies, build upon our work, and contribute to the collective advancement of knowledge.
+Before joining the university I spent eight years as a researcher at the Institute of Social Sciences Ivo Pilar and the Faculty of Croatian Studies, working on problems in financial econometrics and empirical social research. I hold a PhD in Economics from the University of Zagreb, with doctoral training at the Vienna Graduate School of Economics and the Kiel Institute for the World Economy.
 
-Beyond academia, I stay active through sports and embrace the rejuvenating challenge of ice baths. I’m equally fond of fueling my creativity with vegetables, coffee, and computational problem-solving. Ultimately, my mission is to empower students, professionals, and organizations with robust, data-informed insights that shape a more informed and impactful future.
+I currently lead an academic project analyzing Catholic themes in Croatian digital media (2025 to 2027), building a structured database of digital publications for thematic research. Explore the [project here](https://lusiki.github.io/DigiKat/). I also maintain an open source project on Croatia's income convergence (2000 to 2024), using fractional integration and time series methods across country groups. The code and data are available on [GitHub](https://github.com/lusiki/Convergence).
+
+I am committed to open source research tools and reproducible analysis. All of my course materials are publicly available, and I encourage students and collaborators to engage with data transparently and critically.

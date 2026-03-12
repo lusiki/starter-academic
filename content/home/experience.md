@@ -19,42 +19,30 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 [[experience]]
-  title = "Assistant Proffesor"
+  title = "Assistant Professor"
   company = "Croatian Catholic University"
-  company_url = "https://www.unicath.hr/eng/home"
+  company_url = "https://www.unicath.hr/odjeli-i-fakultet/nastavnici/luka-sikic"
   location = "Zagreb"
   date_start = "2023-01-01"
-  date_end = "-"
-  description = """Teaching statistics and doing research.
-  <br>
-  <br>
-  Responsibilities include:
-  
-  * Teaching
-  * Developing new courses
-  * Writing academic papers
-  """
+  date_end = ""
+  description = """Department of Communication Sciences. Teaching statistics, data science, and NLP. Leading research projects on digital media analysis and economic convergence."""
 
 [[experience]]
-  title = "Postdocoral Researcher"
+  title = "Postdoctoral Researcher"
   company = "Faculty of Croatian Studies"
   company_url = "https://www.hrstud.unizg.hr/en"
   location = "Zagreb"
   date_start = "2020-08-01"
   date_end = "2023-01-01"
-  description = """Teaching statistics and doing research.
-  <br>
-  <br>
-  
-  """
+  description = """Teaching statistics courses and conducting empirical social research."""
 
 [[experience]]
   title = "Researcher"
-  company = "Institute Ivo Pilar"
+  company = "Institute of Social Sciences Ivo Pilar"
   company_url = "https://www.pilar.hr/"
   location = "Zagreb"
   date_start = "2012-01-01"
   date_end = "2020-08-01"
-  description = """Research in financial econometrics for publication and academic projects."""
+  description = """Research in financial econometrics, economic convergence, and applied quantitative methods."""
 
 +++
