@@ -1,0 +1,17 @@
+# IDEs
+.idea/
+.vs/
+.vscode/
+
+# Hugo
+/resources/
+public/
+
+# R
+.Rproj.user
+.RData
+.Rhistory
+
+# OS
+.DS_Store
+Thumbs.db
