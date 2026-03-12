@@ -42,14 +42,11 @@ subtitle = ""
   flip_alt_rows = false
 
 [design.background]
-  # Background color.
-  # color = "navy"
+  color = "#f9fafb"
+  text_color_light = false
 
 [advanced]
- # Custom CSS.
  css_style = ""
-
- # CSS class.
  css_class = ""
 +++
 

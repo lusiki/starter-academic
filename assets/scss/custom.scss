@@ -1,56 +1,343 @@
-// Custom styles for Modern Academic theme
+// =============================================================================
+// Modern Academic Theme - Custom Styles
+// Clean, professional design for academic personal sites
+// =============================================================================
 
-// Refined typography
+// ---------------------------------------------------------------------------
+// TYPOGRAPHY
+// ---------------------------------------------------------------------------
 .article-title {
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
-// Cleaner card styling
-.card {
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
-  transition: box-shadow 0.2s ease;
-  &:hover {
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1), 0 2px 4px rgba(0,0,0,0.06);
+h1, h2, h3, h4 {
+  letter-spacing: -0.01em;
+}
+
+.home-section h1 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #111827;
+  .dark & {
+    color: #f9fafb;
   }
 }
 
-// Modern navbar refinements
+// ---------------------------------------------------------------------------
+// NAVBAR
+// ---------------------------------------------------------------------------
 .navbar {
   box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: box-shadow 0.3s ease;
 }
 
-// Section spacing
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+.navbar-light .navbar-nav > .nav-item > a {
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: color 0.15s ease;
+}
+
+// ---------------------------------------------------------------------------
+// ABOUT / BIOGRAPHY SECTION
+// ---------------------------------------------------------------------------
+#about {
+  .portrait-title {
+    h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+    h3 {
+      font-weight: 400;
+      color: #6b7280;
+      font-size: 1.1rem;
+    }
+    a {
+      font-weight: 500;
+    }
+  }
+
+  .avatar-circle {
+    border: 4px solid #fff;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.15);
+    }
+  }
+
+  .network-icon a {
+    font-size: 1.4rem;
+    transition: color 0.2s ease, transform 0.2s ease;
+    &:hover {
+      transform: translateY(-2px);
+    }
+  }
+
+  .col-md-7 {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: #374151;
+    .dark & {
+      color: #d1d5db;
+    }
+  }
+}
+
+// Interests and education
+.row .col-md-5 h3 {
+  font-weight: 600;
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: #1a56db;
+  .dark & {
+    color: #60a5fa;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// HOME SECTIONS
+// ---------------------------------------------------------------------------
 .home-section {
   padding: 5rem 0;
+
+  &:first-of-type {
+    padding-top: 6rem;
+  }
 }
 
-// Avatar refinements
-.avatar-circle {
-  box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+.section-heading h1 {
+  border-bottom: 3px solid #1a56db;
+  display: inline-block;
+  padding-bottom: 0.3rem;
+  .dark & {
+    border-bottom-color: #60a5fa;
+  }
 }
 
-// Publication and experience cards
-.experience .card-body {
-  border-left: 3px solid;
-  border-image: linear-gradient(to bottom, #1a56db, #60a5fa) 1;
+// ---------------------------------------------------------------------------
+// CARDS
+// ---------------------------------------------------------------------------
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+  transition: all 0.25s ease;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    transform: translateY(-2px);
+  }
+
+  .dark & {
+    box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+    &:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    }
+  }
 }
 
-// Smoother link transitions
+// ---------------------------------------------------------------------------
+// EXPERIENCE TIMELINE
+// ---------------------------------------------------------------------------
+.experience .card {
+  border-left: 4px solid #1a56db;
+  border-radius: 0 12px 12px 0;
+
+  .dark & {
+    border-left-color: #60a5fa;
+  }
+}
+
+.experience .card-body h4 {
+  font-weight: 600;
+  color: #111827;
+  .dark & {
+    color: #f9fafb;
+  }
+}
+
+.experience .card-body .company {
+  color: #1a56db;
+  font-weight: 500;
+  .dark & {
+    color: #60a5fa;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// PUBLICATIONS
+// ---------------------------------------------------------------------------
+.pub-list-item {
+  padding: 1.25rem 0;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background 0.15s ease;
+
+  .dark & {
+    border-bottom-color: #1e293b;
+  }
+
+  &:hover {
+    background: #f9fafb;
+    .dark & {
+      background: #1e293b;
+    }
+  }
+
+  .article-metadata {
+    font-size: 0.85rem;
+    color: #6b7280;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// PROJECTS
+// ---------------------------------------------------------------------------
+.project-card {
+  border-radius: 12px;
+  overflow: hidden;
+
+  .card-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// TEACHING
+// ---------------------------------------------------------------------------
+#teaching {
+  a {
+    font-weight: 500;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// CONTACT
+// ---------------------------------------------------------------------------
+#contact {
+  .fa, .fas, .fab {
+    color: #1a56db;
+    .dark & {
+      color: #60a5fa;
+    }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// LINKS & BUTTONS
+// ---------------------------------------------------------------------------
 a {
   transition: color 0.15s ease;
 }
 
-// Button refinements
-.btn-primary {
+.btn {
   border-radius: 8px;
   font-weight: 500;
   letter-spacing: 0.01em;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.2s ease;
 }
 
-// Footer
+.btn-primary {
+  box-shadow: 0 1px 2px rgba(26, 86, 219, 0.2);
+  &:hover {
+    box-shadow: 0 4px 8px rgba(26, 86, 219, 0.25);
+    transform: translateY(-1px);
+  }
+}
+
+.btn-outline-primary {
+  border-width: 2px;
+}
+
+// ---------------------------------------------------------------------------
+// FOOTER
+// ---------------------------------------------------------------------------
 .site-footer {
-  border-top: 1px solid rgba(0,0,0,0.06);
+  border-top: 1px solid #e5e7eb;
+  padding: 2rem 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+
+  .dark & {
+    border-top-color: #1e293b;
+    color: #9ca3af;
+  }
+}
+
+.powered-by {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+// ---------------------------------------------------------------------------
+// SEARCH OVERLAY
+// ---------------------------------------------------------------------------
+#search-box #search-query {
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+// ---------------------------------------------------------------------------
+// DARK MODE REFINEMENTS
+// ---------------------------------------------------------------------------
+.dark {
+  .card {
+    background: #1e293b;
+  }
+
+  .navbar {
+    background: rgba(15, 23, 42, 0.95) !important;
+  }
+
+  .avatar-circle {
+    border-color: #334155;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// RESPONSIVE REFINEMENTS
+// ---------------------------------------------------------------------------
+@media (max-width: 768px) {
+  .home-section {
+    padding: 3rem 0;
+  }
+
+  #about .portrait-title h2 {
+    font-size: 1.8rem;
+  }
+
+  .section-heading h1 {
+    font-size: 1.6rem;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// SMOOTH SCROLLING
+// ---------------------------------------------------------------------------
+html {
+  scroll-behavior: smooth;
+}
+
+// ---------------------------------------------------------------------------
+// SELECTION HIGHLIGHT
+// ---------------------------------------------------------------------------
+::selection {
+  background: rgba(26, 86, 219, 0.15);
+  color: inherit;
 }
