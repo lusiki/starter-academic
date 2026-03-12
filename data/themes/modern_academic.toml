@@ -1,0 +1,40 @@
+# Modern Academic Theme
+# Clean, professional light theme for academic sites
+
+name = "Modern Academic"
+
+# Light mode (default)
+light = true
+primary = "#1a56db"
+primary_light = "#e8f0fe"
+primary_dark = "#1e3a5f"
+
+menu_primary = "#ffffff"
+menu_text = "#374151"
+menu_text_active = "#1a56db"
+menu_title = "#111827"
+
+background = "rgb(255, 255, 255)"
+home_section_odd = "rgb(255, 255, 255)"
+home_section_even = "rgb(249, 250, 251)"
+
+link = "#1a56db"
+link_hover = "#1e3a5f"
+
+# Dark mode
+[dark]
+primary = "#60a5fa"
+primary_light = "#1e3a5f"
+primary_dark = "#93c5fd"
+
+menu_primary = "#111827"
+menu_text = "#d1d5db"
+menu_text_active = "#60a5fa"
+menu_title = "#f9fafb"
+
+background = "#0f172a"
+home_section_odd = "#0f172a"
+home_section_even = "#1e293b"
+
+link = "#60a5fa"
+link_hover = "#93c5fd"

@@ -1,0 +1,13 @@
+# Modern Academic Font Set
+# Clean, readable typography for professional academic sites
+
+name = "Modern Academic"
+
+# Google Fonts import
+google_fonts = "Inter:400,500,600,700|Source+Serif+Pro:400,700|JetBrains+Mono:400"
+
+# Font families
+heading_font = "Inter, sans-serif"
+body_font = "Inter, sans-serif"
+nav_font = "Inter, sans-serif"
+mono_font = "JetBrains Mono, monospace"
