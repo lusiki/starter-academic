@@ -1,0 +1,24 @@
+---
+import Base from '../../layouts/Base.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import ProjectRow from '../../components/ProjectRow.astro';
+import { getCollection } from 'astro:content';
+
+const projects = (await getCollection('projects')).sort(
+  (a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0),
+);
+---
+<Base title="Projects — Luka Šikić">
+  <section class="hero" style="padding: var(--s-9) 0 var(--s-7);">
+    <span class="hero__eyebrow eyebrow">03 — Projects</span>
+    <h1 class="hero__title" style="font-size: 44px; max-width: 24ch;">Open research projects</h1>
+    <p class="hero__lede">Code, data, and writing released in the open.</p>
+  </section>
+
+  <section class="section" style="padding-top: 0; border-top: none;">
+    <SectionHeader num={`${projects.length} items`} title="Active" />
+    <ul class="list">
+      {projects.map(p => <li><ProjectRow entry={p} /></li>)}
+    </ul>
+  </section>
+</Base>

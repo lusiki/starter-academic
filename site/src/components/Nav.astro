@@ -1,0 +1,25 @@
+---
+const { pathname } = Astro.url;
+const isActive = (p: string) => pathname === p || pathname.startsWith(p + '/') || (p !== '/' && pathname.startsWith(p));
+const links = [
+  { href: '/', label: '01 About' },
+  { href: '/publications/', label: '02 Research' },
+  { href: '/projects/', label: '03 Projects' },
+  { href: '/teaching/', label: '04 Teaching' },
+];
+---
+<nav class="nav" aria-label="Primary">
+  <div class="nav__inner">
+    <a class="nav__brand" href="/"><span class="dot"></span> luka šikić</a>
+    <div class="nav__links">
+      {links.map(l => (
+        <a class="nav__link" href={l.href} aria-current={isActive(l.href) ? 'page' : undefined}>{l.label}</a>
+      ))}
+      <button class="nav__theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</nav>

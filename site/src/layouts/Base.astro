@@ -1,0 +1,47 @@
+---
+import '../styles/colors_and_type.css';
+import '../styles/components.css';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+interface Props { title?: string; description?: string; }
+const { title = 'Luka Šikić', description = 'Economist by training, teaching data science and studying language.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content={description} />
+  <title>{title}</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23171717'/%3E%3C/svg%3E" />
+  <script is:inline>
+    (function () {
+      try {
+        const t = localStorage.getItem('ds-theme');
+        if (t) document.documentElement.setAttribute('data-theme', t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <Nav />
+  <main class="container">
+    <slot />
+  </main>
+  <Footer />
+  <script is:inline>
+    (function () {
+      const root = document.documentElement;
+      const KEY = 'ds-theme';
+      const btn = document.getElementById('themeToggle');
+      if (!btn) return;
+      btn.addEventListener('click', () => {
+        const cur = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const next = cur === 'dark' ? 'light' : 'dark';
+        root.setAttribute('data-theme', next);
+        try { localStorage.setItem(KEY, next); } catch (e) {}
+      });
+    })();
+  </script>
+</body>
+</html>

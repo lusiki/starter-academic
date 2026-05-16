@@ -1,0 +1,8 @@
+---
+interface Props { num: string; title: string; }
+const { num, title } = Astro.props;
+---
+<div class="sec-head">
+  <div class="sec-head__num">{num}</div>
+  <h2 class="sec-head__title">{title}</h2>
+</div>

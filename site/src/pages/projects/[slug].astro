@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const projects = await getCollection('projects');
+  return projects.map(entry => ({ params: { slug: entry.slug }, props: { entry } }));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const d = entry.data;
+---
+<Base title={`${d.title} — Luka Šikić`} description={d.summary}>
+  <article class="prose" style="padding: var(--s-9) 0;">
+    <div style="margin-bottom: var(--s-5);">
+      <a href="/projects/" class="eyebrow" style="border-bottom: 0;">← All projects</a>
+    </div>
+
+    <h1 style="font-size: 36px; line-height: 1.15; margin-bottom: var(--s-5); max-width: 28ch;">{d.title}</h1>
+    {d.summary && <p class="hero__lede" style="margin-bottom: var(--s-6);">{d.summary}</p>}
+
+    <div style="display: flex; gap: var(--s-2); flex-wrap: wrap; margin-bottom: var(--s-7);">
+      {d.external_link && <a class="btn btn--primary" href={d.external_link} target="_blank" rel="noopener">Visit project →</a>}
+      {d.url_code && <a class="btn" href={d.url_code} target="_blank" rel="noopener">Code</a>}
+      {d.url_pdf && <a class="btn" href={d.url_pdf} target="_blank" rel="noopener">PDF</a>}
+    </div>
+
+    {d.tags && d.tags.length > 0 && (
+      <div style="margin-bottom: var(--s-7); display: flex; gap: var(--s-2); flex-wrap: wrap;">
+        {d.tags.map(t => <span class="tag">{t}</span>)}
+      </div>
+    )}
+
+    <Content />
+  </article>
+</Base>

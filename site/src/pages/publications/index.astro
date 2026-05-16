@@ -1,0 +1,24 @@
+---
+import Base from '../../layouts/Base.astro';
+import SectionHeader from '../../components/SectionHeader.astro';
+import PublicationRow from '../../components/PublicationRow.astro';
+import { getCollection } from 'astro:content';
+
+const pubs = (await getCollection('publications')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+<Base title="Publications — Luka Šikić" description="Peer-reviewed publications and working papers.">
+  <section class="hero" style="padding: var(--s-9) 0 var(--s-7);">
+    <span class="hero__eyebrow eyebrow">02 — Research</span>
+    <h1 class="hero__title" style="font-size: 44px; max-width: 24ch;">Publications</h1>
+    <p class="hero__lede">Peer-reviewed articles, book chapters, and working papers, in reverse chronological order.</p>
+  </section>
+
+  <section class="section" style="padding-top: 0; border-top: none;">
+    <SectionHeader num={`${pubs.length} items`} title="All publications" />
+    <ul class="list">
+      {pubs.map(p => <li><PublicationRow entry={p} /></li>)}
+    </ul>
+  </section>
+</Base>

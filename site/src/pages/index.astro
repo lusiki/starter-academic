@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeader from '../components/SectionHeader.astro';
+import PublicationRow from '../components/PublicationRow.astro';
+import ProjectRow from '../components/ProjectRow.astro';
+import { getCollection } from 'astro:content';
+
+const pubs = (await getCollection('publications')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const projects = (await getCollection('projects')).sort(
+  (a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0),
+);
+const selectedPubs = pubs.slice(0, 4);
+const totalPubs = pubs.length;
+const years = pubs.map(p => p.data.date.getFullYear());
+const yearSpan = `${Math.min(...years)}–${Math.max(...years)}`;
+---
+<Base title="Luka Šikić — Economist & Data Scientist">
+  <section class="hero">
+    <span class="hero__eyebrow eyebrow">00 — Profile</span>
+    <h1 class="hero__title">Economist by training. Teaching data science. Studying language.</h1>
+    <div class="prose" style="max-width: 56ch;">
+      <p>I'm an economist by training who now spends most of my time teaching data science and studying language. I work at the <a href="https://www.unicath.hr/">Department of Communication Sciences</a>, Croatian Catholic University in Zagreb, where I teach statistics, multivariate methods, data science for social scientists, and an introduction to natural language processing and large language models.</p>
+      <p>Before this I spent eight years at the Institute of Social Sciences Ivo Pilar and the Faculty of Croatian Studies, working on financial econometrics and applied social research. I did my doctoral work in economics at the University of Zagreb, with training at the Vienna Graduate School of Economics and the Kiel Institute for the World Economy.</p>
+    </div>
+    <div class="hero__meta">
+      <span><strong>Croatian Catholic University</strong> · Department of Communication Sciences</span>
+      <span><strong>Office</strong> · Ilica 242, Zagreb</span>
+    </div>
+  </section>
+
+  <section class="section">
+    <SectionHeader num="01 — At a glance" title="Selected output" />
+    <div class="stats">
+      <div class="stats__cell">
+        <div class="stats__label">Publications</div>
+        <div class="stats__value">{totalPubs}</div>
+        <span class="stats__sub">{yearSpan}</span>
+      </div>
+      <div class="stats__cell">
+        <div class="stats__label">Active projects</div>
+        <div class="stats__value">{projects.length}</div>
+        <span class="stats__sub">Open source</span>
+      </div>
+      <div class="stats__cell">
+        <div class="stats__label">Doctorate</div>
+        <div class="stats__value">2018</div>
+        <span class="stats__sub">FEB Zagreb · Wien</span>
+      </div>
+      <div class="stats__cell">
+        <div class="stats__label">Based in</div>
+        <div class="stats__value mono" style="font-size: 22px;">Zagreb</div>
+        <span class="stats__sub">Croatia</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <SectionHeader num="02 — Research" title="Recent publications" />
+    <ul class="list">
+      {selectedPubs.map(p => <li><PublicationRow entry={p} /></li>)}
+    </ul>
+    <div style="margin-top: var(--s-5);">
+      <a href="/publications/" class="btn">All publications →</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <SectionHeader num="03 — Projects" title="Current work" />
+    <ul class="list">
+      {projects.map(p => <li><ProjectRow entry={p} /></li>)}
+    </ul>
+  </section>
+
+  <section class="section">
+    <SectionHeader num="04 — Interests" title="What I work on" />
+    <div style="display: flex; gap: var(--s-2); flex-wrap: wrap;">
+      <span class="tag">Artificial Intelligence & LLMs</span>
+      <span class="tag">Machine Learning</span>
+      <span class="tag">Natural Language Processing</span>
+      <span class="tag">Econometrics</span>
+      <span class="tag">Macroeconomics</span>
+      <span class="tag">Financial markets</span>
+    </div>
+  </section>
+</Base>

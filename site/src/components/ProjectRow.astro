@@ -1,0 +1,19 @@
+---
+import type { CollectionEntry } from 'astro:content';
+interface Props { entry: CollectionEntry<'projects'>; }
+const { entry } = Astro.props;
+const d = entry.data;
+const href = d.external_link || `/projects/${entry.slug}/`;
+const ext = !!d.external_link;
+---
+<article class="pub">
+  <div class="pub__year">{d.date ? d.date.getFullYear() : ''}</div>
+  <div>
+    <a href={href} class="pub__title" target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined}>{d.title}</a>
+    {d.summary && <span class="pub__venue">{d.summary}</span>}
+  </div>
+  <div class="pub__links">
+    {d.url_code && <a href={d.url_code} target="_blank" rel="noopener">CODE</a>}
+    {d.url_pdf && <a href={d.url_pdf} target="_blank" rel="noopener">PDF</a>}
+  </div>
+</article>
