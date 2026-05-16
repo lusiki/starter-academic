@@ -6,7 +6,7 @@ title: Luka Šikić
 superuser: true
 
 # Role/position
-role: Docent
+role: Znanost o podacima i jezik
 
 # Organizations/Affiliations
 organizations:
@@ -14,12 +14,13 @@ organizations:
   url: "https://www.unicath.hr/odjeli-i-fakultet/nastavnici/luka-sikic"
 
 # Short bio (displayed in user profile at end of posts)
-bio: Istraživanja obuhvaćaju znanost o podacima, strojno učenje, ekonometriju i obradu prirodnog jezika.
+bio: Ekonomist po struci, predaje znanost o podacima i istražuje jezik.
 
 interests:
+- Umjetna inteligencija i veliki jezični modeli
 - Strojno učenje i znanost o podacima
-- Ekonometrija i kvantitativno modeliranje
 - Obrada prirodnog jezika
+- Ekonometrija i kvantitativno modeliranje
 - Makroekonomija i financijska tržišta
 
 education:
@@ -64,10 +65,15 @@ user_groups:
 - Visitors
 ---
 
-Docent sam na [Odjelu za komunikologiju](https://www.unicath.hr/) Hrvatskoga katoličkog sveučilišta u Zagrebu. Moj rad obuhvaća znanost o podacima, ekonometriju i primijenjenu statistiku. Izvodim kolegije iz statistike, obrade podataka, multivarijatnih metoda i obrade prirodnog jezika, a u nastavu unosim rezultate tekućih istraživanja iz strojnog učenja, financijske ekonometrije i računalne analize teksta.
+Ekonomist sam po struci, a danas najviše vremena provodim predajući znanost o podacima i istražujući jezik. Radim na [Odjelu za komunikologiju](https://www.unicath.hr/) Hrvatskoga katoličkog sveučilišta u Zagrebu, gdje izvodim kolegije iz statistike, multivarijatnih metoda, znanosti o podacima za društvene znanstvenike te uvoda u obradu prirodnog jezika i velike jezične modele.
 
-Prije dolaska na sveučilište osam sam godina radio kao istraživač na Institutu društvenih znanosti Ivo Pilar i Fakultetu hrvatskih studija, gdje sam se bavio financijskom ekonometrijom i empirijskim društvenim istraživanjima. Doktorirao sam ekonomiju na Sveučilištu u Zagrebu, uz doktorsko usavršavanje na Vienna Graduate School of Economics i Institutu za svjetsku ekonomiju u Kielu.
+Prije ovoga osam sam godina radio na Institutu društvenih znanosti Ivo Pilar i Fakultetu hrvatskih studija, baveći se financijskom ekonometrijom i primijenjenim društvenim istraživanjima. Doktorat iz ekonomije stekao sam na Sveučilištu u Zagrebu, uz usavršavanje na Vienna Graduate School of Economics i Institutu za svjetsku ekonomiju u Kielu.
 
-Trenutno vodim akademski projekt analize katoličke tematike u hrvatskim digitalnim medijima (2025. do 2027.), u sklopu kojeg gradimo strukturiranu bazu digitalnih publikacija za tematska istraživanja. Projekt možete istražiti [ovdje](https://lusiki.github.io/DigiKat/). Također održavam projekt otvorenog koda o konvergenciji dohotka u Hrvatskoj (2000. do 2024.), koristeći metode frakcijske integracije i analize vremenskih nizova. Kod i podaci dostupni su na [GitHubu](https://github.com/lusiki/Convergence).
+Trenutno radim na dvjema temama:
 
-Zagovaram otvorene istraživačke alate i reproducibilnu analizu. Svi moji nastavni materijali javno su dostupni, a studente i suradnike potičem na transparentan i kritički pristup podacima.
+- **[DigiKat](https://lusiki.github.io/DigiKat/)** (2025.–2027.) — strukturirana baza katoličkih tema u hrvatskim digitalnim medijima, koju vodim. Projekt je dijelom empirijsko medijsko istraživanje, a dijelom primijenjena obrada prirodnog jezika.
+- **Religijska dezinformacija** — kritička analiza kako religijske tvrdnje kruže i iskrivljuju se u online prostoru, s Lanom Ciboci Perša i timom.
+
+Uz to održavam otvoreni projekt o [konvergenciji dohotka u Hrvatskoj, 2000.–2024.](https://github.com/lusiki/Convergence), koristeći metode frakcijske integracije i analize dugog pamćenja u vremenskim nizovima.
+
+Pišem kod otvoreno, dijelim sve nastavne materijale javno i od studenata očekujem da pristupaju podacima kao i ja — kritički, s otvorenim razvojnim okruženjem.
