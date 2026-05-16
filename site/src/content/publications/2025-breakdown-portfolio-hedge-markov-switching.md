@@ -15,6 +15,7 @@ tags:
   - "financial econometrics"
 publication_type: "Journal article"
 url_pdf: "https://hrcak.srce.hr/file/492482"
+url_project: "https://raw.githack.com/lusiki/The-Breakdown-of-the-Classic-Portfolio-Hedge-A-Comprehensive-Markov-Switching-Analysis/main/paper/main_analysis.html"
 doi: "10.32676/n.11.1.7"
 selected: true
 ---

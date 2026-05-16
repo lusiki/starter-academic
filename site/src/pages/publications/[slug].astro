@@ -39,6 +39,7 @@ const year = d.date.getFullYear();
       {d.url_code && <a class="btn" href={d.url_code} target="_blank" rel="noopener">Code</a>}
       {d.url_preprint && <a class="btn" href={d.url_preprint} target="_blank" rel="noopener">Preprint</a>}
       {d.url_slides && <a class="btn" href={d.url_slides} target="_blank" rel="noopener">Slides</a>}
+      {d.url_project && <a class="btn" href={d.url_project} target="_blank" rel="noopener">Analysis</a>}
       {d.doi && <a class="btn" href={`https://doi.org/${d.doi}`} target="_blank" rel="noopener">DOI</a>}
     </div>
 
