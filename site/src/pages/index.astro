@@ -2,36 +2,97 @@
 import Base from '../layouts/Base.astro';
 import SectionHeader from '../components/SectionHeader.astro';
 import PublicationRow from '../components/PublicationRow.astro';
-import ProjectRow from '../components/ProjectRow.astro';
 import { getCollection } from 'astro:content';
 
 const pubs = (await getCollection('publications')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
-const projects = (await getCollection('projects')).sort(
-  (a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0),
-);
 const selectedPubs = pubs.slice(0, 4);
 const totalPubs = pubs.length;
 const years = pubs.map(p => p.data.date.getFullYear());
 const yearSpan = `${Math.min(...years)}–${Math.max(...years)}`;
+
+const focus = [
+  { title: 'Econometrics & quantitative modeling', body: 'Time series, financial econometrics, causal inference, panel data.' },
+  { title: 'Machine learning & computational data science', body: 'R and Python, fully reproducible reporting.' },
+  { title: 'Natural language processing & text mining', body: 'Media monitoring, narrative and sentiment analysis, mapping digital media spaces.' },
+  { title: 'Social and digital analytics', body: 'For research groups and communications teams.' },
+];
+
+const selectedWork = [
+  { year: '2025—27', title: 'Catholic themes in Croatian digital media', body: 'Structured database and NLP-driven thematic analysis. Project lead.', href: 'https://lusiki.github.io/DigiKat/' },
+  { year: '2024',    title: 'Mapping the Croatian National Bank across digital media', body: 'Coverage analysis of CNB presence in the Croatian media space.', href: undefined },
+  { year: '2023',    title: 'Stock–bond hedge breakdown, 2022–23 inflation shock', body: 'Markov-switching analysis of the classic 60/40 hedge failure.', href: undefined },
+  { year: '2024',    title: 'Income convergence in Croatia, 2000–2024', body: 'Fractional integration and long-memory time-series methods. Open source.', href: 'https://github.com/lusiki/Convergence' },
+  { year: '2023',    title: 'ESG effects on tourism, EU country panel', body: 'Panel-data study of ESG indicators in EU tourism economies.', href: undefined },
+];
 ---
-<Base title="Luka Šikić — Economist & Data Scientist">
-  <section class="hero">
-    <span class="hero__eyebrow eyebrow">00 — Profile</span>
-    <h1 class="hero__title">Economist by training. Teaching data science. Studying language.</h1>
-    <div class="prose" style="max-width: 56ch;">
-      <p>I'm an economist by training who now spends most of my time teaching data science and studying language. I work at the <a href="https://www.unicath.hr/">Department of Communication Sciences</a>, Croatian Catholic University in Zagreb, where I teach statistics, multivariate methods, data science for social scientists, and an introduction to natural language processing and large language models.</p>
-      <p>Before this I spent eight years at the Institute of Social Sciences Ivo Pilar and the Faculty of Croatian Studies, working on financial econometrics and applied social research. I did my doctoral work in economics at the University of Zagreb, with training at the Vienna Graduate School of Economics and the Kiel Institute for the World Economy.</p>
+<Base title="Luka Šikić — Data Science · Econometrics · Applied Statistics">
+  <section class="hero hero--portrait">
+    <div class="hero__main">
+      <span class="hero__eyebrow eyebrow">00 — Profile</span>
+      <h1 class="hero__title">At the intersection of data science, econometrics, and applied statistics.</h1>
+      <div class="prose" style="max-width: 60ch;">
+        <p>I'm an Assistant Professor of Statistics and Data Science at the <a href="https://www.unicath.hr/">Croatian Catholic University</a> in Zagreb, where I teach and lead research projects on digital media, economic dynamics, and machine learning.</p>
+        <p>Alongside teaching, I take on collaborations and consulting where rigorous quantitative work matters — forecasting, causal analysis, media and text analytics, and turning messy data into something a team can actually act on.</p>
+      </div>
+      <div class="hero__meta">
+        <span><strong>Assistant Professor</strong> · Croatian Catholic University, Zagreb</span>
+        <span><strong>Workshops</strong> · Economic Institute Zagreb</span>
+        <span><strong>Collaboration</strong> · Croatian National Bank</span>
+      </div>
     </div>
-    <div class="hero__meta">
-      <span><strong>Croatian Catholic University</strong> · Department of Communication Sciences</span>
-      <span><strong>Office</strong> · Ilica 242, Zagreb</span>
-    </div>
+    <aside class="hero__portrait">
+      <img src="/avatar.jpg" alt="Portrait of Luka Šikić" width="160" height="160" />
+      <div class="hero__portrait-meta">
+        <span class="eyebrow">Luka Šikić</span>
+        <span class="mono" style="font-size: 12px; color: var(--muted);">Zagreb · HR</span>
+      </div>
+    </aside>
   </section>
 
   <section class="section">
-    <SectionHeader num="01 — At a glance" title="Selected output" />
+    <SectionHeader num="01 — Focus" title="What I work on" />
+    <ul class="list">
+      {focus.map(f => (
+        <li>
+          <div class="pub">
+            <div class="pub__year">·</div>
+            <div>
+              <div class="pub__title">{f.title}</div>
+              <span class="pub__venue">{f.body}</span>
+            </div>
+            <div></div>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section">
+    <SectionHeader num="02 — Selected work" title="Recent projects" />
+    <ul class="list">
+      {selectedWork.map(w => (
+        <li>
+          <article class="pub">
+            <div class="pub__year">{w.year}</div>
+            <div>
+              {w.href
+                ? <a class="pub__title" href={w.href} target="_blank" rel="noopener">{w.title}</a>
+                : <div class="pub__title">{w.title}</div>}
+              <span class="pub__venue">{w.body}</span>
+            </div>
+            <div class="pub__links">
+              {w.href && <a href={w.href} target="_blank" rel="noopener">LINK</a>}
+            </div>
+          </article>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section">
+    <SectionHeader num="03 — At a glance" title="Output" />
     <div class="stats">
       <div class="stats__cell">
         <div class="stats__label">Publications</div>
@@ -39,14 +100,14 @@ const yearSpan = `${Math.min(...years)}–${Math.max(...years)}`;
         <span class="stats__sub">{yearSpan}</span>
       </div>
       <div class="stats__cell">
-        <div class="stats__label">Active projects</div>
-        <div class="stats__value">{projects.length}</div>
-        <span class="stats__sub">Open source</span>
-      </div>
-      <div class="stats__cell">
         <div class="stats__label">Doctorate</div>
         <div class="stats__value">2018</div>
-        <span class="stats__sub">FEB Zagreb · Wien</span>
+        <span class="stats__sub">Zagreb · Wien</span>
+      </div>
+      <div class="stats__cell">
+        <div class="stats__label">Languages</div>
+        <div class="stats__value mono" style="font-size: 22px;">EN · HR · DE</div>
+        <span class="stats__sub">EN bilingual, DE professional</span>
       </div>
       <div class="stats__cell">
         <div class="stats__label">Based in</div>
@@ -57,7 +118,7 @@ const yearSpan = `${Math.min(...years)}–${Math.max(...years)}`;
   </section>
 
   <section class="section">
-    <SectionHeader num="02 — Research" title="Recent publications" />
+    <SectionHeader num="04 — Research" title="Recent publications" />
     <ul class="list">
       {selectedPubs.map(p => <li><PublicationRow entry={p} /></li>)}
     </ul>
@@ -67,21 +128,22 @@ const yearSpan = `${Math.min(...years)}–${Math.max(...years)}`;
   </section>
 
   <section class="section">
-    <SectionHeader num="03 — Projects" title="Current work" />
-    <ul class="list">
-      {projects.map(p => <li><ProjectRow entry={p} /></li>)}
-    </ul>
+    <SectionHeader num="05 — Background" title="Path" />
+    <div class="prose" style="max-width: 65ch;">
+      <p>PhD in Economics, University of Zagreb and University of Vienna. MSc in International Economics (Kiel Institute) and MSc in Finance (Zagreb). About eight years as a researcher at the Institute of Social Sciences Ivo Pilar and the Faculty of Croatian Studies before joining the Croatian Catholic University. I publish in international and Croatian journals and speak regularly on advanced analytics and data-driven decision-making.</p>
+    </div>
   </section>
 
   <section class="section">
-    <SectionHeader num="04 — Interests" title="What I work on" />
-    <div style="display: flex; gap: var(--s-2); flex-wrap: wrap;">
-      <span class="tag">Artificial Intelligence & LLMs</span>
-      <span class="tag">Machine Learning</span>
-      <span class="tag">Natural Language Processing</span>
-      <span class="tag">Econometrics</span>
-      <span class="tag">Macroeconomics</span>
-      <span class="tag">Financial markets</span>
+    <SectionHeader num="06 — Get in touch" title="Workshops, consulting, collaborations" />
+    <div class="prose" style="max-width: 60ch;">
+      <p>If you have data you want turned into clear answers, or you'd like a workshop for your team, send a message — <a href="mailto:luka.sikic@unicath.hr">luka.sikic@unicath.hr</a>.</p>
+    </div>
+    <div style="display: flex; gap: var(--s-2); flex-wrap: wrap; margin-top: var(--s-5);">
+      <a class="btn btn--primary" href="mailto:luka.sikic@unicath.hr">Email</a>
+      <a class="btn" href="https://github.com/lusiki" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://scholar.google.com/citations?user=qOGfRvkAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+      <a class="btn" href="https://www.linkedin.com/in/luka-sikic-662ba869/" target="_blank" rel="noopener">LinkedIn</a>
     </div>
   </section>
 </Base>

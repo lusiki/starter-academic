@@ -81,6 +81,40 @@
 }
 .hero__meta span strong { color: var(--body); font-weight: var(--w-medium); }
 
+/* ---------- Hero with portrait ---------- */
+.hero--portrait {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: var(--s-7);
+  align-items: start;
+}
+.hero__main { min-width: 0; }
+.hero__portrait {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  align-items: flex-start;
+}
+.hero__portrait img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border: var(--bw) solid var(--hairline);
+  border-radius: var(--r-1);
+  filter: grayscale(0.1);
+}
+.hero__portrait-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+@media (max-width: 720px) {
+  .hero--portrait { grid-template-columns: 1fr; }
+  .hero__portrait { max-width: 160px; order: -1; }
+}
+
 /* ---------- Section header ---------- */
 .sec-head {
   display: grid;
