@@ -6,7 +6,7 @@ tags:
   - "media analysis"
   - "natural language processing"
   - "data science"
-external_link: "https://lusiki.github.io/DigiKat/"
+external_link: "https://lusiki.github.io/DigiKat/pages/"
 url_code: "https://github.com/lusiki/DigiKat"
 ---
 
