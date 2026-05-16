@@ -92,33 +92,7 @@ const selectedWork = [
   </section>
 
   <section class="section">
-    <SectionHeader num="03 — At a glance" title="Output" />
-    <div class="stats">
-      <div class="stats__cell">
-        <div class="stats__label">Publications</div>
-        <div class="stats__value">{totalPubs}</div>
-        <span class="stats__sub">{yearSpan}</span>
-      </div>
-      <div class="stats__cell">
-        <div class="stats__label">Doctorate</div>
-        <div class="stats__value">2018</div>
-        <span class="stats__sub">Zagreb · Wien</span>
-      </div>
-      <div class="stats__cell">
-        <div class="stats__label">Languages</div>
-        <div class="stats__value mono" style="font-size: 22px;">EN · HR · DE</div>
-        <span class="stats__sub">EN bilingual, DE professional</span>
-      </div>
-      <div class="stats__cell">
-        <div class="stats__label">Based in</div>
-        <div class="stats__value mono" style="font-size: 22px;">Zagreb</div>
-        <span class="stats__sub">Croatia</span>
-      </div>
-    </div>
-  </section>
-
-  <section class="section">
-    <SectionHeader num="04 — Research" title="Recent publications" />
+    <SectionHeader num="03 — Research" title="Recent publications" />
     <ul class="list">
       {selectedPubs.map(p => <li><PublicationRow entry={p} /></li>)}
     </ul>
@@ -128,14 +102,14 @@ const selectedWork = [
   </section>
 
   <section class="section">
-    <SectionHeader num="05 — Background" title="Path" />
+    <SectionHeader num="04 — Background" title="Path" />
     <div class="prose" style="max-width: 65ch;">
       <p>PhD in Economics, University of Zagreb and University of Vienna. MSc in International Economics (Kiel Institute) and MSc in Finance (Zagreb). About eight years as a researcher at the Institute of Social Sciences Ivo Pilar and the Faculty of Croatian Studies before joining the Croatian Catholic University. I publish in international and Croatian journals and speak regularly on advanced analytics and data-driven decision-making.</p>
     </div>
   </section>
 
   <section class="section">
-    <SectionHeader num="06 — Get in touch" title="Workshops, consulting, collaborations" />
+    <SectionHeader num="05 — Get in touch" title="Workshops, consulting, collaborations" />
     <div class="prose" style="max-width: 60ch;">
       <p>If you have data you want turned into clear answers, or you'd like a workshop for your team, send a message — <a href="mailto:luka.sikic@unicath.hr">luka.sikic@unicath.hr</a>.</p>
     </div>
