@@ -39,24 +39,6 @@ const selectedPubs = pubs.slice(0, 4);
   </section>
 
   <section class="section">
-    <SectionHeader num={s.home.focus} title={s.home.focusTitle} />
-    <ul class="list">
-      {s.home.focusItems.map(f => (
-        <li>
-          <div class="pub">
-            <div class="pub__year">·</div>
-            <div>
-              <div class="pub__title">{f.title}</div>
-              <span class="pub__venue">{f.body}</span>
-            </div>
-            <div></div>
-          </div>
-        </li>
-      ))}
-    </ul>
-  </section>
-
-  <section class="section">
     <SectionHeader num={s.home.selectedWork} title={s.home.selectedWorkTitle} />
     <ul class="list">
       {s.home.selectedWorkItems.map(w => (

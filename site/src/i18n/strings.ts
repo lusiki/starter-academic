@@ -17,7 +17,7 @@ export const strings = {
       eyebrow: '00 — Profile',
       heroTitle: 'At the intersection of data science, econometrics, and applied statistics.',
       bio1: `I'm an Assistant Professor of Statistics and Data Science at the <a href="https://www.unicath.hr/">Croatian Catholic University</a> in Zagreb, where I teach and lead research projects on digital media, economic dynamics, and machine learning.`,
-      bio2: `Alongside teaching, I take on collaborations and consulting where rigorous quantitative work matters — forecasting, causal analysis, media and text analytics, and turning messy data into something a team can actually act on.`,
+      bio2: `Day-to-day my toolkit spans time-series and financial econometrics, machine learning in R and Python, NLP-driven media monitoring and narrative analysis, and social and digital analytics for research and communications teams. The through-line is rigorous, reproducible quantitative work — forecasting, causal analysis, and turning messy data into something a team can actually act on.`,
       metaRole: 'Assistant Professor',
       metaRoleSub: 'Croatian Catholic University, Zagreb',
       metaWorkshops: 'Workshops',
@@ -34,8 +34,8 @@ export const strings = {
         { title: 'Social and digital analytics', body: 'For research groups and communications teams.' },
       ],
 
-      selectedWork: '02 — Selected work',
-      selectedWorkTitle: 'Recent projects',
+      selectedWork: '01 — Currently',
+      selectedWorkTitle: 'In progress',
       selectedWorkItems: [
         { year: '2025—27', title: 'Catholic themes in Croatian digital media', body: 'Structured database and NLP-driven thematic analysis. Project lead.', href: 'https://lusiki.github.io/DigiKat/pages/' },
         { year: '2024',    title: 'Mapping the Croatian National Bank across digital media', body: 'Coverage analysis of CNB presence in the Croatian media space.', href: 'https://raw.githack.com/lusiki/HNB-Media-Map/main/presentation.html#/title-slide' },
@@ -44,15 +44,15 @@ export const strings = {
         { year: '2023',    title: 'ESG effects on tourism, EU country panel', body: 'Panel-data study of ESG indicators in EU tourism economies.', href: undefined as string | undefined },
       ],
 
-      research: '03 — Research',
+      research: '02 — Research',
       researchTitle: 'Recent publications',
       allPubs: 'All publications →',
 
-      background: '04 — Background',
+      background: '03 — Background',
       backgroundTitle: 'Path',
       backgroundBody: `PhD in Economics, University of Zagreb and University of Vienna. MSc in International Economics (Kiel Institute) and MSc in Finance (Zagreb). About eight years as a researcher at the Institute of Social Sciences Ivo Pilar and the Faculty of Croatian Studies before joining the Croatian Catholic University. I publish in international and Croatian journals and speak regularly on advanced analytics and data-driven decision-making.`,
 
-      contact: '05 — Get in touch',
+      contact: '04 — Get in touch',
       contactTitle: 'Workshops, consulting, collaborations',
       contactBody: `If you have data you want turned into clear answers, or you'd like a workshop for your team, send a message — <a href="mailto:luka.sikic@unicath.hr">luka.sikic@unicath.hr</a>.`,
       btnEmail: 'Email',
@@ -124,7 +124,7 @@ export const strings = {
       eyebrow: '00 — Profil',
       heroTitle: 'Na sjecištu znanosti o podacima, ekonometrije i primijenjene statistike.',
       bio1: `Docent sam statistike i znanosti o podacima na <a href="https://www.unicath.hr/">Hrvatskom katoličkom sveučilištu</a> u Zagrebu, gdje predajem i vodim istraživačke projekte iz digitalnih medija, ekonomske dinamike i strojnog učenja.`,
-      bio2: `Uz nastavu prihvaćam suradnje i konzultantske angažmane gdje je važan rigorozan kvantitativan rad — prognoziranje, kauzalna analiza, medijska i tekstualna analitika te pretvaranje nesređenih podataka u nešto što tim može stvarno iskoristiti.`,
+      bio2: `U svakodnevnom radu kombiniram ekonometriju vremenskih serija i financijsku ekonometriju, strojno učenje u R-u i Pythonu, praćenje medija i analizu narativa temeljene na obradi prirodnog jezika te društvenu i digitalnu analitiku za istraživačke i komunikacijske timove. Zajednička nit je rigorozan, reproducibilan kvantitativan rad — prognoziranje, kauzalna analiza i pretvaranje nesređenih podataka u nešto što tim može stvarno iskoristiti.`,
       metaRole: 'Docent',
       metaRoleSub: 'Hrvatsko katoličko sveučilište, Zagreb',
       metaWorkshops: 'Radionice',
@@ -141,8 +141,8 @@ export const strings = {
         { title: 'Društvena i digitalna analitika', body: 'Za istraživačke skupine i komunikacijske timove.' },
       ],
 
-      selectedWork: '02 — Odabrani radovi',
-      selectedWorkTitle: 'Nedavni projekti',
+      selectedWork: '01 — Trenutno',
+      selectedWorkTitle: 'U radu',
       selectedWorkItems: [
         { year: '2025.—27.', title: 'Katoličke teme u hrvatskim digitalnim medijima', body: 'Strukturirana baza podataka i tematska analiza temeljena na obradi prirodnog jezika. Voditelj projekta.', href: 'https://lusiki.github.io/DigiKat/pages/' },
         { year: '2024.',     title: 'Mapiranje Hrvatske narodne banke u digitalnom medijskom prostoru', body: 'Analiza prisutnosti HNB-a u hrvatskom medijskom prostoru.', href: 'https://raw.githack.com/lusiki/HNB-Media-Map/main/presentation.html#/title-slide' },
@@ -151,15 +151,15 @@ export const strings = {
         { year: '2023.',     title: 'ESG učinci na turizam, panel zemalja EU-a', body: 'Studija ESG pokazatelja u turističkim ekonomijama EU-a metodom panel podataka.', href: undefined as string | undefined },
       ],
 
-      research: '03 — Istraživanje',
+      research: '02 — Istraživanje',
       researchTitle: 'Nedavne publikacije',
       allPubs: 'Sve publikacije →',
 
-      background: '04 — Pozadina',
+      background: '03 — Pozadina',
       backgroundTitle: 'Put',
       backgroundBody: `Doktorat iz ekonomije, Sveučilište u Zagrebu i Sveučilište u Beču. Magisterij iz međunarodne ekonomije (Kiel Institute) i magisterij iz financija (Zagreb). Otprilike osam godina kao istraživač na Institutu društvenih znanosti Ivo Pilar i Fakultetu hrvatskih studija prije prelaska na Hrvatsko katoličko sveučilište. Objavljujem u međunarodnim i hrvatskim časopisima te redovito predajem o naprednoj analitici i odlučivanju temeljenom na podacima.`,
 
-      contact: '05 — Kontakt',
+      contact: '04 — Kontakt',
       contactTitle: 'Radionice, konzultacije, suradnje',
       contactBody: `Ako imate podatke koje želite pretvoriti u jasne odgovore, ili biste željeli radionicu za svoj tim, javite se — <a href="mailto:luka.sikic@unicath.hr">luka.sikic@unicath.hr</a>.`,
       btnEmail: 'E-pošta',
