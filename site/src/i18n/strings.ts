@@ -37,6 +37,7 @@ export const strings = {
       selectedWork: '01 — Currently',
       selectedWorkTitle: 'In progress',
       selectedWorkItems: [
+        { year: '2026', title: 'Everything You Want to Know About the State and Public Policies in Croatia', body: 'University textbook on public choice and public-sector economics, applied to the Croatian context. With Milan Deskar-Škrbić and Petra Palić. CC BY 4.0.', href: 'https://lusiki.github.io/Javne-politike/' },
         { year: '2025—27', title: 'Catholic themes in Croatian digital media', body: 'Structured database and NLP-driven thematic analysis. Project lead.', href: 'https://lusiki.github.io/DigiKat/pages/' },
         { year: '2024',    title: 'Mapping the Croatian National Bank across digital media', body: 'Coverage analysis of CNB presence in the Croatian media space.', href: 'https://raw.githack.com/lusiki/HNB-Media-Map/main/presentation.html#/title-slide' },
         { year: '2023',    title: 'Stock–bond hedge breakdown, 2022–23 inflation shock', body: 'Markov-switching analysis of the classic 60/40 hedge failure.', href: 'https://raw.githack.com/lusiki/The-Breakdown-of-the-Classic-Portfolio-Hedge-A-Comprehensive-Markov-Switching-Analysis/main/paper/main_analysis.html' },
@@ -144,6 +145,7 @@ export const strings = {
       selectedWork: '01 — Trenutno',
       selectedWorkTitle: 'U radu',
       selectedWorkItems: [
+        { year: '2026.', title: 'Sve što želite znati o državi i javnim politikama u Hrvatskoj', body: 'Sveučilišni udžbenik o teoriji javnog izbora i ekonomici javnog sektora, primijenjen na hrvatski kontekst. S Milanom Deskar-Škrbićem i Petrom Palić. CC BY 4.0.', href: 'https://lusiki.github.io/Javne-politike/' },
         { year: '2025.—27.', title: 'Katoličke teme u hrvatskim digitalnim medijima', body: 'Strukturirana baza podataka i tematska analiza temeljena na obradi prirodnog jezika. Voditelj projekta.', href: 'https://lusiki.github.io/DigiKat/pages/' },
         { year: '2024.',     title: 'Mapiranje Hrvatske narodne banke u digitalnom medijskom prostoru', body: 'Analiza prisutnosti HNB-a u hrvatskom medijskom prostoru.', href: 'https://raw.githack.com/lusiki/HNB-Media-Map/main/presentation.html#/title-slide' },
         { year: '2023.',     title: 'Slom klasičnog dionica–obveznice hedža tijekom inflacijskog šoka 2022.–23.', body: 'Markov-switching analiza neuspjeha klasičnog 60/40 portfelja.', href: 'https://raw.githack.com/lusiki/The-Breakdown-of-the-Classic-Portfolio-Hedge-A-Comprehensive-Markov-Switching-Analysis/main/paper/main_analysis.html' },
