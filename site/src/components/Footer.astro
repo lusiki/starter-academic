@@ -1,11 +1,15 @@
 ---
+import { strings, type Lang } from '../i18n/strings';
+interface Props { lang?: Lang; }
+const { lang = 'en' } = Astro.props;
+const s = strings[lang];
 const year = new Date().getFullYear();
 ---
 <footer class="footer">
   <div class="footer__inner">
     <div>© {year} Luka Šikić</div>
     <div class="footer__links">
-      <a href="mailto:luka.sikic@unicath.hr">Email</a>
+      <a href="mailto:luka.sikic@unicath.hr">{s.home.btnEmail}</a>
       <a href="https://scholar.google.com/citations?user=qOGfRvkAAAAJ&hl=en">Scholar</a>
       <a href="https://github.com/lusiki">GitHub</a>
       <a href="https://www.linkedin.com/in/luka-sikic-662ba869/">LinkedIn</a>

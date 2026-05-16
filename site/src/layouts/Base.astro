@@ -3,11 +3,12 @@ import '../styles/colors_and_type.css';
 import '../styles/components.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-interface Props { title?: string; description?: string; }
-const { title = 'Luka Šikić', description = 'Economist by training, teaching data science and studying language.' } = Astro.props;
+import type { Lang } from '../i18n/strings';
+interface Props { title?: string; description?: string; lang?: Lang; }
+const { title = 'Luka Šikić', description = '', lang = 'en' } = Astro.props;
 ---
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -24,11 +25,11 @@ const { title = 'Luka Šikić', description = 'Economist by training, teaching d
   </script>
 </head>
 <body>
-  <Nav />
+  <Nav lang={lang} />
   <main class="container">
     <slot />
   </main>
-  <Footer />
+  <Footer lang={lang} />
   <script is:inline>
     (function () {
       const root = document.documentElement;

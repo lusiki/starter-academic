@@ -1,10 +1,12 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-interface Props { entry: CollectionEntry<'publications'>; }
-const { entry } = Astro.props;
+import type { Lang } from '../i18n/strings';
+interface Props { entry: CollectionEntry<'publications'>; lang?: Lang; }
+const { entry, lang = 'en' } = Astro.props;
 const d = entry.data;
 const year = d.date.getFullYear();
-const href = `/publications/${entry.slug}/`;
+const prefix = lang === 'hr' ? '/hr' : '';
+const href = `${prefix}/publications/${entry.slug}/`;
 ---
 <article class="pub">
   <div class="pub__year">{year}</div>

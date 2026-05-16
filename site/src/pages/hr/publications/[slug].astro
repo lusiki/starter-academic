@@ -1,11 +1,11 @@
 ---
-import Base from '../../layouts/Base.astro';
+import Base from '../../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
-import { strings, type Lang } from '../../i18n/strings';
+import { strings, type Lang } from '../../../i18n/strings';
 
-const lang: Lang = 'en';
+const lang: Lang = 'hr';
 const s = strings[lang];
-const prefix = lang === 'hr' ? '/hr' : '';
+const prefix = '/hr';
 
 export async function getStaticPaths() {
   const pubs = await getCollection('publications');
@@ -16,7 +16,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 const d = entry.data;
 const year = d.date.getFullYear();
-const abstract = (lang === 'hr' && d.abstract_hr) ? d.abstract_hr : d.abstract;
+const abstract = d.abstract_hr || d.abstract;
 ---
 <Base title={`${d.title} — Luka Šikić`} description={abstract?.slice(0, 200)} lang={lang}>
   <article class="prose" style="padding: var(--s-9) 0;">
@@ -25,7 +25,7 @@ const abstract = (lang === 'hr' && d.abstract_hr) ? d.abstract_hr : d.abstract;
     </div>
 
     <div class="eyebrow" style="margin-bottom: var(--s-4);">
-      {year} · {d.publication_type || 'Publication'}
+      {year} · {d.publication_type || 'Publikacija'}
     </div>
 
     <h1 style="font-size: 36px; line-height: 1.15; margin-bottom: var(--s-5); max-width: 28ch;">{d.title}</h1>
@@ -42,10 +42,10 @@ const abstract = (lang === 'hr' && d.abstract_hr) ? d.abstract_hr : d.abstract;
 
     <div style="display: flex; gap: var(--s-2); flex-wrap: wrap; margin-bottom: var(--s-7);">
       {d.url_pdf && <a class="btn" href={d.url_pdf} target="_blank" rel="noopener">PDF</a>}
-      {d.url_code && <a class="btn" href={d.url_code} target="_blank" rel="noopener">Code</a>}
+      {d.url_code && <a class="btn" href={d.url_code} target="_blank" rel="noopener">Kod</a>}
       {d.url_preprint && <a class="btn" href={d.url_preprint} target="_blank" rel="noopener">Preprint</a>}
-      {d.url_slides && <a class="btn" href={d.url_slides} target="_blank" rel="noopener">Slides</a>}
-      {d.url_project && <a class="btn" href={d.url_project} target="_blank" rel="noopener">Analysis</a>}
+      {d.url_slides && <a class="btn" href={d.url_slides} target="_blank" rel="noopener">Prezentacija</a>}
+      {d.url_project && <a class="btn" href={d.url_project} target="_blank" rel="noopener">Analiza</a>}
       {d.doi && <a class="btn" href={`https://doi.org/${d.doi}`} target="_blank" rel="noopener">DOI</a>}
     </div>
 

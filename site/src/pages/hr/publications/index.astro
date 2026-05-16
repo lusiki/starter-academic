@@ -1,11 +1,11 @@
 ---
-import Base from '../../layouts/Base.astro';
-import SectionHeader from '../../components/SectionHeader.astro';
-import PublicationRow from '../../components/PublicationRow.astro';
+import Base from '../../../layouts/Base.astro';
+import SectionHeader from '../../../components/SectionHeader.astro';
+import PublicationRow from '../../../components/PublicationRow.astro';
 import { getCollection } from 'astro:content';
-import { strings, type Lang } from '../../i18n/strings';
+import { strings, type Lang } from '../../../i18n/strings';
 
-const lang: Lang = 'en';
+const lang: Lang = 'hr';
 const s = strings[lang];
 
 const pubs = (await getCollection('publications')).sort(

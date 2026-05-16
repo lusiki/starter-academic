@@ -1,11 +1,11 @@
 ---
-import Base from '../../layouts/Base.astro';
+import Base from '../../../layouts/Base.astro';
 import { getCollection } from 'astro:content';
-import { strings, type Lang } from '../../i18n/strings';
+import { strings, type Lang } from '../../../i18n/strings';
 
-const lang: Lang = 'en';
+const lang: Lang = 'hr';
 const s = strings[lang];
-const prefix = lang === 'hr' ? '/hr' : '';
+const prefix = '/hr';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 const { entry } = Astro.props;
 const { Content } = await entry.render();
 const d = entry.data;
-const summary = (lang === 'hr' && d.summary_hr) ? d.summary_hr : d.summary;
+const summary = d.summary_hr || d.summary;
 ---
 <Base title={`${d.title} — Luka Šikić`} description={summary} lang={lang}>
   <article class="prose" style="padding: var(--s-9) 0;">
@@ -28,7 +28,7 @@ const summary = (lang === 'hr' && d.summary_hr) ? d.summary_hr : d.summary;
 
     <div style="display: flex; gap: var(--s-2); flex-wrap: wrap; margin-bottom: var(--s-7);">
       {d.external_link && <a class="btn btn--primary" href={d.external_link} target="_blank" rel="noopener">{s.projects.visit}</a>}
-      {d.url_code && <a class="btn" href={d.url_code} target="_blank" rel="noopener">Code</a>}
+      {d.url_code && <a class="btn" href={d.url_code} target="_blank" rel="noopener">Kod</a>}
       {d.url_pdf && <a class="btn" href={d.url_pdf} target="_blank" rel="noopener">PDF</a>}
     </div>
 

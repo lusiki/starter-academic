@@ -1,6 +1,7 @@
 ---
 title: "Income Convergence in Croatia"
 summary: "Open source investigation of Croatia's income convergence (2000–2024) across country groups using fractional integration and time series methods."
+summary_hr: "Open source istraživanje konvergencije dohotka Hrvatske (2000.–2024.) prema različitim skupinama zemalja metodama frakcionalne integracije i analize vremenskih serija."
 date: 2024-01-01
 tags:
   - "econometrics"

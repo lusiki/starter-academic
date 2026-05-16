@@ -1,0 +1,108 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeader from './SectionHeader.astro';
+import { strings, type Lang } from '../i18n/strings';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const s = strings[lang];
+const c = s.courses;
+
+const current = [
+  { term: '2025/26', code: lang === 'hr' ? 'PD · 5 ECTS' : 'UG · 5 ECTS',
+    title: 'New Media and Web Technologies',
+    inst: lang === 'hr' ? 'Hrvatsko katoličko sveučilište' : 'Croatian Catholic University',
+    description: c.newMedia,
+    href: 'https://lusiki.github.io/Novi-mediji-i-web-tehnologije/' },
+  { term: '2024/25', code: lang === 'hr' ? 'PD · 6 ECTS' : 'UG · 6 ECTS',
+    title: 'Fundamentals of Statistics',
+    inst: lang === 'hr' ? 'Hrvatsko katoličko sveučilište' : 'Croatian Catholic University',
+    description: c.stats,
+    href: 'https://lusiki.github.io/Osnove-statistike/' },
+];
+
+const previous = [
+  { term: '2021/22', code: lang === 'hr' ? 'Diplomski' : 'Graduate',
+    title: 'Data Processing',
+    inst: lang === 'hr' ? 'Fakultet hrvatskih studija, Zagreb' : 'Faculty of Croatian Studies, Zagreb',
+    description: c.data,
+    href: 'https://lusiki.github.io/WebObradaPodataka/' },
+  { term: '2021/22', code: lang === 'hr' ? 'Diplomski' : 'Graduate',
+    title: 'Learning Social Media Analytics',
+    inst: lang === 'hr' ? 'Fakultet hrvatskih studija, Zagreb' : 'Faculty of Croatian Studies, Zagreb',
+    description: c.social,
+    href: 'https://lusiki.github.io/Learning-Social-Media-Analytics/' },
+  { term: '2021/22', code: lang === 'hr' ? 'Diplomski' : 'Graduate',
+    title: 'Machine Text Processing',
+    inst: lang === 'hr' ? 'Fakultet hrvatskih studija, Zagreb' : 'Faculty of Croatian Studies, Zagreb',
+    description: c.text,
+    href: 'https://github.com/lusiki/Analiza-teksta' },
+  { term: '2020/21', code: lang === 'hr' ? 'PD' : 'UG',
+    title: 'Application of Statistics in Social Research',
+    inst: lang === 'hr' ? 'Fakultet hrvatskih studija, Zagreb' : 'Faculty of Croatian Studies, Zagreb',
+    description: c.statsSocial,
+    href: 'https://lusiki.github.io/WebStatistika/' },
+];
+---
+<Base title={s.teaching.title} lang={lang}>
+  <section class="hero" style="padding: var(--s-9) 0 var(--s-7);">
+    <span class="hero__eyebrow eyebrow">{s.teaching.eyebrow}</span>
+    <h1 class="hero__title" style="font-size: 44px; max-width: 24ch;">{s.teaching.heroTitle}</h1>
+    <p class="hero__lede" set:html={s.teaching.hero} />
+  </section>
+
+  <section class="section" style="padding-top: 0; border-top: none;">
+    <SectionHeader num={s.teaching.currentLabel} title={s.teaching.currentTitle} />
+    <ul class="list">
+      {current.map(co => (
+        <li>
+          <div class="teach">
+            <div class="teach__term">
+              <div>{co.term}</div>
+              <div style="margin-top: 2px; font-size: 11px; font-family: var(--font-mono); color: var(--muted);">{co.code}</div>
+            </div>
+            <div>
+              <div class="teach__course">
+                <a href={co.href} target="_blank" rel="noopener" style="border-bottom: 0;">{co.title}</a>
+              </div>
+              <span class="teach__inst">{co.inst}</span>
+              <p style="margin: var(--s-2) 0 0; font-size: 14px; color: var(--muted); max-width: 60ch; line-height: 1.55;">{co.description}</p>
+            </div>
+            <a class="teach__link" href={co.href} target="_blank" rel="noopener">{s.teaching.materials}</a>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section">
+    <SectionHeader num={s.teaching.previousLabel} title={s.teaching.previousTitle} />
+    <ul class="list">
+      {previous.map(co => (
+        <li>
+          <div class="teach">
+            <div class="teach__term">
+              <div>{co.term}</div>
+              <div style="margin-top: 2px; font-size: 11px; font-family: var(--font-mono); color: var(--muted);">{co.code}</div>
+            </div>
+            <div>
+              <div class="teach__course">
+                <a href={co.href} target="_blank" rel="noopener" style="border-bottom: 0;">{co.title}</a>
+              </div>
+              <span class="teach__inst">{co.inst}</span>
+              <p style="margin: var(--s-2) 0 0; font-size: 14px; color: var(--muted); max-width: 60ch; line-height: 1.55;">{co.description}</p>
+            </div>
+            <a class="teach__link" href={co.href} target="_blank" rel="noopener">{s.teaching.materials}</a>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section">
+    <SectionHeader num={s.teaching.workshopsLabel} title={s.teaching.workshopsTitle} />
+    <div class="prose" style="max-width: 60ch;">
+      <p set:html={s.teaching.workshopsBody} />
+    </div>
+  </section>
+</Base>

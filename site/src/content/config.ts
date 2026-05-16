@@ -9,6 +9,7 @@ const publications = defineCollection({
     publication: z.string().optional(),
     publication_short: z.string().optional(),
     abstract: z.string().optional(),
+    abstract_hr: z.string().optional(),
     tags: z.array(z.string()).default([]),
     publication_type: z.string().optional(),
     url_pdf: z.string().optional(),
@@ -31,6 +32,7 @@ const projects = defineCollection({
   schema: z.object({
     title: z.string(),
     summary: z.string().optional(),
+    summary_hr: z.string().optional(),
     date: z.coerce.date().optional(),
     tags: z.array(z.string()).default([]),
     external_link: z.string().optional(),
