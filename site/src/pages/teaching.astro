@@ -1,20 +1,56 @@
 ---
 import Base from '../layouts/Base.astro';
 import SectionHeader from '../components/SectionHeader.astro';
+
+const courses = [
+  {
+    term: '2025/26',
+    code: 'UG · 5 ECTS',
+    title: 'New Media and Web Technologies',
+    titleHr: 'Novi mediji i web tehnologije',
+    inst: 'Croatian Catholic University',
+    description: 'Guides communications students from foundational web infrastructure through contemporary digital tools and emerging technologies. Covers web fundamentals, content management systems, strategic communication planning, AI implications, and analytics. Students learn to critically evaluate, strategically plan, and practically implement web communication.',
+    href: 'https://lusiki.github.io/Novi-mediji-i-web-tehnologije/',
+  },
+];
 ---
 <Base title="Teaching — Luka Šikić">
   <section class="hero" style="padding: var(--s-9) 0 var(--s-7);">
     <span class="hero__eyebrow eyebrow">04 — Teaching</span>
     <h1 class="hero__title" style="font-size: 44px; max-width: 24ch;">Courses</h1>
-    <p class="hero__lede">I teach statistics, multivariate methods, data science for social scientists, and an introduction to natural language processing and large language models at the Croatian Catholic University.</p>
+    <p class="hero__lede">Statistics, data science, and digital media at the Croatian Catholic University. Course materials are public — code and exercises on <a href="https://github.com/lusiki" target="_blank" rel="noopener">GitHub</a>.</p>
   </section>
 
   <section class="section" style="padding-top: 0; border-top: none;">
-    <SectionHeader num="—" title="Course list coming soon" />
-    <p style="color: var(--muted); max-width: var(--measure);">
-      Syllabi and materials will be added here. For now, find course material on
-      <a href="https://github.com/lusiki" target="_blank" rel="noopener">GitHub</a>
-      or email me at <a href="mailto:luka.sikic@unicath.hr">luka.sikic@unicath.hr</a>.
-    </p>
+    <SectionHeader num={`${courses.length} course${courses.length !== 1 ? 's' : ''}`} title="Current" />
+    <ul class="list">
+      {courses.map(c => (
+        <li>
+          <div class="teach">
+            <div class="teach__term">
+              <div>{c.term}</div>
+              <div style="margin-top: 2px; font-size: 11px;">{c.code}</div>
+            </div>
+            <div>
+              <div class="teach__course">
+                <a href={c.href} target="_blank" rel="noopener" style="border-bottom: 0;">
+                  {c.title}
+                </a>
+              </div>
+              <span class="teach__inst">{c.inst}</span>
+              <p style="margin: var(--s-2) 0 0; font-size: 14px; color: var(--muted); max-width: 60ch; line-height: 1.55;">{c.description}</p>
+            </div>
+            <a class="teach__link" href={c.href} target="_blank" rel="noopener">Materials →</a>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </section>
+
+  <section class="section">
+    <SectionHeader num="—" title="Workshops" />
+    <div class="prose" style="max-width: 60ch;">
+      <p>I run analytics workshops for institutions and organisations, including the <strong>Economic Institute Zagreb</strong>. Topics include applied econometrics, machine learning for non-specialists, and data-driven decision-making. Get in touch at <a href="mailto:luka.sikic@unicath.hr">luka.sikic@unicath.hr</a> to discuss.</p>
+    </div>
   </section>
 </Base>
