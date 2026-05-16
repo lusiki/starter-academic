@@ -1,0 +1,401 @@
+// =============================================================================
+// Modern Academic — Vercel/Linear/Geist-inspired minimal theme
+// Grayscale + single blue accent (hover/active/focus only)
+// Hairline borders, no shadows, near-sharp corners, Geist + Geist Mono
+// =============================================================================
+
+// ---------------------------------------------------------------------------
+// TOKENS
+// ---------------------------------------------------------------------------
+:root {
+  --bg:        #FFFFFF;
+  --surface:   #FAFAFA;
+  --body:      #171717;
+  --muted:     #737373;
+  --hairline:  #E5E5E5;
+  --accent:    #2563EB;
+
+  --font-sans: 'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
+
+  --tracking-tight: -0.02em;
+  --tracking-mono:   0.10em;
+  --tracking-mono-s: 0.04em;
+
+  --t-fast: 120ms;
+  --ease:   cubic-bezier(0.2, 0, 0, 1);
+}
+
+.dark {
+  --bg:       #0A0A0A;
+  --surface:  #111111;
+  --body:     #EDEDED;
+  --muted:    #8A8A8A;
+  --hairline: #1F1F1F;
+  --accent:   #60A5FA;
+}
+
+// ---------------------------------------------------------------------------
+// GLOBAL DEFAULTS
+// ---------------------------------------------------------------------------
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--body);
+  font-family: var(--font-sans);
+  font-feature-settings: 'tnum' 1, 'cv11' 1; // tabular numerals everywhere
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.dark body { background: var(--bg); color: var(--body); }
+
+p, li, td, th, dd, dt, blockquote {
+  color: var(--body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sans);
+  color: var(--body);
+  letter-spacing: var(--tracking-tight);
+  font-weight: 600;
+}
+
+a {
+  color: var(--body);
+  border-bottom: 1px solid transparent;
+  transition: color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
+  &:hover, &:focus-visible {
+    color: var(--accent);
+    text-decoration: none;
+  }
+}
+
+::selection { background: var(--accent); color: #fff; }
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+// ---------------------------------------------------------------------------
+// NAVBAR — flat, hairline bottom, mono links
+// ---------------------------------------------------------------------------
+.navbar {
+  background: color-mix(in oklab, var(--bg) 92%, transparent) !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid var(--hairline);
+  backdrop-filter: saturate(160%) blur(8px);
+  -webkit-backdrop-filter: saturate(160%) blur(8px);
+}
+
+.navbar-brand {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: var(--tracking-mono-s);
+  text-transform: lowercase;
+  color: var(--body) !important;
+}
+
+.navbar-light .navbar-nav > .nav-item > a,
+.navbar-dark  .navbar-nav > .nav-item > a {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-mono);
+  color: var(--muted) !important;
+  transition: color var(--t-fast) var(--ease);
+
+  &:hover, &.active {
+    color: var(--accent) !important;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// HOME SECTIONS — generous whitespace, hairline dividers
+// ---------------------------------------------------------------------------
+.home-section {
+  padding: 96px 0;
+  border-top: 1px solid var(--hairline);
+
+  &:first-of-type { border-top: none; padding-top: 120px; }
+  &.dark { background: var(--bg) !important; }
+}
+
+// Kill the alternating gray band — both odd/even white
+.home-section:nth-of-type(even) { background: var(--bg) !important; }
+
+.section-heading h1 {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  border-bottom: none !important;
+  padding-bottom: 0;
+  display: block;
+}
+
+// Numbered mono eyebrow above section headings, via ::before on .section-heading
+.section-heading {
+  position: relative;
+  padding-bottom: 24px;
+  margin-bottom: 32px;
+  border-bottom: 1px solid var(--hairline);
+
+  &::before {
+    content: "";
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: var(--tracking-mono);
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 8px;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// ABOUT / BIOGRAPHY
+// ---------------------------------------------------------------------------
+#about {
+  .portrait-title {
+    h2 {
+      font-size: 40px;
+      font-weight: 600;
+      letter-spacing: var(--tracking-tight);
+      line-height: 1.1;
+      margin-bottom: 8px;
+    }
+    h3 {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: var(--tracking-mono);
+      color: var(--muted);
+      font-weight: 400;
+    }
+  }
+
+  .avatar-circle {
+    border: 1px solid var(--hairline);
+    box-shadow: none !important;
+    border-radius: 50%; // keep avatar round
+    &:hover { transform: none; box-shadow: none !important; }
+  }
+
+  .network-icon a {
+    font-size: 18px;
+    color: var(--muted);
+    transition: color var(--t-fast) var(--ease);
+    &:hover { color: var(--accent); transform: none; }
+  }
+
+  .col-md-7 {
+    font-size: 17px;
+    line-height: 1.6;
+    color: var(--body);
+  }
+}
+
+// Interests / Education headers
+.row .col-md-5 h3 {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-mono);
+  color: var(--muted) !important;
+  margin-bottom: 16px;
+}
+
+// ---------------------------------------------------------------------------
+// CARDS — no shadow, no radius, hairline border
+// ---------------------------------------------------------------------------
+.card {
+  background: var(--bg);
+  border: 1px solid var(--hairline) !important;
+  border-radius: 2px !important;
+  box-shadow: none !important;
+  transition: border-color var(--t-fast) var(--ease);
+
+  &:hover {
+    box-shadow: none !important;
+    transform: none !important;
+    border-color: var(--accent) !important;
+  }
+}
+.dark .card { background: var(--surface); }
+
+// ---------------------------------------------------------------------------
+// EXPERIENCE TIMELINE — hairline left bar instead of brand-color slab
+// ---------------------------------------------------------------------------
+.experience .card {
+  border-left: 1px solid var(--hairline) !important;
+  border-radius: 0 !important;
+
+  &:hover { border-left-color: var(--accent) !important; }
+
+  .card-body h4 {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--body);
+  }
+  .card-body .company {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-mono-s);
+    color: var(--muted) !important;
+    font-weight: 400;
+  }
+  .card-body .date,
+  .card-body .meta {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--muted);
+  }
+}
+
+// ---------------------------------------------------------------------------
+// PUBLICATIONS — hairline-divided rows
+// ---------------------------------------------------------------------------
+.pub-list-item {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--hairline) !important;
+  background: transparent !important;
+  transition: none;
+
+  &:hover { background: transparent !important; }
+
+  .article-metadata,
+  .pub-authors,
+  .pub-publication {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    letter-spacing: var(--tracking-mono-s);
+    color: var(--muted);
+  }
+
+  h3, .article-title {
+    font-size: 17px;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    a { color: var(--body); &:hover { color: var(--accent); } }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// PROJECTS
+// ---------------------------------------------------------------------------
+.project-card,
+.isotope-item .card {
+  border-radius: 2px !important;
+  overflow: hidden;
+}
+
+// ---------------------------------------------------------------------------
+// CONTACT
+// ---------------------------------------------------------------------------
+#contact {
+  .fa, .fas, .fab {
+    color: var(--muted) !important;
+    transition: color var(--t-fast) var(--ease);
+  }
+  a:hover .fa,
+  a:hover .fas,
+  a:hover .fab { color: var(--accent) !important; }
+}
+
+// ---------------------------------------------------------------------------
+// BUTTONS — flat, hairline, accent on hover
+// ---------------------------------------------------------------------------
+.btn {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-mono-s);
+  border-radius: 2px !important;
+  padding: 8px 14px;
+  box-shadow: none !important;
+  transition: color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
+
+  &:hover { box-shadow: none !important; transform: none !important; }
+}
+
+.btn-outline-primary {
+  border: 1px solid var(--hairline) !important;
+  color: var(--body) !important;
+  background: transparent !important;
+  &:hover {
+    border-color: var(--accent) !important;
+    color: var(--accent) !important;
+    background: transparent !important;
+  }
+}
+
+.btn-primary {
+  background: var(--body) !important;
+  border: 1px solid var(--body) !important;
+  color: var(--bg) !important;
+  &:hover {
+    background: var(--accent) !important;
+    border-color: var(--accent) !important;
+    color: #fff !important;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// FOOTER
+// ---------------------------------------------------------------------------
+.site-footer {
+  border-top: 1px solid var(--hairline);
+  padding: 48px 0;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  background: var(--bg);
+
+  a { color: var(--muted); &:hover { color: var(--accent); } }
+}
+.powered-by { font-size: 11px; opacity: 0.7; }
+
+// ---------------------------------------------------------------------------
+// SEARCH
+// ---------------------------------------------------------------------------
+#search-box #search-query {
+  border-radius: 2px;
+  border: 1px solid var(--hairline);
+  font-family: var(--font-sans);
+}
+
+// ---------------------------------------------------------------------------
+// TEACHING / GENERIC LINK LISTS
+// ---------------------------------------------------------------------------
+#teaching a {
+  font-weight: 500;
+  &:hover { color: var(--accent); }
+}
+
+// ---------------------------------------------------------------------------
+// MONO HELPERS — usable from markdown via raw HTML
+// ---------------------------------------------------------------------------
+.mono { font-family: var(--font-mono); font-feature-settings: 'tnum' 1; }
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-mono);
+  color: var(--muted);
+  font-weight: 400;
+}
+
+// ---------------------------------------------------------------------------
+// RESPONSIVE
+// ---------------------------------------------------------------------------
+@media (max-width: 768px) {
+  .home-section { padding: 64px 0; &:first-of-type { padding-top: 80px; } }
+  #about .portrait-title h2 { font-size: 32px; }
+  .section-heading h1 { font-size: 22px; }
+}

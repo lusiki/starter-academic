@@ -1,0 +1,11 @@
+# Modern Academic — Geist + Geist Mono (Vercel)
+# Full Latin Extended coverage for Croatian diacritics (č ć đ š ž).
+
+name = "Modern Academic"
+
+google_fonts = "Geist:wght@400;500;600;700|Geist+Mono:wght@400;500"
+
+heading_font = "Geist, ui-sans-serif, system-ui, -apple-system, sans-serif"
+body_font    = "Geist, ui-sans-serif, system-ui, -apple-system, sans-serif"
+nav_font     = "Geist Mono, ui-monospace, SF Mono, Menlo, monospace"
+mono_font    = "Geist Mono, ui-monospace, SF Mono, Menlo, monospace"

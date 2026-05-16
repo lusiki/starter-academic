@@ -1,9 +1,8 @@
-module github.com/lusiki/starter-academic
+module github.com/wowchemy/starter-academic
 
-go 1.19
+go 1.15
 
 require (
-	github.com/HugoBlox/kit/modules/integrations/netlify v0.0.0-20260102210655-66cba27dc652
-	github.com/HugoBlox/kit/modules/blox v0.0.0-20260219145709-764756ab501c
-	github.com/HugoBlox/kit/modules/slides v0.0.0-20260219151239-9965378d1853
+	github.com/wowchemy/wowchemy-hugo-modules/netlify-cms-academic v0.0.0-20201120231609-58c7dd7a0a2b // indirect
+	github.com/wowchemy/wowchemy-hugo-modules/wowchemy v0.0.0-20201120231609-58c7dd7a0a2b
 )
