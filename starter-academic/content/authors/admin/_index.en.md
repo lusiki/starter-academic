@@ -6,7 +6,7 @@ title: Luka Sikic
 superuser: true
 
 # Role/position
-role: Assistant Professor
+role: Data science & language
 
 # Organizations/Affiliations
 organizations:
@@ -14,12 +14,13 @@ organizations:
   url: "https://www.unicath.hr/odjeli-i-fakultet/nastavnici/luka-sikic"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research spans data science, machine learning, econometrics, and natural language processing.
+bio: Economist by training, teaching data science and studying language.
 
 interests:
+- Artificial Intelligence and Large Language Models
 - Machine Learning and Data Science
-- Econometrics and Quantitative Modeling
 - Natural Language Processing
+- Econometrics and Quantitative Modeling
 - Macroeconomics and Financial Markets
 
 education:
@@ -64,10 +65,15 @@ user_groups:
 - Visitors
 ---
 
-I am an Assistant Professor at the [Department of Communication Sciences](https://www.unicath.hr/), Croatian Catholic University in Zagreb. My work sits at the intersection of data science, econometrics, and applied statistics. I teach courses in statistics, data science, multivariate methods, and natural language processing, and I bring applied research into the classroom through ongoing work in machine learning, financial econometrics, and computational text analysis.
+I'm an economist by training who now spends most of his time teaching data science and studying language. I work at the [Department of Communication Sciences](https://www.unicath.hr/), Croatian Catholic University in Zagreb, where I teach statistics, multivariate methods, data science for social scientists, and an introduction to natural language processing and large language models.
 
-Before joining the university I spent eight years as a researcher at the Institute of Social Sciences Ivo Pilar and the Faculty of Croatian Studies, working on problems in financial econometrics and empirical social research. I hold a PhD in Economics from the University of Zagreb, with doctoral training at the Vienna Graduate School of Economics and the Kiel Institute for the World Economy.
+Before this I spent eight years at the Institute of Social Sciences Ivo Pilar and the Faculty of Croatian Studies, working on financial econometrics and applied social research. I did my doctoral work in economics at the University of Zagreb, with training at the Vienna Graduate School of Economics and the Kiel Institute for the World Economy.
 
-I currently lead an academic project analyzing Catholic themes in Croatian digital media (2025 to 2027), building a structured database of digital publications for thematic research. Explore the [project here](https://lusiki.github.io/DigiKat/). I also maintain an open source project on Croatia's income convergence (2000 to 2024), using fractional integration and time series methods across country groups. The code and data are available on [GitHub](https://github.com/lusiki/Convergence).
+These days I work on two things:
 
-I am committed to open source research tools and reproducible analysis. All of my course materials are publicly available, and I encourage students and collaborators to engage with data transparently and critically.
+- **[DigiKat](https://lusiki.github.io/DigiKat/)** (2025–2027) — a structured database of Catholic themes in Croatian digital media, which I lead. The project is part empirical media research, part applied NLP.
+- **Religious disinformation** — a critical analysis of how religious claims circulate and distort online, with Lana Ciboci Perša and team.
+
+On the side I keep an open project on [Croatia's income convergence, 2000–2024](https://github.com/lusiki/Convergence), using fractional integration and long-memory time series methods.
+
+I write code in the open, share course materials publicly, and expect students to engage with data the same way I do — critically, and with a working IDE.
