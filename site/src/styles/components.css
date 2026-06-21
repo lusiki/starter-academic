@@ -84,7 +84,7 @@
 /* ---------- Hero with portrait ---------- */
 .hero--portrait {
   display: grid;
-  grid-template-columns: 1fr 200px;
+  grid-template-columns: 1fr 240px;
   gap: var(--s-7);
   align-items: start;
 }
@@ -112,7 +112,7 @@
 }
 @media (max-width: 720px) {
   .hero--portrait { grid-template-columns: 1fr; }
-  .hero__portrait { max-width: 160px; order: -1; }
+  .hero__portrait { max-width: 200px; order: -1; }
 }
 
 /* ---------- Section header ---------- */
@@ -309,4 +309,23 @@
   .stats__cell:nth-child(2n) { border-right: 0; }
   .stats__cell { border-right: var(--bw) solid var(--hairline); border-bottom: var(--bw) solid var(--hairline); }
   .hero__title { font-size: 40px; }
+}
+
+/* ---------- Mobile nav: keep the page static, shrink the tabs ---------- */
+@media (max-width: 600px) {
+  :root { --gutter: 16px; }
+
+  .nav { height: auto; }
+  .nav__inner {
+    flex-wrap: wrap;
+    row-gap: var(--s-2);
+    padding-top: var(--s-3);
+    padding-bottom: var(--s-3);
+  }
+  .nav__links {
+    flex: 1 1 100%;
+    flex-wrap: wrap;
+    gap: var(--s-3) var(--s-4);
+  }
+  .nav__link { font-size: 10px; }
 }
