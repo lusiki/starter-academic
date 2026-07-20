@@ -18,7 +18,8 @@ const selectedPubs = pubs.slice(0, 4);
   <section class="hero hero--portrait">
     <div class="hero__main">
       <span class="hero__eyebrow eyebrow">{s.home.eyebrow}</span>
-      <h1 class="visually-hidden">Luka Šikić</h1>
+      <h1 class="hero__title hero__title--home">{s.home.heroTitle}</h1>
+      <p class="visually-hidden">Luka Šikić</p>
       <div class="prose" style="max-width: 60ch;">
         <p set:html={s.home.bio1} />
         <p set:html={s.home.bio2} />
@@ -28,7 +29,7 @@ const selectedPubs = pubs.slice(0, 4);
       </div>
     </div>
     <aside class="hero__portrait">
-      <img src="/avatar.png" alt="Luka Šikić" width="240" height="240" />
+      <img src="/avatar.png" alt="Luka Šikić" width="320" height="320" />
       <div class="hero__portrait-meta">
         <span class="eyebrow">Luka Šikić</span>
         <span class="mono" style="font-size: 12px; color: var(--muted);">Zagreb · HR</span>

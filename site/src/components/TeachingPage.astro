@@ -104,5 +104,29 @@ const previous = [
     <div class="prose" style="max-width: 60ch;">
       <p set:html={s.teaching.workshopsBody} />
     </div>
+    <ul class="list" style="margin-top: var(--s-6);">
+      {s.teaching.workshopItems.map(w => (
+        <li>
+          <div class="teach">
+            <div class="teach__term">
+              <div>{w.term}</div>
+              <div style="margin-top: 2px; font-size: 11px; font-family: var(--font-mono); color: var(--muted);">{w.code}</div>
+            </div>
+            <div>
+              <div class="teach__course">
+                <a href={w.links[0].href} target="_blank" rel="noopener" style="border-bottom: 0;">{w.title}</a>
+              </div>
+              <span class="teach__inst">{w.inst}</span>
+              <p style="margin: var(--s-2) 0 0; font-size: 14px; color: var(--muted); max-width: 60ch; line-height: 1.55;">{w.description}</p>
+            </div>
+            <div class="teach__links">
+              {w.links.map(l => (
+                <a class="teach__link" href={l.href} target="_blank" rel="noopener">{l.label}</a>
+              ))}
+            </div>
+          </div>
+        </li>
+      ))}
+    </ul>
   </section>
 </Base>
