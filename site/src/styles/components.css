@@ -88,8 +88,6 @@
   gap: var(--s-7);
   align-items: start;
 }
-/* Home headline runs wider than the default 14ch display measure. */
-.hero__title--home { max-width: 22ch; }
 .hero__main { min-width: 0; }
 .hero__portrait {
   display: flex;
