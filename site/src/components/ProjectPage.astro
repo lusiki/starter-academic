@@ -1,0 +1,42 @@
+---
+import Base from '../layouts/Base.astro';
+import { render, type CollectionEntry } from 'astro:content';
+import { strings, type Lang } from '../i18n/strings';
+
+interface Props {
+  lang: Lang;
+  entry: CollectionEntry<'projects'>;
+}
+
+const { lang, entry } = Astro.props;
+const s = strings[lang];
+const prefix = lang === 'hr' ? '/hr' : '';
+const { Content } = await render(entry);
+const d = entry.data;
+const title = (lang === 'hr' && d.title_hr) ? d.title_hr : d.title;
+const summary = (lang === 'hr' && d.summary_hr) ? d.summary_hr : d.summary;
+---
+<Base title={`${title} — Luka Šikić`} description={summary} lang={lang}>
+  <article class="prose detail-page">
+    <div class="detail-page__back">
+      <a href={`${prefix}/projects/`} class="eyebrow">{s.projects.back}</a>
+    </div>
+
+    <h1 class="detail-page__title">{title}</h1>
+    {summary && <p class="hero__lede detail-page__summary">{summary}</p>}
+
+    <div class="detail-page__actions">
+      {d.external_link && <a class="btn btn--primary" href={d.external_link} target="_blank" rel="noopener">{s.projects.visit}</a>}
+      {d.url_code && <a class="btn" href={d.url_code} target="_blank" rel="noopener">{lang === 'hr' ? 'Kod' : 'Code'}</a>}
+      {d.url_pdf && <a class="btn" href={d.url_pdf} target="_blank" rel="noopener">PDF</a>}
+    </div>
+
+    {d.tags.length > 0 && (
+      <div class="detail-page__tags">
+        {d.tags.map(tag => <span class="tag">{tag}</span>)}
+      </div>
+    )}
+
+    {lang === 'hr' && d.body_hr ? <p>{d.body_hr}</p> : <Content />}
+  </article>
+</Base>

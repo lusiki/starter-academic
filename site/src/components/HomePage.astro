@@ -1,0 +1,120 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeader from './SectionHeader.astro';
+import PublicationRow from './PublicationRow.astro';
+import { getCollection } from 'astro:content';
+import { strings, type Lang } from '../i18n/strings';
+import { currentWork, localize } from '../data/portfolio';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const s = strings[lang];
+const prefix = lang === 'hr' ? '/hr' : '';
+
+const pubs = (await getCollection('publications')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const selectedPubs = pubs.slice(0, 4);
+const featuredWork = currentWork.filter(item => item.featured);
+
+function workHref(href?: string): string | undefined {
+  if (!href || lang === 'en' || !href.startsWith('/')) return href;
+  return `/hr${href}`;
+}
+---
+<Base title={s.home.title} description={s.home.description} lang={lang}>
+  <section class="hero hero--portrait">
+    <div class="hero__main">
+      <span class="hero__eyebrow eyebrow">{s.home.eyebrow}</span>
+      <h1 class="visually-hidden">Luka Šikić</h1>
+      <div class="prose" style="max-width: 60ch;">
+        <p set:html={s.home.bio1} />
+        <p set:html={s.home.bio2} />
+      </div>
+      <div class="hero__meta">
+        <span><strong>{s.home.metaRole}</strong> · {s.home.metaRoleSub}</span>
+      </div>
+    </div>
+    <aside class="hero__portrait">
+      <img src="/avatar.png" alt="Luka Šikić" width="320" height="320" fetchpriority="high" />
+      <div class="hero__portrait-meta">
+        <span class="eyebrow">Luka Šikić</span>
+        <span class="mono" style="font-size: 12px; color: var(--muted);">Zagreb · HR</span>
+      </div>
+    </aside>
+  </section>
+
+  <section class="section">
+    <SectionHeader num={s.home.selectedWork} title={s.home.selectedWorkTitle} />
+    <ul class="list">
+      {featuredWork.map(item => {
+        const href = workHref(item.href);
+        const external = href?.startsWith('http');
+        return (
+          <li>
+            <article class="pub">
+              <div class="pub__year">{localize(item.year, lang)}</div>
+              <div>
+                {href
+                  ? (
+                    <a
+                      class="pub__title"
+                      href={href}
+                      target={external ? '_blank' : undefined}
+                      rel={external ? 'noopener' : undefined}
+                    >
+                      {localize(item.title, lang)}
+                    </a>
+                  )
+                  : <div class="pub__title">{localize(item.title, lang)}</div>}
+                <span class="pub__venue">{localize(item.body, lang)}</span>
+              </div>
+              <div class="pub__links">
+                {href && (
+                  <a
+                    href={href}
+                    target={external ? '_blank' : undefined}
+                    rel={external ? 'noopener' : undefined}
+                    aria-label={`${s.common.open}: ${localize(item.title, lang)}`}
+                  >
+                    {s.common.open}
+                  </a>
+                )}
+              </div>
+            </article>
+          </li>
+        );
+      })}
+    </ul>
+  </section>
+
+  <section class="section">
+    <SectionHeader num={s.home.research} title={s.home.researchTitle} />
+    <ul class="list">
+      {selectedPubs.map(p => <li><PublicationRow entry={p} lang={lang} /></li>)}
+    </ul>
+    <div style="margin-top: var(--s-5);">
+      <a href={`${prefix}/publications/`} class="btn">{s.home.allPubs}</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <SectionHeader num={s.home.background} title={s.home.backgroundTitle} />
+    <div class="prose" style="max-width: 65ch;">
+      <p>{s.home.backgroundBody}</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <SectionHeader num={s.home.contact} title={s.home.contactTitle} />
+    <div class="prose" style="max-width: 60ch;">
+      <p set:html={s.home.contactBody} />
+    </div>
+    <div style="display: flex; gap: var(--s-2); flex-wrap: wrap; margin-top: var(--s-5);">
+      <a class="btn btn--primary" href="mailto:luka.sikic@unicath.hr">{s.home.btnEmail}</a>
+      <a class="btn" href="https://github.com/lusiki" target="_blank" rel="noopener">{s.home.btnGithub}</a>
+      <a class="btn" href="https://scholar.google.com/citations?user=qOGfRvkAAAAJ&hl=en" target="_blank" rel="noopener">{s.home.btnScholar}</a>
+      <a class="btn" href="https://www.linkedin.com/in/luka-sikic-662ba869/" target="_blank" rel="noopener">{s.home.btnLinkedin}</a>
+    </div>
+  </section>
+</Base>

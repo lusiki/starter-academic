@@ -1,7 +1,13 @@
 ---
 title: "DigiKat — Catholic Themes in Croatian Digital Media"
+title_hr: "DigiKat — katoličke teme u hrvatskim digitalnim medijima"
 summary: "Analysis of Catholic themes in the Croatian digital media landscape (2025–2027). Building a structured database of digital publications for thematic research."
 summary_hr: "Analiza katoličkih tema u hrvatskom digitalnom medijskom prostoru (2025.–2027.). Izrada strukturirane baze podataka digitalnih medijskih publikacija za tematska istraživanja."
+body_hr: >-
+  Akademski istraživački projekt koji analizira katoličke teme u hrvatskom
+  digitalnom medijskom prostoru. Projekt prikuplja i organizira digitalne
+  medijske objave u opsežnu bazu podataka te provodi tematska istraživanja
+  metodama obrade prirodnog jezika i računalne analize teksta.
 date: 2025-01-01
 tags:
   - "media analysis"

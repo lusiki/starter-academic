@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Luka Šikić">
+<meta name="dcterms.date" content="2026-07-23">
+
+<title>How Economics Absorbed AI</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-06c24323d517682b634abf9cd2a75031.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-abba37111a90094c810d6d81738f004c.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-6747ae0308e14b7ba509f3e87cec1a5c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-7d5974a88db6441316dd1ce1db64f680.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+
+
+<!-- lukasikic.info integration -->
+<meta name="description" content="An evidence-based retrospective and forecast of how economics is absorbing artificial intelligence.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Luka Šikić">
+<meta property="og:title" content="How Economics Absorbed AI">
+<meta property="og:description" content="An evidence-based retrospective and forecast of how economics is absorbing artificial intelligence.">
+<meta property="og:url" content="https://www.lukasikic.info/ai/">
+<meta property="og:image" content="https://www.lukasikic.info/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.lukasikic.info/ai/">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">How Economics Absorbed AI</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
+<span class="menu-text">Scenario</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-endings" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Endings</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-endings">    
+        <li>
+    <a class="dropdown-item" href="./endings/audit.html">
+ <span class="dropdown-text">A · The audit ending</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./endings/flood.html">
+ <span class="dropdown-text">B · The flood ending</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-supplements" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Supplements</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-supplements">    
+        <li>
+    <a class="dropdown-item" href="./supplements/predictions.html">
+ <span class="dropdown-text">Predictions scoreboard</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./supplements/model.html">
+ <span class="dropdown-text">A model of verified judgment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./supplements/coverage.html">
+ <span class="dropdown-text">Coverage</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./supplements/timeline.html">
+ <span class="dropdown-text">Timeline</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./supplements/method.html">
+ <span class="dropdown-text">Method</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="/" aria-label="Return to lukasikic.info">
+      <span class="menu-text">lukasikic.info</span>
+    </a>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lusiki/AI_econ_resources"> <i class="bi bi-github" role="img" aria-label="Repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#part-1-the-retrospective" id="toc-part-1-the-retrospective" class="nav-link active" data-scroll-target="#part-1-the-retrospective">Part 1 · The retrospective</a>
+  <ul class="collapse">
+  <li><a href="#the-productivity-ledger-opens" id="toc-the-productivity-ledger-opens" class="nav-link" data-scroll-target="#the-productivity-ledger-opens">2024, the productivity ledger opens</a></li>
+  <li><a href="#h1-the-task-arithmetic-starts-to-break" id="toc-h1-the-task-arithmetic-starts-to-break" class="nav-link" data-scroll-target="#h1-the-task-arithmetic-starts-to-break">2025 H1, the task arithmetic starts to break</a></li>
+  <li><a href="#h2-the-brokers-arrive-and-knowledge-starts-to-compile" id="toc-h2-the-brokers-arrive-and-knowledge-starts-to-compile" class="nav-link" data-scroll-target="#h2-the-brokers-arrive-and-knowledge-starts-to-compile">2025 H2, the brokers arrive, and knowledge starts to compile</a></li>
+  <li><a href="#h1-the-record-arrives-all-at-once-the-field-did-not" id="toc-h1-the-record-arrives-all-at-once-the-field-did-not" class="nav-link" data-scroll-target="#h1-the-record-arrives-all-at-once-the-field-did-not">2026 H1, the record arrives all at once (the field did not)</a></li>
+  <li><a href="#where-the-evidence-argues-back" id="toc-where-the-evidence-argues-back" class="nav-link" data-scroll-target="#where-the-evidence-argues-back">Where the evidence argues back</a></li>
+  </ul></li>
+  <li><a href="#part-2-the-forecast" id="toc-part-2-the-forecast" class="nav-link" data-scroll-target="#part-2-the-forecast">Part 2 · The forecast</a>
+  <ul class="collapse">
+  <li><a href="#the-rest-of-2026" id="toc-the-rest-of-2026" class="nav-link" data-scroll-target="#the-rest-of-2026">The rest of 2026</a></li>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">2027</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2028</a></li>
+  </ul></li>
+  <li><a href="#the-branch-end-of-2028" id="toc-the-branch-end-of-2028" class="nav-link" data-scroll-target="#the-branch-end-of-2028">The branch, end of 2028</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How Economics Absorbed AI</h1>
+<p class="subtitle lead">Cheap Intelligence, In Demand of Trust</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Scenario</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p><a href="https://www.lukasikic.info/">Luka Šikić</a> </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 23, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="lead">
+<p>This is a scenario. The first half is a history of one research field, economics meeting AI, told from a collection of 385 resources, 287 of them with their full text attached. The second half forecasts the next two to five years and ends in a fork with two endings. The method is simple and stated up front. Every number about the past is recomputed from a database, and every claim about the future carries a probability.</p>
+</div>
+<p>The collection behind this page did not come from one search. A small automated pipeline watches the places where this field actually publishes, journal sites and working-paper series, but also newsletters, personal websites, X threads, GitHub repositories, course pages, and recorded talks. It pulls in what is new, fetches the full text wherever it can be legitimately obtained, and files everything in one database, alongside guides and tools added by hand, one judgment call at a time. The result spans everything from a <em>Quarterly Journal of Economics</em> article to a tool’s README to a piece of federal legislation. It is not the field. It is one curator’s map of the field, and like any map it shows the mapmaker’s routes as well as the territory. Papers dominate, but a striking share of the field’s working knowledge arrived in formats journals do not carry:</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-source-type" class="quarto-float quarto-figure quarto-figure-center anchored" width="816" alt="Stacked horizontal bars of the collection by resource type, split by whether an item was gathered automatically or added by hand. Papers dominate; the automated watcher brings the videos, threads, and tools.">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-source-type-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-source-type-1.png" id="fig-source-type" class="img-fluid figure-img" alt="Stacked horizontal bars of the collection by resource type, split by whether an item was gathered automatically or added by hand. Papers dominate; the automated watcher brings the videos, threads, and tools." width="816">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-source-type-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>The one-sentence thesis, in the wording it was first written in, is that <strong>intelligence just became cheap and trust did not, so the new scarce factor is verified judgment.</strong> Nearly every document below is a variation on that sentence. The field spent two years learning what it means. When a judgment task, classifying, screening, advising, drafting, refereeing, becomes almost free, it turns out its old price was quietly paying for quality control. Once the task costs nothing, the value, and the risk, move to whoever still checks the work.</p>
+<section id="how-to-read-this" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-read-this">How to read this</h3>
+<p>Every claim about the past is sourced. In the <strong>margin</strong> beside each section are the people behind that section’s evidence, each work linked to where it lives (for the informal guides, that is usually the author’s own site), and the most important works are named and linked directly in the text. Claims about the future are numbered from <code>P1</code>, 13 in all, each dated, measurable, and carrying a probability. A <strong>metrics strip</strong> repeats at every time step so you can watch four numbers move: how much the field has produced, how much of the new work is executable tooling, how much of that tooling exists to check other machines, and how much of the record can actually be read in full. The strip is measured through the first half of 2026. After that it shades into a forecast band, and you watch the forecast leave the record.</p>
+<hr>
+</section>
+<section id="part-1-the-retrospective" class="level1 page-columns page-full">
+<h1>Part 1 · The retrospective</h1>
+<section id="the-productivity-ledger-opens" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-productivity-ledger-opens">2024, the productivity ledger opens</h2>
+<p>Before the field had a name it had a spine. A small set of living documents carried the method, chief among them Anton Korinek’s <a href="https://www.aeaweb.org/articles?id=10.1257/jel.20231736">Generative AI for Economic Research</a>, published in the <em>Journal of Economic Literature</em> and then <em>kept alive</em> on its own site, <a href="https://genaiforecon.org/">updated</a> on a cycle faster than journals move because the tooling it described would not sit still. Alongside it sat the first attempts to put AI inside the growth model rather than beside it, Daron Acemoglu’s <a href="https://www.nber.org/papers/w32487">The Simple Macroeconomics of AI</a>, and the first serious measurement of what the tools did to output.</p>
+<p>That measurement was mixed from the start, and it stayed mixed, which is the tell. At the micro level the gains looked real. Erik Brynjolfsson, Danielle Li, and Lindsey Raymond put an AI assistant into a customer-support center and found, in <a href="https://arxiv.org/abs/2304.11771">Generative AI at Work</a> in the <em>Quarterly Journal of Economics</em>, a real average productivity gain, concentrated among the least experienced workers. At the level of the firm the same gains kept failing to appear. Representative surveys of executives found most firms adopting AI while a majority reported no measurable effect on employment or productivity, and central-bank monitoring of adoption from the outside told the same story. Economists have seen this movie. In the 1980s Robert Solow quipped that computers were everywhere except the productivity statistics, and the explanations on offer today, short-term losses before long-term gains, revenue that arrives late, firms lacking the skills and processes around the tool, are all versions of one claim: the machine is cheap, and the things that make it pay are not.</p>
+<p>What surrounds the tool matters more than the tool. Where firms saw large returns, a person or a process made sure it was actually used well. Where they did not, the same tool sat idle in the workflow. That is the shape of the whole decade in miniature, abundant capability without the integration to match, and it is why the productivity ledger never balanced on the strength of the technology alone.</p>
+<div class="refrain">
+<p>The guide is a journal article that behaves like software because the knowledge it carries depreciates like software. That is the whole thesis in one artifact. When producing the advice got cheap, keeping it verified got expensive.</p>
+</div>
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="index_files/figure-html/strip-2024-1.png" class="img-fluid figure-img column-page" alt="Four-panel metrics strip showing the state of the field as of 2024: a small corpus, no tooling yet, coverage near complete." width="1386"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="mnote">
+<p><span class="mnote-h">Who made what</span></p>
+<p><strong>Kevin Bryan</strong> · <a href="https://bcf.princeton.edu/wp-content/uploads/2023/05/A_User_s_Guide_to_GPT_and_LLMs_for_Economic_Research.pdf">A User’s Guide to GPT and LLMs for Economic Research</a> <span class="mnote-meta">paper, 2023 · 12,363w</span></p>
+<p><strong>Anton Korinek</strong> · <a href="https://www.aeaweb.org/articles?id=10.1257/jel.20231736">Generative AI for Economic Research: Use Cases and Implications for Economists (Journal of Economic Literature)</a> <span class="mnote-meta">paper, 2023 · 619w</span></p>
+<p><strong>Anton Korinek</strong> · <a href="https://genaiforecon.org/">Generative AI for Economic Research</a> <span class="mnote-meta">guide, 2025 · 365w</span></p>
+<p><strong>Melissa Dell</strong> · <a href="https://arxiv.org/pdf/2407.15339">Deep Learning for Economists</a> <span class="mnote-meta">paper, 2024 · 31,115w</span></p>
+<p><strong>Daron Acemoglu</strong> · <a href="https://www.nber.org/papers/w32487">The Simple Macroeconomics of AI (NBER WP 32487)</a> <span class="mnote-meta">paper, 2025 · 26,767w</span></p>
+<p><strong>David Autor, Anton Korinek</strong> · <a href="https://www.brookings.edu/articles/exploring-the-impact-of-language-models/">Impact of Language Models on Cognitive Automation (Brookings)</a> <span class="mnote-meta">article, 2023 · 8,237w</span></p>
+<p><strong>Erik Brynjolfsson, Danielle Li, Lindsey Raymond</strong> · <a href="https://arxiv.org/abs/2304.11771">Generative AI at Work (Quarterly Journal of Economics)</a> <span class="mnote-meta">paper, 2025 · 36,781w</span></p>
+<p><strong>Anton Korinek</strong> · <a href="https://www.aeaweb.org/content/file?id=21904">LLMs Learn to Collaborate and Reason (JEL)</a> <span class="mnote-meta">paper, 2024 · 42,010w</span></p>
+<p><strong>Salomé Baslandze, Zachary Edwards, John Graham, Ty McClure, Brent H. Meyer, Michael Sparks, Sonya R. Waddell, Daniel Weitz</strong> · <a href="https://www.nber.org/papers/w34984">Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives (NBER WP 34984)</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
+<p><strong>Jeffrey S. Allen</strong> · <a href="https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html">Monitoring AI Adoption in the US Economy (FEDS Notes)</a> <span class="mnote-meta">article, 2026 · 5,821w</span></p>
+</div></div></section>
+<section id="h1-the-task-arithmetic-starts-to-break" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="h1-the-task-arithmetic-starts-to-break">2025 H1, the task arithmetic starts to break</h2>
+<p>The first generation of exposure indices did something simple. It scored tasks for AI susceptibility and summed them. The next generation showed the sum was wrong in both directions. When tasks depend on each other’s quality, automating some of them raises the value of the human work that remains, so the indices overstate displacement, a point Alex Imas and Soumitra Shukla <a href="https://aleximas.substack.com/p/how-will-ai-driven-automation-actually">make plainly</a>. When tasks chain, task-by-task scoring misses the nonlinear gains from automating a whole contiguous sequence. The scores themselves <a href="https://www.nber.org/papers/w35110">turned out to be unstable under re-measurement</a>, which is its own warning about building policy on them. The counterweight to displacement is <a href="https://www.nber.org/papers/w34986">genuinely new work</a>, which commands a persistent premium, and the direction of that work is a policy choice rather than a fact of the technology.</p>
+<p>There is a policy limit sitting under all of this. If AI is steered toward augmenting workers it raises the value of human tasks. If it is steered toward replacing them, the gains concentrate and the displaced have no landing place. Daron Acemoglu, David Autor, and Simon Johnson call the first path <a href="https://www.nber.org/papers/w34854">building pro-worker AI</a>; Pascual Restrepo’s bleakly titled <a href="https://www.nber.org/papers/w34423">We Won’t Be Missed</a> marks where it ends, because steering the direction of innovation only works up to the point where labor’s economic value has fallen far enough, after which the instrument has to be redistribution rather than direction. The pro-worker-versus-replacement question is therefore not a forecast about the machine. It is a choice about which machine gets built and rewarded, which is the same structure the forecast half of this document turns on.</p>
+<p>This is also when the field began, quietly, to write about <em>itself</em>. Kevin Bryan’s <a href="https://kevinbryanecon.com/o3WhatCanWeDo.pdf">essay on AI-assisted academic writing</a> treated the researcher’s own keyboard as the object of study. The record is thin here, and most of the papers that <em>pinned down</em> these tensions, the instability of the exposure scores, the shape of the displacement, are dated to 2026, so read them below as later confirmations of a shift that was visible in 2025 and measured a year after.</p>
+<div class="refrain">
+<p>Whether AI displaces or augments is not read off the model. It is decided by which tasks we let it do and which we insist on checking. Cheap intelligence widens the menu. Scarce trust is what picks from it.</p>
+</div>
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="index_files/figure-html/strip-2025h1-1.png" class="img-fluid figure-img column-page" alt="Metrics strip as of 2025 H1: corpus still small, tool share flat at zero, coverage high." width="1386"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="mnote">
+<p><span class="mnote-h">Who made what</span></p>
+<p><strong>Kevin A. Bryan</strong> · <a href="https://kevinbryanecon.com/o3WhatCanWeDo.pdf">AI-Assisted Academic Writing in Quantitative Social Science</a> <span class="mnote-meta">paper, 2025 · 11,342w</span></p>
+<p><a href="https://www.nber.org/papers/w34986">What Makes New Work Different from More Work?</a> <span class="mnote-meta">paper · no full text</span></p>
+<p><strong>Michelle Yin, Hoa Vu, Claudia Persico</strong> · <a href="https://www.nber.org/papers/w35110">How (Un)stable Are LLM Occupational Exposure Scores? (NBER WP 35110)</a> <span class="mnote-meta">paper, 2026 · 12,933w</span></p>
+<p><strong>Alex Imas, Soumitra Shukla</strong> · <a href="https://aleximas.substack.com/p/how-will-ai-driven-automation-actually">How Will AI-Driven Automation Actually Affect Jobs?</a> <span class="mnote-meta">article, 2026 · 4,418w</span></p>
+<p><strong>Pascual Restrepo</strong> · <a href="https://www.nber.org/papers/w34423">We Won’t Be Missed: Work and Growth in the AGI World (NBER WP 34423)</a> <span class="mnote-meta">paper, 2025 · 12,919w</span></p>
+<p><strong>Daron Acemoglu, David Autor, Simon Johnson</strong> · <a href="https://www.nber.org/papers/w34854">Building Pro-Worker Artificial Intelligence (NBER WP 34854)</a> <span class="mnote-meta">paper, 2026 · 26,357w</span></p>
+<p><strong>Susan Athey, Fiona Scott Morton</strong> · <a href="https://www.nber.org/papers/w34444">Artificial Intelligence, Competition, and Welfare (NBER WP 34444)</a> <span class="mnote-meta">paper, 2025 · 18,941w</span></p>
+<p><strong>Kevin Bryan</strong> · <a href="https://x.com/Afinetheorem/status/1886245511046271194/photo/2">AI and Economics Research Roundup (Afinetheorem)</a> <span class="mnote-meta">thread, 2025 · 67w</span></p>
+</div></div></section>
+<section id="h2-the-brokers-arrive-and-knowledge-starts-to-compile" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="h2-the-brokers-arrive-and-knowledge-starts-to-compile">2025 H2, the brokers arrive, and knowledge starts to compile</h2>
+<p>The methods did not move through journals. They moved through a handful of people writing in the open. Pedro Sant’Anna published <a href="https://psantanna.com/claude-code-my-workflow/">his own Claude Code setup</a> as a working document. Scott Cunningham worked through agentic research workflows <a href="https://causalinf.substack.com/s/claude-code/archive?sort=new">in public, on Substack</a>. Claes Bäckman turned his own learning curve into <a href="https://sites.google.com/view/claesbackman/tips-for-phd-students">guides and tips pages for PhD students</a>. Aniket Panjwani taught economists to <a href="https://ai-mba.io/tutorials/ai-agents-for-economics-research">run AI agents</a>. The shelf kept filling from here into 2026: Chris Blattman’s <a href="https://claudeblattman.com/">AI for professionals who don’t code</a>, Bäckman’s tips grown into a <a href="https://claesbackman.com/claude-code-guide.html">full Claude Code guide for academic economists</a>, Jared Black’s <a href="https://black-jl.github.io/Research-Project-Flow/">end-to-end research flow</a>, and Erkmen Aslim and Emily Beam’s <a href="https://thinkingwithagents.github.io/">Thinking with Agents</a>, a whole bootcamp for teaching and research. A small broker class, bilingual between software practice and economics, produced most of the field’s usable method knowledge, six to eighteen months behind the software world it was translating. The returns to AI in research scale with the share of researchers who actually hold the expertise, so a reading list is not a convenience. It is that share being raised one bookmark at a time.</p>
+<p>What the brokers were circulating was a new kind of object. Prose advice was turning into <em>executable</em> knowledge, skills, templates, instruction files, scaffolding that a machine reads and runs. That is the form that diffuses at software speed rather than citation speed. The first dedicated venues appeared to match, a workshop on the economics of transformative AI, and the earliest field courses. The record starts to grow in earnest here, and the strip shows the inflection.</p>
+<p>Underneath the scattered guides a shared methodology was converging, and it distills into four rules. <strong>Triage:</strong> let the machine produce, never let it be the check. Hand over what is easy to check, editing, first-pass literature searches; keep what is hard to check, proofs and identification arguments. <strong>The repo as laboratory:</strong> everything lives in version control, the machine works on its own branch, and the researcher reviews the actual changes, not the machine’s summary of them. A short instruction file states the house rules and the forbidden moves, and the real test of any analysis is that it reruns end to end, because an analysis that cannot rerun is not accepted from a machine. <strong>LLMs as measurement instruments:</strong> before trusting the machine at scale, have humans label a sample, and report how well the machine agrees with people compared with how well people agree with each other. Save the prompt, the model version, and the raw outputs, because companies retire models, and reproducing the result later means the archive plus the procedure. <strong>Writing and self-audit:</strong> no citation enters a manuscript unchecked against its source, the machine edits but the claims come from the researcher, and, the load-bearing habit, redo a machine result by hand from time to time, because letting the machine do all the practice erodes the judgment needed to supervise it.</p>
+<p>None of the four is hypothetical. Paul Goldsmith-Pinkham builds <a href="https://paulgp.substack.com/p/from-an-empty-folder-to-a-figure">a figure from an empty folder</a> in public, diffs and all, and shows what <a href="https://paulgp.substack.com/p/getting-started-with-claude-code">an instruction file</a> should record. The measurement rule is formalized by Jens Ludwig, Sendhil Mullainathan, and Ashesh Rambachan in <a href="https://www.nber.org/papers/w33344">an applied econometric framework</a>. The citation rule already ships as a <a href="https://github.com/PHY041/claude-skill-citation-checker">machine-loadable skill</a>. And, in the interest of disclosure, the author of this page ran a wiiw seminar walking <a href="https://lusiki.github.io/AI_workshop_wiiw/">a working agentic pipeline end to end</a>, the same kind of pipeline this document is built on.</p>
+<p>That last rule is the whole thesis at the scale of one desk. Producing a result has become cheap; trusting one has not. The choice the profession faces in the forecast below, reward the checking or lose it, shows up first as a personal habit.</p>
+<div class="refrain">
+<p>An instruction file is tacit lab knowledge, written down for a machine because the machine will not work without it. Cheap execution bought the profession the documentation a decade of open-science exhortation could not.</p>
+</div>
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="index_files/figure-html/strip-2025h2-1.png" class="img-fluid figure-img column-page" alt="Metrics strip as of 2025 H2: the corpus begins to grow. Tooling still near zero." width="1386"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="mnote">
+<p><span class="mnote-h">Who made what</span></p>
+<p><strong>Pedro H. C. Sant’Anna</strong> · <a href="https://psantanna.com/claude-code-my-workflow/">My Claude Code Setup</a> <span class="mnote-meta">guide · 192w</span></p>
+<p><strong>Scott Cunningham</strong> · <a href="https://causalinf.substack.com/s/claude-code/archive?sort=new">Claude Code for Quantitative Social Science (Substack)</a> <span class="mnote-meta">guide · 418w</span></p>
+<p><strong>Claes Backman</strong> · <a href="https://sites.google.com/view/claesbackman/tips-for-phd-students">Tips for PhD Students</a> <span class="mnote-meta">guide · no full text</span></p>
+<p><strong>Aniket Panjwani</strong> · <a href="https://ai-mba.io/tutorials/ai-agents-for-economics-research">AI Agents for Economics Research</a> <span class="mnote-meta">guide · 2,224w</span></p>
+<p><strong>Chris Blattman</strong> · <a href="https://claudeblattman.com/">AI for Professionals Who Don’t Code</a> <span class="mnote-meta">guide, 2026 · 1,054w</span></p>
+<p><strong>Claes Bäckman</strong> · <a href="https://claesbackman.com/claude-code-guide.html">Claude Code in VS Code — For Academic Economists: A Practical Guide</a> <span class="mnote-meta">guide, 2026 · 821w</span></p>
+<p><strong>Jared Black</strong> · <a href="https://black-jl.github.io/Research-Project-Flow/">An AI-Assisted Research Flow</a> <span class="mnote-meta">guide · 14,118w</span></p>
+<p><strong>Erkmen G. Aslim, Emily Beam</strong> · <a href="https://thinkingwithagents.github.io/">Thinking with Agents: AI Tools for Teaching and Research (UVM Economics Bootcamp)</a> <span class="mnote-meta">course, 2026 · 20,002w</span></p>
+<p><strong>Paul Goldsmith-Pinkham</strong> · <a href="https://paulgp.substack.com/p/from-an-empty-folder-to-a-figure">From an Empty Folder to a Figure</a> <span class="mnote-meta">guide · 2,851w</span></p>
+<p><strong>Paul Goldsmith-Pinkham</strong> · <a href="https://paulgp.substack.com/p/getting-started-with-claude-code">Getting Started with Claude Code</a> <span class="mnote-meta">guide · 3,505w</span></p>
+<p><a href="https://github.com/PHY041/claude-skill-citation-checker">Claude Skill: Citation Checker</a> <span class="mnote-meta">tool · 1,006w</span></p>
+<p><strong>Luka Šikić</strong> · <a href="https://lusiki.github.io/AI_workshop_wiiw/">AI in Economics Research: From Frontier Ideas to a Working Agentic Pipeline (wiiw seminar)</a> <span class="mnote-meta">guide, 2026 · 3,626w</span></p>
+<p><strong>Anton Korinek</strong> · <a href="https://www.nber.org/conferences/economics-transformative-ai-workshop-fall-2025">Economics of Transformative AI Workshop (NBER, 2025)</a> <span class="mnote-meta">other, 2025 · 420w</span></p>
+<p><strong>Benjamin Golub</strong> · <a href="https://www.youtube.com/watch?v=ixyzgnmqAiU">Modern AI for Economics Research (Markus Academy)</a> <span class="mnote-meta">video, 2025 · 3,194w</span></p>
+<p><strong>Jens Ludwig, Sendhil Mullainathan, Ashesh Rambachan</strong> · <a href="https://www.nber.org/papers/w33344">Large Language Models: An Applied Econometric Framework (NBER WP 33344)</a> <span class="mnote-meta">paper, 2025 · 33,394w</span></p>
+<p><strong>Yiqing Xu, Leo Yang</strong> · <a href="https://arxiv.org/abs/2602.16733">Scaling Reproducibility: An AI-Assisted Workflow for Large-Scale Replication and Reanalysis (arXiv)</a> <span class="mnote-meta">paper, 2026 · 20,127w</span></p>
+</div></div></section>
+<section id="h1-the-record-arrives-all-at-once-the-field-did-not" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="h1-the-record-arrives-all-at-once-the-field-did-not">2026 H1, the record arrives all at once (the field did not)</h2>
+<p>Of every dated work in the collection, 65.2% is dated to this one half-year, and the strip’s cumulative panel goes near-vertical. Read plainly, that looks like a field exploding into being in 2026. It is not, or not only. Part of that spike is real, and part is an artifact of <em>when the collection was assembled</em>: most of it was gathered in mid-2026, and a collector always finds the recent past first. The collection even carries its own correction, a weekly digest of new AI-economics working papers archived back to June 2023, at scale, so the field was producing years before this spike. The honest reading is that the <em>record</em> arrived all at once. The field had been arriving for a while. What <em>is</em> real in this section is the shape of what the record contains, and it carries the most evidence of any period, so read the numbers and not the verticality.</p>
+<p><strong>The literature, in four movements.</strong> The Q1 2026 papers sort into a story. First, the productivity ledger stays unsettled, micro gains that refuse to aggregate. Second, the task arithmetic breaks down in both directions. Joshua Gans and Avi Goldfarb formalize one half in <a href="https://www.nber.org/papers/w34639">O-Ring Automation</a>, where output is only as strong as the weakest task, so automating some tasks raises the value of the human work that remains; a companion model of <a href="https://www.nber.org/papers/w34859">chaining tasks</a> shows the other half, where automating a whole connected sequence pays far more than the sum of its steps. Third, AI enters the papers twice over. As an <em>actor</em> that trades in markets, splits an ultimatum-game pie, in Douglas Araujo and Harald Uhlig’s <a href="https://www.nber.org/papers/w34919">How Does AI Distribute the Pie?</a>, and gives financial advice that shifts with the counterparty’s perceived gender. And as an <em>instrument</em> that builds a decades-long <a href="https://www.nber.org/papers/w34615">capital-controls dataset</a> that was impractical by hand, and classifies decades of articles to date a shift from efficiency to equity framing. Fourth, the dark line. Robert Novy-Marx and Mihail Velikov <a href="https://www.aeaweb.org/articles?id=10.1257/jel.20251821">demonstrate</a> that language models can generate complete finance papers from templates, and a model of <a href="https://www.nber.org/papers/w34910">knowledge collapse</a> shows how better AI can leave society <em>less</em> knowledgeable once it substitutes for effortful learning.</p>
+
+<div class="no-row-height column-margin column-container"><div class="mnote">
+<p><span class="mnote-h">The four movements</span></p>
+<p><strong>Joshua S. Gans, Avi Goldfarb</strong> · <a href="https://www.nber.org/papers/w34639">O-Ring Automation</a> <span class="mnote-meta">paper, 2026 · 8,459w</span></p>
+<p><a href="https://www.nber.org/papers/w34859">Chaining Tasks, Redefining Work</a> <span class="mnote-meta">paper · no full text</span></p>
+<p><strong>Alexander Erlei, Lukas Meub</strong> · <a href="https://arxiv.org/abs/2603.08853">LLM-Agent Interactions on Markets with Information Asymmetries</a> <span class="mnote-meta">paper, 2026 · 13,993w</span></p>
+<p><strong>Douglas K.G. Araujo, Harald Uhlig</strong> · <a href="https://www.nber.org/papers/w34919">How Does AI Distribute the Pie? Large Language Models and the Ultimatum Game (NBER WP 34919)</a> <span class="mnote-meta">paper, 2026 · 8,815w</span></p>
+<p><strong>Richard Foltyn, Jonna Olsson</strong> · <a href="https://www.foltyn.net/research/FO_LLM_gender_bias.pdf">The Worth of a ‘Wo’: Gender Bias in Financial Advice from LLMs</a> <span class="mnote-meta">paper, 2026 · 14,138w</span></p>
+<p><a href="https://www.nber.org/papers/w34615">Expanding the Landscape of Cross-Border Flow Restrictions</a> <span class="mnote-meta">paper · 39,523w</span></p>
+<p><a href="https://www.nber.org/papers/w34714">Measuring Efficiency and Equity Framing</a> <span class="mnote-meta">paper · no full text</span></p>
+<p><strong>Robert Novy-Marx, Mihail Velikov</strong> · <a href="https://www.aeaweb.org/articles?id=10.1257/jel.20251821">Artificial Intelligence–Powered (Finance) Scholarship (JEL)</a> <span class="mnote-meta">paper, 2026 · 11,978w</span></p>
+<p><a href="https://www.nber.org/papers/w34910">AI, Human Cognition and Knowledge Collapse</a> <span class="mnote-meta">paper · no full text</span></p>
+</div></div><p><strong>Verification became a category of its own, and it is easy to overcount.</strong> The same ecosystem generating the flood started building the thing that checks it. Agentic paper reviewers, referee services, and feedback machines add up to a referee factory. How large is it? A quick keyword count over the 38 tools in the collection said two of every three were verifiers. Reading them one by one says otherwise: 11 of the 38 (28.9%) actually check another machine’s output, closer to <strong>one in three</strong>. The keyword count was fooled by literature-search assistants and even by <em>academic-humanizer</em>, a tool built to strip the very tells that verifiers look for. The correction is the thesis in one move, an unchecked filter is just more cheap intelligence, and the checked figure, one referee tool in three, is still the largest single thing the field is building. The hand labels are on the <a href="./supplements/method.html">Method</a> page, and prediction <strong>P1</strong> resolves on them.</p>
+<p><strong>Reproducibility arrived through the back door.</strong> Agents work well only in projects that are versioned, tested, documented, and machine-readable, so adopting them smuggles software engineering into economics whether or not the researcher cares about open science. The practice that a decade of exhortation could not make normal, version control, unit tests, a written lab manual, is now a precondition for the tool to behave.</p>
+<p><strong>The field is studying itself, with an overlapping cast.</strong> Aniket Panjwani’s <a href="https://aieconomist.io/newsletter">newsletter</a> watches cheap intelligence hit the economy while his <a href="https://aieconomist.io/resources">library</a> installs it into the profession’s own workflow. Joshua Gans authors both the formal <a href="https://www.nber.org/papers/w34712">model of jagged intelligence</a> and the essay on <a href="https://joshuagans.substack.com/p/reflections-on-vibe-researching">vibe researching</a>. Paul Goldsmith-Pinkham co-authors the <a href="https://arxiv.org/abs/2601.13379">radiology complementarity paper</a> and writes <a href="https://paulgp.substack.com/p/research-in-the-time-of-ai">Research in the Time of AI</a>. The AEA lectures that both pages point to are given by the same names. Economics is simultaneously the observer and the treated unit, and the overlap makes the reflexivity a documented fact rather than a rhetorical flourish.</p>
+
+<div class="no-row-height column-margin column-container"><div class="mnote">
+<p><span class="mnote-h">Verification and reflexivity</span></p>
+<p><strong>Ingar Haaland</strong> · <a href="https://github.com/Ingar30/reviewer">Reviewer: Multi-Agent Referee for Economics Papers</a> <span class="mnote-meta">tool, 2026 · 1,629w</span></p>
+<p><strong>Stanford CRFM</strong> · <a href="https://paperreview.ai/">PaperReview.ai - Stanford Agentic Paper Reviewer</a> <span class="mnote-meta">tool · no full text</span></p>
+<p><strong>Claes Bäckman</strong> · <a href="https://claesbackman.substack.com/p/feedback-machines-writing-and-editing">Feedback Machines: AI for Research Paper Review</a> <span class="mnote-meta">guide, 2026 · 1,791w</span></p>
+<p><strong>Paul Goldsmith-Pinkham</strong> · <a href="https://paulgp.substack.com/p/research-in-the-time-of-ai">Research in the Time of AI</a> <span class="mnote-meta">article, 2026 · 2,283w</span></p>
+<p><strong>Joshua Gans</strong> · <a href="https://joshuagans.substack.com/p/reflections-on-vibe-researching">Reflections on Vibe Researching (in 2025)</a> <span class="mnote-meta">article, 2026 · 2,033w</span></p>
+<p><strong>Paul Goldsmith-Pinkham, Chenhao Tan, Alexander K. Zentefis</strong> · <a href="https://arxiv.org/abs/2601.13379">Human-AI Collaboration in Radiology: The Case of Pulmonary Embolism</a> <span class="mnote-meta">paper, 2026 · 16,880w</span></p>
+<p><a href="https://www.nber.org/papers/w34712">A Model of Artificial Jagged Intelligence</a> <span class="mnote-meta">paper · no full text</span></p>
+<p><strong>Aniket Panjwani</strong> · <a href="https://aieconomist.io/newsletter">The AI Economist Newsletter</a> <span class="mnote-meta">other, 2026 · 1,336w</span></p>
+<p><strong>Aniket Panjwani</strong> · <a href="https://aieconomist.io/resources">The AI Economist Library</a> <span class="mnote-meta">other · 1,045w</span></p>
+<p><strong>Scott Cunningham, Kosali Simon</strong> · <a href="https://causalinf.substack.com/p/what-a-panel-of-economists-said-about">What a Panel of Economists Said About AI in the Production of Research</a> <span class="mnote-meta">article, 2026 · 173w</span></p>
+</div></div><p><strong>The vendors are inside the value chain.</strong> The labs sit in the discipline at four layers at once. They ship the tools, they run the training, they hold the data, and they author into the literature, as when Anthropic’s own researchers argue that <a href="https://www.anthropic.com/research/claude-code-expertise">agentic coding raises the returns to expertise</a>. The instrument, the vendor, and the co-author are increasingly one entity.</p>
+<p><strong>Access inverted, and the largest document is a statute.</strong> The informal layer, threads, guides, tool READMEs, is open and machine-readable. The formal literature sits behind embargoes and paywalls. In this collection, the informal categories reach 86.6% full-text coverage while research papers sit at 58%, held down by the embargoed frontier. And the single heaviest document is not a paper at all. It is a piece of federal legislation, one whale holding 33.4% of all the extracted text, in a sea of minnows.</p>
+<p><strong>The timeline compressed.</strong> <a href="https://gabors-data-analysis.com/ai-course/week00/">Field courses</a>, <a href="https://www.econometricsociety.org/regional-activities/schedule/2026/06/16/2026-ESIFEconomics-and-AIML-Meeting">dedicated conferences</a>, an <a href="https://www.nber.org/conferences/si-2026-digital-economics-and-artificial-intelligence">NBER Summer Institute session</a>, <a href="https://www.aeaweb.org/conference/webcasts/2026/recent-developments">AEA lectures</a>, and <a href="https://www.imf.org/en/publications/imf-notes/issues/2026/04/03/global-economic-and-financial-implications-of-artificial-intelligence-lessons-from-a-574924">scenario-planning tools built inside institutions</a> all arrived by 2026, faster than a naive diffusion story predicts, because the practice was already circulating as craft knowledge before any of it was codified.</p>
+<p><strong>A division of labor set in.</strong> Informal outlets, Substacks, threads, tool READMEs, own the <em>how-to</em> knowledge and move it at software speed. Journals still own the finding of record, the result that gets cited, credited, and defended. And between the two sits a growing stream of usage data, adoption surveys, logs, and monitoring reports, that lets the field watch its own uptake in close to real time. The papers measuring AI adoption across firms and across countries are that middle layer made visible.</p>
+<p><strong>And the profession started to reprice itself.</strong> The upside is that whole data categories open up. Corpus-scale construction is cheap now, agents can <a href="https://www.nber.org/papers/w35188">build a dataset on a loop</a> or <a href="https://paulgp.substack.com/p/from-edgar-filings-to-a-structured">turn a pile of EDGAR filings into a structured database</a>, and validated against a human benchmark, LLMs work as measurement instruments indistinguishable from human coders. The binding constraint moves from collecting data to designing the validation, so a human-benchmarked check is on its way to being as obligatory as a robustness section, <a href="https://onlinelibrary.wiley.com/doi/10.1111/joes.70105">already formalized for meta-analysis</a>. The downside is a pincer aimed at the profession itself. One jaw is the paper mill, cheap papers at industrial scale, which is specification search with the labor cost removed. The other is knowledge collapse run reflexively. The grunt work that used to build econometric judgment is exactly what agents now do, so the apprenticeship that produced verifiers <a href="https://ai-project-website.github.io/AI-assistance-reduces-persistence/">thins out</a> at the moment verification becomes scarce. The practical defense is the one the <a href="https://arxiv.org/abs/2601.13379">radiology</a> and <a href="https://www.anthropic.com/research/coding-agents-social-sciences">coding-audit</a> studies keep finding, perceived helpfulness is not audited correctness, so build the independent check into the pipeline through tests, replication, and adversarial review. Underneath all of it, an institutional layer of data-use agreements, compliance frameworks, and compute now decides what research is possible and who can do it. Talent equalizes. Access stratifies.</p>
+
+<div class="no-row-height column-margin column-container"><div class="mnote">
+<p><span class="mnote-h">The repricing</span></p>
+<p><strong>Santiago Afonso, Sebastian Galiani, Ramiro H. Gálvez, Raul A. Sosa</strong> · <a href="https://www.nber.org/papers/w35188">Deep Research on a Loop: Using AI Agents to Construct Economic Datasets (NBER WP 35188)</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
+<p><strong>Paul Goldsmith-Pinkham</strong> · <a href="https://paulgp.substack.com/p/from-edgar-filings-to-a-structured">From EDGAR Filings to a Structured Database</a> <span class="mnote-meta">guide · 2,585w</span></p>
+<p><strong>Nikolai Cook, František Bartoš, Pedro R. D. Bom, Sebastian Gechert, Klára Kantová, Jerome Geyer-Klingeberg, Tomáš Havránek, Zuzana Irsova, Martina Luskova</strong> · <a href="https://onlinelibrary.wiley.com/doi/10.1111/joes.70105">Guidance for the Use of AI in the Meta-Analysis of Economics Research</a> <span class="mnote-meta">paper, 2026 · 2,946w</span></p>
+<p><strong>Grace Liu, Brian Christian, Tsvetomira Dumbalska, Michiel A. Bakker, Rachit Dubey</strong> · <a href="https://ai-project-website.github.io/AI-assistance-reduces-persistence/">AI Assistance Reduces Persistence and Hurts Independent Performance (arXiv)</a> <span class="mnote-meta">paper, 2026 · 196w</span></p>
+<p><strong>Thomas Lyttelton, Maxim Massenkoff, Nathan Wilmers</strong> · <a href="https://www.anthropic.com/research/coding-agents-social-sciences">Coding Agents in the Social Sciences (Anthropic Economic Research)</a> <span class="mnote-meta">article, 2026 · 6,372w</span></p>
+</div></div><div class="refrain">
+<p>The first market response to abundant machine text is a market for human filters. One tool in three the field built is a filter, audited, not asserted. That is cheap intelligence and scarce trust, measured.</p>
+</div>
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div class="page-columns page-full">
+<figure class="figure page-columns page-full">
+<p class="page-columns page-full"><img src="index_files/figure-html/strip-2026h1-1.png" class="img-fluid figure-img column-page" alt="Metrics strip as of 2026 H1: cumulative works spikes, tool share jumps to about 15 percent, verification share of tools around one third (audited), coverage declines." width="1386"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<div class="no-row-height column-margin column-container"><div class="mnote">
+<p><span class="mnote-h">The field arrives</span></p>
+<p><strong>Elliott Ash</strong> · <a href="https://www.aeaweb.org/conference/webcasts/2026/recent-developments">Language Models for Economics (AEA 2026, Ash)</a> <span class="mnote-meta">video, 2026 · 349w</span></p>
+<p><strong>Danielle Li</strong> · <a href="https://www.aeaweb.org/conference/webcasts/2026/recent-developments">AI and the Labor Market (AEA 2026, Li)</a> <span class="mnote-meta">video, 2026 · 349w</span></p>
+<p><a href="https://www.nber.org/conferences/si-2026-digital-economics-and-artificial-intelligence">NBER Summer Institute 2026: Digital Economics and Artificial Intelligence</a> <span class="mnote-meta">other, 2026 · 380w</span></p>
+<p><a href="https://www.aifuturesmodel.com/about">AI Futures Model: Scenario Planning Tool</a> <span class="mnote-meta">article, 2025 · 553w</span></p>
+<p><strong>Gabor Bekes</strong> · <a href="https://gabors-data-analysis.com/ai-course/week00/">Doing Data Analysis with AI (Course)</a> <span class="mnote-meta">course, 2026 · 260w</span></p>
+<p><a href="https://www.econometricsociety.org/regional-activities/schedule/2026/06/16/2026-ESIFEconomics-and-AIML-Meeting">2026 ESIF Economics and AI+ML Meeting (Econometric Society)</a> <span class="mnote-meta">other, 2026 · 547w</span></p>
+<p><strong>Karim Barhoumi, Fabia A. de Carvalho, Michael Gorbanyov, Yosuke Kido, David Koll, Dragana Ostojic, Baoping Shang, Natalia T. Tamirisa, Sally Toms, Era Dabla-Norris, Anh D. M. Nguyen, Yunhui Zhao</strong> · <a href="https://www.imf.org/en/publications/imf-notes/issues/2026/04/03/global-economic-and-financial-implications-of-artificial-intelligence-lessons-from-a-574924">Global Economic and Financial Implications of AI: Lessons from a Scenario Planning Exercise (IMF Note)</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
+<p><strong>Zoe Hitzig, Maxim Massenkoff, Eva Lyubich, Shaoyi Zhang, Ryan Heller, Peter McCrory</strong> · <a href="https://www.anthropic.com/research/claude-code-expertise">Agentic coding and persistent returns to expertise (Anthropic)</a> <span class="mnote-meta">article, 2026 · 9,964w</span></p>
+<p><strong>Jeffrey S. Allen</strong> · <a href="https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html">Monitoring AI Adoption in the US Economy (FEDS Notes)</a> <span class="mnote-meta">article, 2026 · 5,821w</span></p>
+<p><strong>Alexander Bick, Adam Blandin, David Deming, Nicola Fuchs-Schündeln, Jonas Jessen</strong> · <a href="https://www.stlouisfed.org/on-the-economy/2026/apr/why-does-ai-adoption-differ-so-much-countries">Why Does AI Adoption Differ So Much across Countries?</a> <span class="mnote-meta">article, 2026 · 2,028w</span></p>
+<p><strong>Ivan Yotzov, Jose Maria Barrero, Nicholas Bloom, Philip Bunn, Steven J. Davis, et al.</strong> · <a href="https://www.nber.org/papers/w34836">Firm Data on AI (NBER WP 34836)</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
+<p><a href="https://www.congress.gov/116/crpt/hrpt617/CRPT-116hrpt617.pdf">National Artificial Intelligence Initiative Act</a> <span class="mnote-meta">other · 1,225,188w</span></p>
+</div></div></section>
+<section id="where-the-evidence-argues-back" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="where-the-evidence-argues-back">Where the evidence argues back</h2>
+<p>A thesis this clean invites objections, and the strongest ones are sitting in the same collection. Three are worth answering before the forecast, because the evidence supplies both the challenge and the reply.</p>
+<p><em>The bottleneck is taste, not checking.</em> Ning Li’s <a href="https://arxiv.org/abs/2604.03338">The Ideation Bottleneck</a> decomposes the quality gap between AI-generated and human research and attributes the large majority of it, on its own numbers roughly 71%, to <em>idea</em> quality, not execution. If the binding constraint is ideation, then verification is not the scarce factor and this whole document is aimed at the wrong problem. The reply concedes ground but holds the line. You cannot make a rule that people have good taste; you can make a rule that work gets checked. So institutions organize around the thing they can enforce. Verified judgment is where the <em>rules</em> bind, even if taste is where the <em>frontier</em> moves.</p>
+<p><em>Trust got cheap too.</em> The pricing here is sharp. Alejandro Lopez-Lira’s <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6687378">ZeroPaper</a> generates a full research paper for about two dollars. <a href="https://coarse.ink/">Coarse</a>, an AI referee, returns a report for under two dollars. A skeptic reads that symmetry as fatal: if checking is as cheap as producing, verification is not scarce either. The reply is that a cheap check just moves the problem up one level. Who checks the checker? An unchecked AI filter is just more cheap intelligence, so the scarce thing is not the filter but the <em>anchor</em> it rests on: a human-labelled benchmark, a pipeline that reruns, a check somebody stands behind. Alexis Akira Toda <a href="https://arxiv.org/abs/2606.05383">ran the controlled test</a>: no model refuted a false economic theory unguided, and human-plus-machine beat both the unaided machine and, in that setting, peer review.</p>
+<p><em>The map is the author’s own workflow.</em> The collection leans toward methods and tooling, which is partly the curator studying his own trade. But it also carries a development-economics thread the thesis never touches, a living evidence bank on <a href="https://voxdev.org/topic/ai-and-development-economics-early-evidence-and-how-keep">AI in development</a>, work on the welfare cost of targeting bias, a tax-benefit microsimulation skill, and that thread widens the claim. Where labour is scarce, full automation can help more, and the scarce-trust story has to share the stage with a scarce-labour one. Disclosed, not hidden, because a map that only covers its author’s desk should say so.</p>
+
+<div class="no-row-height column-margin column-container"><div class="mnote">
+<p><span class="mnote-h">The rivals</span></p>
+<p><strong>Ning Li</strong> · <a href="https://arxiv.org/abs/2604.03338">The Ideation Bottleneck: Decomposing the Quality Gap Between AI-Generated and Human Economics Research</a> <span class="mnote-meta">paper, 2026 · 9,748w</span></p>
+<p><strong>Alejandro Lopez-Lira</strong> · <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6687378">ZeroPaper: An Autonomous Research System (SSRN)</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
+<p><strong>David van Dijcke</strong> · <a href="https://coarse.ink/">Coarse — AI Paper Reviewer</a> <span class="mnote-meta">tool · 424w</span></p>
+<p><strong>Alexis Akira Toda</strong> · <a href="https://arxiv.org/abs/2606.05383">Can AI Refute Economic Theory? Evidence from Beyond the Knowledge Cutoff (arXiv)</a> <span class="mnote-meta">paper, 2026 · 6,754w</span></p>
+<p><strong>Oliver Hanney</strong> · <a href="https://voxdev.org/topic/ai-and-development-economics-early-evidence-and-how-keep">AI and development economics: Early evidence and how to keep up</a> <span class="mnote-meta">article, 2026 · 5,935w</span></p>
+<p><strong>Jesse Lastunen</strong> · <a href="https://policy.fi/southmod/">SOUTHMOD Claude Skill</a> <span class="mnote-meta">tool · 1,308w</span></p>
+</div></div><hr>
+</section>
+</section>
+<section id="part-2-the-forecast" class="level1">
+<h1>Part 2 · The forecast</h1>
+<p>The history above was measured. The forecast below is not, and the difference is deliberate. What follows assumes the tools that already exist keep spreading. Each claim is numbered, dated, and carries a probability in steps of 0.05. Each is written so that a person in 2027 or 2028 can mark it true or false, most of them from public pages and several from this database directly. The full set is mirrored in the <a href="./supplements/predictions.html">Predictions scoreboard</a>, which is the only page that changes after this document is released.</p>
+<section id="the-rest-of-2026" class="level2">
+<h2 class="anchored" data-anchor-id="the-rest-of-2026">The rest of 2026</h2>
+<p>The near term is mostly the present, continued. The referee factory keeps filling because the incentive that built it, checking is now the expensive step, has not moved. The first formal institutional responses appear. A journal or data editor states a policy on machine use, and the reporting-standard idea that has been circulating as a proposal gets a name.</p>
+<div class="prediction">
+<p><span class="prob">p = 0.85</span><span class="pid">P1.</span> By the frozen gold labels, verification and referee tools stay the largest single kind of AI-for-research tool the field builds. The audited share holds at or above 25%. <span class="pmeta"><span class="tag">scored from the database</span> Resolves by 2026-12-31. <span class="pstatus">At tag, already close to true at tag (28.9%, 11 of 38).</span> <em>Reference class.</em> Once a tool category is the largest of its kind it rarely halves within a year.</span></p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.90</span><span class="pid">P2.</span> At least one top-five journal (AER, Econometrica, JPE, QJE, REStud) or the AEA Data Editor carries an explicit written policy on LLM use in submissions. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2026-12-31. <span class="pstatus">At tag, plausibly already satisfied, since journal AI policies moved fast in 2024 and 2025.</span> <em>Reference class.</em> Base rate is high, because disclosure policies spread faster than enforcement.</span></p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.75</span><span class="pid">P3.</span> The named cast (Cunningham, Panjwani, Sant’Anna, Backman, Goldsmith-Pinkham) publishes at least three new guides on their own sites or public repos, verifiable independently of this corpus. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2026-12-31. <em>Reference class.</em> These five have each shipped multiple guides since 2025, so supply is elastic.</span></p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.55</span><span class="pid">P4.</span> A named, numbered reporting checklist of at least eight items, scoped to LLM-based measurement in economics, is released as a preprint or peer-reviewed article. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2026-12-31. <em>Reference class.</em> PRISMA and CONSORT took a small team and a panic, and the trigger of template papers already exists.</span></p>
+</div>
+</section>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section">2027</h2>
+<p>By 2027 the pressure reaches the gatekeepers. Submissions climb against refereeing capacity that cannot climb with them, so desk rejection and triage harden, and at least one editor says so in public. The verification norm starts to show up where careers are decided, in what a research-assistant or predoc posting asks for, and the scattered personal toolkits begin to consolidate into maintained suites, because a standard that outlives its author has to.</p>
+<div class="refrain">
+<p>Every prediction here is a bet on the same mechanism. The cost of producing a result keeps falling, the cost of trusting one does not, and institutions reorganize around the gap.</p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.55</span><span class="pid">P5.</span> The AEA Data Editor or at least one top-five journal adopts an LLM or agent system that autonomously executes and checks submission code, applied to standard accepted submissions rather than a one-off pilot. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2027-12-31. <em>Reference class.</em> Data-editor reproduction already exists, and agent-driven checking is the new step.</span></p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.60</span><span class="pid">P6.</span> At least one top-five journal or a named data editor publicly reports a rise in submissions or in desk-rejection rate that it attributes to AI-generated manuscripts. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2027-12-31. <em>Reference class.</em> Submission-volume complaints are already common, and attribution to AI is the new part.</span></p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.65</span><span class="pid">P7.</span> Research-assistant or predoc postings from at least three top-20 departments or named labs carry explicit reproducibility, replication, verification, or audit language. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2027-12-31. <em>Reference class.</em> Job-ad language tracks tooling with a lag, and verification vocabulary is new since 2026.</span></p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.55</span><span class="pid">P8.</span> At least two multi-author validation suites exist for economics LLM measurement, each with two or more credited authors, a commit within the trailing 12 months, and rOpenSci review or a place on JOSS or CRAN. <span class="pmeta"><span class="tag">scored from the database</span> Resolves by 2027-12-31. <em>Reference class.</em> Fragmented tools consolidate once a standard exists, and rOpenSci review is the usual gate.</span></p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.55</span><span class="pid">P9.</span> Leading agent-coding capabilities ship as defaults in mainstream developer tools, so the share of newly released AI-for-research tools that are standalone coding assistants falls relative to 2026. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2027-12-31. <em>Reference class.</em> Capabilities that become platform defaults stop being separately marketed.</span></p>
+</div>
+</section>
+<section id="section-1" class="level2">
+<h2 class="anchored" data-anchor-id="section-1">2028</h2>
+<p>The two-to-five-year horizon is where the working papers embargoed today come out of embargo on their own, coverage of the record recovers, and the standards question is settled one way or the other, either a reporting standard is being cited in real methods sections, or it is not. Whether that standard exists, and whether anyone is required to follow it, is the thesis playing out in real time: the field either puts a price on verified judgment, or leaves it unpriced.</p>
+<div class="prediction">
+<p><span class="prob">p = 0.70</span><span class="pid">P10.</span> At least half of the NBER working papers embargoed at v1.0 have a findable open mirror by the end of 2028, discoverable by the stated resolution procedure, whether or not this corpus has re-fetched them. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2028-12-31. <em>Reference class.</em> Embargoes of about 18 months lapse, and author self-posting is common in economics.</span></p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.50</span><span class="pid">P11.</span> The reporting standard defined in P4 is cited in the methods section of at least one peer-reviewed economics article. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2028-12-31. <em>Reference class.</em> Conditional on P4, a standard that exists gets cited within a couple of years.</span></p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.45</span><span class="pid">P12.</span> A public repository of human-validated gold-labelled datasets for recurring economics text-classification tasks, other than this site’s own tool-labels set, exists and has at least one citation in a peer-reviewed economics article. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2028-12-31. <em>Reference class.</em> Benchmark repositories emerge where a field repeats a classification task, and economics is early.</span></p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.50</span><span class="pid">P13.</span> Audit-style pedagogy adopted explicitly as an AI-integrity measure appears in graduate economics syllabi at three distinct institutions, whether as planted-error assignments, AI-output audits, or oral examination newly introduced for that purpose. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2028-12-31. <em>Reference class.</em> Audit pedagogy follows the tool, and oral exams pre-date AI, so only AI-motivated adoption counts.</span></p>
+</div>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+The ground gets soft here
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Everything to 2028 mostly assumes tools that already exist keep spreading, and the error bars are narrow enough to grade. Everything past 2028 depends on a choice by institutions, not on what the models can do, and the error bars widen accordingly. The models will keep improving. That is not the uncertain part. The uncertain part is whether the field’s gatekeepers decide to reward verification before the flood of plausible machine text outruns the humans left to check it. The next section is that choice, and the two endings are the two ways it goes.</p>
+</div>
+</div>
+<hr>
+</section>
+</section>
+<section id="the-branch-end-of-2028" class="level1">
+<h1>The branch, end of 2028</h1>
+<p>One question decides which ending unfolds, and it is not a question about AI.</p>
+<blockquote class="blockquote">
+<p><strong>Do the field’s gatekeepers, journals, funders, and data editors, make machine verification mandatory and rewarded, or not?</strong></p>
+</blockquote>
+<p>Both endings start from the same facts, printed word-for-word at the top of each, and differ only on the answer to that one question. Having called the question decisive, it would be a dodge not to bet on it, so here is the bet, with the wide error bars the box above warns about. By 2030, <strong>Ending A</strong>, machine verification made mandatory and rewarded at a top-five journal or by the AEA Data Editor, gets probability <strong>0.35</strong>. <strong>Ending B</strong>, machine-written submissions outrunning the referees with no working check in place, gets <strong>0.30</strong>. The remaining <strong>0.35</strong> goes to the middle path: journals move slowly while private services sell verification in the meantime, something Ending B already hints at. So the single most likely 2030 is not either clean ending but a mix of the two, and the endings are written as the pure cases because the mix is easiest to understand as a blend of them. Pick one to read. Expect some of both.</p>
+<div class="fork">
+<a class="ending-a" href="endings/audit.html">
+  <h3 class="anchored" data-anchor-id="the-branch-end-of-2028">Ending A · The audit</h3>
+  <p>Verification infrastructure catches up the way preregistration did. Agent-checked
+  replication becomes a submission gate, the published literature grows more reliable than
+  it was in 2020, and the unit of contribution drifts from the paper toward the dataset and
+  the living document.</p>
+</a>
+<a class="ending-b" href="endings/flood.html">
+  <h3 class="anchored">Ending B · The flood</h3>
+  <p>Plausible machine-written papers outrun refereeing capacity. Trust retreats to
+  reputation and network whitelists, insiders win, and the apprenticeship that used to
+  produce verifiers erodes exactly when verification became the scarce input.</p>
+</a>
+</div>
+<p><em>Both endings, and every figure above, are recomputed from the underlying database. The retrospective charts extend themselves as the collection grows. The forecast text is frozen at release and graded later. See the <a href="./supplements/method.html">Method</a> page for what this document can and cannot verify.</em></p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>By <a href="https://www.lukasikic.info/">Luka Šikić</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p>Every figure recomputed from the underlying database, none asserted.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

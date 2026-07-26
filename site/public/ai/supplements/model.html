@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Luka Šikić">
+<meta name="dcterms.date" content="2026-07-23">
+
+<title>A model of verified judgment – Cheap Intelligence, Scarce Trust</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-06c24323d517682b634abf9cd2a75031.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-abba37111a90094c810d6d81738f004c.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6747ae0308e14b7ba509f3e87cec1a5c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-7d5974a88db6441316dd1ce1db64f680.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<!-- lukasikic.info integration -->
+<meta name="description" content="An evidence-based retrospective and forecast of how economics is absorbing artificial intelligence.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Luka Šikić">
+<meta property="og:title" content="How Economics Absorbed AI">
+<meta property="og:description" content="An evidence-based retrospective and forecast of how economics is absorbing artificial intelligence.">
+<meta property="og:url" content="https://www.lukasikic.info/ai/supplements/model.html">
+<meta property="og:image" content="https://www.lukasikic.info/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.lukasikic.info/ai/supplements/model.html">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Cheap Intelligence, Scarce Trust</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Scenario</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-endings" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Endings</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-endings">    
+        <li>
+    <a class="dropdown-item" href="../endings/audit.html">
+ <span class="dropdown-text">A · The audit ending</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../endings/flood.html">
+ <span class="dropdown-text">B · The flood ending</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-supplements" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Supplements</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-supplements">    
+        <li>
+    <a class="dropdown-item" href="../supplements/predictions.html">
+ <span class="dropdown-text">Predictions scoreboard</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../supplements/model.html">
+ <span class="dropdown-text">A model of verified judgment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../supplements/coverage.html">
+ <span class="dropdown-text">Coverage</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../supplements/timeline.html">
+ <span class="dropdown-text">Timeline</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../supplements/method.html">
+ <span class="dropdown-text">Method</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="/" aria-label="Return to lukasikic.info">
+      <span class="menu-text">lukasikic.info</span>
+    </a>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lusiki/AI_econ_resources"> <i class="bi bi-github" role="img" aria-label="Repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#setup-a-market-for-plausible-results" id="toc-setup-a-market-for-plausible-results" class="nav-link active" data-scroll-target="#setup-a-market-for-plausible-results">Setup, a market for plausible results</a></li>
+  <li><a href="#verification-technology-the-scarce-input" id="toc-verification-technology-the-scarce-input" class="nav-link" data-scroll-target="#verification-technology-the-scarce-input">Verification technology, the scarce input</a></li>
+  <li><a href="#the-authors-problem-when-honesty-is-incentive-compatible" id="toc-the-authors-problem-when-honesty-is-incentive-compatible" class="nav-link" data-scroll-target="#the-authors-problem-when-honesty-is-incentive-compatible">The author’s problem, when honesty is incentive-compatible</a></li>
+  <li><a href="#the-gatekeepers-problem-and-the-branch" id="toc-the-gatekeepers-problem-and-the-branch" class="nav-link" data-scroll-target="#the-gatekeepers-problem-and-the-branch">The gatekeeper’s problem, and the branch</a></li>
+  <li><a href="#the-flood-as-a-capacity-constraint" id="toc-the-flood-as-a-capacity-constraint" class="nav-link" data-scroll-target="#the-flood-as-a-capacity-constraint">The flood as a capacity constraint</a></li>
+  <li><a href="#a-hybrid-where-trust-is-priced-in-a-certification-market" id="toc-a-hybrid-where-trust-is-priced-in-a-certification-market" class="nav-link" data-scroll-target="#a-hybrid-where-trust-is-priced-in-a-certification-market">A hybrid where trust is priced in a certification market</a></li>
+  <li><a href="#what-would-move-the-result" id="toc-what-would-move-the-result" class="nav-link" data-scroll-target="#what-would-move-the-result">What would move the result</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">A model of verified judgment</h1>
+<p class="subtitle lead">The branch as comparative statics on the cost of audit</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Supplement</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p><a href="https://www.lukasikic.info/">Luka Šikić</a> </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 23, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>This is a formal sketch, not a finished result. It turns the essay’s central claim, that generation got cheap while verification stayed dear, into the smallest model that makes the ending a comparative static rather than a mood. The economics is the author’s to own and refine. The parameters are illustrative, and the propositions are stated as sketches a referee would still want to break.</p>
+</div>
+</div>
+</div>
+<p>The essay’s argument is one sentence long. Producing plausible research became nearly free, while <em>confirming</em> that a result is real stayed costly, so the scarce factor is verified judgment. That sentence has an equilibrium behind it. Below is the smallest version I can write down honestly.</p>
+<section id="setup-a-market-for-plausible-results" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="setup-a-market-for-plausible-results">Setup, a market for plausible results</h2>
+<p>A unit continuum of authors each submit one paper to a gatekeeper (a journal, a funder’s panel, a data editor). A paper has quality <span class="math inline">\(q \in \{H, L\}\)</span>. A high-quality paper is a real result. A low-quality paper is <em>plausible but false</em>, the paper-mill output that reads like research and is not.</p>
+<p>Two costs sit on the author. Producing a genuinely high-quality result costs <span class="math inline">\(k\)</span>, the real work, including the author’s own checking. Generating a plausible submission costs <span class="math inline">\(g\)</span>, and the premise of the whole essay is that <span class="math inline">\(g\)</span> has collapsed toward zero. The price of a competent-looking draft is now a few dollars of inference. The menu-pricing literature is where that premise is measured. <em>Menu Pricing of Large Language Models</em> documents how model providers price generation down a demand curve, which is the supply side of the flood. Verification did not fall the same way, and that asymmetry (<span class="math inline">\(g \to 0\)</span> while <span class="math inline">\(k\)</span> stays bounded away from zero) is the entire engine here.</p>
+<p>A published paper returns private value <span class="math inline">\(V\)</span> (a line on the CV, a grant, standing). A low-quality paper that is <em>caught</em> returns a penalty <span class="math inline">\(\varphi \ge 0\)</span> (the desk reject, the retraction, the reputational mark). Normalize the outside option (do not submit) to zero.</p>
+
+<div class="no-row-height column-margin column-container"><div class="mnote">
+<p><span class="mnote-h">Grounding in the corpus</span></p>
+<p><strong>Dirk Bergemann, Alessandro Bonatti, Alex Smolin</strong> · <a href="https://arxiv.org/abs/2502.07736">Menu Pricing of Large Language Models</a> <span class="mnote-meta">paper, 2026 · 20,135w</span></p>
+<p><strong>Susan Athey, Fiona Scott Morton</strong> · <a href="https://www.nber.org/papers/w34444">Artificial Intelligence, Competition, and Welfare (NBER WP 34444)</a> <span class="mnote-meta">paper, 2025 · 18,941w</span></p>
+</div></div></section>
+<section id="verification-technology-the-scarce-input" class="level2">
+<h2 class="anchored" data-anchor-id="verification-technology-the-scarce-input">Verification technology, the scarce input</h2>
+<p>The gatekeeper chooses an <strong>audit intensity</strong> <span class="math inline">\(a \in [0,1]\)</span>, applied per submission. Read <span class="math inline">\(a\)</span> as the probability that a low-quality paper is caught. Take <span class="math inline">\(\pi(a) = a\)</span> for cleanliness, and assume a true result never fails the audit (no false positives, a simplification I return to). Auditing costs</p>
+<p><span class="math display">\[
+c(a. \theta) = \theta \, \psi(a), \qquad \psi' &gt; 0,\ \psi'' &gt; 0,\ \psi(0)=0,
+\]</span></p>
+<p>per submission, with <span class="math inline">\(\psi\)</span> increasing and convex, so deeper checking is disproportionately expensive. The scalar <span class="math inline">\(\theta &gt; 0\)</span> is the <strong>cost of verification technology</strong>, human referee hours at one extreme and cheap agentic reproduction (the “referee factory”) at the other. This is the binding input. Verified judgment is what the model is short of, and <span class="math inline">\(c(a;\theta)\)</span> is its price.</p>
+</section>
+<section id="the-authors-problem-when-honesty-is-incentive-compatible" class="level2">
+<h2 class="anchored" data-anchor-id="the-authors-problem-when-honesty-is-incentive-compatible">The author’s problem, when honesty is incentive-compatible</h2>
+<p>Given the audit intensity <span class="math inline">\(a\)</span> the author expects, compare the three payoffs below.</p>
+<p><span class="math display">\[
+\Pi_H = V - k, \qquad
+\Pi_L = (1-a)\,V - a\,\varphi - g, \qquad
+\Pi_\varnothing = 0.
+\]</span></p>
+<p>An author invests in quality (chooses <span class="math inline">\(H\)</span> over <span class="math inline">\(L\)</span>) exactly when <span class="math inline">\(\Pi_H \ge \Pi_L\)</span>.</p>
+<p><span class="math display">\[
+V - k \;\ge\; (1-a)V - a\varphi - g
+\quad\Longleftrightarrow\quad
+a\,(V+\varphi) \;\ge\; K - g .
+\]</span></p>
+<p>Solving for the audit intensity that just sustains quality gives the threshold</p>
+<p><span class="math display">\[
+\boxed{\,a^{*} = \dfrac{k - g}{V + \varphi}\,}.
+\]</span></p>
+<p><strong>Proposition 1 (the separating threshold).</strong> <em>A separating equilibrium (every submitted paper is high quality) is sustained if and only if <span class="math inline">\(a \ge a^{*}\)</span>, and</em> <span class="math display">\[
+\frac{\partial a^{*}}{\partial g} = -\frac{1}{V+\varphi} &lt; 0 .
+\]</span></p>
+<p><em>Intuition.</em> Generation cost used to do the gatekeeping for free. When <span class="math inline">\(g \ge k\)</span>, faking costs as much as doing the work, <span class="math inline">\(a^{*} \le 0\)</span>, and no audit is needed, the old world, where writing a convincing fake paper was itself most of the labor of writing a real one. As <span class="math inline">\(g \to 0\)</span> the threshold rises to its residual floor <span class="math inline">\(k/(V+\varphi)\)</span>. The discipline that generation cost supplied for nothing must now be <em>bought</em> as audit. Cheap generation does not corrupt the pool by making authors dishonest. It corrupts the pool by removing the tax that kept dishonesty unprofitable.</p>
+<p>Volume moves the same way. When <span class="math inline">\(a &lt; a^{*}\)</span>, low quality pays, and because a plausible submission is now nearly free the mass of such submissions is bounded only by the number of would-be authors, not by their budgets. The pool does not merely tilt toward junk, it <em>floods</em>.</p>
+</section>
+<section id="the-gatekeepers-problem-and-the-branch" class="level2">
+<h2 class="anchored" data-anchor-id="the-gatekeepers-problem-and-the-branch">The gatekeeper’s problem, and the branch</h2>
+<p>Sustaining trust is worth something. Let <span class="math inline">\(B &gt; 0\)</span> be the per-submission value to the gatekeeper of a pool readers can trust, over a pool they cannot, the difference between a literature people build on and one they discount to reputation. The gatekeeper sets <span class="math inline">\(a \ge a^{*}\)</span> (pays for trust) when the audit it requires is cheaper than the trust it buys:</p>
+<p><span class="math display">\[
+\theta\,\psi(a^{*}) \;\le\; B
+\quad\Longleftrightarrow\quad
+\theta \;\le\; \bar\theta \equiv \frac{B}{\psi(a^{*})} .
+\]</span></p>
+<p>This is the branch, and it is a comparative static on one parameter.</p>
+<p><strong>Proposition 2 (the ending is priced by audit cost, not capability).</strong> <em>Hold model capability fixed. There is a threshold <span class="math inline">\(\bar\theta\)</span> such that the gatekeeper selects the <strong>audit ending</strong> (<span class="math inline">\(a \ge a^{*}\)</span>, verification mandatory and rewarded) if and only if <span class="math inline">\(\theta \le \bar\theta\)</span>, and the <strong>flood ending</strong> (<span class="math inline">\(a &lt; a^{*}\)</span>, the pool pools) otherwise. The selected ending turns on the cost of verification <span class="math inline">\(\theta\)</span>, not on how good the models are.</em></p>
+<p><em>Intuition.</em> The same capability jump that drove <span class="math inline">\(g \to 0\)</span>, feeding the flood, also drives <span class="math inline">\(\theta \to 0\)</span>, because agentic reproduction can re-run an analysis, chase a citation, or re-derive a proof at inference cost. So capability pushes <em>both</em> levers. It raises <span class="math inline">\(a^{*}\)</span> (Proposition 1, more audit now required) and it lowers <span class="math inline">\(\theta\)</span> (that audit now affordable). Which effect the institution acts on is the ending. The technology does not choose. The journal, the funder, and the data editor choose, by deciding whether machine verification is required and rewarded.</p>
+</section>
+<section id="the-flood-as-a-capacity-constraint" class="level2">
+<h2 class="anchored" data-anchor-id="the-flood-as-a-capacity-constraint">The flood as a capacity constraint</h2>
+<p>The flood ending has a sharper reading than “gatekeepers declined to audit.” Let realized audit be <span class="math display">\[
+a_{\text{real}} = \min\!\big(a,\. R/N\big),
+\]</span> where <span class="math inline">\(R\)</span> is refereeing capacity and <span class="math inline">\(N\)</span> the submission volume. With human referees <span class="math inline">\(R\)</span> is fixed at throughput. As <span class="math inline">\(g \to 0\)</span>, <span class="math inline">\(N \to \infty\)</span>, so <span class="math inline">\(R/N \to 0\)</span> and <span class="math inline">\(a_{\text{real}} \to 0\)</span> <em>even for a gatekeeper who wants to audit</em>. At fixed human capacity the audit ending is not merely unchosen, it is infeasible. The referee factory (<span class="math inline">\(\theta \to 0\)</span>) matters precisely because it unbinds <span class="math inline">\(R\)</span> from human throughput, because machine audit lets capacity scale with submissions. So the two endings map cleanly onto one structural question, <strong>does audit capacity scale with the flood, or not.</strong> When it does not, trust does not vanish so much as relocate. Readers condition on author identity and institution instead of on the audit, because the audit has gone uninformative. That is the whitelist world the essay names.</p>
+</section>
+<section id="a-hybrid-where-trust-is-priced-in-a-certification-market" class="level2">
+<h2 class="anchored" data-anchor-id="a-hybrid-where-trust-is-priced-in-a-certification-market">A hybrid where trust is priced in a certification market</h2>
+<p>There is a third region between the two endings. Suppose a private certifier offers audit at price <span class="math inline">\(p\)</span> per paper while the journal lags at <span class="math inline">\(a &lt; a^{*}\)</span>. High-quality authors buy certification to separate. Low-quality authors do not, because for them the expected value of inviting scrutiny is below <span class="math inline">\(p\)</span>. Costly certification then re-manufactures the separating equilibrium the journal failed to enforce, trust becomes a good with a price, sold outside the journal. Whether this substitutes for gatekeeping or corrodes it (a two-tier literature of certified and merely-published work) is a market-structure question, and the market structure around AI is where <em>Artificial Intelligence, Competition, and Welfare (NBER WP 34444)</em> locates the welfare stakes. The scarce factor of the essay’s title, trust, is, in this region, literally a priced input.</p>
+</section>
+<section id="what-would-move-the-result" class="level2">
+<h2 class="anchored" data-anchor-id="what-would-move-the-result">What would move the result</h2>
+<ul>
+<li><strong>The value of trust <span class="math inline">\(B\)</span>.</strong> If readers do not actually discount a flooded pool, if citation counts keep rising regardless of quality, then <span class="math inline">\(\bar\theta\)</span> collapses and no audit is adopted at any cost. The audit ending needs a community that <em>punishes</em> pooling.</li>
+<li><strong>The penalty <span class="math inline">\(\varphi\)</span>.</strong> Enforcement (retraction that bites, reputational memory) lowers <span class="math inline">\(a^{*}\)</span> directly. Cheap audit and weak penalties are substitutes for sustaining honesty. The cheapest path to the audit ending may run through enforcement, not intensity.</li>
+<li><strong>The asymmetry <span class="math inline">\(k\)</span> vs.&nbsp;<span class="math inline">\(g\)</span>.</strong> The whole model lives on <span class="math inline">\(k\)</span> staying bounded while <span class="math inline">\(g \to 0\)</span>. If genuine verification <em>also</em> gets cheap, if <span class="math inline">\(k \to 0\)</span> with <span class="math inline">\(g\)</span>, then <span class="math inline">\(a^{*} \to 0\)</span> and the problem dissolves. The essay’s wager is that the checked, human-audited part of <span class="math inline">\(k\)</span> is exactly what does not fall. That wager is the model’s load-bearing assumption, and its most testable one.</li>
+<li><strong>Whether audit is machine-verifiable and mandated.</strong> <span class="math inline">\(\theta\)</span> is realized institutionally, not technologically. A reproduction agent that exists but is neither required nor rewarded leaves <span class="math inline">\(\theta\)</span> high in practice.</li>
+</ul>
+<div class="callout callout-style-simple callout-warning">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p><strong>Limitations, this is a sketch.</strong> Two types, one period, one gatekeeper, no false positives, <span class="math inline">\(\pi(a)=a\)</span>, and no dynamic reputation or gatekeeper competition. Volume enters informally. A full treatment would microfound <span class="math inline">\(N(g)\)</span> and let <span class="math inline">\(R\)</span> be chosen. The parameters are illustrative and nothing here is estimated, the comparative statics are meant to be read as directions, not magnitudes. The economics is mine to get wrong and to fix. Corrections are the point of publishing a draft rather than a proof.</p>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>By <a href="https://www.lukasikic.info/">Luka Šikić</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p>Every figure recomputed from <code>data/aiecon.sqlite</code>, none asserted.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

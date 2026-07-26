@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeader from './SectionHeader.astro';
+import ProjectRow from './ProjectRow.astro';
+import { getCollection } from 'astro:content';
+import { strings, type Lang } from '../i18n/strings';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const s = strings[lang];
+const projects = (await getCollection('projects')).sort(
+  (a, b) => (b.data.date?.valueOf() ?? 0) - (a.data.date?.valueOf() ?? 0),
+);
+---
+<Base title={s.projects.title} description={s.projects.hero} lang={lang}>
+  <section class="hero hero--compact">
+    <span class="hero__eyebrow eyebrow">{s.projects.eyebrow}</span>
+    <h1 class="hero__title hero__title--page">{s.projects.heroTitle}</h1>
+    <p class="hero__lede">{s.projects.hero}</p>
+  </section>
+
+  <section class="section section--flush">
+    <SectionHeader num={s.projects.sectionLabel(projects.length)} title={s.projects.sectionTitle} />
+    <ul class="list">
+      {projects.map(p => <li><ProjectRow entry={p} lang={lang} /></li>)}
+    </ul>
+  </section>
+</Base>

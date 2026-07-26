@@ -3,18 +3,76 @@ import '../styles/colors_and_type.css';
 import '../styles/components.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
-import type { Lang } from '../i18n/strings';
-interface Props { title?: string; description?: string; lang?: Lang; }
-const { title = 'Luka Šikić', description = '', lang = 'en' } = Astro.props;
+import { altPath, strings, type Lang } from '../i18n/strings';
+
+interface Props {
+  title?: string;
+  description?: string;
+  lang?: Lang;
+}
+
+const { title = 'Luka Šikić', description, lang = 'en' } = Astro.props;
+const s = strings[lang];
+const resolvedDescription = description || s.home.description;
+const siteOrigin = Astro.site || new URL(Astro.url.origin);
+const canonical = new URL(Astro.url.pathname, siteOrigin);
+const alternate = new URL(altPath(Astro.url.pathname, lang), siteOrigin);
+const english = lang === 'en' ? canonical : alternate;
+const croatian = lang === 'hr' ? canonical : alternate;
+const socialImage = new URL('/og.png', siteOrigin);
+const locale = lang === 'hr' ? 'hr_HR' : 'en_US';
+const alternateLocale = lang === 'hr' ? 'en_US' : 'hr_HR';
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Luka Šikić',
+  url: new URL('/', siteOrigin).toString(),
+  image: new URL('/avatar.png', siteOrigin).toString(),
+  jobTitle: lang === 'hr'
+    ? 'Docent statistike i znanosti o podacima'
+    : 'Assistant Professor of Statistics and Data Science',
+  affiliation: {
+    '@type': 'CollegeOrUniversity',
+    name: lang === 'hr' ? 'Hrvatsko katoličko sveučilište' : 'Croatian Catholic University',
+    url: 'https://www.unicath.hr/',
+  },
+  sameAs: [
+    'https://github.com/lusiki',
+    'https://scholar.google.com/citations?user=qOGfRvkAAAAJ&hl=en',
+    'https://www.linkedin.com/in/luka-sikic-662ba869/',
+  ],
+};
 ---
 <!doctype html>
 <html lang={lang}>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content={description} />
+  <meta name="description" content={resolvedDescription} />
+  <meta name="theme-color" content="#171717" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Luka Šikić" />
+  <meta property="og:title" content={title} />
+  <meta property="og:description" content={resolvedDescription} />
+  <meta property="og:url" content={canonical} />
+  <meta property="og:locale" content={locale} />
+  <meta property="og:locale:alternate" content={alternateLocale} />
+  <meta property="og:image" content={socialImage} />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Luka Šikić — Econometrics, Data Science, and AI in Economic Research" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={title} />
+  <meta name="twitter:description" content={resolvedDescription} />
+  <meta name="twitter:image" content={socialImage} />
+  <link rel="canonical" href={canonical} />
+  <link rel="alternate" hreflang="en" href={english} />
+  <link rel="alternate" hreflang="hr" href={croatian} />
+  <link rel="alternate" hreflang="x-default" href={english} />
   <title>{title}</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23171717'/%3E%3C/svg%3E" />
+  <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />
   <script is:inline>
     (function () {
       try {
@@ -25,8 +83,9 @@ const { title = 'Luka Šikić', description = '', lang = 'en' } = Astro.props;
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">{s.common.skipToContent}</a>
   <Nav lang={lang} />
-  <main class="container">
+  <main class="container" id="main-content">
     <slot />
   </main>
   <Footer lang={lang} />

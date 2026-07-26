@@ -1,0 +1,28 @@
+---
+import Base from '../layouts/Base.astro';
+import SectionHeader from './SectionHeader.astro';
+import PublicationRow from './PublicationRow.astro';
+import { getCollection } from 'astro:content';
+import { strings, type Lang } from '../i18n/strings';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const s = strings[lang];
+const pubs = (await getCollection('publications')).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+---
+<Base title={s.pubs.title} description={s.pubs.hero} lang={lang}>
+  <section class="hero hero--compact">
+    <span class="hero__eyebrow eyebrow">{s.pubs.eyebrow}</span>
+    <h1 class="hero__title hero__title--page">{s.pubs.heroTitle}</h1>
+    <p class="hero__lede">{s.pubs.hero}</p>
+  </section>
+
+  <section class="section section--flush">
+    <SectionHeader num={s.pubs.sectionLabel(pubs.length)} title={s.pubs.sectionTitle} />
+    <ul class="list">
+      {pubs.map(p => <li><PublicationRow entry={p} lang={lang} /></li>)}
+    </ul>
+  </section>
+</Base>

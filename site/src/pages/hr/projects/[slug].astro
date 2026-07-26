@@ -1,43 +1,15 @@
 ---
-import Base from '../../../layouts/Base.astro';
+import ProjectPage from '../../../components/ProjectPage.astro';
 import { getCollection } from 'astro:content';
-import { strings, type Lang } from '../../../i18n/strings';
-
-const lang: Lang = 'hr';
-const s = strings[lang];
-const prefix = '/hr';
 
 export async function getStaticPaths() {
   const projects = await getCollection('projects');
-  return projects.map(entry => ({ params: { slug: entry.slug }, props: { entry } }));
+  return projects.map(entry => ({
+    params: { slug: entry.id },
+    props: { entry },
+  }));
 }
 
 const { entry } = Astro.props;
-const { Content } = await entry.render();
-const d = entry.data;
-const summary = d.summary_hr || d.summary;
 ---
-<Base title={`${d.title} — Luka Šikić`} description={summary} lang={lang}>
-  <article class="prose" style="padding: var(--s-9) 0;">
-    <div style="margin-bottom: var(--s-5);">
-      <a href={`${prefix}/projects/`} class="eyebrow" style="border-bottom: 0;">{s.projects.back}</a>
-    </div>
-
-    <h1 style="font-size: 36px; line-height: 1.15; margin-bottom: var(--s-5); max-width: 28ch;">{d.title}</h1>
-    {summary && <p class="hero__lede" style="margin-bottom: var(--s-6);">{summary}</p>}
-
-    <div style="display: flex; gap: var(--s-2); flex-wrap: wrap; margin-bottom: var(--s-7);">
-      {d.external_link && <a class="btn btn--primary" href={d.external_link} target="_blank" rel="noopener">{s.projects.visit}</a>}
-      {d.url_code && <a class="btn" href={d.url_code} target="_blank" rel="noopener">Kod</a>}
-      {d.url_pdf && <a class="btn" href={d.url_pdf} target="_blank" rel="noopener">PDF</a>}
-    </div>
-
-    {d.tags && d.tags.length > 0 && (
-      <div style="margin-bottom: var(--s-7); display: flex; gap: var(--s-2); flex-wrap: wrap;">
-        {d.tags.map(t => <span class="tag">{t}</span>)}
-      </div>
-    )}
-
-    <Content />
-  </article>
-</Base>
+<ProjectPage lang="hr" entry={entry} />

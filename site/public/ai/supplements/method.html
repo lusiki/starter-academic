@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.43">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Luka Šikić">
+<meta name="dcterms.date" content="2026-07-23">
+
+<title>How this was built, and what it cannot verify – Cheap Intelligence, Scarce Trust</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-06c24323d517682b634abf9cd2a75031.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-abba37111a90094c810d6d81738f004c.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6747ae0308e14b7ba509f3e87cec1a5c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-7d5974a88db6441316dd1ce1db64f680.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+
+
+<!-- lukasikic.info integration -->
+<meta name="description" content="An evidence-based retrospective and forecast of how economics is absorbing artificial intelligence.">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Luka Šikić">
+<meta property="og:title" content="How Economics Absorbed AI">
+<meta property="og:description" content="An evidence-based retrospective and forecast of how economics is absorbing artificial intelligence.">
+<meta property="og:url" content="https://www.lukasikic.info/ai/supplements/method.html">
+<meta property="og:image" content="https://www.lukasikic.info/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.lukasikic.info/ai/supplements/method.html">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Cheap Intelligence, Scarce Trust</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Scenario</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-endings" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Endings</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-endings">    
+        <li>
+    <a class="dropdown-item" href="../endings/audit.html">
+ <span class="dropdown-text">A · The audit ending</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../endings/flood.html">
+ <span class="dropdown-text">B · The flood ending</span></a>
+  </li>  
+    </ul>
+  </li>
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-supplements" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Supplements</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-supplements">    
+        <li>
+    <a class="dropdown-item" href="../supplements/predictions.html">
+ <span class="dropdown-text">Predictions scoreboard</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../supplements/model.html">
+ <span class="dropdown-text">A model of verified judgment</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../supplements/coverage.html">
+ <span class="dropdown-text">Coverage</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../supplements/timeline.html">
+ <span class="dropdown-text">Timeline</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../supplements/method.html">
+ <span class="dropdown-text">Method</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="/" aria-label="Return to lukasikic.info">
+      <span class="menu-text">lukasikic.info</span>
+    </a>
+  </li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/lusiki/AI_econ_resources"> <i class="bi bi-github" role="img" aria-label="Repository">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul class="collapse">
+  <li><a href="#the-data-seam" id="toc-the-data-seam" class="nav-link active" data-scroll-target="#the-data-seam">The data seam</a></li>
+  <li><a href="#the-census-reconciled" id="toc-the-census-reconciled" class="nav-link" data-scroll-target="#the-census-reconciled">The census, reconciled</a></li>
+  <li><a href="#the-flagship-number-audited" id="toc-the-flagship-number-audited" class="nav-link" data-scroll-target="#the-flagship-number-audited">The flagship number, audited</a></li>
+  <li><a href="#the-whale-is-mislabelled" id="toc-the-whale-is-mislabelled" class="nav-link" data-scroll-target="#the-whale-is-mislabelled">The whale is mislabelled</a></li>
+  <li><a href="#the-four-hygiene-rules" id="toc-the-four-hygiene-rules" class="nav-link" data-scroll-target="#the-four-hygiene-rules">The four hygiene rules</a></li>
+  <li><a href="#the-metrics-strip-and-its-forecast-band" id="toc-the-metrics-strip-and-its-forecast-band" class="nav-link" data-scroll-target="#the-metrics-strip-and-its-forecast-band">The metrics strip, and its forecast band</a></li>
+  <li><a href="#what-this-document-cannot-verify" id="toc-what-this-document-cannot-verify" class="nav-link" data-scroll-target="#what-this-document-cannot-verify">What this document cannot verify</a></li>
+  <li><a href="#publishability" id="toc-publishability" class="nav-link" data-scroll-target="#publishability">Publishability</a></li>
+  <li><a href="#rebuilding" id="toc-rebuilding" class="nav-link" data-scroll-target="#rebuilding">Rebuilding</a></li>
+  <li><a href="#indexing-policy" id="toc-indexing-policy" class="nav-link" data-scroll-target="#indexing-policy">Indexing policy</a></li>
+  <li><a href="#colophon" id="toc-colophon" class="nav-link" data-scroll-target="#colophon">Colophon</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How this was built, and what it cannot verify</h1>
+<p class="subtitle lead">Honesty is the product</p>
+  <div class="quarto-categories">
+    <div class="quarto-category">Supplement</div>
+  </div>
+  </div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p><a href="https://www.lukasikic.info/">Luka Šikić</a> </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 23, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>This document has two kinds of claim and no third kind. Claims about the past are recomputed from a database. Claims about the future carry a probability. This page describes the machinery behind the first kind and states plainly what it cannot support.</p>
+<section id="the-data-seam" class="level2">
+<h2 class="anchored" data-anchor-id="the-data-seam">The data seam</h2>
+<p>One script, <code>scenario/R/build_metrics.R</code>, reads <code>data/aiecon.sqlite</code> (SELECT-only, it never writes the database) and emits tidy CSVs into <code>scenario/data/derived/</code>. The <code>.qmd</code> pages read <strong>only those CSVs</strong>, never the database. Renders stay fast, continuous integration needs no database logic, and a CSV diff makes every data change visible in git. Every number in the prose resolves to one of these files through the accessors in <code>scenario/R/fig_helpers.R</code>. None is typed by hand. The evidence blocks under each retrospective section are rendered from <code>citations.csv</code>, so the cited titles come from the database rather than from a writer’s memory. <code>ev()</code> fails loudly if a cited id is not in the corpus, which makes a fabricated citation impossible to ship silently.</p>
+</section>
+<section id="the-census-reconciled" class="level2">
+<h2 class="anchored" data-anchor-id="the-census-reconciled">The census, reconciled</h2>
+<p>This snapshot is pinned. The tree is Dropbox-synced and the corpus grew from 385 to over 650 resources during a single work session. A document that claims <em>“every figure recomputed, none asserted”</em> cannot have its figures move with a sync, so <code>build_metrics.R</code> is frozen to a fixed id manifest (<code>scenario/data/snapshot_ids.txt</code>). The mapping runs 385 indexed resources → 2 exact url_norm duplicates folded (coarse.ink twice, a Sant’Anna page under two titles) → title-dedup → <strong>375 distinct works</strong>, of which <strong>287</strong> carry extracted full text. An earlier audit of this same corpus, run days before, reported a smaller census (294) because the corpus was smaller then. That number is superseded, not contradicted. The AEA-2026 webcast page hosts two distinct talks (Li on the labour market, Ash on language models) sharing one URL. Those are kept as two works, not folded, because a shared landing page is not a shared work.</p>
+</section>
+<section id="the-flagship-number-audited" class="level2">
+<h2 class="anchored" data-anchor-id="the-flagship-number-audited">The flagship number, audited</h2>
+<p>The essay’s most quotable statistic, how much of the AI-research tooling is <em>verification</em>, was first produced by a keyword classifier (<code>review|referee|replicat|reproduc|citation|audit|verif|integrity</code>, frozen as <code>VERIF_RE</code>). Held to the discipline the essay preaches, that classifier fails an audit. Hand-labelled against a frozen gold set (<code>scenario/data/tool_labels.csv</code>, one row per tool with a verdict and a one-word kind), the audited numbers appear below.</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Measure</th>
+<th style="text-align: center;">Verification share</th>
+<th style="text-align: center;">n / tools</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Keyword classifier (VERIF_RE)</td>
+<td style="text-align: center;">65.8%</td>
+<td style="text-align: center;">~25 / 38</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Audited gold labels</td>
+<td style="text-align: center;">28.9%</td>
+<td style="text-align: center;">11 / 38</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Against the gold labels the keyword classifier has precision 36% and recall 81.8%. The 16 false positives are literature-search aids (Elicit, Scholara, Google Scholar Labs), a LaTeX workspace, and even <em>academic-humanizer</em>, a tool whose purpose is to strip the tells verifiers look for. The 2 false negatives are an adversarial-research loop and a replication-scoring agent it misses. The audited share, <strong>28.9%</strong>, is what the prose and prediction <strong>P1</strong> now use. That the essay had to correct a number it asserted is not an embarrassment to hide. It is the thesis running on the document itself, because an unaudited filter is just more cheap intelligence. The gold labels are a small public dataset shipped with the site. Adjust them and the number moves, in the open.</p>
+</section>
+<section id="the-whale-is-mislabelled" class="level2">
+<h2 class="anchored" data-anchor-id="the-whale-is-mislabelled">The whale is mislabelled</h2>
+<p>The single largest document, 33.4% of all extracted characters, is indexed as “National Artificial Intelligence Initiative Act.” It is not that Act. Its bytes are House Report 116-617, the full committee report accompanying the FY2021 National Defense Authorization Act, of which the AI Initiative Act is one division. So a third of the corpus’s raw text is a mostly off-topic legislative document under a too-flattering title. The word headline is reported three ways. It is 3,671,256 uncapped, 2,446,068 with the whale removed, and 2,057,167 with the whale and the 388,901-word course-playlist transcript removed. Every <em>per-document</em> text statistic on this site caps document weight at the 95th percentile (172,284 characters) so the whale cannot drive an average.</p>
+</section>
+<section id="the-four-hygiene-rules" class="level2">
+<h2 class="anchored" data-anchor-id="the-four-hygiene-rules">The four hygiene rules</h2>
+<p><strong>1. The version graph.</strong> The same work shows up as a working paper, a journal version, a video, and a thread. <code>resources_clean.csv</code> dedupes by normalized title before counting works, which folds 10 duplicate versions and leaves 375 works from 385 rows. Coverage keeps <strong>all</strong> rows, because coverage measures the index, not the field.</p>
+<p><strong>2. The whale.</strong> One document, a piece of AI legislation, holds 33.4% of all extracted characters. Any text-volume statistic caps per-document weight at the 95th percentile of character counts (172,284 characters). The headline word count (3,671,256) is kept uncapped to match the project’s measured claims passport, while every per-document average uses the capped figure (1,977,820). An uncapped average measures the whale.</p>
+<p><strong>3. Canonical names.</strong> Author names are diacritic-stripped and case-folded before distinct people are counted, so “Bäckman” and “Backman” are one person.</p>
+<p><strong>4. Dates.</strong> Roughly half the corpus (199 of 385 rows, 52%) carries no usable date. Undated rows are excluded from every time series and reported as a visible residual on the <a href="../supplements/timeline.html">Timeline</a> page, never silently dropped. The database is not version-controlled (it is rebuilt wholesale each run), so there is no git history to recover approximate dates from. The undated rows stay undated and stay counted.</p>
+</section>
+<section id="the-metrics-strip-and-its-forecast-band" class="level2">
+<h2 class="anchored" data-anchor-id="the-metrics-strip-and-its-forecast-band">The metrics strip, and its forecast band</h2>
+<p>The strip is measured through 2026 H1. After that, panels 2-4 draw an <strong>illustrative</strong> forecast band, a widening envelope from the last measured point to a range at 2028 H2. The bands are not themselves scored predictions. They are a visual aid, and their endpoints are set by the direction of the numbered predictions:</p>
+<ul>
+<li><strong>Tool share</strong> trends down (capabilities become product defaults), the direction of <strong>P9</strong>.</li>
+<li><strong>Verification share of tools</strong> trends up (the referee factory keeps growing), <strong>P1</strong>, <strong>P11</strong>.</li>
+<li><strong>Coverage</strong> recovers (embargoes lapse), <strong>P10</strong>.</li>
+</ul>
+<p>Panel 1 (cumulative works by category) shows no projection at all past the measured data, because projecting a per-category stack would be a guess dressed as a measurement.</p>
+</section>
+<section id="what-this-document-cannot-verify" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-document-cannot-verify">What this document cannot verify</h2>
+<ul>
+<li><strong>Curation is not coverage of the field.</strong> A curated corpus measures the curator’s map as much as the territory. The 65.2% of dated works landing in 2026 H1 is partly the field flooding and partly the newest material being the easiest to find. Where the distinction changes a number, the retrospective says so.</li>
+<li><strong>The verification-tool count is a keyword heuristic.</strong> A tool counts as verification tooling when its title or description matches <code>review|referee|replicat|reproduc|citation|audit|verif|integrity</code>. The classifier is used only to bucket a row and emit a count, no description text is published, and it is a legible heuristic, not a taxonomy. It will catch a literature-review tool that is verification-adjacent and miss one described in other words.</li>
+<li><strong>The narrative substance is not in the database.</strong> The story beats, which papers say what, are drawn from a separate analysis (<code>docs/ai_in_economics_discussion_notes.md</code>) and grounded in corpus rows by title. The database supplies the <em>counts and dates</em>. It does not adjudicate the interpretation.</li>
+<li><strong>The forecast is extrapolation.</strong> Nothing past 2028 is measured, and the claims there depend on institutional choices rather than model capability. That is stated at the branch, and the error bars are meant to be read as wide.</li>
+</ul>
+</section>
+<section id="publishability" class="level2">
+<h2 class="anchored" data-anchor-id="publishability">Publishability</h2>
+<p>This site is designed to be publishable, so it obeys the same line the corpus’s own report obeys: <strong>aggregates and bibliographic facts only</strong>, counts, titles, authors, dates, tags. It never publishes the curator’s descriptions or fetched body text. Titles appear because they are bibliographic facts. The underlying documents do not.</p>
+</section>
+<section id="rebuilding" class="level2">
+<h2 class="anchored" data-anchor-id="rebuilding">Rebuilding</h2>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># refresh the numbers from the database, then render the site</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> scenario/R/build_metrics.R      <span class="co"># SQLite -&gt; scenario/data/derived/*.csv</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render scenario                   <span class="co"># CSVs -&gt; _site/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>The CSVs are committed, so the site renders in continuous integration without the database (the database is gitignored). Refreshing the numbers needs the machine that holds the corpus. Rendering does not.</p>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-body-container">
+<p>Every figure on this site is recomputed from <code>data/aiecon.sqlite</code> at build time, and none is asserted. If the prose and the database disagree, the database is right.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="indexing-policy" class="level2">
+<h2 class="anchored" data-anchor-id="indexing-policy">Indexing policy</h2>
+<p>What gets into the corpus, stated once so the “curator’s map” caveat has teeth. <strong>In:</strong> any resource on AI and economics worth a record, papers, working papers, guides, tools, courses, talks, threads, from any source, added through the seed feed or the hand-curated overlay. <strong>Full text in</strong> wherever it can be legitimately obtained. Where it cannot, the gap is recorded row by row rather than hidden. <strong>Out:</strong> nothing on topic is excluded for being informal or un-refereed, a Substack guide and an NBER working paper are both records, but a resource that is a <em>door</em> (a landing page pointing at content it does not itself contain) is marked as such and licenses no claim about what lies behind it. <strong>Changelog:</strong> the corpus is append-only. The frozen snapshot for this release is <code>scenario/data/snapshot_ids.txt</code>, and later releases re-pin deliberately, never by accident.</p>
+</section>
+<section id="colophon" class="level2">
+<h2 class="anchored" data-anchor-id="colophon">Colophon</h2>
+<p>This document practises the four rules it describes. <strong>Machine assistance:</strong> the prose was drafted and revised with AI coding agents. Every past claim resolves to a corpus row through <code>ev()</code>, which fails the build on a fabricated id, and every number is recomputed by <code>build_metrics.R</code> rather than typed. <strong>Verified how:</strong> the tool classification was hand-labelled against a frozen gold set and its keyword classifier audited against it (above). The reconciliation, dedup, and whale relabelling were checked against the database. <strong>Where the gold sets live:</strong> <code>scenario/data/tool_labels.csv</code> and the snapshot manifest ship with the repository, so a reader can recompute the headline numbers. <strong>Frozen at:</strong> this release pins to the snapshot manifest. The tagged commit hash belongs here, and the forecast prose freezes at the tag while the retrospective and the <a href="../supplements/predictions.html">predictions scoreboard</a> keep updating. <strong>Not yet done, and owned by the curator:</strong> an external adjudication panel for the scoreboard, a browsable copy of the database, and publishing the gold set as a standalone dataset.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+          // target, if specified
+          link.setAttribute("target", "_blank");
+          if (link.getAttribute("rel") === null) {
+            link.setAttribute("rel", "noopener");
+          }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+<p>By <a href="https://www.lukasikic.info/">Luka Šikić</a></p>
+</div>   
+    <div class="nav-footer-center">
+<p>Every figure recomputed from <code>data/aiecon.sqlite</code>, none asserted.</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

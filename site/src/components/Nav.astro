@@ -10,6 +10,8 @@ const links = [
   { href: `${prefix}/publications/`, label: s.nav.research },
   { href: `${prefix}/projects/`, label: s.nav.projects },
   { href: `${prefix}/teaching/`, label: s.nav.teaching },
+  // Static Quarto site served verbatim from public/ai/ — English only, so no locale prefix.
+  { href: '/ai/', label: s.nav.ai },
 ];
 const isActive = (p: string) => {
   if (p === `${prefix}/`) return pathname === p;
@@ -26,8 +28,8 @@ const other = altLang(lang);
         <a class="nav__link" href={l.href} aria-current={isActive(l.href) ? 'page' : undefined}>{l.label}</a>
       ))}
       <a class="nav__link" href={altHref} aria-label={other === 'hr' ? 'Hrvatski' : 'English'}>{other.toUpperCase()}</a>
-      <button class="nav__theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <button class="nav__theme-toggle" id="themeToggle" aria-label={s.nav.theme} title={s.nav.theme}>
+        <svg aria-hidden="true" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
           <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z" stroke-linejoin="round"/>
         </svg>
       </button>

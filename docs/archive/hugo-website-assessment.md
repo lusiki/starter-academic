@@ -1,4 +1,7 @@
-# Website Assessment Report: lusiki/starter-academic
+# Archived Website Assessment Report: Hugo/Wowchemy Site
+
+> Historical document. This report describes the retired Hugo/Wowchemy
+> implementation and does not describe the current Astro website.
 
 ## Overview
 

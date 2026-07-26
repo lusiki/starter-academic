@@ -5,14 +5,14 @@ interface Props { entry: CollectionEntry<'projects'>; lang?: Lang; }
 const { entry, lang = 'en' } = Astro.props;
 const d = entry.data;
 const prefix = lang === 'hr' ? '/hr' : '';
+const title = (lang === 'hr' && d.title_hr) ? d.title_hr : d.title;
 const summary = (lang === 'hr' && d.summary_hr) ? d.summary_hr : d.summary;
-const href = d.external_link || `${prefix}/projects/${entry.slug}/`;
-const ext = !!d.external_link;
+const href = `${prefix}/projects/${entry.id}/`;
 ---
 <article class="pub">
   <div class="pub__year">{d.date ? d.date.getFullYear() : ''}</div>
   <div>
-    <a href={href} class="pub__title" target={ext ? '_blank' : undefined} rel={ext ? 'noopener' : undefined}>{d.title}</a>
+    <a href={href} class="pub__title">{title}</a>
     {summary && <span class="pub__venue">{summary}</span>}
   </div>
   <div class="pub__links">

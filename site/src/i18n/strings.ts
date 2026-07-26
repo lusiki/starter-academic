@@ -1,292 +1,175 @@
 // UI strings for both locales. Publication titles stay in the original language.
-export type Lang = 'en' | 'hr';
+export type Lang = "en" | "hr";
 
 export const strings = {
   en: {
-    brand: 'luka šikić',
+    brand: "luka šikić",
+    common: {
+      open: "Open",
+      skipToContent: "Skip to content",
+    },
 
     nav: {
-      about: '01 About',
-      research: '02 Research',
-      projects: '03 Projects',
-      teaching: '04 Teaching',
+      about: "01 About",
+      research: "02 Research",
+      projects: "03 Projects",
+      teaching: "04 Teaching",
+      ai: "05 AI",
+      theme: "Toggle color theme",
     },
 
     home: {
-      title: 'Luka Šikić — Data Science · Econometrics · Applied Statistics',
-      eyebrow: '00 — Profile',
-      heroTitle: 'Econometrics, data science, and what AI is changing in economic research.',
+      title: "Luka Šikić — Data Science · Econometrics · Applied Statistics",
+      description:
+        "Luka Šikić is an Assistant Professor of Statistics and Data Science working across econometrics, finance, digital media, and AI in economic research.",
+      eyebrow: "00 — Profile",
       bio1: `I'm an Assistant Professor of Statistics and Data Science at the <a href="https://www.unicath.hr/">Croatian Catholic University</a> in Zagreb. My work sits where quantitative methods meet finance, economics, and digital media. I teach across the statistics curriculum, from introductory to multivariate, along with research methodology, data science, and digital media, and I lead a research project that brings these threads into conversation.`,
       bio2: `Outside the university, I've worked in financial markets and algorithmic trading, and partnered on applied research across time-series and financial econometrics, machine learning, NLP-driven media monitoring and narrative analysis, and social and digital analytics. Most of my current attention goes to <strong>AI in economic research</strong>. I want to know how large language models and agentic pipelines change the way empirical work actually gets done, and which parts of the craft they can't replace. I <a href="https://lusiki.github.io/AI_workshop_wiiw/" target="_blank" rel="noopener">gave a seminar on this recently</a>, and the whole pipeline behind it is open source.`,
-      metaRole: 'Assistant Professor',
-      metaRoleSub: 'Croatian Catholic University, Zagreb',
-      metaWorkshops: 'Workshops',
-      metaWorkshopsSub: 'Economic Institute Zagreb',
-      metaCollab: 'Collaboration',
-      metaCollabSub: 'Croatian National Bank',
+      metaRole: "Assistant Professor",
+      metaRoleSub: "Croatian Catholic University, Zagreb",
 
-      focus: '01 — Focus',
-      focusTitle: 'What I work on',
-      focusItems: [
-        { title: 'Econometrics & quantitative modeling', body: 'Time series, financial econometrics, causal inference, panel data.' },
-        { title: 'Machine learning & computational data science', body: 'R and Python, fully reproducible reporting.' },
-        { title: 'Natural language processing & text mining', body: 'Media monitoring, narrative and sentiment analysis, mapping digital media spaces.' },
-        { title: 'Social and digital analytics', body: 'For research groups and communications teams.' },
-      ],
+      selectedWork: "01 — Currently",
+      selectedWorkTitle: "Selected current work",
 
-      selectedWork: '01 — Currently',
-      selectedWorkTitle: 'In progress',
-      selectedWorkItems: [
-        { year: '2026', title: 'AI in Economics Research — seminar at wiiw, Vienna', body: 'From frontier ideas to a working agentic pipeline: slides, a working paper rendered live from Eurostat data, and the full open-source repository.', href: 'https://lusiki.github.io/AI_workshop_wiiw/' },
-        { year: '2026', title: 'Everything You Want to Know About the State and Public Policies in Croatia', body: 'University textbook on public choice and public-sector economics, applied to the Croatian context. With Milan Deskar-Škrbić and Petra Palić. CC BY 4.0.', href: 'https://lusiki.github.io/Javne-politike/' },
-        { year: '2026', title: 'Connected but Divided — affective publics on Croatian Reddit', body: 'Network, sentiment, and topic analysis of 11,503 Reddit comments around the 2024 elections. With Tamara Kunić. Medijska istraživanja (2026).', href: 'https://lusiki.github.io/Connected-but-divided/' },
-        { year: '2025', title: 'Forecasting returns in thin markets — ML on the Zagreb Stock Exchange', body: 'Machine-learning forecasts of weekly returns from 1,100+ features on 2000–2024 data. With Mislav Šagovac and Petra Palić.', href: 'https://lusiki.github.io/zseML/' },
-        { year: '2025—27', title: 'Catholic themes in Croatian digital media', body: 'Structured database and NLP-driven thematic analysis. Project lead.', href: 'https://lusiki.github.io/DigiKat/' },
-        { year: '2024',    title: 'Mapping the Croatian National Bank across digital media', body: 'Coverage analysis of CNB presence in the Croatian media space.', href: 'https://raw.githack.com/lusiki/HNB-Media-Map/main/presentation.html#/title-slide' },
-        { year: '2023',    title: 'Stock–bond hedge breakdown, 2022–23 inflation shock', body: 'Markov-switching analysis of the classic 60/40 hedge failure.', href: 'https://raw.githack.com/lusiki/The-Breakdown-of-the-Classic-Portfolio-Hedge-A-Comprehensive-Markov-Switching-Analysis/main/paper/main_analysis.html' },
-        { year: '2024',    title: 'Income convergence in Croatia, 2000–2024', body: 'Fractional integration and long-memory time-series methods. Open source.', href: 'https://github.com/lusiki/Convergence' },
-        { year: '2023',    title: 'ESG effects on tourism, EU country panel', body: 'Panel-data study of ESG indicators in EU tourism economies.', href: undefined as string | undefined },
-      ],
+      research: "02 — Research",
+      researchTitle: "Recent publications",
+      allPubs: "All publications →",
 
-      research: '02 — Research',
-      researchTitle: 'Recent publications',
-      allPubs: 'All publications →',
-
-      background: '03 — Background',
-      backgroundTitle: 'Path',
+      background: "03 — Background",
+      backgroundTitle: "Path",
       backgroundBody: `PhD in Economics, University of Zagreb and University of Vienna. MSc in International Economics (Kiel Institute) and MSc in Finance (Zagreb). About eight years as a researcher at the Institute of Social Sciences Ivo Pilar and the Faculty of Croatian Studies before joining the Croatian Catholic University. I publish in international and Croatian journals and speak regularly on advanced analytics and data-driven decision-making.`,
 
-      contact: '04 — Get in touch',
-      contactTitle: 'Workshops, consulting, collaborations',
+      contact: "04 — Get in touch",
+      contactTitle: "Workshops, consulting, collaborations",
       contactBody: `If you have data you want turned into clear answers, or you'd like a workshop for your team, send a message — <a href="mailto:luka.sikic@unicath.hr">luka.sikic@unicath.hr</a>.`,
-      btnEmail: 'Email',
-      btnGithub: 'GitHub',
-      btnScholar: 'Google Scholar',
-      btnLinkedin: 'LinkedIn',
+      btnEmail: "Email",
+      btnGithub: "GitHub",
+      btnScholar: "Google Scholar",
+      btnLinkedin: "LinkedIn",
     },
 
     pubs: {
-      title: 'Publications — Luka Šikić',
-      eyebrow: '02 — Research',
-      heroTitle: 'Publications',
-      hero: 'Peer-reviewed articles, book chapters, and working papers, in reverse chronological order.',
+      title: "Publications — Luka Šikić",
+      eyebrow: "02 — Research",
+      heroTitle: "Publications",
+      hero: "Peer-reviewed articles, book chapters, and working papers, in reverse chronological order.",
       sectionLabel: (n: number) => `${n} items`,
-      sectionTitle: 'All publications',
-      back: '← All publications',
-      abstract: 'Abstract',
-      bibtex: 'BibTeX',
+      sectionTitle: "All publications",
+      back: "← All publications",
+      abstract: "Abstract",
+      bibtex: "BibTeX",
     },
 
     projects: {
-      title: 'Projects — Luka Šikić',
-      eyebrow: '03 — Projects',
-      heroTitle: 'Open research projects',
-      hero: 'Code, data, and writing released in the open.',
+      title: "Projects — Luka Šikić",
+      eyebrow: "03 — Projects",
+      heroTitle: "Open research projects",
+      hero: "Code, data, and writing released in the open.",
       sectionLabel: (n: number) => `${n} items`,
-      sectionTitle: 'Active',
-      back: '← All projects',
-      visit: 'Visit project →',
+      sectionTitle: "Active",
+      back: "← All projects",
+      visit: "Visit project →",
     },
 
     teaching: {
-      title: 'Teaching — Luka Šikić',
-      eyebrow: '04 — Teaching',
-      heroTitle: 'Courses',
+      title: "Teaching — Luka Šikić",
+      eyebrow: "04 — Teaching",
+      heroTitle: "Courses",
       hero: 'Statistics, data science, and digital media. All course materials are public — code and exercises on <a href="https://github.com/lusiki" target="_blank" rel="noopener">GitHub</a>.',
-      currentLabel: 'Current',
-      currentTitle: '2024/25 — 2025/26',
-      previousLabel: 'Previous',
-      previousTitle: '2020/21 — 2021/22',
-      materials: 'Materials →',
-      workshopsLabel: '—',
-      workshopsTitle: 'Workshops & invited talks',
+      currentLabel: "Current",
+      currentTitle: "2024/25 — 2025/26",
+      previousLabel: "Previous",
+      previousTitle: "2020/21 — 2021/22",
+      materials: "Materials →",
+      workshopsLabel: "—",
+      workshopsTitle: "Workshops & invited talks",
       workshopsBody: `I run workshops on applied analytics and, increasingly, on <strong>AI in research work</strong> — for universities, institutes, and organisations. All materials below are public. Get in touch at <a href="mailto:luka.sikic@unicath.hr">luka.sikic@unicath.hr</a> to discuss a workshop for your team.`,
-      workshopItems: [
-        {
-          term: '2026', code: 'Seminar',
-          title: 'AI in Economics Research',
-          inst: 'Vienna Institute for International Economic Studies (wiiw), Vienna',
-          description: 'From frontier ideas to a working agentic pipeline: a working paper rendered live from Eurostat data, and a fully reproducible open-source repository you can clone and run.',
-          links: [
-            { label: 'Slides →', href: 'https://lusiki.github.io/AI_workshop_wiiw/' },
-            { label: 'GitHub →', href: 'https://github.com/lusiki/AI_workshop_wiiw' },
-          ],
-        },
-        {
-          term: '2026', code: 'Workshop',
-          title: 'AI for researchers — from chat to delegation',
-          inst: 'Croatian Catholic University, Zagreb',
-          description: 'Agentic AI for methodological research: moving from chat-prompting to delegating a whole task the model plans, executes, and verifies before returning for approval. The repository is itself a worked example of the framework.',
-          links: [
-            { label: 'Slides →', href: 'https://lusiki.github.io/AI-radionica-za-istra-iva-e/' },
-            { label: 'GitHub →', href: 'https://github.com/lusiki/AI-radionica-za-istra-iva-e' },
-          ],
-        },
-        {
-          term: '2025', code: '2 days · 7h',
-          title: 'Using AI tools in student research',
-          inst: 'Economic Institute Zagreb · for graduate economics students',
-          description: 'Day 1 — transformers and RAG, academic integrity and APA 7, Perplexity for sourcing, Gemini Deep Research, structuring a research proposal with Claude. Day 2 — agentic coding with Claude Code, IDE integration, LLM notebooks for exploratory analysis, and AI-assisted academic writing in Croatian. Funded under the National Recovery and Resilience Plan (NextGenerationEU).',
-          links: [
-            { label: 'Day 1 →', href: 'https://raw.githack.com/lusiki/EIZ-radionica/refs/heads/main/slides/day1.html' },
-            { label: 'Day 2 →', href: 'https://raw.githack.com/lusiki/EIZ-radionica/refs/heads/main/slides/day2.html' },
-            { label: 'GitHub →', href: 'https://github.com/lusiki/EIZ-radionica' },
-          ],
-        },
-      ],
-    },
-
-    courses: {
-      newMedia: 'Web infrastructure, content management systems, strategic communication planning, AI implications, and digital analytics. Students learn to critically evaluate and implement web communication strategies.',
-      stats: 'Statistical foundations for communication students. Descriptive statistics, probability theory, hypothesis testing, and inferential statistics in R (tidyverse, ggplot2), with examples from media and communications.',
-      data: 'Data types and sources, R programming, data visualisation, web scraping, machine learning, text analysis, and reproducible reporting. For graduate sociology and social science students.',
-      social: 'Computational approaches to social media data. Platform-specific analysis (Twitter, Facebook, Instagram, LinkedIn), data infrastructure, statistical methods, and open-source analytics tools.',
-      text: 'Computational text analysis from data preparation through NLP. Dictionary methods, supervised and unsupervised machine learning, topic modelling, and text clustering in R.',
-      statsSocial: 'R programming, descriptive statistics, data visualisation, hypothesis testing, categorical analysis, ANOVA, and linear regression for undergraduate social science students.',
     },
   },
 
   hr: {
-    brand: 'luka šikić',
+    brand: "luka šikić",
+    common: {
+      open: "Otvori",
+      skipToContent: "Preskoči na sadržaj",
+    },
 
     nav: {
-      about: '01 O meni',
-      research: '02 Istraživanje',
-      projects: '03 Projekti',
-      teaching: '04 Nastava',
+      about: "01 O meni",
+      research: "02 Istraživanje",
+      projects: "03 Projekti",
+      teaching: "04 Nastava",
+      ai: "05 AI (EN)",
+      theme: "Promijeni temu boja",
     },
 
     home: {
-      title: 'Luka Šikić — Znanost o podacima · Ekonometrija · Primijenjena statistika',
-      eyebrow: '00 — Profil',
-      heroTitle: 'Ekonometrija, znanost o podacima i ono što umjetna inteligencija mijenja u ekonomskim istraživanjima.',
+      title:
+        "Luka Šikić — Znanost o podacima · Ekonometrija · Primijenjena statistika",
+      description:
+        "Luka Šikić docent je statistike i znanosti o podacima, a bavi se ekonometrijom, financijama, digitalnim medijima i umjetnom inteligencijom u ekonomskim istraživanjima.",
+      eyebrow: "00 — Profil",
       bio1: `Docent sam statistike i znanosti o podacima na <a href="https://www.unicath.hr/">Hrvatskom katoličkom sveučilištu</a> u Zagrebu. Moj rad nalazi se na sjecištu kvantitativnih metoda, financija, ekonomije i digitalnih medija. Predajem cijeli niz statističkih kolegija, od uvodne do multivarijatne statistike, kao i metodologiju istraživanja, znanost o podacima i digitalne medije, te vodim istraživački projekt koji te niti povezuje u zajedničku cjelinu.`,
       bio2: `Izvan sveučilišta radio sam na financijskim tržištima i u algoritamskom trgovanju te surađivao na primijenjenim istraživanjima iz ekonometrije vremenskih serija i financijske ekonometrije, strojnog učenja, praćenja medija i analize narativa temeljenih na obradi prirodnog jezika te društvene i digitalne analitike. Najveći dio moje trenutne pažnje ide na <strong>umjetnu inteligenciju u ekonomskim istraživanjima</strong>. Zanima me kako veliki jezični modeli i agentski sustavi mijenjaju način na koji se empirijski rad zapravo radi i koje dijelove tog zanata ne mogu zamijeniti. O tome sam <a href="https://lusiki.github.io/AI_workshop_wiiw/" target="_blank" rel="noopener">nedavno održao seminar</a>, a cijeli je sustav iza njega otvorenog koda.`,
-      metaRole: 'Docent',
-      metaRoleSub: 'Hrvatsko katoličko sveučilište, Zagreb',
-      metaWorkshops: 'Radionice',
-      metaWorkshopsSub: 'Ekonomski institut Zagreb',
-      metaCollab: 'Suradnja',
-      metaCollabSub: 'Hrvatska narodna banka',
+      metaRole: "Docent",
+      metaRoleSub: "Hrvatsko katoličko sveučilište, Zagreb",
 
-      focus: '01 — Fokus',
-      focusTitle: 'Čime se bavim',
-      focusItems: [
-        { title: 'Ekonometrija i kvantitativno modeliranje', body: 'Vremenske serije, financijska ekonometrija, kauzalno zaključivanje, panel podaci.' },
-        { title: 'Strojno učenje i računalna znanost o podacima', body: 'R i Python, potpuno reproducibilno izvještavanje.' },
-        { title: 'Obrada prirodnog jezika i tekstualna analitika', body: 'Praćenje medija, analiza narativa i sentimenta, mapiranje digitalnih medijskih prostora.' },
-        { title: 'Društvena i digitalna analitika', body: 'Za istraživačke skupine i komunikacijske timove.' },
-      ],
+      selectedWork: "01 — Trenutno",
+      selectedWorkTitle: "Odabrani aktualni rad",
 
-      selectedWork: '01 — Trenutno',
-      selectedWorkTitle: 'U radu',
-      selectedWorkItems: [
-        { year: '2026.', title: 'Umjetna inteligencija u ekonomskim istraživanjima — seminar na wiiw-u, Beč', body: 'Od novih ideja do funkcionalnog agentskog sustava: prezentacija, radni tekst generiran uživo iz Eurostatovih podataka i cijeli repozitorij otvorenog koda.', href: 'https://lusiki.github.io/AI_workshop_wiiw/' },
-        { year: '2026.', title: 'Sve što želite znati o državi i javnim politikama u Hrvatskoj', body: 'Sveučilišni udžbenik o teoriji javnog izbora i ekonomici javnog sektora, primijenjen na hrvatski kontekst. S Milanom Deskar-Škrbićem i Petrom Palić. CC BY 4.0.', href: 'https://lusiki.github.io/Javne-politike/' },
-        { year: '2026.', title: 'Povezani, ali podijeljeni — afektivne javnosti na hrvatskom Redditu', body: 'Mrežna analiza, analiza sentimenta i tema na 11.503 komentara u kontekstu izbora 2024. S Tamarom Kunić. Medijska istraživanja (2026.).', href: 'https://lusiki.github.io/Connected-but-divided/' },
-        { year: '2025.', title: 'Predviđanje prinosa na tankim tržištima — strojno učenje na Zagrebačkoj burzi', body: 'Strojno učenje za predviđanje tjednih prinosa iz više od 1.100 značajki na podacima 2000.–2024. S Mislavom Šagovcem i Petrom Palić.', href: 'https://lusiki.github.io/zseML/' },
-        { year: '2025.—27.', title: 'Katoličke teme u hrvatskim digitalnim medijima', body: 'Strukturirana baza podataka i tematska analiza temeljena na obradi prirodnog jezika. Voditelj projekta.', href: 'https://lusiki.github.io/DigiKat/' },
-        { year: '2024.',     title: 'Mapiranje Hrvatske narodne banke u digitalnom medijskom prostoru', body: 'Analiza prisutnosti HNB-a u hrvatskom medijskom prostoru.', href: 'https://raw.githack.com/lusiki/HNB-Media-Map/main/presentation.html#/title-slide' },
-        { year: '2023.',     title: 'Slom klasičnog dionica–obveznice hedža tijekom inflacijskog šoka 2022.–23.', body: 'Markov-switching analiza neuspjeha klasičnog 60/40 portfelja.', href: 'https://raw.githack.com/lusiki/The-Breakdown-of-the-Classic-Portfolio-Hedge-A-Comprehensive-Markov-Switching-Analysis/main/paper/main_analysis.html' },
-        { year: '2024.',     title: 'Konvergencija dohotka u Hrvatskoj, 2000.–2024.', body: 'Frakcionalna integracija i metode dugog pamćenja u vremenskim serijama. Otvoreni kod.', href: 'https://github.com/lusiki/Convergence' },
-        { year: '2023.',     title: 'ESG učinci na turizam, panel zemalja EU-a', body: 'Studija ESG pokazatelja u turističkim ekonomijama EU-a metodom panel podataka.', href: undefined as string | undefined },
-      ],
+      research: "02 — Istraživanje",
+      researchTitle: "Nedavne publikacije",
+      allPubs: "Sve publikacije →",
 
-      research: '02 — Istraživanje',
-      researchTitle: 'Nedavne publikacije',
-      allPubs: 'Sve publikacije →',
-
-      background: '03 — Pozadina',
-      backgroundTitle: 'Put',
+      background: "03 — Pozadina",
+      backgroundTitle: "Put",
       backgroundBody: `Doktorat iz ekonomije, Sveučilište u Zagrebu i Sveučilište u Beču. Magisterij iz međunarodne ekonomije (Kiel Institute) i magisterij iz financija (Zagreb). Otprilike osam godina kao istraživač na Institutu društvenih znanosti Ivo Pilar i Fakultetu hrvatskih studija prije prelaska na Hrvatsko katoličko sveučilište. Objavljujem u međunarodnim i hrvatskim časopisima te redovito predajem o naprednoj analitici i odlučivanju temeljenom na podacima.`,
 
-      contact: '04 — Kontakt',
-      contactTitle: 'Radionice, konzultacije, suradnje',
+      contact: "04 — Kontakt",
+      contactTitle: "Radionice, konzultacije, suradnje",
       contactBody: `Ako imate podatke koje želite pretvoriti u jasne odgovore, ili biste željeli radionicu za svoj tim, javite se — <a href="mailto:luka.sikic@unicath.hr">luka.sikic@unicath.hr</a>.`,
-      btnEmail: 'E-pošta',
-      btnGithub: 'GitHub',
-      btnScholar: 'Google Scholar',
-      btnLinkedin: 'LinkedIn',
+      btnEmail: "E-pošta",
+      btnGithub: "GitHub",
+      btnScholar: "Google Scholar",
+      btnLinkedin: "LinkedIn",
     },
 
     pubs: {
-      title: 'Publikacije — Luka Šikić',
-      eyebrow: '02 — Istraživanje',
-      heroTitle: 'Publikacije',
-      hero: 'Recenzirani članci, poglavlja u knjigama i radni materijali, obrnutim kronološkim redom.',
+      title: "Publikacije — Luka Šikić",
+      eyebrow: "02 — Istraživanje",
+      heroTitle: "Publikacije",
+      hero: "Recenzirani članci, poglavlja u knjigama i radni materijali, obrnutim kronološkim redom.",
       sectionLabel: (n: number) => `${n} stavki`,
-      sectionTitle: 'Sve publikacije',
-      back: '← Sve publikacije',
-      abstract: 'Sažetak',
-      bibtex: 'BibTeX',
+      sectionTitle: "Sve publikacije",
+      back: "← Sve publikacije",
+      abstract: "Sažetak",
+      bibtex: "BibTeX",
     },
 
     projects: {
-      title: 'Projekti — Luka Šikić',
-      eyebrow: '03 — Projekti',
-      heroTitle: 'Otvoreni istraživački projekti',
-      hero: 'Kod, podaci i tekstovi objavljeni u otvorenom kodu.',
+      title: "Projekti — Luka Šikić",
+      eyebrow: "03 — Projekti",
+      heroTitle: "Otvoreni istraživački projekti",
+      hero: "Kod, podaci i tekstovi objavljeni u otvorenom kodu.",
       sectionLabel: (n: number) => `${n} stavki`,
-      sectionTitle: 'Aktivno',
-      back: '← Svi projekti',
-      visit: 'Posjeti projekt →',
+      sectionTitle: "Aktivno",
+      back: "← Svi projekti",
+      visit: "Posjeti projekt →",
     },
 
     teaching: {
-      title: 'Nastava — Luka Šikić',
-      eyebrow: '04 — Nastava',
-      heroTitle: 'Kolegiji',
+      title: "Nastava — Luka Šikić",
+      eyebrow: "04 — Nastava",
+      heroTitle: "Kolegiji",
       hero: 'Statistika, znanost o podacima i digitalni mediji. Svi nastavni materijali javni su — kod i vježbe na <a href="https://github.com/lusiki" target="_blank" rel="noopener">GitHubu</a>.',
-      currentLabel: 'Aktualno',
-      currentTitle: '2024./25. — 2025./26.',
-      previousLabel: 'Prethodno',
-      previousTitle: '2020./21. — 2021./22.',
-      materials: 'Materijali →',
-      workshopsLabel: '—',
-      workshopsTitle: 'Radionice i pozvana predavanja',
+      currentLabel: "Aktualno",
+      currentTitle: "2024./25. — 2025./26.",
+      previousLabel: "Prethodno",
+      previousTitle: "2020./21. — 2021./22.",
+      materials: "Materijali →",
+      workshopsLabel: "—",
+      workshopsTitle: "Radionice i pozvana predavanja",
       workshopsBody: `Vodim radionice iz primijenjene analitike i, sve više, o <strong>umjetnoj inteligenciji u istraživačkom radu</strong> — za sveučilišta, institute i organizacije. Svi su materijali javni. Javite se na <a href="mailto:luka.sikic@unicath.hr">luka.sikic@unicath.hr</a> za dogovor o radionici za vaš tim.`,
-      workshopItems: [
-        {
-          term: '2026.', code: 'Seminar',
-          title: 'Umjetna inteligencija u ekonomskim istraživanjima',
-          inst: 'Bečki institut za međunarodne ekonomske studije (wiiw), Beč',
-          description: 'Od novih ideja do funkcionalnog agentskog sustava: radni tekst generiran uživo iz Eurostatovih podataka i potpuno reproducibilan repozitorij otvorenog koda koji možete klonirati i pokrenuti.',
-          links: [
-            { label: 'Prezentacija →', href: 'https://lusiki.github.io/AI_workshop_wiiw/' },
-            { label: 'GitHub →', href: 'https://github.com/lusiki/AI_workshop_wiiw' },
-          ],
-        },
-        {
-          term: '2026.', code: 'Radionica',
-          title: 'AI radionica za istraživače — od chata do delegiranja',
-          inst: 'Hrvatsko katoličko sveučilište, Zagreb',
-          description: 'Agentska AI za metodološka istraživanja: prijelaz s chat-promptanja na delegiranje cijelog zadatka koji model planira, izvršava i provjerava prije nego što se vrati na odobrenje. Sam je repozitorij radni primjer tog okvira.',
-          links: [
-            { label: 'Prezentacija →', href: 'https://lusiki.github.io/AI-radionica-za-istra-iva-e/' },
-            { label: 'GitHub →', href: 'https://github.com/lusiki/AI-radionica-za-istra-iva-e' },
-          ],
-        },
-        {
-          term: '2025.', code: '2 dana · 7 h',
-          title: 'Upotreba AI alata u studentskom istraživanju',
-          inst: 'Ekonomski institut Zagreb · za diplomske studente ekonomije',
-          description: 'Dan 1 — transformerska arhitektura i RAG, akademska čestitost i APA 7, Perplexity za pretraživanje izvora, Gemini Deep Research, strukturiranje istraživačkog nacrta s Claudeom. Dan 2 — agentsko kodiranje s Claude Codeom, integracija u IDE, LLM bilježnice za eksplorativnu analizu i pisanje akademskog teksta uz AI na hrvatskom. Financirano iz Nacionalnog plana oporavka i otpornosti (NextGenerationEU).',
-          links: [
-            { label: 'Dan 1 →', href: 'https://raw.githack.com/lusiki/EIZ-radionica/refs/heads/main/slides/day1.html' },
-            { label: 'Dan 2 →', href: 'https://raw.githack.com/lusiki/EIZ-radionica/refs/heads/main/slides/day2.html' },
-            { label: 'GitHub →', href: 'https://github.com/lusiki/EIZ-radionica' },
-          ],
-        },
-      ],
-    },
-
-    courses: {
-      newMedia: 'Web infrastruktura, sustavi za upravljanje sadržajem, strateško planiranje komunikacije, implikacije umjetne inteligencije i digitalna analitika. Studenti uče kritički procjenjivati i provoditi web-komunikacijske strategije.',
-      stats: 'Statistički temelji za studente komunikologije. Deskriptivna statistika, teorija vjerojatnosti, testiranje hipoteza i inferencijalna statistika u R-u (tidyverse, ggplot2), s primjerima iz medija i komunikacija.',
-      data: 'Vrste i izvori podataka, programiranje u R-u, vizualizacija podataka, web scraping, strojno učenje, analiza teksta i reproducibilno izvještavanje. Za studente diplomske razine sociologije i društvenih znanosti.',
-      social: 'Računalni pristupi podacima društvenih mreža. Analiza specifična za platforme (Twitter, Facebook, Instagram, LinkedIn), podatkovna infrastruktura, statističke metode i otvoreni analitički alati.',
-      text: 'Računalna analiza teksta od pripreme podataka do obrade prirodnog jezika. Rječničke metode, nadgledano i nenadgledano strojno učenje, modeliranje tema i grupiranje teksta u R-u.',
-      statsSocial: 'Programiranje u R-u, deskriptivna statistika, vizualizacija podataka, testiranje hipoteza, analiza kategorijskih varijabli, ANOVA i linearna regresija za studente preddiplomske razine društvenih znanosti.',
     },
   },
 } as const;
@@ -295,14 +178,16 @@ export function t(lang: Lang) {
   return strings[lang];
 }
 
-export function altLang(lang: Lang): Lang { return lang === 'en' ? 'hr' : 'en'; }
+export function altLang(lang: Lang): Lang {
+  return lang === "en" ? "hr" : "en";
+}
 export function altPath(pathname: string, lang: Lang): string {
-  if (lang === 'hr') {
+  if (lang === "hr") {
     // currently on /hr/..., switch to EN by stripping /hr prefix
-    const stripped = pathname.replace(/^\/hr(\/|$)/, '/');
-    return stripped || '/';
+    const stripped = pathname.replace(/^\/hr(\/|$)/, "/");
+    return stripped || "/";
   } else {
     // currently on /..., switch to HR by prepending /hr
-    return '/hr' + (pathname === '/' ? '/' : pathname);
+    return "/hr" + (pathname === "/" ? "/" : pathname);
   }
 }

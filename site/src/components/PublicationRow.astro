@@ -6,7 +6,7 @@ const { entry, lang = 'en' } = Astro.props;
 const d = entry.data;
 const year = d.date.getFullYear();
 const prefix = lang === 'hr' ? '/hr' : '';
-const href = `${prefix}/publications/${entry.slug}/`;
+const href = `${prefix}/publications/${entry.id}/`;
 ---
 <article class="pub">
   <div class="pub__year">{year}</div>
