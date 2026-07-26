@@ -257,6 +257,7 @@ export const previousCourses: Course[] = [
 export interface Workshop {
   term: LocalizedText;
   code: LocalizedText;
+  marker?: LocalizedText;
   title: LocalizedText;
   institution: LocalizedText;
   description: LocalizedText;
@@ -322,6 +323,10 @@ export const workshops: Workshop[] = [
   {
     term: { en: "2025", hr: "2025." },
     code: { en: "2 days · 7h", hr: "2 dana · 7 h" },
+    marker: {
+      en: "Funded — NextGenerationEU",
+      hr: "Financirano — NextGenerationEU",
+    },
     title: {
       en: "Using AI tools in student research",
       hr: "Upotreba AI alata u studentskom istraživanju",

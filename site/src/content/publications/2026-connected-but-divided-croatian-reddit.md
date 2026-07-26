@@ -4,8 +4,8 @@ date: 2026-06-17
 authors:
   - "Tamara Kunić"
   - "Luka Šikić"
-publication: "Medijska istraživanja, Vol. 32 No. 1, _pp. 31–54_"
-publication_short: "Medijska istraživanja, Vol. 32 No. 1, _pp. 31–54_"
+publication: "_Medijska istraživanja_, Vol. 32 No. 1, pp. 31–54"
+publication_short: "_Medijska istraživanja_, Vol. 32 No. 1, pp. 31–54"
 abstract: "This study examines Croatian Reddit communities during the 2024 parliamentary and European Parliament elections using 11,503 comments collected from March to June 2024. Network, sentiment, and topic analyses reveal structurally distinct communities discussing many of the same issues in different emotional climates. A small group of highly active connectors bridges these communities while also intensifying their divisions, showing how cohesion and conflict coexist in Croatian digital publics."
 abstract_hr: "Istraživanje analizira hrvatske zajednice na Redditu tijekom parlamentarnih izbora i izbora za Europski parlament 2024. na uzorku od 11.503 komentara prikupljenih od ožujka do lipnja 2024. Mrežna analiza, analiza sentimenta i modeliranje tema otkrivaju strukturno odvojene zajednice koje raspravljaju o mnogim istim pitanjima u različitim emocionalnim okruženjima. Mala skupina vrlo aktivnih korisnika povezuje te zajednice, ali istodobno pojačava njihove podjele."
 tags:

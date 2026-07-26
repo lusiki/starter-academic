@@ -22,7 +22,7 @@ const pubs = (await getCollection('publications')).sort(
   <section class="section section--flush">
     <SectionHeader num={s.pubs.sectionLabel(pubs.length)} title={s.pubs.sectionTitle} />
     <ul class="list">
-      {pubs.map(p => <li><PublicationRow entry={p} lang={lang} /></li>)}
+      {pubs.map(p => <li><PublicationRow entry={p} lang={lang} markSelected /></li>)}
     </ul>
   </section>
 </Base>

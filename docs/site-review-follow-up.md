@@ -3,12 +3,14 @@
 Updated: 2026-07-26
 
 This note records how the multi-agent profile-site review was applied to the
-active Astro site.
+active Astro site. The review itself — findings, reasoning, and the suggestions
+from both implementation passes — is in [site-review.md](site-review.md).
 
 ## Implemented
 
-- Made Luka Šikić's name and international credentials visible in the homepage
-  hero.
+- Lifted Luka Šikić's international credentials into the homepage hero. The
+  visible name headline was later removed at the owner's request while keeping
+  an accessible top-level heading.
 - Added a compact proof strip for publications, open projects, public courses,
   and workshop series.
 - Surfaced the _How Economics Absorbed AI_ study in the homepage copy, current
@@ -30,6 +32,23 @@ active Astro site.
   WebP outputs (about 11–36 KB).
 - Extended the repeatable AI-site preparation step so the Quarto microsite
   inherits the main site's fonts and color palette.
+- Self-hosted Geist and Geist Mono across both the Astro and Quarto sections.
+- Added Google Scholar Highwire metadata to every publication detail page.
+- Added branded English and Croatian 404 pages plus legacy Hugo redirects.
+- Added the social card's statistical trace motif to the homepage.
+- Added a theme-aware favicon shared across the main and AI sites, and made the
+  theme toggle reflect its current state.
+- Surfaced NextGenerationEU funding and DigiKat project leadership in their
+  relevant rows.
+- Applied the three verified Croatian terminology and phrasing corrections.
+- Re-exported the social card from an 890 KB PNG to a visually equivalent
+  104 KB JPEG.
+- Rebuilt the homepage trace motif from seeded random-walk series so it reads as
+  data rather than as tilted rules.
+- Gave the accent colour a resting role: curated publications are marked in the
+  year column, with a visually-hidden label so the cue is not colour alone.
+- Strengthened the publication row hierarchy and moved venue emphasis from page
+  ranges onto journal names across all sixteen entries.
 
 ## Deliberately deferred
 

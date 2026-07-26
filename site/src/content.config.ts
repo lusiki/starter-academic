@@ -42,6 +42,8 @@ const projects = defineCollection({
     title_hr: z.string().optional(),
     summary: z.string().optional(),
     summary_hr: z.string().optional(),
+    role: z.string().optional(),
+    role_hr: z.string().optional(),
     body_hr: z.string().optional(),
     date: z.coerce.date().optional(),
     tags: z.array(z.string()).default([]),

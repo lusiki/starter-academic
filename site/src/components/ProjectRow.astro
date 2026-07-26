@@ -7,11 +7,13 @@ const d = entry.data;
 const prefix = lang === 'hr' ? '/hr' : '';
 const title = (lang === 'hr' && d.title_hr) ? d.title_hr : d.title;
 const summary = (lang === 'hr' && d.summary_hr) ? d.summary_hr : d.summary;
+const role = (lang === 'hr' && d.role_hr) ? d.role_hr : d.role;
 const href = `${prefix}/projects/${entry.id}/`;
 ---
 <article class="pub">
   <div class="pub__year">{d.date ? d.date.getFullYear() : ''}</div>
   <div>
+    {role && <span class="credibility-mark">{role}</span>}
     <a href={href} class="pub__title">{title}</a>
     {summary && <span class="pub__venue">{summary}</span>}
   </div>

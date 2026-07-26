@@ -1,11 +1,15 @@
 ---
 import '../styles/colors_and_type.css';
 import '../styles/components.css';
+import '@fontsource-variable/geist/wght.css';
+import '@fontsource-variable/geist-mono/wght.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import { altPath, strings, type Lang } from '../i18n/strings';
 import { getImage } from 'astro:assets';
 import avatar from '../assets/avatar.png';
+import geistLatin from '@fontsource-variable/geist/files/geist-latin-wght-normal.woff2?url';
+import geistMonoLatin from '@fontsource-variable/geist-mono/files/geist-mono-latin-wght-normal.woff2?url';
 
 interface Props {
   title?: string;
@@ -18,10 +22,13 @@ const s = strings[lang];
 const resolvedDescription = description || s.home.description;
 const siteOrigin = Astro.site || new URL(Astro.url.origin);
 const canonical = new URL(Astro.url.pathname, siteOrigin);
-const alternate = new URL(altPath(Astro.url.pathname, lang), siteOrigin);
+const alternatePath = lang === 'hr' && Astro.url.pathname.startsWith('/hr/404')
+  ? '/404.html'
+  : altPath(Astro.url.pathname, lang);
+const alternate = new URL(alternatePath, siteOrigin);
 const english = lang === 'en' ? canonical : alternate;
 const croatian = lang === 'hr' ? canonical : alternate;
-const socialImage = new URL('/og.png', siteOrigin);
+const socialImage = new URL('/og.jpg', siteOrigin);
 const locale = lang === 'hr' ? 'hr_HR' : 'en_US';
 const alternateLocale = lang === 'hr' ? 'en_US' : 'hr_HR';
 const schemaAvatar = await getImage({
@@ -67,6 +74,7 @@ const personSchema = {
   <meta property="og:locale" content={locale} />
   <meta property="og:locale:alternate" content={alternateLocale} />
   <meta property="og:image" content={socialImage} />
+  <meta property="og:image:type" content="image/jpeg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:image:alt" content="Luka Šikić — Econometrics, Data Science, and AI in Economic Research" />
@@ -78,10 +86,11 @@ const personSchema = {
   <link rel="alternate" hreflang="en" href={english} />
   <link rel="alternate" hreflang="hr" href={croatian} />
   <link rel="alternate" hreflang="x-default" href={english} />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preload" href={geistLatin} as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href={geistMonoLatin} as="font" type="font/woff2" crossorigin />
   <title>{title}</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23171717'/%3E%3C/svg%3E" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <slot name="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />
   <script is:inline>
     (function () {
@@ -105,11 +114,20 @@ const personSchema = {
       const KEY = 'ds-theme';
       const btn = document.getElementById('themeToggle');
       if (!btn) return;
+      const systemDark = () => matchMedia('(prefers-color-scheme: dark)').matches;
+      const currentTheme = () => root.getAttribute('data-theme') || (systemDark() ? 'dark' : 'light');
+      const updateState = () => {
+        const theme = currentTheme();
+        btn.setAttribute('aria-pressed', String(theme === 'dark'));
+        btn.setAttribute('data-theme-state', theme);
+      };
+      updateState();
       btn.addEventListener('click', () => {
-        const cur = root.getAttribute('data-theme') || (matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+        const cur = currentTheme();
         const next = cur === 'dark' ? 'light' : 'dark';
         root.setAttribute('data-theme', next);
         try { localStorage.setItem(KEY, next); } catch (e) {}
+        updateState();
       });
     })();
   </script>

@@ -20,8 +20,26 @@ const projectHref = d.url_project?.startsWith('/')
   ? `${prefix}${d.url_project}`
   : d.url_project;
 const projectIsExternal = Boolean(projectHref?.startsWith('http'));
+const siteOrigin = Astro.site || new URL(Astro.url.origin);
+const citationPageUrl = new URL(Astro.url.pathname, siteOrigin).toString();
+const citationPdfUrl = d.url_pdf
+  ? new URL(d.url_pdf, siteOrigin).toString()
+  : undefined;
+const citationJournal = (d.publication_short || d.publication)
+  ?.replace(/[_*]/g, '')
+  .split(',')[0]
+  .trim();
 ---
 <Base title={`${d.title} — Luka Šikić`} description={abstract?.slice(0, 200)} lang={lang}>
+  <Fragment slot="head">
+    <meta name="citation_title" content={d.title} />
+    {d.authors.map(author => <meta name="citation_author" content={author} />)}
+    <meta name="citation_publication_date" content={d.date.toISOString().slice(0, 10)} />
+    <meta name="citation_abstract_html_url" content={citationPageUrl} />
+    {citationJournal && <meta name="citation_journal_title" content={citationJournal} />}
+    {citationPdfUrl && <meta name="citation_pdf_url" content={citationPdfUrl} />}
+    {d.doi && <meta name="citation_doi" content={d.doi} />}
+  </Fragment>
   <article class="prose detail-page">
     <div class="detail-page__back">
       <a href={`${prefix}/publications/`} class="eyebrow">{s.pubs.back}</a>

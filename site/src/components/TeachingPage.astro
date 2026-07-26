@@ -78,6 +78,7 @@ const s = strings[lang];
               <div class="teach__code">{localize(w.code, lang)}</div>
             </div>
             <div>
+              {w.marker && <span class="credibility-mark">{localize(w.marker, lang)}</span>}
               <div class="teach__course">
                 <a href={w.links[0].href} target="_blank" rel="noopener">{localize(w.title, lang)}</a>
               </div>

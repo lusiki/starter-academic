@@ -67,6 +67,13 @@
   transition: color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease);
 }
 .nav__theme-toggle:hover { color: var(--accent); border-color: var(--accent); }
+.theme-icon--sun { display: none; }
+:root[data-theme="dark"] .theme-icon--moon { display: none; }
+:root[data-theme="dark"] .theme-icon--sun { display: block; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .theme-icon--moon { display: none; }
+  :root:not([data-theme="light"]) .theme-icon--sun { display: block; }
+}
 
 /* ---------- Hero ---------- */
 .hero { padding: var(--s-10) 0 var(--s-9); }
@@ -81,11 +88,6 @@
   margin-bottom: var(--s-5);
 }
 .hero__title.hero__title--page { font-size: 44px; max-width: 24ch; }
-.hero__name {
-  font-size: var(--fs-display);
-  max-width: 12ch;
-  margin-bottom: var(--s-5);
-}
 .hero__lede {
   color: var(--muted);
   font-size: 20px;
@@ -135,6 +137,68 @@
   gap: 2px;
 }
 .hero__location { font-size: var(--fs-mono-meta); color: var(--muted); }
+
+/* ---------- Statistical trace ---------- */
+.signal-band {
+  position: relative;
+  height: 72px;
+  margin: calc(-1 * var(--s-5)) 0 var(--s-7);
+  overflow: hidden;
+  border-block: var(--bw) solid var(--hairline);
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent calc(10% - 1px),
+      var(--hairline) calc(10% - 1px),
+      var(--hairline) 10%
+    );
+}
+.signal-band__svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.signal-band__trace {
+  stroke: var(--fg-4);
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+}
+.signal-band__trace--2 { stroke: var(--hairline); }
+.signal-band__trace--3 { stroke: var(--fg-4); opacity: 0.7; }
+.signal-band__trace--accent { stroke: var(--accent); }
+
+/* The accent series terminates in a marker pinned to its final value
+   (x=1200/1200, y=17.2/72). */
+.signal-band__point {
+  position: absolute;
+  right: 0;
+  top: 23.9%;
+  width: 5px;
+  height: 5px;
+  background: var(--accent);
+  /* Sits flush inside the right edge; a centred marker would be half-clipped
+     by the band's overflow. */
+  transform: translateY(-50%);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .signal-band__trace {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: signal-draw 1.6s var(--ease) forwards;
+  }
+  .signal-band__trace--2 { animation-delay: 90ms; }
+  .signal-band__trace--3 { animation-delay: 180ms; }
+  .signal-band__trace--accent { animation-delay: 270ms; }
+  .signal-band__point {
+    opacity: 0;
+    animation: signal-point 240ms var(--ease) 1.6s forwards;
+  }
+}
+@keyframes signal-draw { to { stroke-dashoffset: 0; } }
+@keyframes signal-point { to { opacity: 1; } }
 
 /* ---------- Proof strip ---------- */
 .proof-strip {
@@ -208,15 +272,46 @@
   align-items: baseline;
 }
 .pub__year {
+  position: relative;
   font-family: var(--font-mono);
   font-size: var(--fs-mono-meta);
-  color: var(--muted);
+  color: var(--fg-2);
   font-feature-settings: 'tnum' 1;
 }
 .pub__title { color: var(--body); font-weight: var(--w-medium); line-height: 1.4; }
 a.pub__title, .pub__title a { border-bottom: 0; }
 a.pub__title:hover, .pub__title a:hover { color: var(--accent); }
-.pub__venue { display: block; color: var(--muted); font-size: var(--fs-body-sm); margin-top: 4px; }
+.pub__venue {
+  display: block;
+  color: var(--muted);
+  font-size: var(--fs-body-sm);
+  line-height: 1.5;
+  margin-top: 6px;
+}
+.pub__venue em { font-style: italic; color: var(--fg-2); }
+
+/* The accent's one resting job: the author's own curation, marked in the year
+   column. Paired with a visually-hidden label so it never reads as color alone. */
+.pub--selected .pub__year { color: var(--accent); }
+.pub--selected .pub__year::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--s-3));
+  top: 0.35em;
+  width: 2px;
+  height: 1em;
+  background: var(--accent);
+}
+.credibility-mark {
+  display: block;
+  width: fit-content;
+  margin-bottom: 5px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: var(--fs-mono-label);
+  letter-spacing: var(--tracking-mono-s);
+  text-transform: uppercase;
+}
 .pub__links {
   font-family: var(--font-mono);
   font-size: var(--fs-mono-meta);
@@ -409,6 +504,7 @@ a.pub__title:hover, .pub__title a:hover { color: var(--accent); }
   margin-bottom: var(--s-6);
 }
 .detail-page__summary { margin-bottom: var(--s-6); }
+.detail-page__role { margin-bottom: var(--s-3); }
 .detail-page__actions {
   display: flex;
   gap: var(--s-2);
@@ -423,6 +519,17 @@ a.pub__title:hover, .pub__title a:hover { color: var(--accent); }
 }
 .detail-page__section-label { margin: var(--s-7) 0 var(--s-3); }
 
+/* ---------- Not found ---------- */
+.error-page { min-height: 65vh; }
+.error-page__hr {
+  max-width: 60ch;
+  margin-top: var(--s-8);
+  padding-top: var(--s-5);
+  border-top: var(--bw) solid var(--hairline);
+  color: var(--muted);
+}
+.error-page__hr p { margin: var(--s-2) 0; color: var(--muted); }
+
 /* ---------- Responsive ---------- */
 @media (max-width: 720px) {
   .pub  { grid-template-columns: 60px 1fr; }
@@ -434,7 +541,7 @@ a.pub__title:hover, .pub__title a:hover { color: var(--accent); }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .stats__cell:nth-child(2n) { border-right: 0; }
   .stats__cell { border-right: var(--bw) solid var(--hairline); border-bottom: var(--bw) solid var(--hairline); }
-  .hero__title, .hero__name { font-size: var(--fs-h1); }
+  .hero__title { font-size: var(--fs-h1); }
   .proof-strip { grid-template-columns: repeat(2, 1fr); }
   .proof-strip__item:nth-child(2) { border-right: 0; }
   .proof-strip__item:nth-child(-n + 2) { border-bottom: var(--bw) solid var(--hairline); }

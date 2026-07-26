@@ -1,14 +1,35 @@
-import { readdir, readFile, writeFile } from "node:fs/promises";
+import {
+  copyFile,
+  mkdir,
+  readdir,
+  readFile,
+  writeFile,
+} from "node:fs/promises";
 import { relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const projectRoot = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const aiRoot = resolve(projectRoot, "public/ai");
+const fontRoot = resolve(projectRoot, "public/fonts");
 const siteRoot = "https://www.lukasikic.info/ai/";
 const marker = "<!-- lukasikic.info integration -->";
 const themeMarker = "<!-- lukasikic.info theme -->";
 const theme = `${themeMarker}
 <style>
+  @font-face {
+    font-family: "Geist";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url("/fonts/geist-latin-wght-normal.woff2") format("woff2-variations");
+  }
+  @font-face {
+    font-family: "Geist Mono";
+    font-style: normal;
+    font-display: swap;
+    font-weight: 100 900;
+    src: url("/fonts/geist-mono-latin-wght-normal.woff2") format("woff2-variations");
+  }
   :root {
     --ls-bg: #FFFFFF;
     --ls-surface: #FAFAFA;
@@ -64,6 +85,24 @@ const theme = `${themeMarker}
   }
 </style>`;
 
+await mkdir(fontRoot, { recursive: true });
+await Promise.all([
+  copyFile(
+    resolve(
+      projectRoot,
+      "node_modules/@fontsource-variable/geist/files/geist-latin-wght-normal.woff2",
+    ),
+    resolve(fontRoot, "geist-latin-wght-normal.woff2"),
+  ),
+  copyFile(
+    resolve(
+      projectRoot,
+      "node_modules/@fontsource-variable/geist-mono/files/geist-mono-latin-wght-normal.woff2",
+    ),
+    resolve(fontRoot, "geist-mono-latin-wght-normal.woff2"),
+  ),
+]);
+
 async function htmlFiles(directory) {
   const entries = await readdir(directory, { withFileTypes: true });
   const nested = await Promise.all(
@@ -88,20 +127,51 @@ for (const file of await htmlFiles(aiRoot)) {
 <meta property="og:title" content="How Economics Absorbed AI">
 <meta property="og:description" content="An evidence-based retrospective and forecast of how economics is absorbing artificial intelligence.">
 <meta property="og:url" content="${canonical}">
-<meta property="og:image" content="https://www.lukasikic.info/og.png">
+<meta property="og:image" content="https://www.lukasikic.info/og.jpg">
+<meta property="og:image:type" content="image/jpeg">
 <meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="${canonical}">`;
 
   if (!html.includes(marker)) {
     html = html.replace("</head>", `${metadata}\n</head>`);
   }
-  if (!html.includes(themeMarker)) {
+  if (!html.includes('href="/favicon.svg"')) {
+    html = html.replace(
+      "</head>",
+      '<link rel="icon" href="/favicon.svg" type="image/svg+xml">\n</head>',
+    );
+  }
+  html = html
+    .replaceAll(
+      "https://www.lukasikic.info/og.png",
+      "https://www.lukasikic.info/og.jpg",
+    )
+    .replace(
+      /<meta property="og:image" content="https:\/\/www\.lukasikic\.info\/og\.jpg">\n(?:<meta property="og:image:type" content="image\/jpeg">\n?)?/,
+      '<meta property="og:image" content="https://www.lukasikic.info/og.jpg">\n<meta property="og:image:type" content="image/jpeg">',
+    );
+  if (html.includes(themeMarker)) {
+    html = html.replace(
+      /<!-- lukasikic\.info theme -->\s*<style>[\s\S]*?<\/style>/,
+      theme,
+    );
+  } else {
     html = html.replace("</head>", `${theme}\n</head>`);
   }
-  html = html.replace(
-    /https:\/\/fonts\.googleapis\.com\/css2\?family=Roboto\+Mono[^"]+/,
-    "https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap",
-  );
+  html = html
+    .replace(
+      /\s*<link rel="preconnect" href="https:\/\/fonts\.googleapis\.com">\s*/g,
+      "\n",
+    )
+    .replace(
+      /\s*<link rel="preconnect" href="https:\/\/fonts\.gstatic\.com" crossorigin="">\s*/g,
+      "\n",
+    )
+    .replace(
+      /\s*<link href="https:\/\/fonts\.googleapis\.com\/css2\?[^"]+" rel="stylesheet">\s*/g,
+      "\n",
+    );
   if (!html.includes('aria-label="Return to lukasikic.info"')) {
     html = html.replace(
       '<ul class="navbar-nav navbar-nav-scroll ms-auto">',

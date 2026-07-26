@@ -1,0 +1,24 @@
+---
+import Base from '../layouts/Base.astro';
+---
+<Base
+  title="Page not found — Luka Šikić"
+  description="The requested page could not be found."
+  lang="en"
+>
+  <section class="hero hero--compact error-page">
+    <span class="hero__eyebrow eyebrow">404 · Page not found</span>
+    <h1 class="hero__title hero__title--page">This page has moved or does not exist.</h1>
+    <p class="hero__lede">Try the homepage, research, or projects. Older singular URLs are redirected automatically.</p>
+    <div class="btn-row">
+      <a class="btn btn--primary" href="/">Homepage</a>
+      <a class="btn" href="/publications/">Research</a>
+      <a class="btn" href="/projects/">Projects</a>
+    </div>
+    <div class="error-page__hr" lang="hr">
+      <span class="eyebrow">Stranica nije pronađena</span>
+      <p>Tražena stranica premještena je ili ne postoji.</p>
+      <a href="/hr/">Početna stranica na hrvatskom →</a>
+    </div>
+  </section>
+</Base>

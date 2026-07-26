@@ -1,0 +1,16 @@
+/publication/  /publications/  301
+/publication/*  /publications/:splat  301
+/project/      /projects/      301
+/project/*      /projects/:splat      301
+/post/         /                301
+/post/*         /                     301
+/talk/         /teaching/#workshops   301
+/talk/*         /teaching/#workshops  301
+/hr/publication/  /hr/publications/  301
+/hr/publication/*  /hr/publications/:splat  301
+/hr/project/      /hr/projects/      301
+/hr/project/*      /hr/projects/:splat      301
+/hr/post/         /hr/              301
+/hr/post/*         /hr/                     301
+/hr/talk/         /hr/teaching/#workshops   301
+/hr/talk/*         /hr/teaching/#workshops  301

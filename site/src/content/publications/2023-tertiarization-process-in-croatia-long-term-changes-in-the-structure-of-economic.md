@@ -5,8 +5,8 @@ authors:
   - "Krešimir Peračković"
   - "Ivo Turk"
   - "Luka Šikić"
-publication: "Ekonomski pregled, Vol. 74 No. 3, _pp. 335–360_"
-publication_short: "Ekonomski pregled, 74(3), _pp. 335–360_"
+publication: "_Ekonomski pregled_, Vol. 74 No. 3, pp. 335–360"
+publication_short: "_Ekonomski pregled_, 74(3), pp. 335–360"
 abstract: "This paper examines long-run structural change and the expansion of services in Croatia between 1971 and 2011 using population-census data. The results show a sustained increase in service-sector employment alongside declining agricultural and industrial shares, extending beyond the three post-socialist transition decades. By assembling a consistent dataset from several sources, the study provides a foundation for evaluating whether Croatia's shift toward a post-industrial service economy produced the modernization and development effects observed in richer economies."
 abstract_hr: "Rad analizira strukturne promjene po ekonomskim sektorima općenito i proces tercijarizacije posebno, za razdoblje 1971.–2011. u Hrvatskoj. Polazi od klasične ekonomske teorije rasta uslužnog sektora i demografskog pristupa koristeći podatke prikupljene iz popisa stanovništva. Proces tercijarizacije obično se definira kao porast udjela zaposlenosti u uslužnom sektoru u ukupnoj zaposlenosti, te se pretpostavlja kao kontinuiran dugoročni proces na koji utječu različiti čimbenici u različitim razdobljima. Rezultati potvrđuju strukturnu promjenu koja pogoduje rastu uslužnog sektora tijekom cijelog razdoblja, uz istovremeno smanjenje udjela poljoprivrednog i industrijskog sektora. Doprinos rada je interdisciplinarni pristup objašnjenju različitih utjecaja i specifičnih značajki procesa tercijarizacije u Hrvatskoj od 1970-ih."
 tags:

@@ -15,6 +15,7 @@ const { Content } = await render(entry);
 const d = entry.data;
 const title = (lang === 'hr' && d.title_hr) ? d.title_hr : d.title;
 const summary = (lang === 'hr' && d.summary_hr) ? d.summary_hr : d.summary;
+const role = (lang === 'hr' && d.role_hr) ? d.role_hr : d.role;
 ---
 <Base title={`${title} — Luka Šikić`} description={summary} lang={lang}>
   <article class="prose detail-page">
@@ -22,6 +23,7 @@ const summary = (lang === 'hr' && d.summary_hr) ? d.summary_hr : d.summary;
       <a href={`${prefix}/projects/`} class="eyebrow">{s.projects.back}</a>
     </div>
 
+    {role && <div class="credibility-mark detail-page__role">{role}</div>}
     <h1 class="detail-page__title">{title}</h1>
     {summary && <p class="hero__lede detail-page__summary">{summary}</p>}
 

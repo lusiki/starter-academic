@@ -64,6 +64,7 @@ export const strings = {
       back: "← All publications",
       abstract: "Abstract",
       bibtex: "BibTeX",
+      selectedMark: "Selected work",
     },
 
     projects: {
@@ -157,13 +158,14 @@ export const strings = {
       back: "← Sve publikacije",
       abstract: "Sažetak",
       bibtex: "BibTeX",
+      selectedMark: "Odabrani rad",
     },
 
     projects: {
       title: "Projekti — Luka Šikić",
       eyebrow: "03 — Projekti",
       heroTitle: "Otvoreni istraživački projekti",
-      hero: "Kod, podaci i tekstovi objavljeni u otvorenom kodu.",
+      hero: "Kod, podaci i tekstovi — sve javno objavljeno.",
       sectionLabel: (n: number) => `${n} stavki`,
       sectionTitle: "Svi projekti",
       back: "← Svi projekti",

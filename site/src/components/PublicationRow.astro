@@ -1,16 +1,26 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import type { Lang } from '../i18n/strings';
-interface Props { entry: CollectionEntry<'publications'>; lang?: Lang; }
-const { entry, lang = 'en' } = Astro.props;
+import { strings, type Lang } from '../i18n/strings';
+interface Props {
+  entry: CollectionEntry<'publications'>;
+  lang?: Lang;
+  /** Mark the author's own curated picks. Off where the list is already curated. */
+  markSelected?: boolean;
+}
+const { entry, lang = 'en', markSelected = false } = Astro.props;
+const s = strings[lang];
 const d = entry.data;
 const year = d.date.getFullYear();
 const prefix = lang === 'hr' ? '/hr' : '';
 const href = `${prefix}/publications/${entry.id}/`;
 const venue = d.publication_short || d.publication;
+const selected = markSelected && d.selected;
 ---
-<article class="pub">
-  <div class="pub__year">{year}</div>
+<article class:list={['pub', selected && 'pub--selected']}>
+  <div class="pub__year">
+    {year}
+    {selected && <span class="visually-hidden"> — {s.pubs.selectedMark}</span>}
+  </div>
   <div>
     <a href={href} class="pub__title">{d.title}</a>
     {venue && <span class="pub__venue" set:html={venue.replace(/_([^_]+)_/g, '<em>$1</em>')} />}
