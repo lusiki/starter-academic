@@ -331,7 +331,7 @@ a.pub__title:hover, .pub__title a:hover { color: var(--accent); }
   text-transform: uppercase;
   color: var(--muted);
   padding: 4px 8px;
-  border: var(--bw) solid var(--hairline);
+  border: var(--bw) solid var(--fg-4);
   border-radius: var(--r-1);
   background: transparent;
 }
@@ -345,20 +345,32 @@ a.pub__title:hover, .pub__title a:hover { color: var(--accent); }
   letter-spacing: var(--tracking-mono-s);
   text-transform: uppercase;
   padding: 8px 14px;
-  border: var(--bw) solid var(--hairline);
+  /* Hairline is too faint for a control: on white it left the buttons reading
+     as pale floating boxes. Buttons need a visible edge; dividers do not. */
+  border: var(--bw) solid var(--fg-4);
   border-radius: var(--r-1);
-  background: transparent;
+  background: var(--surface);
   color: var(--body);
   cursor: pointer;
   transition: color var(--t-fast) var(--ease), border-color var(--t-fast) var(--ease), background var(--t-fast) var(--ease);
 }
-.btn:hover { color: var(--accent); border-color: var(--accent); }
-.btn--primary {
-  background: var(--body);
-  color: var(--bg);
-  border-color: var(--body);
+.btn:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: color-mix(in oklab, var(--accent) 8%, var(--bg));
 }
-.btn--primary:hover { background: var(--accent); border-color: var(--accent); color: var(--bg); }
+/* Filled in the accent rather than in --body, which inverted per theme and put
+   a glaring white slab on the dark page. */
+.btn--primary {
+  background: var(--accent);
+  color: var(--bg);
+  border-color: var(--accent);
+}
+.btn--primary:hover {
+  background: color-mix(in oklab, var(--accent) 82%, var(--body));
+  border-color: transparent;
+  color: var(--bg);
+}
 .btn-row {
   display: flex;
   gap: var(--s-2);
