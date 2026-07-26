@@ -4,6 +4,8 @@ import '../styles/components.css';
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
 import { altPath, strings, type Lang } from '../i18n/strings';
+import { getImage } from 'astro:assets';
+import avatar from '../assets/avatar.png';
 
 interface Props {
   title?: string;
@@ -22,12 +24,18 @@ const croatian = lang === 'hr' ? canonical : alternate;
 const socialImage = new URL('/og.png', siteOrigin);
 const locale = lang === 'hr' ? 'hr_HR' : 'en_US';
 const alternateLocale = lang === 'hr' ? 'en_US' : 'hr_HR';
+const schemaAvatar = await getImage({
+  src: avatar,
+  width: 640,
+  format: 'webp',
+  quality: 82,
+});
 const personSchema = {
   '@context': 'https://schema.org',
   '@type': 'Person',
   name: 'Luka Šikić',
   url: new URL('/', siteOrigin).toString(),
-  image: new URL('/avatar.png', siteOrigin).toString(),
+  image: new URL(schemaAvatar.src, siteOrigin).toString(),
   jobTitle: lang === 'hr'
     ? 'Docent statistike i znanosti o podacima'
     : 'Assistant Professor of Statistics and Data Science',
@@ -49,7 +57,7 @@ const personSchema = {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content={resolvedDescription} />
-  <meta name="theme-color" content="#171717" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0A0A0A" media="(prefers-color-scheme: dark)" />
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="Luka Šikić" />
@@ -70,6 +78,8 @@ const personSchema = {
   <link rel="alternate" hreflang="en" href={english} />
   <link rel="alternate" hreflang="hr" href={croatian} />
   <link rel="alternate" hreflang="x-default" href={english} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <title>{title}</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23171717'/%3E%3C/svg%3E" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />

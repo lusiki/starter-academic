@@ -106,7 +106,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&amp;family=Geist+Mono:wght@400;500&amp;display=swap" rel="stylesheet">
 
 
 <!-- lukasikic.info integration -->
@@ -119,6 +119,62 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta property="og:image" content="https://www.lukasikic.info/og.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://www.lukasikic.info/ai/supplements/predictions.html">
+<!-- lukasikic.info theme -->
+<style>
+  :root {
+    --ls-bg: #FFFFFF;
+    --ls-surface: #FAFAFA;
+    --ls-body: #171717;
+    --ls-muted: #737373;
+    --ls-hairline: #E5E5E5;
+    --ls-accent: #2563EB;
+  }
+  body {
+    background: var(--ls-bg) !important;
+    color: var(--ls-body) !important;
+    font-family: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif !important;
+  }
+  h1, h2, h3, h4, h5, h6, .navbar-brand, .menu-text {
+    font-family: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif !important;
+  }
+  code, pre, kbd, samp {
+    font-family: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace !important;
+  }
+  a, .nav-link:hover, .nav-link:focus, .sidebar-link:hover { color: var(--ls-accent); }
+  .navbar {
+    background: color-mix(in oklab, var(--ls-bg) 94%, transparent) !important;
+    border-bottom: 1px solid var(--ls-hairline) !important;
+    backdrop-filter: saturate(160%) blur(8px);
+  }
+  .navbar-title, .nav-link, .menu-text { color: var(--ls-body) !important; }
+  #quarto-sidebar, .sidebar, .quarto-title-banner { background: var(--ls-surface) !important; }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ls-bg: #0A0A0A;
+      --ls-surface: #111111;
+      --ls-body: #EDEDED;
+      --ls-muted: #8A8A8A;
+      --ls-hairline: #1F1F1F;
+      --ls-accent: #60A5FA;
+    }
+  }
+  body.quarto-light {
+    --ls-bg: #FFFFFF;
+    --ls-surface: #FAFAFA;
+    --ls-body: #171717;
+    --ls-muted: #737373;
+    --ls-hairline: #E5E5E5;
+    --ls-accent: #2563EB;
+  }
+  body.quarto-dark {
+    --ls-bg: #0A0A0A;
+    --ls-surface: #111111;
+    --ls-body: #EDEDED;
+    --ls-muted: #8A8A8A;
+    --ls-hairline: #1F1F1F;
+    --ls-accent: #60A5FA;
+  }
+</style>
 </head>
 
 <body class="nav-fixed">

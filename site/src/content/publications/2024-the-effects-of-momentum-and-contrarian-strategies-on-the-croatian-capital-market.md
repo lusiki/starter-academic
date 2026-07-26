@@ -2,11 +2,11 @@
 title: "The Effects of Momentum and Contrarian Strategies on the Croatian Capital Market"
 date: 2024-06-11
 authors:
-  - "Joško Marić [orcid.org/0009-0003-9470-9810](https://orcid.org/0009-0003-9470-9810)"
+  - "Joško Marić"
   - "Mislav Šagovac"
   - "Luka Šikić"
-publication: "Ekonomska misao i praksa, Vol. 33 No. 1, _pp. 149--175_, https://doi.org/10.17818/EMIP/2024/1.8"
-publication_short: "Ekonomska misao i praksa, Vol. 33 No. 1, _pp. 149--175_, https://doi.org/10.17818/EMIP/2024/1.8"
+publication: "Ekonomska misao i praksa, Vol. 33 No. 1, _pp. 149–175_"
+publication_short: "Ekonomska misao i praksa, 33(1), _pp. 149–175_"
 abstract: "The study investigates momentum and contrarian strategies in the Croatian stock market from 2000 to 2022 and several sub-periods within that period. Throughout the entire analyzed period, the results confirm a contrarian effect in the short, medium, and long investment term, while momentum and contrarian effects are confirmed in the short and medium investment term in several sub-periods, with the contrarian effect being confirmed in significantly more cases. The analysis indicates the variability of the size and significance of momentum and contrarian effects depending on the portfolio formation period, the portfolio holding period, and market regime. The contrarian effect is confirmed in more cases and is generally characterized by higher profitability. The research results are in line with findings from literature that analyzed these phenomena on developed and emerging markets, suggesting the conclusion that the Croatian market has a certain type of memory that can serve as a basis for generating long-term investment profits."
 abstract_hr: "Studija istražuje momentum i contrarian strategije na hrvatskom tržištu dionica od 2000. do 2022., kao i u nekoliko podrazdoblja unutar tog razdoblja. Tijekom cjelokupnog analiziranog razdoblja rezultati potvrđuju contrarian učinak u kratkom, srednjem i dugom investicijskom roku, dok su u nekoliko podrazdoblja potvrđeni i momentum i contrarian učinci u kratkom i srednjem roku, pri čemu se contrarian učinak potvrđuje u znatno većem broju slučajeva. Analiza upućuje na varijabilnost veličine i značajnosti učinaka ovisno o razdoblju formiranja portfelja, razdoblju držanja portfelja i tržišnom režimu. Contrarian učinak potvrđuje se u više slučajeva i općenito se odlikuje višom profitabilnošću. Rezultati su u skladu s nalazima iz literature na razvijenim i tržištima u nastajanju, što sugerira da hrvatsko tržište posjeduje određen tip memorije koji može poslužiti kao osnova za generiranje dugoročnih investicijskih profita."
 tags:
@@ -15,6 +15,7 @@ tags:
   - "contrarian strategy"
 publication_type: "Journal article"
 url_pdf: "https://hrcak.srce.hr/317747"
+doi: "10.17818/EMIP/2024/1.8"
 selected: false
 bibtex: |
   @Article{maric_effects_2024,
@@ -33,5 +34,4 @@ bibtex: |
     issn         = {1334-1434},
   }
 ---
-
 

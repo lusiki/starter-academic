@@ -12,7 +12,8 @@ body_hr: >-
   modeliranje tema. Rezultati pokazuju strukturno odvojene zajednice koje
   raspravljaju o istim temama u različitim emocionalnim okruženjima, uz vrlo
   aktivne korisnike koji zajednice istodobno povezuju i pojačavaju njihove
-  podjele.
+  podjele. Rad je objavljen u časopisu Medijska istraživanja, 32(1), 31–54,
+  DOI 10.22572/mi.32.1.2.
 date: 2026-01-01
 tags:
   - "media analysis"
@@ -23,4 +24,4 @@ external_link: "https://lusiki.github.io/Connected-but-divided/"
 url_code: "https://github.com/lusiki/Connected-but-divided"
 ---
 
-Interactive companion site to the paper *"Connected but Divided: Affective Publics and the Clash of Communities on Croatian Reddit in the Context of the 2024 Elections"* (Tamara Kunić & Luka Šikić), published in *Medijska istraživanja*, Vol. 32(1), 2026. Using 11,503 election-related Reddit comments collected from March to June 2024, the study combines co-participation network analysis (Louvain communities), sentiment analysis (NRC Croatian and CroSentiLex lexicons), and topic modeling (LDA) in R. It finds that Croatian online publics are not sealed echo chambers but structurally distinct communities that discuss the same topics under divergent emotional climates, with highly active "connector" users bridging — and paradoxically intensifying — the divides.
+Interactive companion site to the paper *"Connected but Divided: Affective Publics and the Clash of Communities on Croatian Reddit in the Context of the 2024 Elections"* (Tamara Kunić & Luka Šikić), published in *Medijska istraživanja*, Vol. 32(1), pp. 31–54, DOI 10.22572/mi.32.1.2. Using 11,503 election-related Reddit comments collected from March to June 2024, the study combines co-participation network analysis (Louvain communities), sentiment analysis (NRC Croatian and CroSentiLex lexicons), and topic modeling (LDA) in R. It finds that Croatian online publics are not sealed echo chambers but structurally distinct communities that discuss the same topics in divergent emotional climates, with highly active "connector" users bridging — and paradoxically intensifying — the divides.

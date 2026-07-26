@@ -18,11 +18,24 @@ export const currentWork: CurrentWorkItem[] = [
   {
     year: { en: "2026", hr: "2026." },
     title: {
+      en: "How Economics Absorbed AI",
+      hr: "Kako je ekonomija usvojila umjetnu inteligenciju",
+    },
+    body: {
+      en: "An evidence-based retrospective and forecast built from 385 sources, with falsifiable predictions about how AI is changing economic research.",
+      hr: "Retrospektiva i prognoza utemeljena na 385 izvora, s provjerljivim predviđanjima o tome kako umjetna inteligencija mijenja ekonomska istraživanja. Sadržaj je na engleskom.",
+    },
+    href: "/ai/",
+    featured: true,
+  },
+  {
+    year: { en: "2026", hr: "2026." },
+    title: {
       en: "AI in Economics Research — seminar at wiiw, Vienna",
       hr: "Umjetna inteligencija u ekonomskim istraživanjima — seminar na wiiw-u, Beč",
     },
     body: {
-      en: "From frontier ideas to a working agentic pipeline: slides, a working paper rendered live from Eurostat data, and the full open-source repository.",
+      en: "From frontier ideas to a functioning agentic pipeline: slides, a working paper rendered live from Eurostat data, and the full open-source repository.",
       hr: "Od novih ideja do funkcionalnog agentskog sustava: prezentacija, radni tekst generiran uživo iz Eurostatovih podataka i cijeli repozitorij otvorenog koda.",
     },
     href: "https://lusiki.github.io/AI_workshop_wiiw/",
@@ -68,7 +81,7 @@ export const currentWork: CurrentWorkItem[] = [
     featured: true,
   },
   {
-    year: { en: "2025—27", hr: "2025.—27." },
+    year: { en: "2025–27", hr: "2025.–27." },
     title: {
       en: "Catholic themes in Croatian digital media",
       hr: "Katoličke teme u hrvatskim digitalnim medijima",
@@ -78,7 +91,7 @@ export const currentWork: CurrentWorkItem[] = [
       hr: "Strukturirana baza podataka i tematska analiza temeljena na obradi prirodnog jezika. Voditelj projekta.",
     },
     href: "/projects/digikat/",
-    featured: true,
+    featured: false,
   },
   {
     year: { en: "2024", hr: "2024." },
@@ -87,20 +100,20 @@ export const currentWork: CurrentWorkItem[] = [
       hr: "Mapiranje Hrvatske narodne banke u digitalnom medijskom prostoru",
     },
     body: {
-      en: "Coverage analysis of CNB presence in the Croatian media space.",
+      en: "Coverage analysis of the Croatian National Bank's presence in digital media.",
       hr: "Analiza prisutnosti HNB-a u hrvatskom medijskom prostoru.",
     },
     href: "https://raw.githack.com/lusiki/HNB-Media-Map/main/presentation.html#/title-slide",
     featured: false,
   },
   {
-    year: { en: "2023", hr: "2023." },
+    year: { en: "2025", hr: "2025." },
     title: {
       en: "Stock–bond hedge breakdown, 2022–23 inflation shock",
       hr: "Slom klasičnog dionica–obveznice hedža tijekom inflacijskog šoka 2022.–23.",
     },
     body: {
-      en: "Markov-switching analysis of the classic 60/40 hedge failure.",
+      en: "Markov-switching analysis of how the classic 60/40 portfolio hedge broke down.",
       hr: "Markov-switching analiza neuspjeha klasičnog 60/40 portfelja.",
     },
     href: "/publications/2025-breakdown-portfolio-hedge-markov-switching/",
@@ -155,7 +168,7 @@ export const currentCourses: Course[] = [
       hr: "Hrvatsko katoličko sveučilište",
     },
     description: {
-      en: "Web infrastructure, content management systems, strategic communication planning, AI implications, and digital analytics. Students learn to critically evaluate and implement web communication strategies.",
+      en: "Web infrastructure, content management systems, strategic communication, how AI changes online content and discovery, and digital analytics.",
       hr: "Web infrastruktura, sustavi za upravljanje sadržajem, strateško planiranje komunikacije, implikacije umjetne inteligencije i digitalna analitika. Studenti uče kritički procjenjivati i provoditi web-komunikacijske strategije.",
     },
     href: "https://lusiki.github.io/Novi-mediji-i-web-tehnologije/",
@@ -186,7 +199,7 @@ export const previousCourses: Course[] = [
       hr: "Fakultet hrvatskih studija, Zagreb",
     },
     description: {
-      en: "Data types and sources, R programming, data visualisation, web scraping, machine learning, text analysis, and reproducible reporting. For graduate sociology and social science students.",
+      en: "Data types and sources, R programming, data visualization, web scraping, machine learning, text analysis, and reproducible reporting. For graduate sociology and social science students.",
       hr: "Vrste i izvori podataka, programiranje u R-u, vizualizacija podataka, web scraping, strojno učenje, analiza teksta i reproducibilno izvještavanje. Za studente diplomske razine sociologije i društvenih znanosti.",
     },
     href: "https://lusiki.github.io/WebObradaPodataka/",
@@ -195,7 +208,7 @@ export const previousCourses: Course[] = [
     term: "2021/22",
     code: { en: "Graduate", hr: "Diplomski" },
     title: {
-      en: "Learning Social Media Analytics",
+      en: "Social Media Analytics",
       hr: "Analitika društvenih mreža",
     },
     institution: {
@@ -211,13 +224,13 @@ export const previousCourses: Course[] = [
   {
     term: "2021/22",
     code: { en: "Graduate", hr: "Diplomski" },
-    title: { en: "Machine Text Processing", hr: "Strojna obrada teksta" },
+    title: { en: "Computational Text Analysis", hr: "Strojna obrada teksta" },
     institution: {
       en: "Faculty of Croatian Studies, Zagreb",
       hr: "Fakultet hrvatskih studija, Zagreb",
     },
     description: {
-      en: "Computational text analysis from data preparation through NLP. Dictionary methods, supervised and unsupervised machine learning, topic modelling, and text clustering in R.",
+      en: "Computational text analysis in R: data preparation, dictionary methods, supervised and unsupervised machine learning, topic modeling, and text clustering.",
       hr: "Računalna analiza teksta od pripreme podataka do obrade prirodnog jezika. Rječničke metode, nadgledano i nenadgledano strojno učenje, modeliranje tema i grupiranje teksta u R-u.",
     },
     href: "https://github.com/lusiki/Analiza-teksta",
@@ -234,7 +247,7 @@ export const previousCourses: Course[] = [
       hr: "Fakultet hrvatskih studija, Zagreb",
     },
     description: {
-      en: "R programming, descriptive statistics, data visualisation, hypothesis testing, categorical analysis, ANOVA, and linear regression for undergraduate social science students.",
+      en: "R programming, descriptive statistics, data visualization, hypothesis testing, categorical analysis, ANOVA, and linear regression for undergraduate social science students.",
       hr: "Programiranje u R-u, deskriptivna statistika, vizualizacija podataka, testiranje hipoteza, analiza kategorijskih varijabli, ANOVA i linearna regresija za studente preddiplomske razine društvenih znanosti.",
     },
     href: "https://lusiki.github.io/WebStatistika/",
@@ -266,7 +279,7 @@ export const workshops: Workshop[] = [
       hr: "Bečki institut za međunarodne ekonomske studije (wiiw), Beč",
     },
     description: {
-      en: "From frontier ideas to a working agentic pipeline: a working paper rendered live from Eurostat data, and a fully reproducible open-source repository you can clone and run.",
+      en: "From frontier ideas to a functioning agentic pipeline: a working paper rendered live from Eurostat data and a fully reproducible open-source repository you can clone and run.",
       hr: "Od novih ideja do funkcionalnog agentskog sustava: radni tekst generiran uživo iz Eurostatovih podataka i potpuno reproducibilan repozitorij otvorenog koda koji možete klonirati i pokrenuti.",
     },
     links: [
@@ -292,7 +305,7 @@ export const workshops: Workshop[] = [
       hr: "Hrvatsko katoličko sveučilište, Zagreb",
     },
     description: {
-      en: "Agentic AI for methodological research: moving from chat-prompting to delegating a whole task the model plans, executes, and verifies before returning for approval. The repository is itself a worked example of the framework.",
+      en: "Agentic AI for methodological research: moving from chat prompting to delegating a whole task that the model plans, executes, and verifies before returning for approval. The repository is itself a worked example of the framework.",
       hr: "Agentska AI za metodološka istraživanja: prijelaz s chat-promptanja na delegiranje cijelog zadatka koji model planira, izvršava i provjerava prije nego što se vrati na odobrenje. Sam je repozitorij radni primjer tog okvira.",
     },
     links: [
@@ -314,7 +327,7 @@ export const workshops: Workshop[] = [
       hr: "Upotreba AI alata u studentskom istraživanju",
     },
     institution: {
-      en: "Economic Institute Zagreb · for graduate economics students",
+      en: "The Institute of Economics, Zagreb · for graduate economics students",
       hr: "Ekonomski institut Zagreb · za diplomske studente ekonomije",
     },
     description: {

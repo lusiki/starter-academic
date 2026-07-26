@@ -2,7 +2,7 @@
 title: "Competing Media Frames During a National Currency Transition: The Euro Adoption in Croatia"
 date: 2026-01-01
 authors:
-  - "Davor Trbušič"
+  - "Davor Trbušić"
   - "Stela Lechpammer"
   - "Luka Šikić"
 publication: "Communication Today, Vol. 17 No. 1, 2026"
@@ -19,6 +19,16 @@ publication_type: "Journal article"
 url_pdf: "https://communicationtoday.sk/wp-content/uploads/15_Trbusic-et-al._CT-1-2026.pdf"
 doi: "10.34135/communicationtoday.2026.Vol.17.No.1.15"
 selected: true
+bibtex: |
+  @Article{trbusic_competing_2026,
+    author  = {Davor Trbušić and Stela Lechpammer and Luka Šikić},
+    title   = {Competing Media Frames During a National Currency Transition: The Euro Adoption in Croatia},
+    journal = {Communication Today},
+    year    = {2026},
+    volume  = {17},
+    number  = {1},
+    doi     = {10.34135/communicationtoday.2026.Vol.17.No.1.15}
+  }
 ---
 
 Open-access article in Communication Today. The full PDF is hosted at communicationtoday.sk.

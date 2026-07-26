@@ -16,6 +16,10 @@ const d = entry.data;
 const year = d.date.getFullYear();
 const abstract = (lang === 'hr' && d.abstract_hr) ? d.abstract_hr : d.abstract;
 const typeFallback = lang === 'hr' ? 'Publikacija' : 'Publication';
+const projectHref = d.url_project?.startsWith('/')
+  ? `${prefix}${d.url_project}`
+  : d.url_project;
+const projectIsExternal = Boolean(projectHref?.startsWith('http'));
 ---
 <Base title={`${d.title} — Luka Šikić`} description={abstract?.slice(0, 200)} lang={lang}>
   <article class="prose detail-page">
@@ -42,7 +46,18 @@ const typeFallback = lang === 'hr' ? 'Publikacija' : 'Publication';
       {d.url_code && <a class="btn" href={d.url_code} target="_blank" rel="noopener">{lang === 'hr' ? 'Kod' : 'Code'}</a>}
       {d.url_preprint && <a class="btn" href={d.url_preprint} target="_blank" rel="noopener">Preprint</a>}
       {d.url_slides && <a class="btn" href={d.url_slides} target="_blank" rel="noopener">{lang === 'hr' ? 'Prezentacija' : 'Slides'}</a>}
-      {d.url_project && <a class="btn" href={d.url_project} target="_blank" rel="noopener">{lang === 'hr' ? 'Analiza' : 'Analysis'}</a>}
+      {projectHref && (
+        <a
+          class="btn"
+          href={projectHref}
+          target={projectIsExternal ? '_blank' : undefined}
+          rel={projectIsExternal ? 'noopener' : undefined}
+        >
+          {projectIsExternal
+            ? (lang === 'hr' ? 'Analiza' : 'Analysis')
+            : (lang === 'hr' ? 'Projekt' : 'Project')}
+        </a>
+      )}
       {d.doi && <a class="btn" href={`https://doi.org/${d.doi}`} target="_blank" rel="noopener">DOI</a>}
     </div>
 

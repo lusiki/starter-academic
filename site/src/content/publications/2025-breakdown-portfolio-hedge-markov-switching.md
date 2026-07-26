@@ -19,4 +19,15 @@ url_pdf: "https://hrcak.srce.hr/file/492482"
 url_project: "https://raw.githack.com/lusiki/The-Breakdown-of-the-Classic-Portfolio-Hedge-A-Comprehensive-Markov-Switching-Analysis/main/paper/main_analysis.html"
 doi: "10.32676/n.11.1.7"
 selected: true
+bibtex: |
+  @Article{sikic_breakdown_2025,
+    author  = {Luka Šikić},
+    title   = {The Breakdown of the Classic Portfolio Hedge: A Markov-Switching Analysis of the US Stock–Bond Correlation},
+    journal = {Notitia},
+    year    = {2025},
+    volume  = {11},
+    number  = {1},
+    pages   = {97--111},
+    doi     = {10.32676/n.11.1.7}
+  }
 ---
