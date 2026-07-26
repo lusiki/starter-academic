@@ -43,8 +43,13 @@ from both implementation passes — is in [site-review.md](site-review.md).
 - Applied the three verified Croatian terminology and phrasing corrections.
 - Re-exported the social card from an 890 KB PNG to a visually equivalent
   104 KB JPEG.
-- Rebuilt the homepage trace motif from seeded random-walk series so it reads as
-  data rather than as tilted rules.
+- Removed the homepage graphic and the counter strip. Successive attempts (a
+  trace motif, then a cumulative publications chart) were both rejected as
+  decoration; the aesthetic layer is now motion rather than a graphic element.
+- Added a restrained entrance and scroll reveal: the hero arrives on load, and
+  each section's content and its hairline rule draw in as it is reached. Guarded
+  by prefers-reduced-motion, gated on a pre-paint JS hook so nothing flashes,
+  and backed by a timeout so content can never remain hidden.
 - Gave the accent colour a resting role: curated publications are marked in the
   year column, with a visually-hidden label so the cue is not colour alone.
 - Strengthened the publication row hierarchy and moved venue emphasis from page

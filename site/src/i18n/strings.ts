@@ -48,12 +48,6 @@ export const strings = {
       btnGithub: "GitHub",
       btnScholar: "Google Scholar",
       btnLinkedin: "LinkedIn",
-      outputCaption: (from: number, to: number) =>
-        `Cumulative publications · ${from}–${to}`,
-      outputAlt: (total: number, from: number, to: number) =>
-        `Step chart of cumulative peer-reviewed output, rising to ${total} publications between ${from} and ${to}.`,
-      outputYear: "Year",
-      outputTotal: "Cumulative total",
     },
 
     pubs: {
@@ -144,12 +138,6 @@ export const strings = {
       btnGithub: "GitHub",
       btnScholar: "Google Scholar",
       btnLinkedin: "LinkedIn",
-      outputCaption: (from: number, to: number) =>
-        `Kumulativno objavljeni radovi · ${from}.–${to}.`,
-      outputAlt: (total: number, from: number, to: number) =>
-        `Stepenasti prikaz kumulativnog broja recenziranih radova, koji od ${from}. do ${to}. raste na ${total}.`,
-      outputYear: "Godina",
-      outputTotal: "Ukupno",
     },
 
     pubs: {

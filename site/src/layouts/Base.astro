@@ -98,6 +98,9 @@ const personSchema = {
         const t = localStorage.getItem('ds-theme');
         if (t) document.documentElement.setAttribute('data-theme', t);
       } catch (e) {}
+      // Set before first paint so the reveal styles apply without a flash of
+      // already-visible content. Nothing depends on this for readability.
+      document.documentElement.classList.add('has-js');
     })();
   </script>
 </head>
@@ -129,6 +132,45 @@ const personSchema = {
         try { localStorage.setItem(KEY, next); } catch (e) {}
         updateState();
       });
+    })();
+  </script>
+  <script is:inline>
+    (function () {
+      const sections = document.querySelectorAll('.section');
+      const hero = document.querySelectorAll('.hero__main > *, .hero__portrait');
+      const show = el => el.classList.add('is-in');
+      const showEverything = () => {
+        sections.forEach(show);
+        hero.forEach(show);
+      };
+
+      // Reduced motion or no IntersectionObserver: reveal immediately and stop.
+      if (
+        matchMedia('(prefers-reduced-motion: reduce)').matches ||
+        !('IntersectionObserver' in window)
+      ) {
+        showEverything();
+        return;
+      }
+
+      // Two frames so the initial hidden state is painted and the entrance
+      // actually transitions rather than snapping.
+      requestAnimationFrame(() => requestAnimationFrame(() => hero.forEach(show)));
+
+      const io = new IntersectionObserver(
+        entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            show(entry.target);
+            io.unobserve(entry.target);
+          });
+        },
+        { rootMargin: '0px 0px -10% 0px', threshold: 0.05 },
+      );
+      sections.forEach(section => io.observe(section));
+
+      // Safety net: if anything above misbehaves, never leave content hidden.
+      setTimeout(showEverything, 3000);
     })();
   </script>
 </body>

@@ -2,7 +2,6 @@
 import Base from '../layouts/Base.astro';
 import SectionHeader from './SectionHeader.astro';
 import PublicationRow from './PublicationRow.astro';
-import OutputChart from './OutputChart.astro';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import avatar from '../assets/avatar.png';
@@ -65,8 +64,6 @@ function workHref(href?: string): string | undefined {
       </div>
     </aside>
   </section>
-
-  <OutputChart lang={lang} />
 
   <section class="section">
     <SectionHeader num={s.home.selectedWork} title={s.home.selectedWorkTitle} />
