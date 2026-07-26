@@ -2,18 +2,12 @@
 import Base from '../layouts/Base.astro';
 import SectionHeader from './SectionHeader.astro';
 import PublicationRow from './PublicationRow.astro';
-import SignalBand from './SignalBand.astro';
+import OutputChart from './OutputChart.astro';
 import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import avatar from '../assets/avatar.png';
 import { strings, type Lang } from '../i18n/strings';
-import {
-  currentCourses,
-  currentWork,
-  localize,
-  previousCourses,
-  workshops,
-} from '../data/portfolio';
+import { currentWork, localize } from '../data/portfolio';
 
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
@@ -23,22 +17,12 @@ const prefix = lang === 'hr' ? '/hr' : '';
 const pubs = (await getCollection('publications')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
-const projects = await getCollection('projects');
 const curatedPubs = pubs.filter(pub => pub.data.selected);
 const selectedPubs = [
   ...curatedPubs,
   ...pubs.filter(pub => !pub.data.selected),
 ].slice(0, 4);
 const featuredWork = currentWork.filter(item => item.featured);
-const stats = [
-  { value: pubs.length, label: s.home.statsPublications },
-  { value: projects.length, label: s.home.statsProjects },
-  {
-    value: currentCourses.length + previousCourses.length,
-    label: s.home.statsCourses,
-  },
-  { value: workshops.length, label: s.home.statsWorkshops },
-];
 
 function workHref(href?: string): string | undefined {
   if (
@@ -82,16 +66,7 @@ function workHref(href?: string): string | undefined {
     </aside>
   </section>
 
-  <SignalBand />
-
-  <section class="proof-strip" aria-label={lang === 'hr' ? 'Sažetak portfelja' : 'Portfolio summary'}>
-    {stats.map(stat => (
-      <div class="proof-strip__item">
-        <strong class="proof-strip__value">{stat.value}</strong>
-        <span class="proof-strip__label">{stat.label}</span>
-      </div>
-    ))}
-  </section>
+  <OutputChart lang={lang} />
 
   <section class="section">
     <SectionHeader num={s.home.selectedWork} title={s.home.selectedWorkTitle} />

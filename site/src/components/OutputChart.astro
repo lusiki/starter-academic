@@ -1,0 +1,102 @@
+---
+// Cumulative publication count, derived from the publications collection so it
+// stays true as new work lands. A step function is the correct rendering for a
+// running total: the line holds flat through years without a publication.
+import { getCollection } from 'astro:content';
+import { strings, type Lang } from '../i18n/strings';
+
+interface Props { lang: Lang; }
+const { lang } = Astro.props;
+const s = strings[lang];
+
+const years = (await getCollection('publications'))
+  .map(p => p.data.date.getFullYear())
+  .sort((a, b) => a - b);
+
+const first = years[0];
+const last = years[years.length - 1];
+const total = years.length;
+
+// One entry per year in which something was published, with the running total.
+const steps: Array<{ year: number; count: number }> = [];
+years.forEach((year, i) => {
+  const running = i + 1;
+  const existing = steps.find(st => st.year === year);
+  if (existing) existing.count = running;
+  else steps.push({ year, count: running });
+});
+
+// The SVG scales uniformly, so anything inside it scales too — which is why the
+// year labels live in HTML below the chart rather than as <text> nodes. At phone
+// widths in-SVG text would render around 4px.
+const W = 1200;
+const H = 220;
+const padX = 6;
+const padT = 16;
+const padB = 12;
+const plotW = W - padX * 2;
+const plotH = H - padT - padB;
+
+const x = (year: number) => padX + ((year - first) / (last - first)) * plotW;
+const y = (count: number) => padT + plotH - (count / total) * plotH;
+const r2 = (n: number) => Math.round(n * 100) / 100;
+
+// Step path: rise at the publication year, hold flat until the next one.
+let d = `M ${r2(x(first))} ${r2(y(0))}`;
+for (const st of steps) {
+  d += ` H ${r2(x(st.year))} V ${r2(y(st.count))}`;
+}
+if (steps[steps.length - 1].year < last) d += ` H ${r2(x(last))}`;
+
+const area = `${d} V ${r2(y(0))} Z`;
+const endX = x(last);
+const endY = y(total);
+
+const gridlines = [0.5, 1].map(f => padT + plotH - f * plotH);
+const caption = s.home.outputCaption(first, last);
+---
+<figure class="output" aria-labelledby="output-caption">
+  <figcaption class="output__caption" id="output-caption">
+    <span class="eyebrow">{caption}</span>
+    <span class="output__total mono">{total}</span>
+  </figcaption>
+
+  <svg
+    class="output__svg"
+    viewBox={`0 0 ${W} ${H}`}
+    role="img"
+    aria-label={s.home.outputAlt(total, first, last)}
+    focusable="false"
+  >
+    {gridlines.map(gy => (
+      <line class="output__grid" x1={padX} y1={r2(gy)} x2={W - padX} y2={r2(gy)} />
+    ))}
+    <line class="output__axis" x1={padX} y1={r2(y(0))} x2={W - padX} y2={r2(y(0))} />
+
+    <path class="output__area" d={area} />
+    <path class="output__line" d={d} vector-effect="non-scaling-stroke" />
+
+    {steps.map(st => (
+      <g class="output__node">
+        <circle class="output__hit" cx={r2(x(st.year))} cy={r2(y(st.count))} r="18" />
+        <circle class="output__dot" cx={r2(x(st.year))} cy={r2(y(st.count))} r="3.5" />
+        <title>{st.year} — {st.count}</title>
+      </g>
+    ))}
+
+    <circle class="output__end" cx={r2(endX)} cy={r2(endY)} r="5" />
+  </svg>
+
+  <div class="output__axis-labels mono" aria-hidden="true">
+    <span>{first}</span>
+    <span>{last}</span>
+  </div>
+
+  <table class="visually-hidden">
+    <caption>{caption}</caption>
+    <thead><tr><th>{s.home.outputYear}</th><th>{s.home.outputTotal}</th></tr></thead>
+    <tbody>
+      {steps.map(st => <tr><td>{st.year}</td><td>{st.count}</td></tr>)}
+    </tbody>
+  </table>
+</figure>
