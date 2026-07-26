@@ -19,4 +19,15 @@ publication_type: "Journal article"
 url_pdf: "https://hrcak.srce.hr/file/495017"
 doi: "10.18045/zbefri.2025.2.1"
 selected: false
+bibtex: |
+  @Article{trbusic_clickbait_2025,
+    author  = {Davor Trbušić and Luka Šikić and Dražen Maleš},
+    title   = {Clickbait and Influencers: How Peripheral Cues Affect the Reach of Native Ads},
+    journal = {Zbornik radova Ekonomskog fakulteta u Rijeci},
+    year    = {2025},
+    volume  = {43},
+    number  = {2},
+    pages   = {511--536},
+    doi     = {10.18045/zbefri.2025.2.1}
+  }
 ---

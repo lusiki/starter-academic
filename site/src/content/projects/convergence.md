@@ -6,8 +6,9 @@ summary_hr: "Open source istraživanje konvergencije dohotka Hrvatske (2000.–2
 body_hr: >-
   Istraživački projekt otvorenog koda o konvergenciji hrvatskog dohotka od
   2000. do 2024. prema različitim skupinama zemalja. Za analizu obrazaca
-  konvergencije i putanja gospodarskog razvoja koristi metode vremenskih serija,
-  uključujući frakcionalnu integraciju.
+  konvergencije koristi metode vremenskih serija, uključujući frakcionalnu
+  integraciju. Rezultati su objavljeni u časopisu Croatian Review of Economic,
+  Business and Social Statistics, 11(1), 35–49.
 date: 2024-01-01
 tags:
   - "econometrics"
@@ -17,4 +18,4 @@ external_link: "https://github.com/lusiki/Convergence"
 url_code: "https://github.com/lusiki/Convergence"
 ---
 
-Open source research project investigating Croatia's income convergence from 2000 to 2024 across various country groups. Uses time series methodologies including fractional integration to analyze convergence patterns and economic development trajectories.
+Open-source research project investigating Croatia's income convergence from 2000 to 2024 across EU15, newer EU members, Southern Europe, and Southeast Europe. It uses fractional-integration and long-memory methods; the results are published in *Croatian Review of Economic, Business and Social Statistics*, 11(1), pp. 35–49.

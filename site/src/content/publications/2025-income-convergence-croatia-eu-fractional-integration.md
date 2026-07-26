@@ -15,6 +15,19 @@ tags:
   - "time series"
 publication_type: "Journal article"
 url_pdf: "https://hrcak.srce.hr/file/480633"
+url_project: "/projects/convergence/"
+url_code: "https://github.com/lusiki/Convergence"
 doi: "10.62366/crebss.2025.1.003"
 selected: true
+bibtex: |
+  @Article{sikic_income_2025,
+    author  = {Luka Šikić},
+    title   = {Income Convergence of Croatia Within the European Union: An Empirical Analysis of Fractional Integration},
+    journal = {Croatian Review of Economic, Business and Social Statistics},
+    year    = {2025},
+    volume  = {11},
+    number  = {1},
+    pages   = {35--49},
+    doi     = {10.62366/crebss.2025.1.003}
+  }
 ---

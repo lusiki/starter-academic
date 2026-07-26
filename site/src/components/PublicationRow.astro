@@ -7,12 +7,13 @@ const d = entry.data;
 const year = d.date.getFullYear();
 const prefix = lang === 'hr' ? '/hr' : '';
 const href = `${prefix}/publications/${entry.id}/`;
+const venue = d.publication_short || d.publication;
 ---
 <article class="pub">
   <div class="pub__year">{year}</div>
   <div>
     <a href={href} class="pub__title">{d.title}</a>
-    {d.publication && <span class="pub__venue" set:html={d.publication.replace(/_([^_]+)_/g, '<em>$1</em>')} />}
+    {venue && <span class="pub__venue" set:html={venue.replace(/_([^_]+)_/g, '<em>$1</em>')} />}
   </div>
   <div class="pub__links">
     {d.url_pdf && <a href={d.url_pdf} target="_blank" rel="noopener">PDF</a>}

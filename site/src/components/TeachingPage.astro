@@ -23,20 +23,21 @@ const s = strings[lang];
           <div class="teach">
             <div class="teach__term">
               <div>{co.term}</div>
-              <div style="margin-top: 2px; font-size: 11px; font-family: var(--font-mono); color: var(--muted);">{localize(co.code, lang)}</div>
+              <div class="teach__code">{localize(co.code, lang)}</div>
             </div>
             <div>
               <div class="teach__course">
-                <a href={co.href} target="_blank" rel="noopener" style="border-bottom: 0;">{localize(co.title, lang)}</a>
+                <a href={co.href} target="_blank" rel="noopener">{localize(co.title, lang)}</a>
               </div>
               <span class="teach__inst">{localize(co.institution, lang)}</span>
-              <p style="margin: var(--s-2) 0 0; font-size: 14px; color: var(--muted); max-width: 60ch; line-height: 1.55;">{localize(co.description, lang)}</p>
+              <p class="teach__desc">{localize(co.description, lang)}</p>
             </div>
             <a class="teach__link" href={co.href} target="_blank" rel="noopener">{s.teaching.materials}</a>
           </div>
         </li>
       ))}
     </ul>
+    <p class="teaching__student-note" set:html={s.teaching.studentNote} />
   </section>
 
   <section class="section">
@@ -47,14 +48,14 @@ const s = strings[lang];
           <div class="teach">
             <div class="teach__term">
               <div>{co.term}</div>
-              <div style="margin-top: 2px; font-size: 11px; font-family: var(--font-mono); color: var(--muted);">{localize(co.code, lang)}</div>
+              <div class="teach__code">{localize(co.code, lang)}</div>
             </div>
             <div>
               <div class="teach__course">
-                <a href={co.href} target="_blank" rel="noopener" style="border-bottom: 0;">{localize(co.title, lang)}</a>
+                <a href={co.href} target="_blank" rel="noopener">{localize(co.title, lang)}</a>
               </div>
               <span class="teach__inst">{localize(co.institution, lang)}</span>
-              <p style="margin: var(--s-2) 0 0; font-size: 14px; color: var(--muted); max-width: 60ch; line-height: 1.55;">{localize(co.description, lang)}</p>
+              <p class="teach__desc">{localize(co.description, lang)}</p>
             </div>
             <a class="teach__link" href={co.href} target="_blank" rel="noopener">{s.teaching.materials}</a>
           </div>
@@ -63,25 +64,25 @@ const s = strings[lang];
     </ul>
   </section>
 
-  <section class="section">
+  <section class="section" id="workshops">
     <SectionHeader num={s.teaching.workshopsLabel} title={s.teaching.workshopsTitle} />
-    <div class="prose" style="max-width: 60ch;">
+    <div class="prose prose--narrow">
       <p set:html={s.teaching.workshopsBody} />
     </div>
-    <ul class="list" style="margin-top: var(--s-6);">
+    <ul class="list list--spaced">
       {workshops.map(w => (
         <li>
           <div class="teach">
             <div class="teach__term">
               <div>{localize(w.term, lang)}</div>
-              <div style="margin-top: 2px; font-size: 11px; font-family: var(--font-mono); color: var(--muted);">{localize(w.code, lang)}</div>
+              <div class="teach__code">{localize(w.code, lang)}</div>
             </div>
             <div>
               <div class="teach__course">
-                <a href={w.links[0].href} target="_blank" rel="noopener" style="border-bottom: 0;">{localize(w.title, lang)}</a>
+                <a href={w.links[0].href} target="_blank" rel="noopener">{localize(w.title, lang)}</a>
               </div>
               <span class="teach__inst">{localize(w.institution, lang)}</span>
-              <p style="margin: var(--s-2) 0 0; font-size: 14px; color: var(--muted); max-width: 60ch; line-height: 1.55;">{localize(w.description, lang)}</p>
+              <p class="teach__desc">{localize(w.description, lang)}</p>
             </div>
             <div class="teach__links">
               {w.links.map(l => (

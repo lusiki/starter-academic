@@ -2,9 +2,17 @@
 import Base from '../layouts/Base.astro';
 import SectionHeader from './SectionHeader.astro';
 import PublicationRow from './PublicationRow.astro';
+import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
+import avatar from '../assets/avatar.png';
 import { strings, type Lang } from '../i18n/strings';
-import { currentWork, localize } from '../data/portfolio';
+import {
+  currentCourses,
+  currentWork,
+  localize,
+  previousCourses,
+  workshops,
+} from '../data/portfolio';
 
 interface Props { lang: Lang; }
 const { lang } = Astro.props;
@@ -14,11 +22,30 @@ const prefix = lang === 'hr' ? '/hr' : '';
 const pubs = (await getCollection('publications')).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
-const selectedPubs = pubs.slice(0, 4);
+const projects = await getCollection('projects');
+const curatedPubs = pubs.filter(pub => pub.data.selected);
+const selectedPubs = [
+  ...curatedPubs,
+  ...pubs.filter(pub => !pub.data.selected),
+].slice(0, 4);
 const featuredWork = currentWork.filter(item => item.featured);
+const stats = [
+  { value: pubs.length, label: s.home.statsPublications },
+  { value: projects.length, label: s.home.statsProjects },
+  {
+    value: currentCourses.length + previousCourses.length,
+    label: s.home.statsCourses,
+  },
+  { value: workshops.length, label: s.home.statsWorkshops },
+];
 
 function workHref(href?: string): string | undefined {
-  if (!href || lang === 'en' || !href.startsWith('/')) return href;
+  if (
+    !href ||
+    lang === 'en' ||
+    !href.startsWith('/') ||
+    href.startsWith('/ai/')
+  ) return href;
   return `/hr${href}`;
 }
 ---
@@ -26,22 +53,41 @@ function workHref(href?: string): string | undefined {
   <section class="hero hero--portrait">
     <div class="hero__main">
       <span class="hero__eyebrow eyebrow">{s.home.eyebrow}</span>
-      <h1 class="visually-hidden">Luka Šikić</h1>
-      <div class="prose" style="max-width: 60ch;">
+      <h1 class="hero__name">Luka Šikić</h1>
+      <div class="prose prose--narrow">
         <p set:html={s.home.bio1} />
         <p set:html={s.home.bio2} />
       </div>
       <div class="hero__meta">
         <span><strong>{s.home.metaRole}</strong> · {s.home.metaRoleSub}</span>
+        <span>{s.home.metaFocus}</span>
+        <span>{s.home.metaCredentials}</span>
       </div>
     </div>
     <aside class="hero__portrait">
-      <img src="/avatar.png" alt="Luka Šikić" width="320" height="320" fetchpriority="high" />
+      <Image
+        src={avatar}
+        alt="Luka Šikić"
+        widths={[320, 640]}
+        sizes="(max-width: 720px) 240px, 320px"
+        format="webp"
+        quality={82}
+        fetchpriority="high"
+        loading="eager"
+      />
       <div class="hero__portrait-meta">
-        <span class="eyebrow">Luka Šikić</span>
-        <span class="mono" style="font-size: 12px; color: var(--muted);">Zagreb · HR</span>
+        <span class="mono hero__location">Zagreb · HR</span>
       </div>
     </aside>
+  </section>
+
+  <section class="proof-strip" aria-label={lang === 'hr' ? 'Sažetak portfelja' : 'Portfolio summary'}>
+    {stats.map(stat => (
+      <div class="proof-strip__item">
+        <strong class="proof-strip__value">{stat.value}</strong>
+        <span class="proof-strip__label">{stat.label}</span>
+      </div>
+    ))}
   </section>
 
   <section class="section">
@@ -93,24 +139,24 @@ function workHref(href?: string): string | undefined {
     <ul class="list">
       {selectedPubs.map(p => <li><PublicationRow entry={p} lang={lang} /></li>)}
     </ul>
-    <div style="margin-top: var(--s-5);">
+    <div class="section__actions">
       <a href={`${prefix}/publications/`} class="btn">{s.home.allPubs}</a>
     </div>
   </section>
 
   <section class="section">
     <SectionHeader num={s.home.background} title={s.home.backgroundTitle} />
-    <div class="prose" style="max-width: 65ch;">
+    <div class="prose prose--medium">
       <p>{s.home.backgroundBody}</p>
     </div>
   </section>
 
   <section class="section">
     <SectionHeader num={s.home.contact} title={s.home.contactTitle} />
-    <div class="prose" style="max-width: 60ch;">
+    <div class="prose prose--narrow">
       <p set:html={s.home.contactBody} />
     </div>
-    <div style="display: flex; gap: var(--s-2); flex-wrap: wrap; margin-top: var(--s-5);">
+    <div class="btn-row">
       <a class="btn btn--primary" href="mailto:luka.sikic@unicath.hr">{s.home.btnEmail}</a>
       <a class="btn" href="https://github.com/lusiki" target="_blank" rel="noopener">{s.home.btnGithub}</a>
       <a class="btn" href="https://scholar.google.com/citations?user=qOGfRvkAAAAJ&hl=en" target="_blank" rel="noopener">{s.home.btnScholar}</a>

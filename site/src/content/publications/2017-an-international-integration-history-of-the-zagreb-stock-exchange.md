@@ -2,35 +2,27 @@
 title: "An international integration history of the Zagreb Stock Exchange"
 date: 2017-01-01
 authors:
-  - "Luka Sikic"
-  - "Mislav Sagovac"
-publication: "Public Sector Economics, (41), 2, _pp. 227--257_, https://doi.org/10.3326/pse.41.2.4"
-publication_short: "Public Sector Economics, (41), 2, _pp. 227--257_, https://doi.org/10.3326/pse.41.2.4"
+  - "Luka Šikić"
+  - "Mislav Šagovac"
+publication: "Public Sector Economics, Vol. 41 No. 2, _pp. 227–257_"
+publication_short: "Public Sector Economics, 41(2), _pp. 227–257_"
 abstract: "We investigate stock market co-movements among the Croatian and several other markets (in the US, UK, Germany, Austria, Poland, Czech Republic and Hungary) in the period from 3 September 1997 to 19 August 2016 with dynamic correlation coefficient models. This allows us to analyse long-term trends of the international financial integration of the Zagreb Stock Exchange in the last two decades as well as the separate impacts of major events that influenced financial markets during that period. Our results imply a relatively low level of international financial integration of the Croatian stock market, but some convergence in co-movement with the analysed markets over time is present. The strongest market co-movement is related to the subprime mortgage crisis, and EU accession seems to have made Croatian international integration less segmented."
 abstract_hr: "Rad istražuje ko-kretanja burzi između hrvatskog i nekoliko drugih tržišta (SAD, UK, Njemačka, Austrija, Poljska, Češka i Mađarska) u razdoblju od 3. rujna 1997. do 19. kolovoza 2016. modelima dinamičkog koeficijenta korelacije. To omogućuje analizu dugoročnih trendova međunarodne financijske integracije Zagrebačke burze u posljednja dva desetljeća, kao i zasebnih utjecaja velikih događaja koji su utjecali na financijska tržišta u tom razdoblju. Rezultati upućuju na relativno nisku razinu međunarodne financijske integracije hrvatskog tržišta dionica, ali i na određenu konvergenciju u ko-kretanju s analiziranim tržištima kroz vrijeme. Najjača ko-kretanja povezana su s krizom drugorazrednih hipotekarnih kredita, a pristupanje EU-u učinilo je hrvatsku međunarodnu integraciju manje segmentiranom."
 publication_type: "Journal article"
 url_pdf: "http://www.pse-journal.hr/upload/files/pse/2017/2/sikic_sagovac.pdf"
+doi: "10.3326/pse.41.2.4"
 selected: false
 bibtex: |
-  @Article{ivo_pilar_institute_of_social_sciences_zagreb_croatia_international_2017,
-    title = {An international integration history of the Zagreb Stock Exchange},
-    language = {en},
-    author = {Ivo Pilar Institute of Social Sciences and {Zagreb} and {Croatia} and Luka Sikic and Contentio d.o.o. and Velika Gorica and {Croatia} and Mislav Sagovac},
-    pages = {227--257},
-    file = {Ivo Pilar Institute of Social Sciences, Zagreb, Croatia et al. - 2017 - An international integration history of the Zagreb.pdf:C\:\\Users\\Lukas\\Zotero\\storage\\SPEZUBDF\\Ivo Pilar Institute of Social Sciences, Zagreb, Croatia et al. - 2017 - An international integration history of the Zagreb.pdf:application/pdf},
-    volume = {41},
-    issn = {2459-8860},
-    url = {http://www.pse-journal.hr/upload/files/pse/2017/2/sikic_sagovac.pdf},
-    doi = {10.3326/pse.41.2.4},
-    abstract = {We investigate stock market co-movements among the Croatian and several other markets (in the US, UK, Germany, Austria, Poland, Czech Republic and Hungary) in the period from 3 September 1997 to 19 August 2016 with dynamic correlation coefficient models. This allows us to analyse long-term trends of the international financial integration of the Zagreb Stock Exchange in the last two decades as well as the separate impacts of major events that influenced financial markets during that period. Our results imply a relatively low level of international financial integration of the Croatian stock market, but some convergence in co-movement with the analysed markets over time is present. The strongest market co-movement is related to the subprime mortgage crisis, and EU accession seems to have made Croatian international integration less segmented.},
-    number = {2},
-    urldate = {2020-11-27},
+  @Article{sikic_international_2017,
+    author  = {Luka Šikić and Mislav Šagovac},
+    title   = {An International Integration History of the Zagreb Stock Exchange},
     journal = {Public Sector Economics},
-    month = {jun},
-    year = {2017},
-    pubtype = {2},
-    date = {2017-01-01},
+    year    = {2017},
+    volume  = {41},
+    number  = {2},
+    pages   = {227--257},
+    doi     = {10.3326/pse.41.2.4},
+    url     = {http://www.pse-journal.hr/upload/files/pse/2017/2/sikic_sagovac.pdf}
   }
 ---
-
 

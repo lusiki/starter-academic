@@ -186,7 +186,7 @@ hr {
   margin: var(--s-7) 0;
 }
 
-::selection { background: var(--accent); color: #fff; }
+::selection { background: var(--accent); color: var(--bg); }
 
 :focus-visible {
   outline: 2px solid var(--accent);
