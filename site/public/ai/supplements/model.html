@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Luka Šikić">
-<meta name="dcterms.date" content="2026-07-23">
+<meta name="dcterms.date" content="2026-07-27">
 
 <title>A model of verified judgment – How Economics Absorbed AI</title>
 <style>
@@ -315,7 +315,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 23, 2026</p>
+      <p class="date">July 27, 2026</p>
     </div>
   </div>
   
@@ -353,9 +353,9 @@ window.Quarto = {
 <h2 class="anchored" data-anchor-id="verification-technology-the-scarce-input">Verification technology, the scarce input</h2>
 <p>The gatekeeper chooses an <strong>audit intensity</strong> <span class="math inline">\(a \in [0,1]\)</span>, applied per submission. Read <span class="math inline">\(a\)</span> as the probability that a low-quality paper is caught. Take <span class="math inline">\(\pi(a) = a\)</span> for cleanliness, and assume a true result never fails the audit (no false positives, a simplification I return to). Auditing costs</p>
 <p><span class="math display">\[
-c(a. \theta) = \theta \, \psi(a), \qquad \psi' &gt; 0,\ \psi'' &gt; 0,\ \psi(0)=0,
+c(a, \theta) = \theta \, \psi(a), \qquad \psi' &gt; 0,\ \psi'' &gt; 0,\ \psi(0)=0,
 \]</span></p>
-<p>per submission, with <span class="math inline">\(\psi\)</span> increasing and convex, so deeper checking is disproportionately expensive. The scalar <span class="math inline">\(\theta &gt; 0\)</span> is the <strong>cost of verification technology</strong>, human referee hours at one extreme and cheap agentic reproduction (the “referee factory”) at the other. This is the binding input. Verified judgment is what the model is short of, and <span class="math inline">\(c(a;\theta)\)</span> is its price.</p>
+<p>per submission, with <span class="math inline">\(\psi\)</span> increasing and convex, so deeper checking costs more than proportionately. The scalar <span class="math inline">\(\theta &gt; 0\)</span> is the <strong>cost of verification technology</strong>, human referee hours at one extreme and cheap agentic reproduction (the “referee factory”) at the other. This is the binding input. Verified judgment is what the model is short of, and <span class="math inline">\(c(a, \theta)\)</span> is its price.</p>
 </section>
 <section id="the-authors-problem-when-honesty-is-incentive-compatible" class="level2">
 <h2 class="anchored" data-anchor-id="the-authors-problem-when-honesty-is-incentive-compatible">The author’s problem, when honesty is incentive-compatible</h2>
@@ -369,7 +369,7 @@ c(a. \theta) = \theta \, \psi(a), \qquad \psi' &gt; 0,\ \psi'' &gt; 0,\ \psi(0)=
 <p><span class="math display">\[
 V - k \;\ge\; (1-a)V - a\varphi - g
 \quad\Longleftrightarrow\quad
-a\,(V+\varphi) \;\ge\; K - g .
+a\,(V+\varphi) \;\ge\; k - g .
 \]</span></p>
 <p>Solving for the audit intensity that just sustains quality gives the threshold</p>
 <p><span class="math display">\[
@@ -383,7 +383,7 @@ a\,(V+\varphi) \;\ge\; K - g .
 </section>
 <section id="the-gatekeepers-problem-and-the-branch" class="level2">
 <h2 class="anchored" data-anchor-id="the-gatekeepers-problem-and-the-branch">The gatekeeper’s problem, and the branch</h2>
-<p>Sustaining trust is worth something. Let <span class="math inline">\(B &gt; 0\)</span> be the per-submission value to the gatekeeper of a pool readers can trust, over a pool they cannot, the difference between a literature people build on and one they discount to reputation. The gatekeeper sets <span class="math inline">\(a \ge a^{*}\)</span> (pays for trust) when the audit it requires is cheaper than the trust it buys:</p>
+<p>Sustaining trust is worth something. Let <span class="math inline">\(B &gt; 0\)</span> be the per-submission value to the gatekeeper of a pool readers can trust, over a pool they cannot, the difference between a literature people build on and one they discount to reputation. The gatekeeper sets <span class="math inline">\(a \ge a^{*}\)</span> (pays for trust) when the audit it requires is cheaper than the trust it buys.</p>
 <p><span class="math display">\[
 \theta\,\psi(a^{*}) \;\le\; B
 \quad\Longleftrightarrow\quad
@@ -396,8 +396,8 @@ a\,(V+\varphi) \;\ge\; K - g .
 <section id="the-flood-as-a-capacity-constraint" class="level2">
 <h2 class="anchored" data-anchor-id="the-flood-as-a-capacity-constraint">The flood as a capacity constraint</h2>
 <p>The flood ending has a sharper reading than “gatekeepers declined to audit.” Let realized audit be <span class="math display">\[
-a_{\text{real}} = \min\!\big(a,\. R/N\big),
-\]</span> where <span class="math inline">\(R\)</span> is refereeing capacity and <span class="math inline">\(N\)</span> the submission volume. With human referees <span class="math inline">\(R\)</span> is fixed at throughput. As <span class="math inline">\(g \to 0\)</span>, <span class="math inline">\(N \to \infty\)</span>, so <span class="math inline">\(R/N \to 0\)</span> and <span class="math inline">\(a_{\text{real}} \to 0\)</span> <em>even for a gatekeeper who wants to audit</em>. At fixed human capacity the audit ending is not merely unchosen, it is infeasible. The referee factory (<span class="math inline">\(\theta \to 0\)</span>) matters precisely because it unbinds <span class="math inline">\(R\)</span> from human throughput, because machine audit lets capacity scale with submissions. So the two endings map cleanly onto one structural question, <strong>does audit capacity scale with the flood, or not.</strong> When it does not, trust does not vanish so much as relocate. Readers condition on author identity and institution instead of on the audit, because the audit has gone uninformative. That is the whitelist world the essay names.</p>
+a_{\text{real}} = \min\!\big(a,\, R/N\big),
+\]</span> where <span class="math inline">\(R\)</span> is refereeing capacity and <span class="math inline">\(N\)</span> the submission volume. With human referees <span class="math inline">\(R\)</span> is fixed at throughput. As <span class="math inline">\(g \to 0\)</span>, <span class="math inline">\(N \to \infty\)</span>, so <span class="math inline">\(R/N \to 0\)</span> and <span class="math inline">\(a_{\text{real}} \to 0\)</span> <em>even for a gatekeeper who wants to audit</em>. At fixed human capacity the audit ending is not merely unchosen, it is impossible. The referee factory (<span class="math inline">\(\theta \to 0\)</span>) matters precisely because it frees <span class="math inline">\(R\)</span> from human throughput, since machine audit lets capacity grow with submissions. So the two endings map cleanly onto one structural question, <strong>does audit capacity scale with the flood, or not.</strong> When it does not, trust does not vanish so much as move. Readers go on author identity and institution instead of on the audit, because the audit no longer tells them anything. That is the whitelist world the essay names.</p>
 </section>
 <section id="a-hybrid-where-trust-is-priced-in-a-certification-market" class="level2">
 <h2 class="anchored" data-anchor-id="a-hybrid-where-trust-is-priced-in-a-certification-market">A hybrid where trust is priced in a certification market</h2>
