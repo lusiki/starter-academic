@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Luka Šikić">
-<meta name="dcterms.date" content="2026-07-23">
+<meta name="dcterms.date" content="2026-07-27">
 
-<title>How this was built, and what it cannot verify – Cheap Intelligence, Scarce Trust</title>
+<title>How this was built, and what it cannot verify – How Economics Absorbed AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -113,6 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta property="og:url" content="https://www.lukasikic.info/ai/supplements/method.html">
 <meta property="og:image" content="https://www.lukasikic.info/og.jpg">
 <meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://www.lukasikic.info/ai/supplements/method.html">
 <!-- lukasikic.info theme -->
 <style>
@@ -184,7 +185,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     --ls-accent: #60A5FA;
   }
 </style>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 
 <body class="nav-fixed">
@@ -195,7 +195,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Cheap Intelligence, Scarce Trust</span>
+    <span class="navbar-title">How Economics Absorbed AI</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -207,6 +207,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Scenario</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../catalog.html"> 
+<span class="menu-text">Catalog</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-endings" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -284,6 +288,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#the-flagship-number-audited" id="toc-the-flagship-number-audited" class="nav-link" data-scroll-target="#the-flagship-number-audited">The flagship number, audited</a></li>
   <li><a href="#the-whale-is-mislabelled" id="toc-the-whale-is-mislabelled" class="nav-link" data-scroll-target="#the-whale-is-mislabelled">The whale is mislabelled</a></li>
   <li><a href="#the-four-hygiene-rules" id="toc-the-four-hygiene-rules" class="nav-link" data-scroll-target="#the-four-hygiene-rules">The four hygiene rules</a></li>
+  <li><a href="#the-date-repair-2026-07-27" id="toc-the-date-repair-2026-07-27" class="nav-link" data-scroll-target="#the-date-repair-2026-07-27">The date repair (2026-07-27)</a></li>
   <li><a href="#the-metrics-strip-and-its-forecast-band" id="toc-the-metrics-strip-and-its-forecast-band" class="nav-link" data-scroll-target="#the-metrics-strip-and-its-forecast-band">The metrics strip, and its forecast band</a></li>
   <li><a href="#what-this-document-cannot-verify" id="toc-what-this-document-cannot-verify" class="nav-link" data-scroll-target="#what-this-document-cannot-verify">What this document cannot verify</a></li>
   <li><a href="#publishability" id="toc-publishability" class="nav-link" data-scroll-target="#publishability">Publishability</a></li>
@@ -319,7 +324,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 23, 2026</p>
+      <p class="date">July 27, 2026</p>
     </div>
   </div>
   
@@ -338,11 +343,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="the-census-reconciled" class="level2">
 <h2 class="anchored" data-anchor-id="the-census-reconciled">The census, reconciled</h2>
-<p>This snapshot is pinned. The tree is Dropbox-synced and the corpus grew from 385 to over 650 resources during a single work session. A document that claims <em>“every figure recomputed, none asserted”</em> cannot have its figures move with a sync, so <code>build_metrics.R</code> is frozen to a fixed id manifest (<code>scenario/data/snapshot_ids.txt</code>). The mapping runs 385 indexed resources → 2 exact url_norm duplicates folded (coarse.ink twice, a Sant’Anna page under two titles) → title-dedup → <strong>375 distinct works</strong>, of which <strong>287</strong> carry extracted full text. An earlier audit of this same corpus, run days before, reported a smaller census (294) because the corpus was smaller then. That number is superseded, not contradicted. The AEA-2026 webcast page hosts two distinct talks (Li on the labour market, Ash on language models) sharing one URL. Those are kept as two works, not folded, because a shared landing page is not a shared work.</p>
+<p>This snapshot is pinned. The tree is Dropbox-synced and the corpus grows underneath it, so a document that claims <em>“every figure recomputed, none asserted”</em> cannot have its figures move with a sync. <code>build_metrics.R</code> is frozen to a fixed id manifest (<code>scenario/data/snapshot_ids.txt</code>), and re-pinning is a deliberate release step with its own script (<code>scenario/R/repin_snapshot.R</code>) that prints the old and new census side by side. This release re-pinned on <strong>2026-07-27</strong>, from 385 resources to 661; nothing was dropped, because the corpus is append-only.</p>
+<p>The mapping runs 661 indexed resources → 2 exact url_norm duplicates folded → title-dedup → <strong>625 distinct works</strong>, of which <strong>490</strong> carry extracted full text. Earlier audits of this same corpus reported smaller censuses (294, then 385) because the corpus was smaller then. Those numbers are superseded, not contradicted. The AEA-2026 webcast page hosts two distinct talks (Li on the labour market, Ash on language models) sharing one URL. Those are kept as two works, not folded, because a shared landing page is not a shared work.</p>
 </section>
 <section id="the-flagship-number-audited" class="level2">
 <h2 class="anchored" data-anchor-id="the-flagship-number-audited">The flagship number, audited</h2>
-<p>The essay’s most quotable statistic, how much of the AI-research tooling is <em>verification</em>, was first produced by a keyword classifier (<code>review|referee|replicat|reproduc|citation|audit|verif|integrity</code>, frozen as <code>VERIF_RE</code>). Held to the discipline the essay preaches, that classifier fails an audit. Hand-labelled against a frozen gold set (<code>scenario/data/tool_labels.csv</code>, one row per tool with a verdict and a one-word kind), the audited numbers appear below.</p>
+<p>The essay’s most quotable statistic, how much of the AI-research tooling is <em>verification</em>, was first produced by a keyword classifier (<code>review|referee|replicat|reproduc|citation|audit|verif|integrity</code>, frozen as <code>VERIF_RE</code>, and matched against titles only, because a resource’s description is curator’s notes that never enter anything this site publishes). Held to the discipline the essay preaches, that classifier fails an audit. Hand-labelled against a gold set (<code>scenario/data/tool_labels.csv</code>, one row per tool with a verdict, a one-word kind and a note), the audited numbers appear below.</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
@@ -356,30 +362,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Keyword classifier (VERIF_RE)</td>
-<td style="text-align: center;">65.8%</td>
-<td style="text-align: center;">~25 / 38</td>
+<td style="text-align: center;">13.2%</td>
+<td style="text-align: center;">~15 / 114</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Audited gold labels</td>
-<td style="text-align: center;">28.9%</td>
-<td style="text-align: center;">11 / 38</td>
+<td style="text-align: center;">18.4%</td>
+<td style="text-align: center;">21 / 114</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<p>Against the gold labels the keyword classifier has precision 36% and recall 81.8%. The 16 false positives are literature-search aids (Elicit, Scholara, Google Scholar Labs), a LaTeX workspace, and even <em>academic-humanizer</em>, a tool whose purpose is to strip the tells verifiers look for. The 2 false negatives are an adversarial-research loop and a replication-scoring agent it misses. The audited share, <strong>28.9%</strong>, is what the prose and prediction <strong>P1</strong> now use. That the essay had to correct a number it asserted is not an embarrassment to hide. It is the thesis running on the document itself, because an unaudited filter is just more cheap intelligence. The gold labels are a small public dataset shipped with the site. Adjust them and the number moves, in the open.</p>
+<p>Against the gold labels the keyword classifier has precision 93.3% and recall 66.7%. It now matches <strong>titles only</strong>, because a resource’s description is curator’s notes and never enters anything this site publishes, and that constraint is what makes it fail: the 7 false negatives are verifiers whose names say nothing about what they do (<em>coarse</em>, <em>GPTZero</em>, <em>Thesify</em>, <em>Refine.ink</em>, an adversarial research loop, a model leaderboard, an idea-evaluation pipeline), while the 1 false positive is a systematic-review screening platform with “Review” in its title that screens literature for humans rather than checking a machine. Naming is not function. The audited share, <strong>18.4%</strong>, is what the prose and prediction <strong>P1</strong> use.</p>
+<p>That the essay had to correct a number it asserted, twice now, is not an embarrassment to hide. It is the thesis running on the document itself, because an unaudited filter is just more cheap intelligence. The gold labels are a small public dataset shipped with the site (<code>scenario/data/tool_labels.csv</code>, one row per tool with a verdict, a one-word kind, and a note). Adjust them and the number moves, in the open.</p>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Read the count, not the share, across releases
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The verification share fell from a published 11-in-38 to 21-in-114 between releases. That is <strong>not</strong> the field building fewer referees. The count of verification tools roughly doubled; the tool denominator nearly tripled, because the automated watcher began sweeping in general-purpose AI infrastructure (foundation models, agent frameworks, OCR engines, data APIs) that is not economics-research tooling at all. The share is a fact about this collection’s composition. The count is a fact about the field. Compare counts across releases, not shares.</p>
+</div>
+</div>
 </section>
 <section id="the-whale-is-mislabelled" class="level2">
 <h2 class="anchored" data-anchor-id="the-whale-is-mislabelled">The whale is mislabelled</h2>
-<p>The single largest document, 33.4% of all extracted characters, is indexed as “National Artificial Intelligence Initiative Act.” It is not that Act. Its bytes are House Report 116-617, the full committee report accompanying the FY2021 National Defense Authorization Act, of which the AI Initiative Act is one division. So a third of the corpus’s raw text is a mostly off-topic legislative document under a too-flattering title. The word headline is reported three ways. It is 3,671,256 uncapped, 2,446,068 with the whale removed, and 2,057,167 with the whale and the 388,901-word course-playlist transcript removed. Every <em>per-document</em> text statistic on this site caps document weight at the 95th percentile (172,284 characters) so the whale cannot drive an average.</p>
+<p>The single largest document, 25% of all extracted characters, is indexed as “National Artificial Intelligence Initiative Act.” It is not that Act. Its bytes are House Report 116-617, the full committee report accompanying the FY2021 National Defense Authorization Act, of which the AI Initiative Act is one division. So a third of the corpus’s raw text is a mostly off-topic legislative document under a too-flattering title. The word headline is reported three ways. It is 4,909,337 uncapped, 3,684,149 with the whale removed, and 3,295,248 with the whale and the 388,901-word course-playlist transcript removed. Every <em>per-document</em> text statistic on this site caps document weight at the 95th percentile (151,151 characters) so the whale cannot drive an average.</p>
 </section>
 <section id="the-four-hygiene-rules" class="level2">
 <h2 class="anchored" data-anchor-id="the-four-hygiene-rules">The four hygiene rules</h2>
-<p><strong>1. The version graph.</strong> The same work shows up as a working paper, a journal version, a video, and a thread. <code>resources_clean.csv</code> dedupes by normalized title before counting works, which folds 10 duplicate versions and leaves 375 works from 385 rows. Coverage keeps <strong>all</strong> rows, because coverage measures the index, not the field.</p>
-<p><strong>2. The whale.</strong> One document, a piece of AI legislation, holds 33.4% of all extracted characters. Any text-volume statistic caps per-document weight at the 95th percentile of character counts (172,284 characters). The headline word count (3,671,256) is kept uncapped to match the project’s measured claims passport, while every per-document average uses the capped figure (1,977,820). An uncapped average measures the whale.</p>
+<p><strong>1. The version graph.</strong> The same work shows up as a working paper, a journal version, a video, and a thread. <code>resources_clean.csv</code> dedupes by normalized title before counting works, which folds 36 duplicate versions and leaves 625 works from 661 rows. Coverage keeps <strong>all</strong> rows, because coverage measures the index, not the field.</p>
+<p><strong>2. The whale.</strong> One document, a piece of AI legislation, holds 25% of all extracted characters. Any text-volume statistic caps per-document weight at the 95th percentile of character counts (151,151 characters). The headline word count (4,909,337) is kept uncapped to match the project’s measured claims passport, while every per-document average uses the capped figure (3,106,969). An uncapped average measures the whale.</p>
 <p><strong>3. Canonical names.</strong> Author names are diacritic-stripped and case-folded before distinct people are counted, so “Bäckman” and “Backman” are one person.</p>
-<p><strong>4. Dates.</strong> Roughly half the corpus (199 of 385 rows, 52%) carries no usable date. Undated rows are excluded from every time series and reported as a visible residual on the <a href="../supplements/timeline.html">Timeline</a> page, never silently dropped. The database is not version-controlled (it is rebuilt wholesale each run), so there is no git history to recover approximate dates from. The undated rows stay undated and stay counted.</p>
+<p><strong>4. Dates.</strong> 382 of 661 rows (58%) carry no usable date. Undated rows are excluded from every time series and reported as a visible residual on the <a href="../supplements/timeline.html">Timeline</a> page, never silently dropped. A large part of that residual is not a gap at all: a tool homepage, a course catalogue and a living personal guide have no publication date and never will, so the pipeline records them as <em>not applicable</em> rather than <em>missing</em>. The rest stay undated and stay counted. A further 8 rows are known only to a <strong>year</strong>; they carry a January day-filler and therefore sort into that year’s first half, which is a sorting convention and not a fact about when they appeared.</p>
+</section>
+<section id="the-date-repair-2026-07-27" class="level2">
+<h2 class="anchored" data-anchor-id="the-date-repair-2026-07-27">The date repair (2026-07-27)</h2>
+<p>This site placed several works in the wrong half-year until 2026-07-27, and the failure is worth recording because it was invisible from the prose.</p>
+<p><code>build_metrics.R</code> read the resources table’s raw <code>date</code> column, which is whatever the upstream feed supplied. It never read <code>pub_date</code>, the pipeline’s own <strong>derived</strong> date, which normalises the upstream string and fills gaps from sources that <em>encode</em> a date: the arXiv identifier, a <code>/YYYY/MM/</code> permalink, and NBER’s own abstract page. The database held the better answer the whole time and the site did not ask for it.</p>
+<p>Underneath that sat two wrong facts and one silent failure. The feed dated NBER working paper 33344 (Ludwig, Mullainathan and Rambachan’s measurement framework) to 2025-12; the publisher says <strong>January 2025</strong>, an eleven-month error that moved the paper a full half-year on this timeline. It misdated w34202 by four months. NBER assigns working-paper numbers in issue order, and <code>scripts/lib/dates.R</code> checks that relation is monotone before it will estimate any date from a w-number; those two errors broke monotonicity, so the estimator <strong>switched itself off exactly as designed</strong> and 43 further NBER papers silently lost their dates.</p>
+<p>The repair replaces estimation with measurement. <code>scripts/24_nber_dates.R</code> reads the issue date off each NBER paper’s own abstract page (the Highwire <code>citation_publication_date</code> meta tag, or the visible “Issue Date” block) into a tracked file, <code>data/nber_dates.csv</code>, that records the URL and the date it was read for every row. All 69 NBER papers in the corpus were read this way, none failed, and the resulting series has <strong>zero monotonicity violations across 68 steps</strong>, which confirms the two bad feed dates were the whole problem. Dated resources rose from 188 to <strong>278</strong>, and every one of them is now an exact date from a named source rather than an estimate: the interpolation rule is still in the code as a fallback and currently produces nothing.</p>
 </section>
 <section id="the-metrics-strip-and-its-forecast-band" class="level2">
 <h2 class="anchored" data-anchor-id="the-metrics-strip-and-its-forecast-band">The metrics strip, and its forecast band</h2>
@@ -394,8 +421,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="what-this-document-cannot-verify" class="level2">
 <h2 class="anchored" data-anchor-id="what-this-document-cannot-verify">What this document cannot verify</h2>
 <ul>
-<li><strong>Curation is not coverage of the field.</strong> A curated corpus measures the curator’s map as much as the territory. The 65.2% of dated works landing in 2026 H1 is partly the field flooding and partly the newest material being the easiest to find. Where the distinction changes a number, the retrospective says so.</li>
-<li><strong>The verification-tool count is a keyword heuristic.</strong> A tool counts as verification tooling when its title or description matches <code>review|referee|replicat|reproduc|citation|audit|verif|integrity</code>. The classifier is used only to bucket a row and emit a count, no description text is published, and it is a legible heuristic, not a taxonomy. It will catch a literature-review tool that is verification-adjacent and miss one described in other words.</li>
+<li><strong>Curation is not coverage of the field.</strong> A curated corpus measures the curator’s map as much as the territory. The 59.8% of dated works landing in 2026 H1 is partly the field flooding and partly the newest material being the easiest to find. Where the distinction changes a number, the retrospective says so.</li>
+<li><strong>The verification-tool count is a hand judgment, not a measurement.</strong> Every tool was labelled by reading it, against one test: does it check another machine’s output? That test has genuinely hard cases (a systematic-review screener, a meta-analysis extractor, a paper generator that contains a reviewer), and a different reader would draw two or three of them the other way. The gold file ships with the site so a disagreement can be settled by editing a row rather than by argument.</li>
+<li><strong>The undated residual is not random.</strong> It falls hardest on exactly the material this page argues moves fastest: living guides on personal sites, which are revised rather than published and so carry no date by nature. Every time series here therefore under-represents the informal layer, and no reweighting fixes that, because the missing dates do not exist.</li>
 <li><strong>The narrative substance is not in the database.</strong> The story beats, which papers say what, are drawn from a separate analysis (<code>docs/ai_in_economics_discussion_notes.md</code>) and grounded in corpus rows by title. The database supplies the <em>counts and dates</em>. It does not adjudicate the interpretation.</li>
 <li><strong>The forecast is extrapolation.</strong> Nothing past 2028 is measured, and the claims there depend on institutional choices rather than model capability. That is stated at the branch, and the error bars are meant to be read as wide.</li>
 </ul>
@@ -1006,7 +1034,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>By <a href="https://www.lukasikic.info/">Luka Šikić</a></p>
 </div>   
     <div class="nav-footer-center">
-<p>Every figure recomputed from <code>data/aiecon.sqlite</code>, none asserted.</p>
+<p>Every figure recomputed from the underlying database, none asserted.</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
