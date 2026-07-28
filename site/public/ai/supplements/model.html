@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Luka Šikić">
-<meta name="dcterms.date" content="2026-07-23">
+<meta name="dcterms.date" content="2026-07-28">
 
-<title>A model of verified judgment – Cheap Intelligence, Scarce Trust</title>
+<title>A model of verified judgment – How Economics Absorbed AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -109,6 +109,7 @@ window.Quarto = {
 <meta property="og:url" content="https://www.lukasikic.info/ai/supplements/model.html">
 <meta property="og:image" content="https://www.lukasikic.info/og.jpg">
 <meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://www.lukasikic.info/ai/supplements/model.html">
 <!-- lukasikic.info theme -->
 <style>
@@ -180,7 +181,6 @@ window.Quarto = {
     --ls-accent: #60A5FA;
   }
 </style>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 
 <body class="nav-fixed">
@@ -191,7 +191,7 @@ window.Quarto = {
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Cheap Intelligence, Scarce Trust</span>
+    <span class="navbar-title">How Economics Absorbed AI</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -203,6 +203,10 @@ window.Quarto = {
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Scenario</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../catalog.html"> 
+<span class="menu-text">Catalog</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-endings" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -234,11 +238,11 @@ window.Quarto = {
   </li>  
         <li>
     <a class="dropdown-item" href="../supplements/coverage.html">
- <span class="dropdown-text">Coverage</span></a>
+ <span class="dropdown-text">What can be read</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../supplements/timeline.html">
- <span class="dropdown-text">Timeline</span></a>
+ <span class="dropdown-text">Timeline and its gaps</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../supplements/method.html">
@@ -277,7 +281,7 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#setup-a-market-for-plausible-results" id="toc-setup-a-market-for-plausible-results" class="nav-link active" data-scroll-target="#setup-a-market-for-plausible-results">Setup, a market for plausible results</a></li>
   <li><a href="#verification-technology-the-scarce-input" id="toc-verification-technology-the-scarce-input" class="nav-link" data-scroll-target="#verification-technology-the-scarce-input">Verification technology, the scarce input</a></li>
-  <li><a href="#the-authors-problem-when-honesty-is-incentive-compatible" id="toc-the-authors-problem-when-honesty-is-incentive-compatible" class="nav-link" data-scroll-target="#the-authors-problem-when-honesty-is-incentive-compatible">The author’s problem, when honesty is incentive-compatible</a></li>
+  <li><a href="#the-authors-problem-when-honesty-is-incentive-compatible" id="toc-the-authors-problem-when-honesty-is-incentive-compatible" class="nav-link" data-scroll-target="#the-authors-problem-when-honesty-is-incentive-compatible">The author’s problem, when honesty is incentive compatible</a></li>
   <li><a href="#the-gatekeepers-problem-and-the-branch" id="toc-the-gatekeepers-problem-and-the-branch" class="nav-link" data-scroll-target="#the-gatekeepers-problem-and-the-branch">The gatekeeper’s problem, and the branch</a></li>
   <li><a href="#the-flood-as-a-capacity-constraint" id="toc-the-flood-as-a-capacity-constraint" class="nav-link" data-scroll-target="#the-flood-as-a-capacity-constraint">The flood as a capacity constraint</a></li>
   <li><a href="#a-hybrid-where-trust-is-priced-in-a-certification-market" id="toc-a-hybrid-where-trust-is-priced-in-a-certification-market" class="nav-link" data-scroll-target="#a-hybrid-where-trust-is-priced-in-a-certification-market">A hybrid where trust is priced in a certification market</a></li>
@@ -311,7 +315,7 @@ window.Quarto = {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 23, 2026</p>
+      <p class="date">July 28, 2026</p>
     </div>
   </div>
   
@@ -329,16 +333,16 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>This is a formal sketch, not a finished result. It turns the essay’s central claim, that generation got cheap while verification stayed dear, into the smallest model that makes the ending a comparative static rather than a mood. The economics is the author’s to own and refine. The parameters are illustrative, and the propositions are stated as sketches a referee would still want to break.</p>
+<p>This is a formal sketch rather than a finished result. It turns the essay’s central claim, that generation got cheap while verification stayed dear, into the smallest model that makes the ending a comparative static rather than a mood. The economics is the author’s to own and refine. The parameters are illustrative, and the propositions are stated as sketches a referee would still want to break.</p>
 </div>
 </div>
 </div>
 <p>The essay’s argument is one sentence long. Producing plausible research became nearly free, while <em>confirming</em> that a result is real stayed costly, so the scarce factor is verified judgment. That sentence has an equilibrium behind it. Below is the smallest version I can write down honestly.</p>
 <section id="setup-a-market-for-plausible-results" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="setup-a-market-for-plausible-results">Setup, a market for plausible results</h2>
-<p>A unit continuum of authors each submit one paper to a gatekeeper (a journal, a funder’s panel, a data editor). A paper has quality <span class="math inline">\(q \in \{H, L\}\)</span>. A high-quality paper is a real result. A low-quality paper is <em>plausible but false</em>, the paper-mill output that reads like research and is not.</p>
-<p>Two costs sit on the author. Producing a genuinely high-quality result costs <span class="math inline">\(k\)</span>, the real work, including the author’s own checking. Generating a plausible submission costs <span class="math inline">\(g\)</span>, and the premise of the whole essay is that <span class="math inline">\(g\)</span> has collapsed toward zero. The price of a competent-looking draft is now a few dollars of inference. The menu-pricing literature is where that premise is measured. <em>Menu Pricing of Large Language Models</em> documents how model providers price generation down a demand curve, which is the supply side of the flood. Verification did not fall the same way, and that asymmetry (<span class="math inline">\(g \to 0\)</span> while <span class="math inline">\(k\)</span> stays bounded away from zero) is the entire engine here.</p>
-<p>A published paper returns private value <span class="math inline">\(V\)</span> (a line on the CV, a grant, standing). A low-quality paper that is <em>caught</em> returns a penalty <span class="math inline">\(\varphi \ge 0\)</span> (the desk reject, the retraction, the reputational mark). Normalize the outside option (do not submit) to zero.</p>
+<p>A unit continuum of authors each submit one paper to a gatekeeper, which might be a journal, a funder’s panel or a data editor. A paper has quality <span class="math inline">\(q \in \{H, L\}\)</span>. A high quality paper is a real result. A low quality paper is <em>plausible but false</em>, the paper mill output that reads like research and is not.</p>
+<p>Two costs sit on the author. Producing a genuinely high quality result costs <span class="math inline">\(k\)</span>, the real work, including the author’s own checking. Generating a plausible submission costs <span class="math inline">\(g\)</span>, and the premise of the whole essay is that <span class="math inline">\(g\)</span> has collapsed toward zero. The price of a competent looking draft is now a few dollars of inference. The menu pricing literature is where that premise is measured. <em>Menu Pricing of Large Language Models</em> documents how model providers price generation down a demand curve, which is the supply side of the flood. Verification did not fall the same way, and that asymmetry, with <span class="math inline">\(g \to 0\)</span> while <span class="math inline">\(k\)</span> stays bounded away from zero, is the entire engine here.</p>
+<p>A published paper returns private value <span class="math inline">\(V\)</span>, meaning a line on the CV, a grant, standing. A low quality paper that is <em>caught</em> returns a penalty <span class="math inline">\(\varphi \ge 0\)</span>, meaning the desk reject, the retraction, the reputational mark. Normalize the outside option, which is not submitting at all, to zero.</p>
 
 <div class="no-row-height column-margin column-container"><div class="mnote">
 <p><span class="mnote-h">Grounding in the corpus</span></p>
@@ -347,73 +351,71 @@ window.Quarto = {
 </div></div></section>
 <section id="verification-technology-the-scarce-input" class="level2">
 <h2 class="anchored" data-anchor-id="verification-technology-the-scarce-input">Verification technology, the scarce input</h2>
-<p>The gatekeeper chooses an <strong>audit intensity</strong> <span class="math inline">\(a \in [0,1]\)</span>, applied per submission. Read <span class="math inline">\(a\)</span> as the probability that a low-quality paper is caught. Take <span class="math inline">\(\pi(a) = a\)</span> for cleanliness, and assume a true result never fails the audit (no false positives, a simplification I return to). Auditing costs</p>
+<p>The gatekeeper chooses an <strong>audit intensity</strong> <span class="math inline">\(a \in [0,1]\)</span>, applied per submission. Read <span class="math inline">\(a\)</span> as the probability that a low quality paper is caught. Take <span class="math inline">\(\pi(a) = a\)</span> for cleanliness, and assume a true result never fails the audit, so there are no false positives, a simplification I return to. Auditing costs</p>
 <p><span class="math display">\[
-c(a. \theta) = \theta \, \psi(a), \qquad \psi' &gt; 0,\ \psi'' &gt; 0,\ \psi(0)=0,
+c(a, \theta) = \theta \, \psi(a), \qquad \psi' &gt; 0,\ \psi'' &gt; 0,\ \psi(0)=0,
 \]</span></p>
-<p>per submission, with <span class="math inline">\(\psi\)</span> increasing and convex, so deeper checking is disproportionately expensive. The scalar <span class="math inline">\(\theta &gt; 0\)</span> is the <strong>cost of verification technology</strong>, human referee hours at one extreme and cheap agentic reproduction (the “referee factory”) at the other. This is the binding input. Verified judgment is what the model is short of, and <span class="math inline">\(c(a;\theta)\)</span> is its price.</p>
+<p>per submission, with <span class="math inline">\(\psi\)</span> increasing and convex, so deeper checking costs more than proportionately. The scalar <span class="math inline">\(\theta &gt; 0\)</span> is the <strong>cost of verification technology</strong>, human referee hours at one extreme and cheap agentic reproduction, the “referee factory”, at the other. This is the binding input. Verified judgment is what the model is short of, and <span class="math inline">\(c(a, \theta)\)</span> is its price.</p>
 </section>
 <section id="the-authors-problem-when-honesty-is-incentive-compatible" class="level2">
-<h2 class="anchored" data-anchor-id="the-authors-problem-when-honesty-is-incentive-compatible">The author’s problem, when honesty is incentive-compatible</h2>
+<h2 class="anchored" data-anchor-id="the-authors-problem-when-honesty-is-incentive-compatible">The author’s problem, when honesty is incentive compatible</h2>
 <p>Given the audit intensity <span class="math inline">\(a\)</span> the author expects, compare the three payoffs below.</p>
 <p><span class="math display">\[
 \Pi_H = V - k, \qquad
 \Pi_L = (1-a)\,V - a\,\varphi - g, \qquad
 \Pi_\varnothing = 0.
 \]</span></p>
-<p>An author invests in quality (chooses <span class="math inline">\(H\)</span> over <span class="math inline">\(L\)</span>) exactly when <span class="math inline">\(\Pi_H \ge \Pi_L\)</span>.</p>
+<p>An author invests in quality, choosing <span class="math inline">\(H\)</span> over <span class="math inline">\(L\)</span>, exactly when <span class="math inline">\(\Pi_H \ge \Pi_L\)</span>.</p>
 <p><span class="math display">\[
 V - k \;\ge\; (1-a)V - a\varphi - g
 \quad\Longleftrightarrow\quad
-a\,(V+\varphi) \;\ge\; K - g .
+a\,(V+\varphi) \;\ge\; k - g .
 \]</span></p>
 <p>Solving for the audit intensity that just sustains quality gives the threshold</p>
 <p><span class="math display">\[
 \boxed{\,a^{*} = \dfrac{k - g}{V + \varphi}\,}.
 \]</span></p>
-<p><strong>Proposition 1 (the separating threshold).</strong> <em>A separating equilibrium (every submitted paper is high quality) is sustained if and only if <span class="math inline">\(a \ge a^{*}\)</span>, and</em> <span class="math display">\[
+<p><strong>Proposition 1 (the separating threshold).</strong> <em>A separating equilibrium, in which every submitted paper is high quality, is sustained if and only if <span class="math inline">\(a \ge a^{*}\)</span>, and</em> <span class="math display">\[
 \frac{\partial a^{*}}{\partial g} = -\frac{1}{V+\varphi} &lt; 0 .
 \]</span></p>
-<p><em>Intuition.</em> Generation cost used to do the gatekeeping for free. When <span class="math inline">\(g \ge k\)</span>, faking costs as much as doing the work, <span class="math inline">\(a^{*} \le 0\)</span>, and no audit is needed, the old world, where writing a convincing fake paper was itself most of the labor of writing a real one. As <span class="math inline">\(g \to 0\)</span> the threshold rises to its residual floor <span class="math inline">\(k/(V+\varphi)\)</span>. The discipline that generation cost supplied for nothing must now be <em>bought</em> as audit. Cheap generation does not corrupt the pool by making authors dishonest. It corrupts the pool by removing the tax that kept dishonesty unprofitable.</p>
-<p>Volume moves the same way. When <span class="math inline">\(a &lt; a^{*}\)</span>, low quality pays, and because a plausible submission is now nearly free the mass of such submissions is bounded only by the number of would-be authors, not by their budgets. The pool does not merely tilt toward junk, it <em>floods</em>.</p>
+<p><em>Intuition.</em> Generation cost used to do the gatekeeping for free. When <span class="math inline">\(g \ge k\)</span>, faking costs as much as doing the work, <span class="math inline">\(a^{*} \le 0\)</span>, and no audit is needed. That was the old world, where writing a convincing fake paper was itself most of the labor of writing a real one. As <span class="math inline">\(g \to 0\)</span> the threshold rises to its residual floor <span class="math inline">\(k/(V+\varphi)\)</span>. The discipline that generation cost supplied for nothing must now be <em>bought</em> as audit. Cheap generation does not corrupt the pool by making authors dishonest. It corrupts the pool by removing the tax that kept dishonesty unprofitable.</p>
+<p>Volume moves the same way. When <span class="math inline">\(a &lt; a^{*}\)</span>, low quality pays, and because a plausible submission is now nearly free the mass of such submissions is bounded only by the number of would be authors, not by their budgets. The pool does not merely tilt toward junk, it <em>floods</em>.</p>
 </section>
 <section id="the-gatekeepers-problem-and-the-branch" class="level2">
 <h2 class="anchored" data-anchor-id="the-gatekeepers-problem-and-the-branch">The gatekeeper’s problem, and the branch</h2>
-<p>Sustaining trust is worth something. Let <span class="math inline">\(B &gt; 0\)</span> be the per-submission value to the gatekeeper of a pool readers can trust, over a pool they cannot, the difference between a literature people build on and one they discount to reputation. The gatekeeper sets <span class="math inline">\(a \ge a^{*}\)</span> (pays for trust) when the audit it requires is cheaper than the trust it buys:</p>
+<p>Sustaining trust is worth something. Let <span class="math inline">\(B &gt; 0\)</span> be the per submission value to the gatekeeper of a pool readers can trust, over a pool they cannot, which is the difference between a literature people build on and one they discount to reputation. The gatekeeper sets <span class="math inline">\(a \ge a^{*}\)</span>, and so pays for trust, when the audit it requires is cheaper than the trust it buys.</p>
 <p><span class="math display">\[
 \theta\,\psi(a^{*}) \;\le\; B
 \quad\Longleftrightarrow\quad
 \theta \;\le\; \bar\theta \equiv \frac{B}{\psi(a^{*})} .
 \]</span></p>
 <p>This is the branch, and it is a comparative static on one parameter.</p>
-<p><strong>Proposition 2 (the ending is priced by audit cost, not capability).</strong> <em>Hold model capability fixed. There is a threshold <span class="math inline">\(\bar\theta\)</span> such that the gatekeeper selects the <strong>audit ending</strong> (<span class="math inline">\(a \ge a^{*}\)</span>, verification mandatory and rewarded) if and only if <span class="math inline">\(\theta \le \bar\theta\)</span>, and the <strong>flood ending</strong> (<span class="math inline">\(a &lt; a^{*}\)</span>, the pool pools) otherwise. The selected ending turns on the cost of verification <span class="math inline">\(\theta\)</span>, not on how good the models are.</em></p>
-<p><em>Intuition.</em> The same capability jump that drove <span class="math inline">\(g \to 0\)</span>, feeding the flood, also drives <span class="math inline">\(\theta \to 0\)</span>, because agentic reproduction can re-run an analysis, chase a citation, or re-derive a proof at inference cost. So capability pushes <em>both</em> levers. It raises <span class="math inline">\(a^{*}\)</span> (Proposition 1, more audit now required) and it lowers <span class="math inline">\(\theta\)</span> (that audit now affordable). Which effect the institution acts on is the ending. The technology does not choose. The journal, the funder, and the data editor choose, by deciding whether machine verification is required and rewarded.</p>
+<p><strong>Proposition 2 (the ending is priced by audit cost, not capability).</strong> <em>Hold model capability fixed. There is a threshold <span class="math inline">\(\bar\theta\)</span> such that the gatekeeper selects the <strong>audit ending</strong>, where <span class="math inline">\(a \ge a^{*}\)</span> and verification is mandatory and rewarded, if and only if <span class="math inline">\(\theta \le \bar\theta\)</span>, and the <strong>flood ending</strong>, where <span class="math inline">\(a &lt; a^{*}\)</span> and the pool pools, otherwise. The selected ending turns on the cost of verification <span class="math inline">\(\theta\)</span>, not on how good the models are.</em></p>
+<p><em>Intuition.</em> The same capability jump that drove <span class="math inline">\(g \to 0\)</span>, feeding the flood, also drives <span class="math inline">\(\theta \to 0\)</span>, because agentic reproduction can re-run an analysis, chase a citation, or re-derive a proof at inference cost. So capability pushes <em>both</em> levers. It raises <span class="math inline">\(a^{*}\)</span>, as Proposition 1 shows, so more audit is now required, and it lowers <span class="math inline">\(\theta\)</span>, so that audit is now affordable. Which effect the institution acts on is the ending. The technology does not choose. The journal, the funder, and the data editor choose, by deciding whether machine verification is required and rewarded.</p>
 </section>
 <section id="the-flood-as-a-capacity-constraint" class="level2">
 <h2 class="anchored" data-anchor-id="the-flood-as-a-capacity-constraint">The flood as a capacity constraint</h2>
 <p>The flood ending has a sharper reading than “gatekeepers declined to audit.” Let realized audit be <span class="math display">\[
-a_{\text{real}} = \min\!\big(a,\. R/N\big),
-\]</span> where <span class="math inline">\(R\)</span> is refereeing capacity and <span class="math inline">\(N\)</span> the submission volume. With human referees <span class="math inline">\(R\)</span> is fixed at throughput. As <span class="math inline">\(g \to 0\)</span>, <span class="math inline">\(N \to \infty\)</span>, so <span class="math inline">\(R/N \to 0\)</span> and <span class="math inline">\(a_{\text{real}} \to 0\)</span> <em>even for a gatekeeper who wants to audit</em>. At fixed human capacity the audit ending is not merely unchosen, it is infeasible. The referee factory (<span class="math inline">\(\theta \to 0\)</span>) matters precisely because it unbinds <span class="math inline">\(R\)</span> from human throughput, because machine audit lets capacity scale with submissions. So the two endings map cleanly onto one structural question, <strong>does audit capacity scale with the flood, or not.</strong> When it does not, trust does not vanish so much as relocate. Readers condition on author identity and institution instead of on the audit, because the audit has gone uninformative. That is the whitelist world the essay names.</p>
+a_{\text{real}} = \min\!\big(a,\, R/N\big),
+\]</span> where <span class="math inline">\(R\)</span> is refereeing capacity and <span class="math inline">\(N\)</span> the submission volume. With human referees <span class="math inline">\(R\)</span> is fixed at throughput. As <span class="math inline">\(g \to 0\)</span>, <span class="math inline">\(N \to \infty\)</span>, so <span class="math inline">\(R/N \to 0\)</span> and <span class="math inline">\(a_{\text{real}} \to 0\)</span> <em>even for a gatekeeper who wants to audit</em>. At fixed human capacity the audit ending is not merely unchosen, it is impossible. The referee factory, where <span class="math inline">\(\theta \to 0\)</span>, matters precisely because it frees <span class="math inline">\(R\)</span> from human throughput, since machine audit lets capacity grow with submissions. So the two endings map cleanly onto one structural question, which is whether audit capacity scales with the flood. When it does not, trust does not vanish so much as move. Readers go on author identity and institution instead of on the audit, because the audit no longer tells them anything. That is the whitelist world the essay names.</p>
 </section>
 <section id="a-hybrid-where-trust-is-priced-in-a-certification-market" class="level2">
 <h2 class="anchored" data-anchor-id="a-hybrid-where-trust-is-priced-in-a-certification-market">A hybrid where trust is priced in a certification market</h2>
-<p>There is a third region between the two endings. Suppose a private certifier offers audit at price <span class="math inline">\(p\)</span> per paper while the journal lags at <span class="math inline">\(a &lt; a^{*}\)</span>. High-quality authors buy certification to separate. Low-quality authors do not, because for them the expected value of inviting scrutiny is below <span class="math inline">\(p\)</span>. Costly certification then re-manufactures the separating equilibrium the journal failed to enforce, trust becomes a good with a price, sold outside the journal. Whether this substitutes for gatekeeping or corrodes it (a two-tier literature of certified and merely-published work) is a market-structure question, and the market structure around AI is where <em>Artificial Intelligence, Competition, and Welfare (NBER WP 34444)</em> locates the welfare stakes. The scarce factor of the essay’s title, trust, is, in this region, literally a priced input.</p>
+<p>There is a third region between the two endings. Suppose a private certifier offers audit at price <span class="math inline">\(p\)</span> per paper while the journal lags at <span class="math inline">\(a &lt; a^{*}\)</span>. High quality authors buy certification to separate. Low quality authors do not, because for them the expected value of inviting scrutiny is below <span class="math inline">\(p\)</span>. Costly certification then re-manufactures the separating equilibrium the journal failed to enforce, so trust becomes a good with a price, sold outside the journal. Whether this substitutes for gatekeeping or corrodes it, leaving a two tier literature of certified and merely published work, is a market structure question, and the market structure around AI is where <em>Artificial Intelligence, Competition, and Welfare (NBER WP 34444)</em> locates the welfare stakes. The scarce factor of the essay’s title, trust, is in this region literally a priced input.</p>
 </section>
 <section id="what-would-move-the-result" class="level2">
 <h2 class="anchored" data-anchor-id="what-would-move-the-result">What would move the result</h2>
-<ul>
-<li><strong>The value of trust <span class="math inline">\(B\)</span>.</strong> If readers do not actually discount a flooded pool, if citation counts keep rising regardless of quality, then <span class="math inline">\(\bar\theta\)</span> collapses and no audit is adopted at any cost. The audit ending needs a community that <em>punishes</em> pooling.</li>
-<li><strong>The penalty <span class="math inline">\(\varphi\)</span>.</strong> Enforcement (retraction that bites, reputational memory) lowers <span class="math inline">\(a^{*}\)</span> directly. Cheap audit and weak penalties are substitutes for sustaining honesty. The cheapest path to the audit ending may run through enforcement, not intensity.</li>
-<li><strong>The asymmetry <span class="math inline">\(k\)</span> vs.&nbsp;<span class="math inline">\(g\)</span>.</strong> The whole model lives on <span class="math inline">\(k\)</span> staying bounded while <span class="math inline">\(g \to 0\)</span>. If genuine verification <em>also</em> gets cheap, if <span class="math inline">\(k \to 0\)</span> with <span class="math inline">\(g\)</span>, then <span class="math inline">\(a^{*} \to 0\)</span> and the problem dissolves. The essay’s wager is that the checked, human-audited part of <span class="math inline">\(k\)</span> is exactly what does not fall. That wager is the model’s load-bearing assumption, and its most testable one.</li>
-<li><strong>Whether audit is machine-verifiable and mandated.</strong> <span class="math inline">\(\theta\)</span> is realized institutionally, not technologically. A reproduction agent that exists but is neither required nor rewarded leaves <span class="math inline">\(\theta\)</span> high in practice.</li>
-</ul>
+<p><strong>The value of trust <span class="math inline">\(B\)</span>.</strong> If readers do not actually discount a flooded pool, and citation counts keep rising regardless of quality, then <span class="math inline">\(\bar\theta\)</span> collapses and no audit is adopted at any cost. The audit ending needs a community that <em>punishes</em> pooling.</p>
+<p><strong>The penalty <span class="math inline">\(\varphi\)</span>.</strong> Enforcement, meaning retraction that bites and reputational memory, lowers <span class="math inline">\(a^{*}\)</span> directly. Cheap audit and weak penalties are substitutes for sustaining honesty. The cheapest path to the audit ending may run through enforcement rather than intensity.</p>
+<p><strong>The asymmetry between <span class="math inline">\(k\)</span> and <span class="math inline">\(g\)</span>.</strong> The whole model lives on <span class="math inline">\(k\)</span> staying bounded while <span class="math inline">\(g \to 0\)</span>. If genuine verification <em>also</em> gets cheap, so that <span class="math inline">\(k \to 0\)</span> with <span class="math inline">\(g\)</span>, then <span class="math inline">\(a^{*} \to 0\)</span> and the problem dissolves. The essay’s wager is that the checked, human audited part of <span class="math inline">\(k\)</span> is exactly what does not fall. That wager is the model’s load bearing assumption, and its most testable one.</p>
+<p><strong>Whether audit is verifiable by machine and mandated.</strong> <span class="math inline">\(\theta\)</span> is realized institutionally rather than technologically. A reproduction agent that exists but is neither required nor rewarded leaves <span class="math inline">\(\theta\)</span> high in practice.</p>
 <div class="callout callout-style-simple callout-warning">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p><strong>Limitations, this is a sketch.</strong> Two types, one period, one gatekeeper, no false positives, <span class="math inline">\(\pi(a)=a\)</span>, and no dynamic reputation or gatekeeper competition. Volume enters informally. A full treatment would microfound <span class="math inline">\(N(g)\)</span> and let <span class="math inline">\(R\)</span> be chosen. The parameters are illustrative and nothing here is estimated, the comparative statics are meant to be read as directions, not magnitudes. The economics is mine to get wrong and to fix. Corrections are the point of publishing a draft rather than a proof.</p>
+<p><strong>Limitations, because this is a sketch.</strong> Two types, one period, one gatekeeper, no false positives, <span class="math inline">\(\pi(a)=a\)</span>, and no dynamic reputation or gatekeeper competition. Volume enters informally. A full treatment would microfound <span class="math inline">\(N(g)\)</span> and let <span class="math inline">\(R\)</span> be chosen. The parameters are illustrative and nothing here is estimated, so the comparative statics are meant to be read as directions rather than magnitudes. The economics is mine to get wrong and to fix. Corrections are the point of publishing a draft rather than a proof.</p>
 </div>
 </div>
 </div>
@@ -995,7 +997,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>By <a href="https://www.lukasikic.info/">Luka Šikić</a></p>
 </div>   
     <div class="nav-footer-center">
-<p>Every figure recomputed from <code>data/aiecon.sqlite</code>, none asserted.</p>
+<p>Every figure recomputed from the underlying database, none asserted.</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

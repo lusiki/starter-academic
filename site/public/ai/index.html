@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Luka Šikić">
-<meta name="dcterms.date" content="2026-07-23">
+<meta name="dcterms.date" content="2026-07-28">
 
 <title>How Economics Absorbed AI</title>
 <style>
@@ -79,6 +79,7 @@ ul.task-list li input[type="checkbox"] {
 <meta property="og:url" content="https://www.lukasikic.info/ai/">
 <meta property="og:image" content="https://www.lukasikic.info/og.jpg">
 <meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://www.lukasikic.info/ai/">
 <!-- lukasikic.info theme -->
 <style>
@@ -150,7 +151,6 @@ ul.task-list li input[type="checkbox"] {
     --ls-accent: #60A5FA;
   }
 </style>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 
 <body class="nav-fixed">
@@ -173,6 +173,10 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Scenario</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./catalog.html"> 
+<span class="menu-text">Catalog</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-endings" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -204,11 +208,11 @@ ul.task-list li input[type="checkbox"] {
   </li>  
         <li>
     <a class="dropdown-item" href="./supplements/coverage.html">
- <span class="dropdown-text">Coverage</span></a>
+ <span class="dropdown-text">What can be read</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./supplements/timeline.html">
- <span class="dropdown-text">Timeline</span></a>
+ <span class="dropdown-text">Timeline and its gaps</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="./supplements/method.html">
@@ -245,19 +249,38 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#part-1-the-retrospective" id="toc-part-1-the-retrospective" class="nav-link active" data-scroll-target="#part-1-the-retrospective">Part 1 · The retrospective</a>
+  <li><a href="#part-1-the-structure" id="toc-part-1-the-structure" class="nav-link active" data-scroll-target="#part-1-the-structure">Part 1 · The structure</a>
   <ul class="collapse">
-  <li><a href="#the-productivity-ledger-opens" id="toc-the-productivity-ledger-opens" class="nav-link" data-scroll-target="#the-productivity-ledger-opens">2024, the productivity ledger opens</a></li>
-  <li><a href="#h1-the-task-arithmetic-starts-to-break" id="toc-h1-the-task-arithmetic-starts-to-break" class="nav-link" data-scroll-target="#h1-the-task-arithmetic-starts-to-break">2025 H1, the task arithmetic starts to break</a></li>
-  <li><a href="#h2-the-brokers-arrive-and-knowledge-starts-to-compile" id="toc-h2-the-brokers-arrive-and-knowledge-starts-to-compile" class="nav-link" data-scroll-target="#h2-the-brokers-arrive-and-knowledge-starts-to-compile">2025 H2, the brokers arrive, and knowledge starts to compile</a></li>
-  <li><a href="#h1-the-record-arrives-all-at-once-the-field-did-not" id="toc-h1-the-record-arrives-all-at-once-the-field-did-not" class="nav-link" data-scroll-target="#h1-the-record-arrives-all-at-once-the-field-did-not">2026 H1, the record arrives all at once (the field did not)</a></li>
+  <li><a href="#the-field-argues-in-six-registers" id="toc-the-field-argues-in-six-registers" class="nav-link" data-scroll-target="#the-field-argues-in-six-registers">The field argues in six registers</a></li>
+  <li><a href="#the-registers-barely-cite-each-other" id="toc-the-registers-barely-cite-each-other" class="nav-link" data-scroll-target="#the-registers-barely-cite-each-other">The registers barely cite each other</a></li>
+  <li><a href="#the-bridge-is-twenty-seven-people" id="toc-the-bridge-is-twenty-seven-people" class="nav-link" data-scroll-target="#the-bridge-is-twenty-seven-people">The bridge is twenty seven people</a></li>
+  <li><a href="#what-the-registers-are-made-of" id="toc-what-the-registers-are-made-of" class="nav-link" data-scroll-target="#what-the-registers-are-made-of">What the registers are made of</a></li>
+  </ul></li>
+  <li><a href="#part-2-how-it-got-this-way" id="toc-part-2-how-it-got-this-way" class="nav-link" data-scroll-target="#part-2-how-it-got-this-way">Part 2 · How it got this way</a>
+  <ul class="collapse">
+  <li><a href="#to-2024-the-guide-arrives-before-the-literature" id="toc-to-2024-the-guide-arrives-before-the-literature" class="nav-link" data-scroll-target="#to-2024-the-guide-arrives-before-the-literature">2023 to 2024 · the guide arrives before the literature</a></li>
+  <li><a href="#h1-the-method-gets-specified" id="toc-h1-the-method-gets-specified" class="nav-link" data-scroll-target="#h1-the-method-gets-specified">2025 H1 · the method gets specified</a></li>
+  <li><a href="#h2-the-split-becomes-visible" id="toc-h2-the-split-becomes-visible" class="nav-link" data-scroll-target="#h2-the-split-becomes-visible">2025 H2 · the split becomes visible</a></li>
+  <li><a href="#h1-the-record-floods-and-tooling-becomes-a-register" id="toc-h1-the-record-floods-and-tooling-becomes-a-register" class="nav-link" data-scroll-target="#h1-the-record-floods-and-tooling-becomes-a-register">2026 H1 · the record floods, and tooling becomes a register</a></li>
+  <li><a href="#h2-the-podcast-becomes-a-register-of-record" id="toc-h2-the-podcast-becomes-a-register-of-record" class="nav-link" data-scroll-target="#h2-the-podcast-becomes-a-register-of-record">2026 H2 · the podcast becomes a register of record</a></li>
+  </ul></li>
+  <li><a href="#part-3-the-mechanism-and-the-objections" id="toc-part-3-the-mechanism-and-the-objections" class="nav-link" data-scroll-target="#part-3-the-mechanism-and-the-objections">Part 3 · The mechanism, and the objections</a>
+  <ul class="collapse">
+  <li><a href="#one-sentence-and-why-the-structure-follows-from-it" id="toc-one-sentence-and-why-the-structure-follows-from-it" class="nav-link" data-scroll-target="#one-sentence-and-why-the-structure-follows-from-it">One sentence, and why the structure follows from it</a></li>
   <li><a href="#where-the-evidence-argues-back" id="toc-where-the-evidence-argues-back" class="nav-link" data-scroll-target="#where-the-evidence-argues-back">Where the evidence argues back</a></li>
   </ul></li>
-  <li><a href="#part-2-the-forecast" id="toc-part-2-the-forecast" class="nav-link" data-scroll-target="#part-2-the-forecast">Part 2 · The forecast</a>
+  <li><a href="#part-4-what-to-expect" id="toc-part-4-what-to-expect" class="nav-link" data-scroll-target="#part-4-what-to-expect">Part 4 · What to expect</a>
   <ul class="collapse">
   <li><a href="#the-rest-of-2026" id="toc-the-rest-of-2026" class="nav-link" data-scroll-target="#the-rest-of-2026">The rest of 2026</a></li>
   <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">2027</a></li>
   <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">2028</a></li>
+  </ul></li>
+  <li><a href="#where-to-stand" id="toc-where-to-stand" class="nav-link" data-scroll-target="#where-to-stand">Part 5 · Where to stand</a>
+  <ul class="collapse">
+  <li><a href="#four-positions-and-what-each-costs" id="toc-four-positions-and-what-each-costs" class="nav-link" data-scroll-target="#four-positions-and-what-each-costs">Four positions, and what each costs</a></li>
+  <li><a href="#practical-rules-the-evidence-supports" id="toc-practical-rules-the-evidence-supports" class="nav-link" data-scroll-target="#practical-rules-the-evidence-supports">Practical rules the evidence supports</a></li>
+  <li><a href="#what-this-map-still-cannot-measure" id="toc-what-this-map-still-cannot-measure" class="nav-link" data-scroll-target="#what-this-map-still-cannot-measure">What this map still cannot measure</a></li>
+  <li><a href="#if-you-are-early-in-your-career" id="toc-if-you-are-early-in-your-career" class="nav-link" data-scroll-target="#if-you-are-early-in-your-career">If you are early in your career</a></li>
   </ul></li>
   <li><a href="#the-branch-end-of-2028" id="toc-the-branch-end-of-2028" class="nav-link" data-scroll-target="#the-branch-end-of-2028">The branch, end of 2028</a></li>
   </ul>
@@ -269,7 +292,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">How Economics Absorbed AI</h1>
-<p class="subtitle lead">Cheap Intelligence, In Demand of Trust</p>
+<p class="subtitle lead">A field map of what is being argued, where it is being argued, and where that leaves you</p>
   <div class="quarto-categories">
     <div class="quarto-category">Scenario</div>
   </div>
@@ -289,7 +312,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 23, 2026</p>
+      <p class="date">July 28, 2026</p>
     </div>
   </div>
   
@@ -302,209 +325,468 @@ ul.task-list li input[type="checkbox"] {
 
 
 <div class="lead">
-<p>This is a scenario. The first half is a history of one research field, economics meeting AI, told from a collection of 385 resources, 287 of them with their full text attached. The second half forecasts the next two to five years and ends in a fork with two endings. The method is simple and stated up front. Every number about the past is recomputed from a database, and every claim about the future carries a probability.</p>
+<p>This is a map of one research field, economics meeting AI, built from a collection of 661 resources, 530 of them with their full text attached. One thing about the collection is hard to miss. This field argues in several <strong>registers</strong> at once, in papers and Substacks and tools and podcasts, and those registers move at different speeds, carry different knowledge, and barely cite each other. Understanding that structure explains more than any single paper in it does. The first half maps the structure and how it came about. The second forecasts the next two to five years with numbered probabilities, and ends with where a person might actually stand.</p>
 </div>
-<p>The collection behind this page did not come from one search. A small automated pipeline watches the places where this field actually publishes, journal sites and working-paper series, but also newsletters, personal websites, X threads, GitHub repositories, course pages, and recorded talks. It pulls in what is new, fetches the full text wherever it can be legitimately obtained, and files everything in one database, alongside guides and tools added by hand, one judgment call at a time. The result spans everything from a <em>Quarterly Journal of Economics</em> article to a tool’s README to a piece of federal legislation. It is not the field. It is one curator’s map of the field, and like any map it shows the mapmaker’s routes as well as the territory. Papers dominate, but a striking share of the field’s working knowledge arrived in formats journals do not carry:</p>
+<p>The collection did not come from one search. A pipeline watches where this field publishes, which means journal sites and working paper series, but also newsletters, personal websites, GitHub repositories, course pages, and recorded talks. It fetches full text wherever that can be legitimately obtained and files everything in one database, alongside material added by hand. Every number below about the past is recomputed from that database at build time. Nothing is typed from memory. Claims about the future are numbered from <code>P1</code>, 18 in all, each one dated and carrying a probability. What this map cannot verify is set out on the <a href="./supplements/method.html">Method</a> page, which also records a date repair made in late July 2026 that moved several works between periods.</p>
+<p>It is not the field. It is one curator’s map of the field, and like any map it shows the mapmaker’s routes as well as the territory.</p>
+<hr>
+<section id="part-1-the-structure" class="level1 page-columns page-full">
+<h1>Part 1 · The structure</h1>
+<section id="the-field-argues-in-six-registers" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-field-argues-in-six-registers">The field argues in six registers</h2>
+<p>Sort the collection by what kind of <em>thing</em> each item is, and a structure appears that no reading list would show you. These are not topics. They are <strong>registers</strong>, which is to say distinct formats, each with its own speed, its own audience, and its own idea of what counts as a contribution.</p>
+<div id="tbl-registers" class="cell anchored">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 5%">
+<col style="width: 15%">
+<col style="width: 18%">
+<col style="width: 16%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Register</th>
+<th style="text-align: right;">Rows</th>
+<th style="text-align: right;">Median length</th>
+<th style="text-align: right;">Readable in full</th>
+<th style="text-align: right;">Carries a date</th>
+<th style="text-align: right;">No date by nature</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">working paper / article</td>
+<td style="text-align: right;">245</td>
+<td style="text-align: right;">14,895 w</td>
+<td style="text-align: right;">69%</td>
+<td style="text-align: right;">82%</td>
+<td style="text-align: right;">0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tool / skill</td>
+<td style="text-align: right;">114</td>
+<td style="text-align: right;">1,397 w</td>
+<td style="text-align: right;">79%</td>
+<td style="text-align: right;">21%</td>
+<td style="text-align: right;">79%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">commentary / Substack</td>
+<td style="text-align: right;">104</td>
+<td style="text-align: right;">1,395 w</td>
+<td style="text-align: right;">88%</td>
+<td style="text-align: right;">75%</td>
+<td style="text-align: right;">0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">other</td>
+<td style="text-align: right;">66</td>
+<td style="text-align: right;">1,113 w</td>
+<td style="text-align: right;">80%</td>
+<td style="text-align: right;">30%</td>
+<td style="text-align: right;">3%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">talk / podcast</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">10,090 w</td>
+<td style="text-align: right;">96%</td>
+<td style="text-align: right;">28%</td>
+<td style="text-align: right;">2%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">guide / how-to</td>
+<td style="text-align: right;">45</td>
+<td style="text-align: right;">1,376 w</td>
+<td style="text-align: right;">98%</td>
+<td style="text-align: right;">51%</td>
+<td style="text-align: right;">0%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">course</td>
+<td style="text-align: right;">21</td>
+<td style="text-align: right;">1,251 w</td>
+<td style="text-align: right;">95%</td>
+<td style="text-align: right;">71%</td>
+<td style="text-align: right;">29%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">thread</td>
+<td style="text-align: right;">14</td>
+<td style="text-align: right;">56 w</td>
+<td style="text-align: right;">86%</td>
+<td style="text-align: right;">79%</td>
+<td style="text-align: right;">0%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Read that table across, because two of its columns run the opposite way to what you would expect.</p>
+<p><strong>The most authoritative register is the least readable.</strong> Working papers are the largest group in the collection and the only one that confers formal credit, yet only 69% of them can be read in full, against 98% of guides and 96% of recorded talks. The reason is dull and it matters. The research frontier sits behind embargoes and paywalls, while the informal layer is open by default and readable by machine out of habit. Anyone building on this literature with software, and increasingly that is everyone, finds the gray literature easier to obtain than the refereed one.</p>
+<p><strong>The fastest register has no dates at all.</strong> 79% of tools carry no publication date, and this is not missing data. A tool homepage, a living guide, a maintained instruction file is <em>revised</em> rather than published. It has no issue date and never will. So the layer of this field that moves fastest is exactly the layer a timeline cannot see, and every time series on this page under represents it by construction. That is worth holding onto. The register with the most current knowledge is the one with the weakest paper trail.</p>
+<p><strong>And length does not track importance.</strong> The span runs from a thread at 56 words to a working paper at 14,895. The surprise is the talk. A recorded interview transcribes to about 10,090 words, which is paper length. The podcast is not a soundbite format in this field. It is long form argument that happens not to be typeset, and as the last section of this history shows, it is where senior people say things they will not put in a paper.</p>
+
+<div class="no-row-height column-margin column-container"><div class="mnote">
+<p><span class="mnote-h">One of each register</span></p>
+<p><strong>Anton Korinek</strong> · <a href="https://www.aeaweb.org/articles?id=10.1257/jel.20231736">Generative AI for Economic Research: Use Cases and Implications for Economists (Journal of Economic Literature)</a> <span class="mnote-meta">paper, 2023 · 619w</span></p>
+<p><strong>Anton Korinek</strong> · <a href="https://genaiforecon.org/">Generative AI for Economic Research</a> <span class="mnote-meta">guide, 2025 · 365w</span></p>
+<p><strong>Pedro H. C. Sant’Anna</strong> · <a href="https://psantanna.com/claude-code-my-workflow/">My Claude Code Setup</a> <span class="mnote-meta">guide · 192w</span></p>
+<p><strong>Claes Bäckman</strong> · <a href="https://github.com/claesbackman/AI-research-feedback">AI Research Feedback: Claude Code Skills for Peer Review</a> <span class="mnote-meta">tool, 2026 · 2,155w</span></p>
+<p><strong>Daron Acemoglu</strong> · <a href="https://www.youtube.com/watch?v=55BnPJlHjb8">Nobel Laureate Daron Acemoglu: How AI Will Affect the Economy</a> <span class="mnote-meta">video, 2026 · 10,205w</span></p>
+<p><a href="https://www.congress.gov/116/crpt/hrpt617/CRPT-116hrpt617.pdf">National Artificial Intelligence Initiative Act</a> <span class="mnote-meta">other · 1,225,188w</span></p>
+</div></div></section>
+<section id="the-registers-barely-cite-each-other" class="level2">
+<h2 class="anchored" data-anchor-id="the-registers-barely-cite-each-other">The registers barely cite each other</h2>
+<p>Registers would be a curiosity if they were only packaging. They are not, because the collection also records what every document <em>links to</em>. Restricting to links that land on something else in the collection gives a rough map of who points at whom.</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-source-type" class="quarto-float quarto-figure quarto-figure-center anchored" width="816" alt="Stacked horizontal bars of the collection by resource type, split by whether an item was gathered automatically or added by hand. Papers dominate; the automated watcher brings the videos, threads, and tools.">
+<div id="fig-format-links" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Heatmap of register to register linking. Papers point mostly at papers, tools point mostly at tools, commentary points at papers, and guides point at guides and tools." width="768">
 <figure class="quarto-float quarto-float-fig figure">
-<div aria-describedby="fig-source-type-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="index_files/figure-html/fig-source-type-1.png" id="fig-source-type" class="img-fluid figure-img" alt="Stacked horizontal bars of the collection by resource type, split by whether an item was gathered automatically or added by hand. Papers dominate; the automated watcher brings the videos, threads, and tools." width="816">
+<div aria-describedby="fig-format-links-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-format-links-1.png" id="fig-format-links" class="img-fluid figure-img" alt="Heatmap of register to register linking. Papers point mostly at papers, tools point mostly at tools, commentary points at papers, and guides point at guides and tools." width="768">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-source-type-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-format-links-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>The one-sentence thesis, in the wording it was first written in, is that <strong>intelligence just became cheap and trust did not, so the new scarce factor is verified judgment.</strong> Nearly every document below is a variation on that sentence. The field spent two years learning what it means. When a judgment task, classifying, screening, advising, drafting, refereeing, becomes almost free, it turns out its old price was quietly paying for quality control. Once the task costs nothing, the value, and the risk, move to whoever still checks the work.</p>
-<section id="how-to-read-this" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-read-this">How to read this</h3>
-<p>Every claim about the past is sourced. In the <strong>margin</strong> beside each section are the people behind that section’s evidence, each work linked to where it lives (for the informal guides, that is usually the author’s own site), and the most important works are named and linked directly in the text. Claims about the future are numbered from <code>P1</code>, 13 in all, each dated, measurable, and carrying a probability. A <strong>metrics strip</strong> repeats at every time step so you can watch four numbers move: how much the field has produced, how much of the new work is executable tooling, how much of that tooling exists to check other machines, and how much of the record can actually be read in full. The strip is measured through the first half of 2026. After that it shades into a forecast band, and you watch the forecast leave the record.</p>
-<hr>
+<p>Each register is largely talking to itself. 52% of a paper’s in corpus links land on another paper. 60% of a tool’s land on another tool. Guides point at guides and at tools. This is what a set of parallel conversations looks like, and it is the single most useful thing on this page.</p>
+<p>The interesting part is the <strong>asymmetry</strong>. Commentary and Substack writing point <em>up</em> at the formal literature, and 51% of what an essay links to is a paper. The formal literature does not point back. Only 5% of a paper’s links reach a guide. So method knowledge flows into the informal layer, gets refined there, and has <strong>no way back into the citation economy</strong>. A researcher can produce the most useful methodological work of the year, and the machinery that turns contribution into credit will not see it.</p>
+<p>That asymmetry is the field’s central inefficiency, and most of what follows, including where the opportunities are, comes out of it.</p>
+<p>One channel is opening. 21% of what papers link to is now a <strong>tool</strong>, which is papers starting to cite software as something they depend on. Software is the first informal artifact to get a citation path. If a reporting standard or a validation package becomes citable the same way, the loop closes. Whether it does is what the forecast below is mostly about.</p>
 </section>
-<section id="part-1-the-retrospective" class="level1 page-columns page-full">
-<h1>Part 1 · The retrospective</h1>
-<section id="the-productivity-ledger-opens" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="the-productivity-ledger-opens">2024, the productivity ledger opens</h2>
-<p>Before the field had a name it had a spine. A small set of living documents carried the method, chief among them Anton Korinek’s <a href="https://www.aeaweb.org/articles?id=10.1257/jel.20231736">Generative AI for Economic Research</a>, published in the <em>Journal of Economic Literature</em> and then <em>kept alive</em> on its own site, <a href="https://genaiforecon.org/">updated</a> on a cycle faster than journals move because the tooling it described would not sit still. Alongside it sat the first attempts to put AI inside the growth model rather than beside it, Daron Acemoglu’s <a href="https://www.nber.org/papers/w32487">The Simple Macroeconomics of AI</a>, and the first serious measurement of what the tools did to output.</p>
-<p>That measurement was mixed from the start, and it stayed mixed, which is the tell. At the micro level the gains looked real. Erik Brynjolfsson, Danielle Li, and Lindsey Raymond put an AI assistant into a customer-support center and found, in <a href="https://arxiv.org/abs/2304.11771">Generative AI at Work</a> in the <em>Quarterly Journal of Economics</em>, a real average productivity gain, concentrated among the least experienced workers. At the level of the firm the same gains kept failing to appear. Representative surveys of executives found most firms adopting AI while a majority reported no measurable effect on employment or productivity, and central-bank monitoring of adoption from the outside told the same story. Economists have seen this movie. In the 1980s Robert Solow quipped that computers were everywhere except the productivity statistics, and the explanations on offer today, short-term losses before long-term gains, revenue that arrives late, firms lacking the skills and processes around the tool, are all versions of one claim: the machine is cheap, and the things that make it pay are not.</p>
-<p>What surrounds the tool matters more than the tool. Where firms saw large returns, a person or a process made sure it was actually used well. Where they did not, the same tool sat idle in the workflow. That is the shape of the whole decade in miniature, abundant capability without the integration to match, and it is why the productivity ledger never balanced on the strength of the technology alone.</p>
-<div class="refrain">
-<p>The guide is a journal article that behaves like software because the knowledge it carries depreciates like software. That is the whole thesis in one artifact. When producing the advice got cheap, keeping it verified got expensive.</p>
+<section id="the-bridge-is-twenty-seven-people" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="the-bridge-is-twenty-seven-people">The bridge is twenty seven people</h2>
+<p>If the registers barely cite each other, who connects them? The collection credits 626 distinct people. Exactly <strong>34</strong> of them are credited in two or more registers, and <strong>10</strong> in three or more.</p>
+<div id="tbl-cast" class="cell anchored">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Person</th>
+<th style="text-align: center;">Registers</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Aniket Panjwani</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Anton Korinek</td>
+<td style="text-align: center;">5</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Paul Goldsmith-Pinkham</td>
+<td style="text-align: center;">4</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Claes Backman</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Daron Acemoglu</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Elliott Ash</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Erik Brynjolfsson</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Joshua Gans</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Kevin Bryan</td>
+<td style="text-align: center;">3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Scott Cunningham</td>
+<td style="text-align: center;">3</td>
+</tr>
+</tbody>
+</table>
 </div>
-<div class="cell page-columns page-full">
-<div class="cell-output-display page-columns page-full">
-<div class="page-columns page-full">
-<figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="index_files/figure-html/strip-2024-1.png" class="img-fluid figure-img column-page" alt="Four-panel metrics strip showing the state of the field as of 2024: a small corpus, no tooling yet, coverage near complete." width="1386"></p>
+</div>
+<p>That is the broker class, counted. Fewer than one credited person in ten writes in more than one register, and the handful who write in three or more are, not by coincidence, the names this field cites most. Korinek’s guide is a <em>Journal of Economic Literature</em> article kept alive on its own site, because the knowledge in it goes stale the way software does. Panjwani runs a newsletter, a library, and tutorials. Goldsmith-Pinkham publishes an identification paper and a Substack showing his own diffs. Brynjolfsson appears as a QJE author, a talk, and an indicator platform.</p>
+<p>The scarce skill here is not AI and it is not economics. It is being <strong>at home in more than one register at once</strong>, and the measurement says roughly nine per cent of credited people are.</p>
+<p>There is a catch in that advice, and it only shows up when you cross the bridge list against the credit list. Of the 10 people who write in three or more registers, <strong>7 are also among the 10 most credited people in the whole collection.</strong> The bridge is not a separate population from the establishment. It <em>is</em> the establishment, writing in a second register.</p>
+<p>That turns the obvious reading on its head. The informal layer looks like an open frontier where anyone can build a reputation, and it is, but the people supplying it are overwhelmingly the ones who no longer need it. Writing where no credit accrues is cheap if you already have tenure and expensive if you are counting publications. So the bridge has a seniority gate that nobody put there on purpose, and “just write in a second register” is advice whose cost falls almost entirely on the people least able to pay it. Any honest advice section has to say that out loud, and <a href="#where-to-stand">Part 5</a> does.</p>
+
+<div class="no-row-height column-margin column-container"><div class="mnote">
+<p><span class="mnote-h">The bridge, in practice</span></p>
+<p><strong>Anton Korinek</strong> · <a href="https://www.nber.org/papers/w34202">AI Agents for Economic Research (NBER WP 34202)</a> <span class="mnote-meta">paper, 2025 · 28,222w</span></p>
+<p><strong>Aniket Panjwani</strong> · <a href="https://aieconomist.io/newsletter">The AI Economist Newsletter</a> <span class="mnote-meta">other, 2026 · 1,336w</span></p>
+<p><strong>Aniket Panjwani</strong> · <a href="https://aieconomist.io/resources">The AI Economist Library</a> <span class="mnote-meta">other · 1,045w</span></p>
+<p><strong>Paul Goldsmith-Pinkham</strong> · <a href="https://paulgp.substack.com/p/from-an-empty-folder-to-a-figure">From an Empty Folder to a Figure</a> <span class="mnote-meta">guide, 2026 · 2,851w</span></p>
+<p><strong>Paul Goldsmith-Pinkham</strong> · <a href="https://paulgp.substack.com/p/research-in-the-time-of-ai">Research in the Time of AI</a> <span class="mnote-meta">article, 2026 · 2,283w</span></p>
+<p><strong>Elliott Ash</strong> · <a href="https://www.aeaweb.org/conference/webcasts/2026/recent-developments">Language Models for Economics (AEA 2026, Ash)</a> <span class="mnote-meta">video, 2026 · 349w</span></p>
+</div></div></section>
+<section id="what-the-registers-are-made-of" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="what-the-registers-are-made-of">What the registers are made of</h2>
+<p>Knowing how the registers connect is one thing. Looking at what is actually <em>inside</em> them turns up two more splits, and both matter more than the format story on its own.</p>
+<p><strong>The literature studies one company’s product. The profession runs on another’s.</strong> Count which model vendor each document’s own text talks about. Among papers the OpenAI stack leads 111 documents to 61 out of 169 with full text. Among guides it goes the other way, 31 to 24 out of 44, and 23 of the 122 guides and tools name the Anthropic stack without mentioning OpenAI at all. ChatGPT is what the field <em>studies</em>, because it is what the public adopted and what the usage data covers. Claude is what the field <em>works in</em>, because that is where the agent tooling landed first.</p>
+<p>The result is a dependency nobody in this collection writes about. The whole written down method layer, the instruction files and skills and workflow guides that Part 2 shows carrying the field’s practical knowledge, is written against one company’s product. That knowledge is real, but a good part of it is really knowledge of one vendor’s menus and conventions rather than technique you could carry anywhere, so it goes stale on that vendor’s release schedule rather than on the field’s. Set that next to Acemoglu’s own point later in this map, that cheap open weight rivals could leave the labs unprofitable even if the technology works, and the risk is plain. The profession has invested heavily in know how that lives inside a commercial product line. <strong>P15</strong> is the bet on whether that dependence breaks.</p>
+<p><strong>And the two registers are not covering the same subject.</strong> Sort the topic tags by the register each one sits in most heavily, and the split turns out to be about content rather than style.</p>
+<div id="tbl-tag-capture" class="cell anchored">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Topic</th>
+<th style="text-align: left;">Lives mostly in</th>
+<th style="text-align: right;">Share</th>
+<th style="text-align: right;">Tagged rows</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">productivity</td>
+<td style="text-align: left;">working paper / article</td>
+<td style="text-align: right;">77%</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">growth</td>
+<td style="text-align: left;">working paper / article</td>
+<td style="text-align: right;">71%</td>
+<td style="text-align: right;">14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">open-source</td>
+<td style="text-align: left;">tool / skill</td>
+<td style="text-align: right;">67%</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">methodology</td>
+<td style="text-align: left;">working paper / article</td>
+<td style="text-align: right;">58%</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">claude</td>
+<td style="text-align: left;">guide / how-to</td>
+<td style="text-align: right;">49%</td>
+<td style="text-align: right;">37</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">labor</td>
+<td style="text-align: left;">working paper / article</td>
+<td style="text-align: right;">47%</td>
+<td style="text-align: right;">30</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">peer-review</td>
+<td style="text-align: left;">tool / skill</td>
+<td style="text-align: right;">45%</td>
+<td style="text-align: right;">20</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Claude Code</td>
+<td style="text-align: left;">guide / how-to</td>
+<td style="text-align: right;">42%</td>
+<td style="text-align: right;">12</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">coding</td>
+<td style="text-align: left;">guide / how-to</td>
+<td style="text-align: right;">41%</td>
+<td style="text-align: right;">64</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Productivity, growth and labour, the questions a finance ministry would ask, sit overwhelmingly in the register that is embargoed and 57% readable. Coding, peer review and the Claude specific practice material sit in the register that is open and 96% readable. So the access gap is not just an inconvenience about paywalls. <strong>It decides which questions each audience gets to see at all.</strong> A policymaker reading the citable literature meets the welfare debate and almost none of the practice revolution. A practitioner reading the open web meets the reverse and could easily conclude the field’s main topic is tooling. Neither is reading a distorted version of one conversation. They are reading two different fields that happen to share a name.</p>
+
+<div class="no-row-height column-margin column-container"><div class="mnote">
+<p><span class="mnote-h">What the registers run on</span></p>
+<p><strong>Zoe Hitzig, Maxim Massenkoff, Eva Lyubich, Shaoyi Zhang, Ryan Heller, Peter McCrory</strong> · <a href="https://www.anthropic.com/research/claude-code-expertise">Agentic coding and persistent returns to expertise (Anthropic)</a> <span class="mnote-meta">article, 2026 · 9,964w</span></p>
+<p><strong>Thomas Lyttelton, Maxim Massenkoff, Nathan Wilmers</strong> · <a href="https://www.anthropic.com/research/coding-agents-social-sciences">Coding Agents in the Social Sciences (Anthropic Economic Research)</a> <span class="mnote-meta">article, 2026 · 6,372w</span></p>
+<p><strong>Aaron Chatterji, Thomas Cunningham, David J. Deming, Zoe Hitzig, Christopher Ong, Carl Yan Shan, Kevin Wadman</strong> · <a href="https://www.nber.org/papers/w34255">How People Use ChatGPT (NBER WP 34255)</a> <span class="mnote-meta">paper, 2025 · 20,682w</span></p>
+<p><strong>Claes Bäckman</strong> · <a href="https://claesbackman.com/claude-code-guide.html">Claude Code in VS Code — For Academic Economists: A Practical Guide</a> <span class="mnote-meta">guide, 2026 · 821w</span></p>
+<p><strong>Alexander Bick, Adam Blandin, David Deming, Nicola Fuchs-Schündeln, Jonas Jessen</strong> · <a href="https://www.stlouisfed.org/on-the-economy/2026/apr/why-does-ai-adoption-differ-so-much-countries">Why Does AI Adoption Differ So Much across Countries?</a> <span class="mnote-meta">article, 2026 · 2,028w</span></p>
+</div></div><hr>
+</section>
+</section>
+<section id="part-2-how-it-got-this-way" class="level1 page-columns page-full">
+<h1>Part 2 · How it got this way</h1>
+<p>The register structure was not designed. It fell out of a sequence, and the sequence is worth walking because it explains which register owns which kind of knowledge today. Dates below are the publisher’s own, and roughly 41.4% of the collection carries no usable date at all, so read this as the shape of the record rather than a census of the field.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-format-period" class="quarto-float quarto-figure quarto-figure-center anchored" alt="Small multiples showing when each register arrived. Papers run throughout, while commentary and tools spike in 2026." width="864">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-format-period-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-format-period-1.png" id="fig-format-period" class="img-fluid figure-img" alt="Small multiples showing when each register arrived. Papers run throughout, while commentary and tools spike in 2026." width="864">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-format-period-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2
+</figcaption>
 </figure>
 </div>
 </div>
 </div>
+<section id="to-2024-the-guide-arrives-before-the-literature" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="to-2024-the-guide-arrives-before-the-literature">2023 to 2024 · the guide arrives before the literature</h2>
+<p>The first thing that lasted was not a finding. It was a <em>manual</em>. Anton Korinek’s <a href="https://www.aeaweb.org/articles?id=10.1257/jel.20231736">Generative AI for Economic Research</a> appeared in the <em>Journal of Economic Literature</em> in late 2023 and was then kept alive on <a href="https://genaiforecon.org/">its own site</a>, updated on a cycle faster than journals move, because the tooling it described would not sit still. A journal article behaving like software is the whole story in one object. Once producing advice got cheap, keeping it current stopped fitting the publication cycle.</p>
+<p>The theory arrived alongside it. Daron Acemoglu’s <a href="https://www.nber.org/papers/w32487">The Simple Macroeconomics of AI</a> in May 2024 put a number on the decade, and Brynjolfsson, Li and Raymond’s <a href="https://arxiv.org/abs/2304.11771">Generative AI at Work</a> found a real productivity gain in a customer support centre, concentrated among the least experienced workers. That paper also shows why this page counts <em>works</em> rather than rows. It circulated from 2023 and reached the <em>Quarterly Journal of Economics</em> in 2025, so the finding is older than the place it takes on any timeline built from publication dates.</p>
+<p>The tension that has never resolved was visible straight away. Gains for the individual worker looked real. Gains at the level of the firm kept failing to appear. Economists have seen this film before, and the explanations on offer, short run losses before long run gains, revenue that arrives late, missing changes in how firms are organised, all come to the same thing. The machine is cheap and the things that make it pay are not.</p>
 
 <div class="no-row-height column-margin column-container"><div class="mnote">
 <p><span class="mnote-h">Who made what</span></p>
 <p><strong>Kevin Bryan</strong> · <a href="https://bcf.princeton.edu/wp-content/uploads/2023/05/A_User_s_Guide_to_GPT_and_LLMs_for_Economic_Research.pdf">A User’s Guide to GPT and LLMs for Economic Research</a> <span class="mnote-meta">paper, 2023 · 12,363w</span></p>
 <p><strong>Anton Korinek</strong> · <a href="https://www.aeaweb.org/articles?id=10.1257/jel.20231736">Generative AI for Economic Research: Use Cases and Implications for Economists (Journal of Economic Literature)</a> <span class="mnote-meta">paper, 2023 · 619w</span></p>
-<p><strong>Anton Korinek</strong> · <a href="https://genaiforecon.org/">Generative AI for Economic Research</a> <span class="mnote-meta">guide, 2025 · 365w</span></p>
-<p><strong>Melissa Dell</strong> · <a href="https://arxiv.org/pdf/2407.15339">Deep Learning for Economists</a> <span class="mnote-meta">paper, 2024 · 31,115w</span></p>
-<p><strong>Daron Acemoglu</strong> · <a href="https://www.nber.org/papers/w32487">The Simple Macroeconomics of AI (NBER WP 32487)</a> <span class="mnote-meta">paper, 2025 · 26,767w</span></p>
 <p><strong>David Autor, Anton Korinek</strong> · <a href="https://www.brookings.edu/articles/exploring-the-impact-of-language-models/">Impact of Language Models on Cognitive Automation (Brookings)</a> <span class="mnote-meta">article, 2023 · 8,237w</span></p>
-<p><strong>Erik Brynjolfsson, Danielle Li, Lindsey Raymond</strong> · <a href="https://arxiv.org/abs/2304.11771">Generative AI at Work (Quarterly Journal of Economics)</a> <span class="mnote-meta">paper, 2025 · 36,781w</span></p>
+<p><strong>Tyler Cowen</strong> · <a href="https://marginalrevolution.com/marginalrevolution/2024/01/prompts-for-economists.html">Prompts for Economists (Marginal Revolution)</a> <span class="mnote-meta">article, 2024 · 159w</span></p>
+<p><strong>Daron Acemoglu</strong> · <a href="https://www.nber.org/papers/w32487">The Simple Macroeconomics of AI (NBER WP 32487)</a> <span class="mnote-meta">paper, 2024 · 26,767w</span></p>
+<p><strong>Melissa Dell</strong> · <a href="https://arxiv.org/pdf/2407.15339">Deep Learning for Economists</a> <span class="mnote-meta">paper, 2024 · 31,115w</span></p>
 <p><strong>Anton Korinek</strong> · <a href="https://www.aeaweb.org/content/file?id=21904">LLMs Learn to Collaborate and Reason (JEL)</a> <span class="mnote-meta">paper, 2024 · 42,010w</span></p>
-<p><strong>Salomé Baslandze, Zachary Edwards, John Graham, Ty McClure, Brent H. Meyer, Michael Sparks, Sonya R. Waddell, Daniel Weitz</strong> · <a href="https://www.nber.org/papers/w34984">Artificial Intelligence, Productivity, and the Workforce: Evidence from Corporate Executives (NBER WP 34984)</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
-<p><strong>Jeffrey S. Allen</strong> · <a href="https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html">Monitoring AI Adoption in the US Economy (FEDS Notes)</a> <span class="mnote-meta">article, 2026 · 5,821w</span></p>
+<p><strong>John Horton</strong> · <a href="https://x.com/johnjhorton/status/1801247494443086039">LLM Agents and Homo Silicus</a> <span class="mnote-meta">thread, 2024 · 65w</span></p>
+<p><strong>Erik Brynjolfsson, Danielle Li, Lindsey Raymond</strong> · <a href="https://arxiv.org/abs/2304.11771">Generative AI at Work (Quarterly Journal of Economics)</a> <span class="mnote-meta">paper, 2025 · 36,781w</span></p>
 </div></div></section>
-<section id="h1-the-task-arithmetic-starts-to-break" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="h1-the-task-arithmetic-starts-to-break">2025 H1, the task arithmetic starts to break</h2>
-<p>The first generation of exposure indices did something simple. It scored tasks for AI susceptibility and summed them. The next generation showed the sum was wrong in both directions. When tasks depend on each other’s quality, automating some of them raises the value of the human work that remains, so the indices overstate displacement, a point Alex Imas and Soumitra Shukla <a href="https://aleximas.substack.com/p/how-will-ai-driven-automation-actually">make plainly</a>. When tasks chain, task-by-task scoring misses the nonlinear gains from automating a whole contiguous sequence. The scores themselves <a href="https://www.nber.org/papers/w35110">turned out to be unstable under re-measurement</a>, which is its own warning about building policy on them. The counterweight to displacement is <a href="https://www.nber.org/papers/w34986">genuinely new work</a>, which commands a persistent premium, and the direction of that work is a policy choice rather than a fact of the technology.</p>
-<p>There is a policy limit sitting under all of this. If AI is steered toward augmenting workers it raises the value of human tasks. If it is steered toward replacing them, the gains concentrate and the displaced have no landing place. Daron Acemoglu, David Autor, and Simon Johnson call the first path <a href="https://www.nber.org/papers/w34854">building pro-worker AI</a>; Pascual Restrepo’s bleakly titled <a href="https://www.nber.org/papers/w34423">We Won’t Be Missed</a> marks where it ends, because steering the direction of innovation only works up to the point where labor’s economic value has fallen far enough, after which the instrument has to be redistribution rather than direction. The pro-worker-versus-replacement question is therefore not a forecast about the machine. It is a choice about which machine gets built and rewarded, which is the same structure the forecast half of this document turns on.</p>
-<p>This is also when the field began, quietly, to write about <em>itself</em>. Kevin Bryan’s <a href="https://kevinbryanecon.com/o3WhatCanWeDo.pdf">essay on AI-assisted academic writing</a> treated the researcher’s own keyboard as the object of study. The record is thin here, and most of the papers that <em>pinned down</em> these tensions, the instability of the exposure scores, the shape of the displacement, are dated to 2026, so read them below as later confirmations of a shift that was visible in 2025 and measured a year after.</p>
-<div class="refrain">
-<p>Whether AI displaces or augments is not read off the model. It is decided by which tasks we let it do and which we insist on checking. Cheap intelligence widens the menu. Scarce trust is what picks from it.</p>
-</div>
-<div class="cell page-columns page-full">
-<div class="cell-output-display page-columns page-full">
-<div class="page-columns page-full">
-<figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="index_files/figure-html/strip-2025h1-1.png" class="img-fluid figure-img column-page" alt="Metrics strip as of 2025 H1: corpus still small, tool share flat at zero, coverage high." width="1386"></p>
-</figure>
-</div>
-</div>
-</div>
+<section id="h1-the-method-gets-specified" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="h1-the-method-gets-specified">2025 H1 · the method gets specified</h2>
+<p>The record for this half year is thin, 30 dated works against 204 in the first half of 2026, and the thinness tells you something. The method was being written down faster than results were coming in.</p>
+<p>The pivotal document is Jens Ludwig, Sendhil Mullainathan and Ashesh Rambachan’s <a href="https://www.nber.org/papers/w33344">applied econometric framework for large language models</a>, from January 2025, which took the loose practice of using a model to label things and gave it a shape an economist could argue with, namely what the model estimates, what its error does further down the chain, and what has to be checked before any of it is believed. Kevin Bryan’s <a href="https://kevinbryanecon.com/o3WhatCanWeDo.pdf">essay on AI assisted academic writing</a> did the same for the keyboard. And the field began measuring its own uptake, with <a href="https://www.sciencedirect.com/science/article/abs/pii/S0165176525001028">the first estimates of adoption among economists</a> in <em>Economics Letters</em>.</p>
+<p>The method came before the evidence. Before the field could argue about what AI does to the economy, it had to agree what counted as measuring it.</p>
 
 <div class="no-row-height column-margin column-container"><div class="mnote">
 <p><span class="mnote-h">Who made what</span></p>
+<p><strong>Jens Ludwig, Sendhil Mullainathan, Ashesh Rambachan</strong> · <a href="https://www.nber.org/papers/w33344">Large Language Models: An Applied Econometric Framework (NBER WP 33344)</a> <span class="mnote-meta">paper, 2025 · 33,394w</span></p>
 <p><strong>Kevin A. Bryan</strong> · <a href="https://kevinbryanecon.com/o3WhatCanWeDo.pdf">AI-Assisted Academic Writing in Quantitative Social Science</a> <span class="mnote-meta">paper, 2025 · 11,342w</span></p>
-<p><a href="https://www.nber.org/papers/w34986">What Makes New Work Different from More Work?</a> <span class="mnote-meta">paper · no full text</span></p>
-<p><strong>Michelle Yin, Hoa Vu, Claudia Persico</strong> · <a href="https://www.nber.org/papers/w35110">How (Un)stable Are LLM Occupational Exposure Scores? (NBER WP 35110)</a> <span class="mnote-meta">paper, 2026 · 12,933w</span></p>
-<p><strong>Alex Imas, Soumitra Shukla</strong> · <a href="https://aleximas.substack.com/p/how-will-ai-driven-automation-actually">How Will AI-Driven Automation Actually Affect Jobs?</a> <span class="mnote-meta">article, 2026 · 4,418w</span></p>
-<p><strong>Pascual Restrepo</strong> · <a href="https://www.nber.org/papers/w34423">We Won’t Be Missed: Work and Growth in the AGI World (NBER WP 34423)</a> <span class="mnote-meta">paper, 2025 · 12,919w</span></p>
-<p><strong>Daron Acemoglu, David Autor, Simon Johnson</strong> · <a href="https://www.nber.org/papers/w34854">Building Pro-Worker Artificial Intelligence (NBER WP 34854)</a> <span class="mnote-meta">paper, 2026 · 26,357w</span></p>
-<p><strong>Susan Athey, Fiona Scott Morton</strong> · <a href="https://www.nber.org/papers/w34444">Artificial Intelligence, Competition, and Welfare (NBER WP 34444)</a> <span class="mnote-meta">paper, 2025 · 18,941w</span></p>
+<p><strong>Maryam Feyzollahi, Nima Rafizadeh</strong> · <a href="https://www.sciencedirect.com/science/article/abs/pii/S0165176525001028">The Adoption of Large Language Models in Economics Research (Economics Letters)</a> <span class="mnote-meta">paper, 2025 · no full text</span></p>
+<p><strong>Wei Jiang, Junyoung Park, Rachel (Jiqiu) Xiao, Shen Zhang</strong> · <a href="https://www.nber.org/papers/w33536">AI and the Extended Workday: Productivity, Contracting Efficiency, and Distribution of Rents</a> <span class="mnote-meta">paper, 2025 · 30,520w</span></p>
+<p><strong>Joshua Gans</strong> · <a href="https://direct.mit.edu/books/oa-monograph/6067/The-Microeconomics-of-Artificial-Intelligence">The Microeconomics of Artificial Intelligence</a> <span class="mnote-meta">other, 2025 · no full text</span></p>
 <p><strong>Kevin Bryan</strong> · <a href="https://x.com/Afinetheorem/status/1886245511046271194/photo/2">AI and Economics Research Roundup (Afinetheorem)</a> <span class="mnote-meta">thread, 2025 · 67w</span></p>
 </div></div></section>
-<section id="h2-the-brokers-arrive-and-knowledge-starts-to-compile" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="h2-the-brokers-arrive-and-knowledge-starts-to-compile">2025 H2, the brokers arrive, and knowledge starts to compile</h2>
-<p>The methods did not move through journals. They moved through a handful of people writing in the open. Pedro Sant’Anna published <a href="https://psantanna.com/claude-code-my-workflow/">his own Claude Code setup</a> as a working document. Scott Cunningham worked through agentic research workflows <a href="https://causalinf.substack.com/s/claude-code/archive?sort=new">in public, on Substack</a>. Claes Bäckman turned his own learning curve into <a href="https://sites.google.com/view/claesbackman/tips-for-phd-students">guides and tips pages for PhD students</a>. Aniket Panjwani taught economists to <a href="https://ai-mba.io/tutorials/ai-agents-for-economics-research">run AI agents</a>. The shelf kept filling from here into 2026: Chris Blattman’s <a href="https://claudeblattman.com/">AI for professionals who don’t code</a>, Bäckman’s tips grown into a <a href="https://claesbackman.com/claude-code-guide.html">full Claude Code guide for academic economists</a>, Jared Black’s <a href="https://black-jl.github.io/Research-Project-Flow/">end-to-end research flow</a>, and Erkmen Aslim and Emily Beam’s <a href="https://thinkingwithagents.github.io/">Thinking with Agents</a>, a whole bootcamp for teaching and research. A small broker class, bilingual between software practice and economics, produced most of the field’s usable method knowledge, six to eighteen months behind the software world it was translating. The returns to AI in research scale with the share of researchers who actually hold the expertise, so a reading list is not a convenience. It is that share being raised one bookmark at a time.</p>
-<p>What the brokers were circulating was a new kind of object. Prose advice was turning into <em>executable</em> knowledge, skills, templates, instruction files, scaffolding that a machine reads and runs. That is the form that diffuses at software speed rather than citation speed. The first dedicated venues appeared to match, a workshop on the economics of transformative AI, and the earliest field courses. The record starts to grow in earnest here, and the strip shows the inflection.</p>
-<p>Underneath the scattered guides a shared methodology was converging, and it distills into four rules. <strong>Triage:</strong> let the machine produce, never let it be the check. Hand over what is easy to check, editing, first-pass literature searches; keep what is hard to check, proofs and identification arguments. <strong>The repo as laboratory:</strong> everything lives in version control, the machine works on its own branch, and the researcher reviews the actual changes, not the machine’s summary of them. A short instruction file states the house rules and the forbidden moves, and the real test of any analysis is that it reruns end to end, because an analysis that cannot rerun is not accepted from a machine. <strong>LLMs as measurement instruments:</strong> before trusting the machine at scale, have humans label a sample, and report how well the machine agrees with people compared with how well people agree with each other. Save the prompt, the model version, and the raw outputs, because companies retire models, and reproducing the result later means the archive plus the procedure. <strong>Writing and self-audit:</strong> no citation enters a manuscript unchecked against its source, the machine edits but the claims come from the researcher, and, the load-bearing habit, redo a machine result by hand from time to time, because letting the machine do all the practice erodes the judgment needed to supervise it.</p>
-<p>None of the four is hypothetical. Paul Goldsmith-Pinkham builds <a href="https://paulgp.substack.com/p/from-an-empty-folder-to-a-figure">a figure from an empty folder</a> in public, diffs and all, and shows what <a href="https://paulgp.substack.com/p/getting-started-with-claude-code">an instruction file</a> should record. The measurement rule is formalized by Jens Ludwig, Sendhil Mullainathan, and Ashesh Rambachan in <a href="https://www.nber.org/papers/w33344">an applied econometric framework</a>. The citation rule already ships as a <a href="https://github.com/PHY041/claude-skill-citation-checker">machine-loadable skill</a>. And, in the interest of disclosure, the author of this page ran a wiiw seminar walking <a href="https://lusiki.github.io/AI_workshop_wiiw/">a working agentic pipeline end to end</a>, the same kind of pipeline this document is built on.</p>
-<p>That last rule is the whole thesis at the scale of one desk. Producing a result has become cheap; trusting one has not. The choice the profession faces in the forecast below, reward the checking or lose it, shows up first as a personal habit.</p>
-<div class="refrain">
-<p>An instruction file is tacit lab knowledge, written down for a machine because the machine will not work without it. Cheap execution bought the profession the documentation a decade of open-science exhortation could not.</p>
-</div>
-<div class="cell page-columns page-full">
-<div class="cell-output-display page-columns page-full">
-<div class="page-columns page-full">
-<figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="index_files/figure-html/strip-2025h2-1.png" class="img-fluid figure-img column-page" alt="Metrics strip as of 2025 H2: the corpus begins to grow. Tooling still near zero." width="1386"></p>
-</figure>
-</div>
-</div>
-</div>
+<section id="h2-the-split-becomes-visible" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="h2-the-split-becomes-visible">2025 H2 · the split becomes visible</h2>
+<p>Two things happen at once, in different registers, and this is the moment the structure described in Part 1 sets.</p>
+<p>In the <strong>formal</strong> register an agenda gets built. The NBER convenes a <a href="https://www.nber.org/conferences/economics-transformative-ai-workshop-fall-2025">workshop on the economics of transformative AI</a> and publishes <a href="https://www.nber.org/papers/w34256">a research agenda</a>. Korinek follows his guide with <a href="https://www.nber.org/papers/w34202">AI Agents for Economic Research</a>, the moment “agent” becomes a research word. Diane Coyle and John Poquiz argue in <a href="https://www.nber.org/papers/w34330">Making AI Count</a> that measurement itself is the frontier. The first large scale usage evidence lands with <a href="https://www.nber.org/papers/w34255">How People Use ChatGPT</a>. And the question of which direction the technology gets pushed in grows sharper. Pascual Restrepo’s <a href="https://www.nber.org/papers/w34423">We Won’t Be Missed</a> marks the point past which steering the technology stops working and only redistribution is left.</p>
+<p>In the <strong>informal</strong> register, almost entirely outside the journals, the actual methods start moving. Pedro Sant’Anna publishes <a href="https://psantanna.com/claude-code-my-workflow/">his own working setup</a>. Scott Cunningham works through agentic workflows <a href="https://causalinf.substack.com/s/claude-code/archive?sort=new">in public on Substack</a>. Claes Bäckman turns his learning curve into <a href="https://sites.google.com/view/claesbackman/tips-for-phd-students">guides for PhD students</a>. Aniket Panjwani teaches economists to <a href="https://ai-mba.io/tutorials/ai-agents-for-economics-research">run agents</a>. Paul Goldsmith-Pinkham builds <a href="https://paulgp.substack.com/p/from-an-empty-folder-to-a-figure">a figure from an empty folder</a> in public, diffs and all.</p>
+<p>Note what each register is carrying. The formal one is producing <em>claims about the world</em>. The informal one is producing <em>knowledge about how to work</em>. Almost none of the second kind carries a date, which is why it is nearly invisible in the chart above and why it took a link analysis rather than a timeline to see it at all.</p>
+<p>These writers were not inventing the practice. They were <strong>translating</strong> it, from a software world that had been running agents against test suites for a year already, and the standing claim in this literature is that economics receives that practice six to eighteen months late. That figure is repeated across the informal register and it matches the shape of what is here, but it is folklore. Nothing in this collection establishes it, and this page is not going to assert a number it has not measured. It can be measured, and <a href="#what-this-map-still-cannot-measure">the last section of Part 5</a> says how.</p>
 
 <div class="no-row-height column-margin column-container"><div class="mnote">
 <p><span class="mnote-h">Who made what</span></p>
+<p><strong>Anton Korinek</strong> · <a href="https://www.nber.org/papers/w34202">AI Agents for Economic Research (NBER WP 34202)</a> <span class="mnote-meta">paper, 2025 · 28,222w</span></p>
+<p><strong>Erik Brynjolfsson, Anton Korinek, Ajay K. Agrawal</strong> · <a href="https://www.nber.org/papers/w34256">A Research Agenda for the Economics of Transformative AI (NBER WP 34256)</a> <span class="mnote-meta">paper, 2025 · 11,803w</span></p>
+<p><strong>Anton Korinek</strong> · <a href="https://www.nber.org/conferences/economics-transformative-ai-workshop-fall-2025">Economics of Transformative AI Workshop (NBER, 2025)</a> <span class="mnote-meta">other, 2025 · 420w</span></p>
+<p><strong>Diane Coyle, John Poquiz</strong> · <a href="https://www.nber.org/system/files/working_papers/w34330/w34330.pdf">Making AI Count: The Next Measurement Frontier (NBER WP 34330)</a> <span class="mnote-meta">paper, 2025 · 9,227w</span></p>
+<p><strong>Aaron Chatterji, Thomas Cunningham, David J. Deming, Zoe Hitzig, Christopher Ong, Carl Yan Shan, Kevin Wadman</strong> · <a href="https://www.nber.org/papers/w34255">How People Use ChatGPT (NBER WP 34255)</a> <span class="mnote-meta">paper, 2025 · 20,682w</span></p>
+<p><strong>Pascual Restrepo</strong> · <a href="https://www.nber.org/papers/w34423">We Won’t Be Missed: Work and Growth in the AGI World (NBER WP 34423)</a> <span class="mnote-meta">paper, 2025 · 12,919w</span></p>
+<p><strong>Susan Athey, Fiona Scott Morton</strong> · <a href="https://www.nber.org/papers/w34444">Artificial Intelligence, Competition, and Welfare (NBER WP 34444)</a> <span class="mnote-meta">paper, 2025 · 18,941w</span></p>
+<p><strong>Anton Korinek</strong> · <a href="https://genaiforecon.org/">Generative AI for Economic Research</a> <span class="mnote-meta">guide, 2025 · 365w</span></p>
 <p><strong>Pedro H. C. Sant’Anna</strong> · <a href="https://psantanna.com/claude-code-my-workflow/">My Claude Code Setup</a> <span class="mnote-meta">guide · 192w</span></p>
 <p><strong>Scott Cunningham</strong> · <a href="https://causalinf.substack.com/s/claude-code/archive?sort=new">Claude Code for Quantitative Social Science (Substack)</a> <span class="mnote-meta">guide · 418w</span></p>
 <p><strong>Claes Backman</strong> · <a href="https://sites.google.com/view/claesbackman/tips-for-phd-students">Tips for PhD Students</a> <span class="mnote-meta">guide · no full text</span></p>
-<p><strong>Aniket Panjwani</strong> · <a href="https://ai-mba.io/tutorials/ai-agents-for-economics-research">AI Agents for Economics Research</a> <span class="mnote-meta">guide · 2,224w</span></p>
-<p><strong>Chris Blattman</strong> · <a href="https://claudeblattman.com/">AI for Professionals Who Don’t Code</a> <span class="mnote-meta">guide, 2026 · 1,054w</span></p>
-<p><strong>Claes Bäckman</strong> · <a href="https://claesbackman.com/claude-code-guide.html">Claude Code in VS Code — For Academic Economists: A Practical Guide</a> <span class="mnote-meta">guide, 2026 · 821w</span></p>
+<p><strong>Aniket Panjwani</strong> · <a href="https://ai-mba.io/tutorials/ai-agents-for-economics-research">AI Agents for Economics Research</a> <span class="mnote-meta">guide, 2026 · 2,224w</span></p>
+<p><strong>Paul Goldsmith-Pinkham</strong> · <a href="https://paulgp.substack.com/p/from-an-empty-folder-to-a-figure">From an Empty Folder to a Figure</a> <span class="mnote-meta">guide, 2026 · 2,851w</span></p>
+<p><strong>Paul Goldsmith-Pinkham</strong> · <a href="https://paulgp.substack.com/p/getting-started-with-claude-code">Getting Started with Claude Code</a> <span class="mnote-meta">guide, 2026 · 3,505w</span></p>
 <p><strong>Jared Black</strong> · <a href="https://black-jl.github.io/Research-Project-Flow/">An AI-Assisted Research Flow</a> <span class="mnote-meta">guide · 14,118w</span></p>
-<p><strong>Erkmen G. Aslim, Emily Beam</strong> · <a href="https://thinkingwithagents.github.io/">Thinking with Agents: AI Tools for Teaching and Research (UVM Economics Bootcamp)</a> <span class="mnote-meta">course, 2026 · 20,002w</span></p>
-<p><strong>Paul Goldsmith-Pinkham</strong> · <a href="https://paulgp.substack.com/p/from-an-empty-folder-to-a-figure">From an Empty Folder to a Figure</a> <span class="mnote-meta">guide · 2,851w</span></p>
-<p><strong>Paul Goldsmith-Pinkham</strong> · <a href="https://paulgp.substack.com/p/getting-started-with-claude-code">Getting Started with Claude Code</a> <span class="mnote-meta">guide · 3,505w</span></p>
-<p><a href="https://github.com/PHY041/claude-skill-citation-checker">Claude Skill: Citation Checker</a> <span class="mnote-meta">tool · 1,006w</span></p>
-<p><strong>Luka Šikić</strong> · <a href="https://lusiki.github.io/AI_workshop_wiiw/">AI in Economics Research: From Frontier Ideas to a Working Agentic Pipeline (wiiw seminar)</a> <span class="mnote-meta">guide, 2026 · 3,626w</span></p>
-<p><strong>Anton Korinek</strong> · <a href="https://www.nber.org/conferences/economics-transformative-ai-workshop-fall-2025">Economics of Transformative AI Workshop (NBER, 2025)</a> <span class="mnote-meta">other, 2025 · 420w</span></p>
 <p><strong>Benjamin Golub</strong> · <a href="https://www.youtube.com/watch?v=ixyzgnmqAiU">Modern AI for Economics Research (Markus Academy)</a> <span class="mnote-meta">video, 2025 · 3,194w</span></p>
-<p><strong>Jens Ludwig, Sendhil Mullainathan, Ashesh Rambachan</strong> · <a href="https://www.nber.org/papers/w33344">Large Language Models: An Applied Econometric Framework (NBER WP 33344)</a> <span class="mnote-meta">paper, 2025 · 33,394w</span></p>
-<p><strong>Yiqing Xu, Leo Yang</strong> · <a href="https://arxiv.org/abs/2602.16733">Scaling Reproducibility: An AI-Assisted Workflow for Large-Scale Replication and Reanalysis (arXiv)</a> <span class="mnote-meta">paper, 2026 · 20,127w</span></p>
+<p><strong>Salman Bahoo, John W. Goodell, Rachid Rhattat, Subhan Shahid</strong> · <a href="https://onlinelibrary.wiley.com/doi/10.1111/joes.12694">Artificial Intelligence in Economics Research: What Have We Learned? What Do We Need to Learn?</a> <span class="mnote-meta">paper, 2025 · no full text</span></p>
+<p><a href="https://www.aifuturesmodel.com/about">AI Futures Model: Scenario Planning Tool</a> <span class="mnote-meta">article, 2025 · 553w</span></p>
 </div></div></section>
-<section id="h1-the-record-arrives-all-at-once-the-field-did-not" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="h1-the-record-arrives-all-at-once-the-field-did-not">2026 H1, the record arrives all at once (the field did not)</h2>
-<p>Of every dated work in the collection, 65.2% is dated to this one half-year, and the strip’s cumulative panel goes near-vertical. Read plainly, that looks like a field exploding into being in 2026. It is not, or not only. Part of that spike is real, and part is an artifact of <em>when the collection was assembled</em>: most of it was gathered in mid-2026, and a collector always finds the recent past first. The collection even carries its own correction, a weekly digest of new AI-economics working papers archived back to June 2023, at scale, so the field was producing years before this spike. The honest reading is that the <em>record</em> arrived all at once. The field had been arriving for a while. What <em>is</em> real in this section is the shape of what the record contains, and it carries the most evidence of any period, so read the numbers and not the verticality.</p>
-<p><strong>The literature, in four movements.</strong> The Q1 2026 papers sort into a story. First, the productivity ledger stays unsettled, micro gains that refuse to aggregate. Second, the task arithmetic breaks down in both directions. Joshua Gans and Avi Goldfarb formalize one half in <a href="https://www.nber.org/papers/w34639">O-Ring Automation</a>, where output is only as strong as the weakest task, so automating some tasks raises the value of the human work that remains; a companion model of <a href="https://www.nber.org/papers/w34859">chaining tasks</a> shows the other half, where automating a whole connected sequence pays far more than the sum of its steps. Third, AI enters the papers twice over. As an <em>actor</em> that trades in markets, splits an ultimatum-game pie, in Douglas Araujo and Harald Uhlig’s <a href="https://www.nber.org/papers/w34919">How Does AI Distribute the Pie?</a>, and gives financial advice that shifts with the counterparty’s perceived gender. And as an <em>instrument</em> that builds a decades-long <a href="https://www.nber.org/papers/w34615">capital-controls dataset</a> that was impractical by hand, and classifies decades of articles to date a shift from efficiency to equity framing. Fourth, the dark line. Robert Novy-Marx and Mihail Velikov <a href="https://www.aeaweb.org/articles?id=10.1257/jel.20251821">demonstrate</a> that language models can generate complete finance papers from templates, and a model of <a href="https://www.nber.org/papers/w34910">knowledge collapse</a> shows how better AI can leave society <em>less</em> knowledgeable once it substitutes for effortful learning.</p>
+<section id="h1-the-record-floods-and-tooling-becomes-a-register" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="h1-the-record-floods-and-tooling-becomes-a-register">2026 H1 · the record floods, and tooling becomes a register</h2>
+<p>55.3% of every dated work in the collection falls in this one half year. Part of that is real and part is an artifact of when the collection was assembled, because a collector always finds the recent past first. What is not in doubt is that <strong>tooling appears as a register for the first time</strong>. The collection holds 114 tools, and essentially none of them predate 2026.</p>
+<p><strong>The literature, in four movements.</strong> First, the productivity question stays unsettled, with the adoption gap itself becoming a subject of study in <a href="https://www.nber.org/papers/w34995">Mind the Gap</a> and the financial question put directly as <a href="https://www.nber.org/papers/w34722">speculative growth or bubble</a>. Second, the simple arithmetic of counting tasks breaks down in both directions. Gans and Goldfarb’s <a href="https://www.nber.org/papers/w34639">O-Ring Automation</a> shows that automating some tasks <em>raises</em> the value of the human work left, while a companion model of <a href="https://www.nber.org/papers/w34859">chaining tasks</a> shows that automating a whole sequence pays more than the sum of its steps. The exposure scores themselves turn out to <a href="https://www.nber.org/papers/w35110">move when they are measured again</a>, and the counterweight is <a href="https://www.nber.org/papers/w34986">genuinely new work</a>, which appears only because somebody chose the policy that makes it appear. That is what Acemoglu, Autor and Johnson mean by <a href="https://www.nber.org/papers/w34854">building pro worker AI</a>.</p>
+<p>Third, AI enters the papers twice over. It shows up as an <em>actor</em> that trades, splits an ultimatum game pie in <a href="https://www.nber.org/papers/w34919">How Does AI Distribute the Pie?</a>, gives advice that shifts with perceived gender, and appears as a <a href="https://www.nber.org/papers/w34937">general social agent</a>. It also shows up as an <em>instrument</em>, building a decades long <a href="https://www.nber.org/papers/w34615">capital controls dataset</a> that would be impractical by hand. Fourth, the dark line. Novy-Marx and Velikov <a href="https://www.aeaweb.org/articles?id=10.1257/jel.20251821">show</a> that models generate complete finance papers from templates, and Acemoglu, Kong and Ozdaglar’s <a href="https://www.nber.org/papers/w34910">knowledge collapse</a> model shows that better AI can leave society <em>less</em> knowledgeable once it stands in for the effort of learning.</p>
+<p><strong>And the field started studying itself.</strong> Verification became a category of its own. Reading the 99 tools one by one, 15 (15.2%) exist to check another machine’s output.</p>
+<p>An earlier draft of this page called that the largest single kind of tool the field builds, and the correction is worth keeping in view rather than quietly fixing. Verification is not a kind, it is a <strong>family of 7 kinds</strong>, and setting a family against single kinds is a contest it could hardly lose. Counted honestly, data tooling leads at 17, and the largest single verification kind, which is referee work, is 9. The claim that survives the correction is the plainer one. Checking other machines’ output is now the second largest thing this field builds tools for, and the most internally differentiated. Either way, count it as a count. The share moves with whatever the collection happens to sweep in, while the count moves with the field.</p>
+<p>Look at <em>what</em> those verifiers check, though, and the referee factory turns out to be building the cheap half. Of the 15 verification tools, <strong>11 check a manuscript</strong>, meaning referee reports, citation checkers and an AI text detector, and only <strong>3 check a result</strong>, by re-running an analysis, scoring a replication, or benchmarking a model’s output. The remaining 1 grades a model rather than either, and is counted on neither side, because a split that does not add up to its total is a split that is hiding a row. The field’s own standards, from the Ludwig, Mullainathan and Rambachan framework onward, say the scarce thing is <em>measurement</em> somebody has checked. The tooling is overwhelmingly aimed at <em>prose</em>. Reading a draft is cheap to automate and re-running someone’s analysis is not, so the tools went where the cost was low rather than where the risk is.</p>
+<p>There is a second gap on top of that one, and it is the sharper of the two. <strong>None of these verifiers has itself been tested against human referees.</strong> The corpus holds exactly one controlled head to head anywhere near the question, Toda’s test of whether models can refute a false economic theory, and that is about theory rather than refereeing. So the field has built its filters and skipped the step it insists on for every other instrument, which is to measure it against the humans it replaces before trusting it. The auditors are unaudited, which is the argument of this page turned back on the field’s own favourite instrument. <strong>P14</strong> bets on the first gap closing.</p>
+<p>The overlap in the cast gets sharper too. Gans writes both the formal <a href="https://www.nber.org/papers/w34712">model of jagged intelligence</a> and the essay on <a href="https://joshuagans.substack.com/p/reflections-on-vibe-researching">vibe researching</a>. Goldsmith-Pinkham co-authors the <a href="https://arxiv.org/abs/2601.13379">radiology complementarity paper</a> and writes <a href="https://paulgp.substack.com/p/research-in-the-time-of-ai">Research in the Time of AI</a>. Economics is doing the study and being studied at the same time.</p>
 
 <div class="no-row-height column-margin column-container"><div class="mnote">
-<p><span class="mnote-h">The four movements</span></p>
+<p><span class="mnote-h">2026, the flood</span></p>
 <p><strong>Joshua S. Gans, Avi Goldfarb</strong> · <a href="https://www.nber.org/papers/w34639">O-Ring Automation</a> <span class="mnote-meta">paper, 2026 · 8,459w</span></p>
-<p><a href="https://www.nber.org/papers/w34859">Chaining Tasks, Redefining Work</a> <span class="mnote-meta">paper · no full text</span></p>
-<p><strong>Alexander Erlei, Lukas Meub</strong> · <a href="https://arxiv.org/abs/2603.08853">LLM-Agent Interactions on Markets with Information Asymmetries</a> <span class="mnote-meta">paper, 2026 · 13,993w</span></p>
+<p><strong>Mert Demirer, John Horton, Nicole Immorlica, Brendan Lucier, Peyman Shahidi</strong> · <a href="https://www.nber.org/papers/w34859">Chaining Tasks, Redefining Work</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
+<p><strong>Michelle Yin, Hoa Vu, Claudia Persico</strong> · <a href="https://www.nber.org/papers/w35110">How (Un)stable Are LLM Occupational Exposure Scores? (NBER WP 35110)</a> <span class="mnote-meta">paper, 2026 · 12,933w</span></p>
+<p><strong>David Autor, Caroline Chin, Anna Salomons, Bryan Seegmiller</strong> · <a href="https://www.nber.org/papers/w34986">What Makes New Work Different from More Work?</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
+<p><strong>Daron Acemoglu, David Autor, Simon Johnson</strong> · <a href="https://www.nber.org/papers/w34854">Building Pro-Worker Artificial Intelligence (NBER WP 34854)</a> <span class="mnote-meta">paper, 2026 · 26,357w</span></p>
+<p><strong>Alexander Bick, Adam Blandin, David Deming, Nicola Fuchs-Schündeln, Jonas Jessen</strong> · <a href="https://www.nber.org/papers/w34995">Mind the Gap: AI Adoption in Europe and the U.S.</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
+<p><strong>Ricardo Caballero</strong> · <a href="https://www.nber.org/papers/w34722">Speculative Growth and the AI ‘Bubble’</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
 <p><strong>Douglas K.G. Araujo, Harald Uhlig</strong> · <a href="https://www.nber.org/papers/w34919">How Does AI Distribute the Pie? Large Language Models and the Ultimatum Game (NBER WP 34919)</a> <span class="mnote-meta">paper, 2026 · 8,815w</span></p>
-<p><strong>Richard Foltyn, Jonna Olsson</strong> · <a href="https://www.foltyn.net/research/FO_LLM_gender_bias.pdf">The Worth of a ‘Wo’: Gender Bias in Financial Advice from LLMs</a> <span class="mnote-meta">paper, 2026 · 14,138w</span></p>
-<p><a href="https://www.nber.org/papers/w34615">Expanding the Landscape of Cross-Border Flow Restrictions</a> <span class="mnote-meta">paper · 39,523w</span></p>
-<p><a href="https://www.nber.org/papers/w34714">Measuring Efficiency and Equity Framing</a> <span class="mnote-meta">paper · no full text</span></p>
+<p><strong>Benjamin Manning, John Horton</strong> · <a href="https://www.nber.org/papers/w34937">General Social Agents</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
+<p><strong>Katharina Bergant, Andrés Fernández, Ken Teoh, Martín Uribe</strong> · <a href="https://www.nber.org/papers/w34615">Expanding the Landscape of Cross-Border Flow Restrictions</a> <span class="mnote-meta">paper, 2026 · 39,523w</span></p>
 <p><strong>Robert Novy-Marx, Mihail Velikov</strong> · <a href="https://www.aeaweb.org/articles?id=10.1257/jel.20251821">Artificial Intelligence–Powered (Finance) Scholarship (JEL)</a> <span class="mnote-meta">paper, 2026 · 11,978w</span></p>
-<p><a href="https://www.nber.org/papers/w34910">AI, Human Cognition and Knowledge Collapse</a> <span class="mnote-meta">paper · no full text</span></p>
-</div></div><p><strong>Verification became a category of its own, and it is easy to overcount.</strong> The same ecosystem generating the flood started building the thing that checks it. Agentic paper reviewers, referee services, and feedback machines add up to a referee factory. How large is it? A quick keyword count over the 38 tools in the collection said two of every three were verifiers. Reading them one by one says otherwise: 11 of the 38 (28.9%) actually check another machine’s output, closer to <strong>one in three</strong>. The keyword count was fooled by literature-search assistants and even by <em>academic-humanizer</em>, a tool built to strip the very tells that verifiers look for. The correction is the thesis in one move, an unchecked filter is just more cheap intelligence, and the checked figure, one referee tool in three, is still the largest single thing the field is building. The hand labels are on the <a href="./supplements/method.html">Method</a> page, and prediction <strong>P1</strong> resolves on them.</p>
-<p><strong>Reproducibility arrived through the back door.</strong> Agents work well only in projects that are versioned, tested, documented, and machine-readable, so adopting them smuggles software engineering into economics whether or not the researcher cares about open science. The practice that a decade of exhortation could not make normal, version control, unit tests, a written lab manual, is now a precondition for the tool to behave.</p>
-<p><strong>The field is studying itself, with an overlapping cast.</strong> Aniket Panjwani’s <a href="https://aieconomist.io/newsletter">newsletter</a> watches cheap intelligence hit the economy while his <a href="https://aieconomist.io/resources">library</a> installs it into the profession’s own workflow. Joshua Gans authors both the formal <a href="https://www.nber.org/papers/w34712">model of jagged intelligence</a> and the essay on <a href="https://joshuagans.substack.com/p/reflections-on-vibe-researching">vibe researching</a>. Paul Goldsmith-Pinkham co-authors the <a href="https://arxiv.org/abs/2601.13379">radiology complementarity paper</a> and writes <a href="https://paulgp.substack.com/p/research-in-the-time-of-ai">Research in the Time of AI</a>. The AEA lectures that both pages point to are given by the same names. Economics is simultaneously the observer and the treated unit, and the overlap makes the reflexivity a documented fact rather than a rhetorical flourish.</p>
-
-<div class="no-row-height column-margin column-container"><div class="mnote">
-<p><span class="mnote-h">Verification and reflexivity</span></p>
+<p><strong>Daron Acemoglu, Dingwen Kong, Asuman Ozdaglar</strong> · <a href="https://www.nber.org/papers/w34910">AI, Human Cognition and Knowledge Collapse</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
+<p><a href="https://www.nber.org/papers/w34712">A Model of Artificial Jagged Intelligence</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
 <p><strong>Ingar Haaland</strong> · <a href="https://github.com/Ingar30/reviewer">Reviewer: Multi-Agent Referee for Economics Papers</a> <span class="mnote-meta">tool, 2026 · 1,629w</span></p>
 <p><strong>Stanford CRFM</strong> · <a href="https://paperreview.ai/">PaperReview.ai - Stanford Agentic Paper Reviewer</a> <span class="mnote-meta">tool · no full text</span></p>
 <p><strong>Claes Bäckman</strong> · <a href="https://claesbackman.substack.com/p/feedback-machines-writing-and-editing">Feedback Machines: AI for Research Paper Review</a> <span class="mnote-meta">guide, 2026 · 1,791w</span></p>
+<p><a href="https://github.com/AIScientists-Dev/academic-humanizer">academic-humanizer: Strip AI-Writing Tells from Papers and Grant Proposals</a> <span class="mnote-meta">tool, 2026 · 1,123w</span></p>
 <p><strong>Paul Goldsmith-Pinkham</strong> · <a href="https://paulgp.substack.com/p/research-in-the-time-of-ai">Research in the Time of AI</a> <span class="mnote-meta">article, 2026 · 2,283w</span></p>
 <p><strong>Joshua Gans</strong> · <a href="https://joshuagans.substack.com/p/reflections-on-vibe-researching">Reflections on Vibe Researching (in 2025)</a> <span class="mnote-meta">article, 2026 · 2,033w</span></p>
 <p><strong>Paul Goldsmith-Pinkham, Chenhao Tan, Alexander K. Zentefis</strong> · <a href="https://arxiv.org/abs/2601.13379">Human-AI Collaboration in Radiology: The Case of Pulmonary Embolism</a> <span class="mnote-meta">paper, 2026 · 16,880w</span></p>
-<p><a href="https://www.nber.org/papers/w34712">A Model of Artificial Jagged Intelligence</a> <span class="mnote-meta">paper · no full text</span></p>
-<p><strong>Aniket Panjwani</strong> · <a href="https://aieconomist.io/newsletter">The AI Economist Newsletter</a> <span class="mnote-meta">other, 2026 · 1,336w</span></p>
-<p><strong>Aniket Panjwani</strong> · <a href="https://aieconomist.io/resources">The AI Economist Library</a> <span class="mnote-meta">other · 1,045w</span></p>
-<p><strong>Scott Cunningham, Kosali Simon</strong> · <a href="https://causalinf.substack.com/p/what-a-panel-of-economists-said-about">What a Panel of Economists Said About AI in the Production of Research</a> <span class="mnote-meta">article, 2026 · 173w</span></p>
-</div></div><p><strong>The vendors are inside the value chain.</strong> The labs sit in the discipline at four layers at once. They ship the tools, they run the training, they hold the data, and they author into the literature, as when Anthropic’s own researchers argue that <a href="https://www.anthropic.com/research/claude-code-expertise">agentic coding raises the returns to expertise</a>. The instrument, the vendor, and the co-author are increasingly one entity.</p>
-<p><strong>Access inverted, and the largest document is a statute.</strong> The informal layer, threads, guides, tool READMEs, is open and machine-readable. The formal literature sits behind embargoes and paywalls. In this collection, the informal categories reach 86.6% full-text coverage while research papers sit at 58%, held down by the embargoed frontier. And the single heaviest document is not a paper at all. It is a piece of federal legislation, one whale holding 33.4% of all the extracted text, in a sea of minnows.</p>
-<p><strong>The timeline compressed.</strong> <a href="https://gabors-data-analysis.com/ai-course/week00/">Field courses</a>, <a href="https://www.econometricsociety.org/regional-activities/schedule/2026/06/16/2026-ESIFEconomics-and-AIML-Meeting">dedicated conferences</a>, an <a href="https://www.nber.org/conferences/si-2026-digital-economics-and-artificial-intelligence">NBER Summer Institute session</a>, <a href="https://www.aeaweb.org/conference/webcasts/2026/recent-developments">AEA lectures</a>, and <a href="https://www.imf.org/en/publications/imf-notes/issues/2026/04/03/global-economic-and-financial-implications-of-artificial-intelligence-lessons-from-a-574924">scenario-planning tools built inside institutions</a> all arrived by 2026, faster than a naive diffusion story predicts, because the practice was already circulating as craft knowledge before any of it was codified.</p>
-<p><strong>A division of labor set in.</strong> Informal outlets, Substacks, threads, tool READMEs, own the <em>how-to</em> knowledge and move it at software speed. Journals still own the finding of record, the result that gets cited, credited, and defended. And between the two sits a growing stream of usage data, adoption surveys, logs, and monitoring reports, that lets the field watch its own uptake in close to real time. The papers measuring AI adoption across firms and across countries are that middle layer made visible.</p>
-<p><strong>And the profession started to reprice itself.</strong> The upside is that whole data categories open up. Corpus-scale construction is cheap now, agents can <a href="https://www.nber.org/papers/w35188">build a dataset on a loop</a> or <a href="https://paulgp.substack.com/p/from-edgar-filings-to-a-structured">turn a pile of EDGAR filings into a structured database</a>, and validated against a human benchmark, LLMs work as measurement instruments indistinguishable from human coders. The binding constraint moves from collecting data to designing the validation, so a human-benchmarked check is on its way to being as obligatory as a robustness section, <a href="https://onlinelibrary.wiley.com/doi/10.1111/joes.70105">already formalized for meta-analysis</a>. The downside is a pincer aimed at the profession itself. One jaw is the paper mill, cheap papers at industrial scale, which is specification search with the labor cost removed. The other is knowledge collapse run reflexively. The grunt work that used to build econometric judgment is exactly what agents now do, so the apprenticeship that produced verifiers <a href="https://ai-project-website.github.io/AI-assistance-reduces-persistence/">thins out</a> at the moment verification becomes scarce. The practical defense is the one the <a href="https://arxiv.org/abs/2601.13379">radiology</a> and <a href="https://www.anthropic.com/research/coding-agents-social-sciences">coding-audit</a> studies keep finding, perceived helpfulness is not audited correctness, so build the independent check into the pipeline through tests, replication, and adversarial review. Underneath all of it, an institutional layer of data-use agreements, compliance frameworks, and compute now decides what research is possible and who can do it. Talent equalizes. Access stratifies.</p>
-
-<div class="no-row-height column-margin column-container"><div class="mnote">
-<p><span class="mnote-h">The repricing</span></p>
-<p><strong>Santiago Afonso, Sebastian Galiani, Ramiro H. Gálvez, Raul A. Sosa</strong> · <a href="https://www.nber.org/papers/w35188">Deep Research on a Loop: Using AI Agents to Construct Economic Datasets (NBER WP 35188)</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
-<p><strong>Paul Goldsmith-Pinkham</strong> · <a href="https://paulgp.substack.com/p/from-edgar-filings-to-a-structured">From EDGAR Filings to a Structured Database</a> <span class="mnote-meta">guide · 2,585w</span></p>
-<p><strong>Nikolai Cook, František Bartoš, Pedro R. D. Bom, Sebastian Gechert, Klára Kantová, Jerome Geyer-Klingeberg, Tomáš Havránek, Zuzana Irsova, Martina Luskova</strong> · <a href="https://onlinelibrary.wiley.com/doi/10.1111/joes.70105">Guidance for the Use of AI in the Meta-Analysis of Economics Research</a> <span class="mnote-meta">paper, 2026 · 2,946w</span></p>
 <p><strong>Grace Liu, Brian Christian, Tsvetomira Dumbalska, Michiel A. Bakker, Rachit Dubey</strong> · <a href="https://ai-project-website.github.io/AI-assistance-reduces-persistence/">AI Assistance Reduces Persistence and Hurts Independent Performance (arXiv)</a> <span class="mnote-meta">paper, 2026 · 196w</span></p>
 <p><strong>Thomas Lyttelton, Maxim Massenkoff, Nathan Wilmers</strong> · <a href="https://www.anthropic.com/research/coding-agents-social-sciences">Coding Agents in the Social Sciences (Anthropic Economic Research)</a> <span class="mnote-meta">article, 2026 · 6,372w</span></p>
-</div></div><div class="refrain">
-<p>The first market response to abundant machine text is a market for human filters. One tool in three the field built is a filter, audited, not asserted. That is cheap intelligence and scarce trust, measured.</p>
-</div>
-<div class="cell page-columns page-full">
+<p><strong>Tyler Cowen</strong> · <a href="https://www.youtube.com/watch?v=aJlg6o0A_Js">Tyler Cowen on the Economics of AI (Sana AI Summit)</a> <span class="mnote-meta">video, 2026 · 3,155w</span></p>
+<p><strong>Elliott Ash</strong> · <a href="https://www.aeaweb.org/conference/webcasts/2026/recent-developments">Language Models for Economics (AEA 2026, Ash)</a> <span class="mnote-meta">video, 2026 · 349w</span></p>
+</div></div><div class="cell page-columns page-full">
 <div class="cell-output-display page-columns page-full">
 <div class="page-columns page-full">
 <figure class="figure page-columns page-full">
-<p class="page-columns page-full"><img src="index_files/figure-html/strip-2026h1-1.png" class="img-fluid figure-img column-page" alt="Metrics strip as of 2026 H1: cumulative works spikes, tool share jumps to about 15 percent, verification share of tools around one third (audited), coverage declines." width="1386"></p>
+<p class="page-columns page-full"><img src="index_files/figure-html/strip-2026h1-1.png" class="img-fluid figure-img column-page" alt="Four panel metrics strip as of 2026 H1. Cumulative works spikes, tool share rises, verification share of tools sits around one in five, and coverage declines." width="1386"></p>
 </figure>
 </div>
 </div>
 </div>
+</section>
+<section id="h2-the-podcast-becomes-a-register-of-record" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="h2-the-podcast-becomes-a-register-of-record">2026 H2 · the podcast becomes a register of record</h2>
+<p>The most recent material in the collection is not a paper. It is two long interviews, given weeks apart in July 2026 by the two economists whose names appear most often in everything above. They disagree about nearly everything except the one thing that matters here, and the fact that this exchange happened in podcasts rather than in print is itself the argument of Part 1.</p>
+<p><strong>Daron Acemoglu</strong> goes back to his own 2024 number and mostly keeps it, roughly 1.5% of GDP over ten years, and he still defends the order of magnitude. What he admits he got wrong is speed in one place. Agentic AI arrived faster, and picked up pace more sharply, than he predicted, and 2026 is the first year that could change how fast it spreads, because agents make the tools usable by firms that could never have integrated them on their own. What he does not give ground on is capability. The models lack judgment, lack context, and can do nothing physical, so claims that AI <em>could</em> already do most of the work in a field like finance are overblown, and acting on them would leave a mess for humans to clean up. His verdict on the current path is specific. Asked whether the productivity gain shows up as more output or as fewer jobs, he answers “definitely less employment,” because the agenda being funded is an automation agenda rather than a pro worker one, and that is a choice rather than something built into the technology. He is just as blunt about the money, contrasting the fibre laid in the dot com boom, which lasted, with GPUs that stay useful for a year or two, and noting that cheap open weight rivals could leave the labs unprofitable even if the technology succeeds completely.</p>
+<p><strong>Erik Brynjolfsson</strong> takes the opposite side and says so, calling AI <em>under</em> hyped and reporting that he is winning a bet with Robert Gordon that 2030 productivity will beat the official forecasts. His evidence is sharper than his optimism. The Stanford “canaries in the coal mine” work finds employment for under 25s in the most exposed occupations down about 16%, with the effect growing month by month, while the least exposed occupations and older workers grow. What matters, he argues, is not how exposed a job is but how demand responds. Where demand is elastic, making a task cheaper raises spending on it, which is why there are more radiologists than ever even though the imaging is automated. Where demand is inelastic, the same efficiency destroys the job. He is blunt about what this implies for institutions. Cutting away the base of the career pyramid makes sense for each firm on its own and is ruinous for all of them together, “a coordination problem,” because the junior roles were how senior judgment used to get made. And he draws the free trade parallel on purpose. Economists won the efficiency argument, never delivered the compensation, and got a backlash.</p>
+<p>Both men, coming from opposite directions, land on the same leftover. Acemoglu says the models are useful but “you still have to verify and check certain things that they do.” Brynjolfsson says a project is defining the question, doing the work, and judging the result, and agents are taking the middle piece, so the human job becomes the first and the third. Two people who agree on almost nothing agree on where the value ends up.</p>
+<p>The rest of the half year fills in around them. Sixteen Nobel laureates and a group of leading economists and AI researchers published a <a href="https://digitaleconomy.stanford.edu/news/wemustactnow/">“We Must Act Now”</a> statement on preparing for AI’s economic transformation. Matthew Jackson and Zafer Kanik put <a href="https://arxiv.org/abs/2607.01101">benefits, costs and inequality policy</a> in one framework. And the practice literature kept piling up, with Goldsmith-Pinkham on <a href="https://paulgp.substack.com/p/integration-and-collaboration-in">integration and collaboration</a> and Bäckman shipping his <a href="https://github.com/claesbackman/AI-research-feedback">referee skills as installable software</a>, which is the informal register turning into the tooling register in a single step.</p>
 
 <div class="no-row-height column-margin column-container"><div class="mnote">
-<p><span class="mnote-h">The field arrives</span></p>
-<p><strong>Elliott Ash</strong> · <a href="https://www.aeaweb.org/conference/webcasts/2026/recent-developments">Language Models for Economics (AEA 2026, Ash)</a> <span class="mnote-meta">video, 2026 · 349w</span></p>
-<p><strong>Danielle Li</strong> · <a href="https://www.aeaweb.org/conference/webcasts/2026/recent-developments">AI and the Labor Market (AEA 2026, Li)</a> <span class="mnote-meta">video, 2026 · 349w</span></p>
+<p><span class="mnote-h">The principals take stock</span></p>
+<p><strong>Daron Acemoglu</strong> · <a href="https://www.youtube.com/watch?v=55BnPJlHjb8">Nobel Laureate Daron Acemoglu: How AI Will Affect the Economy</a> <span class="mnote-meta">video, 2026 · 10,205w</span></p>
+<p><strong>Erik Brynjolfsson, Marina Mogilko</strong> · <a href="https://www.youtube.com/watch?v=72duHF7iZiU">Stanford’s Top AI Economist: The Next 10 Years Will Be the Best AND the Worst in History (Silicon Valley Girl Podcast)</a> <span class="mnote-meta">video, 2026 · 10,908w</span></p>
+<p><strong>Matty Smith</strong> · <a href="https://digitaleconomy.stanford.edu/news/wemustactnow/">“We Must Act Now”: Sixteen Nobel Laureates Join Leading Economists and AI Researchers in Call to Prepare for AI’s Economic Transformation</a> <span class="mnote-meta">article, 2026 · 689w</span></p>
+<p><strong>Matthew O. Jackson, Zafer Kanik</strong> · <a href="https://arxiv.org/abs/2607.01101">The Economic Benefits and Costs of AI and Policies to Mitigate AI’s Impact on Inequality (arXiv)</a> <span class="mnote-meta">paper, 2026 · 31,324w</span></p>
 <p><a href="https://www.nber.org/conferences/si-2026-digital-economics-and-artificial-intelligence">NBER Summer Institute 2026: Digital Economics and Artificial Intelligence</a> <span class="mnote-meta">other, 2026 · 380w</span></p>
-<p><a href="https://www.aifuturesmodel.com/about">AI Futures Model: Scenario Planning Tool</a> <span class="mnote-meta">article, 2025 · 553w</span></p>
-<p><strong>Gabor Bekes</strong> · <a href="https://gabors-data-analysis.com/ai-course/week00/">Doing Data Analysis with AI (Course)</a> <span class="mnote-meta">course, 2026 · 260w</span></p>
-<p><a href="https://www.econometricsociety.org/regional-activities/schedule/2026/06/16/2026-ESIFEconomics-and-AIML-Meeting">2026 ESIF Economics and AI+ML Meeting (Econometric Society)</a> <span class="mnote-meta">other, 2026 · 547w</span></p>
-<p><strong>Karim Barhoumi, Fabia A. de Carvalho, Michael Gorbanyov, Yosuke Kido, David Koll, Dragana Ostojic, Baoping Shang, Natalia T. Tamirisa, Sally Toms, Era Dabla-Norris, Anh D. M. Nguyen, Yunhui Zhao</strong> · <a href="https://www.imf.org/en/publications/imf-notes/issues/2026/04/03/global-economic-and-financial-implications-of-artificial-intelligence-lessons-from-a-574924">Global Economic and Financial Implications of AI: Lessons from a Scenario Planning Exercise (IMF Note)</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
-<p><strong>Zoe Hitzig, Maxim Massenkoff, Eva Lyubich, Shaoyi Zhang, Ryan Heller, Peter McCrory</strong> · <a href="https://www.anthropic.com/research/claude-code-expertise">Agentic coding and persistent returns to expertise (Anthropic)</a> <span class="mnote-meta">article, 2026 · 9,964w</span></p>
-<p><strong>Jeffrey S. Allen</strong> · <a href="https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html">Monitoring AI Adoption in the US Economy (FEDS Notes)</a> <span class="mnote-meta">article, 2026 · 5,821w</span></p>
-<p><strong>Alexander Bick, Adam Blandin, David Deming, Nicola Fuchs-Schündeln, Jonas Jessen</strong> · <a href="https://www.stlouisfed.org/on-the-economy/2026/apr/why-does-ai-adoption-differ-so-much-countries">Why Does AI Adoption Differ So Much across Countries?</a> <span class="mnote-meta">article, 2026 · 2,028w</span></p>
-<p><strong>Ivan Yotzov, Jose Maria Barrero, Nicholas Bloom, Philip Bunn, Steven J. Davis, et al.</strong> · <a href="https://www.nber.org/papers/w34836">Firm Data on AI (NBER WP 34836)</a> <span class="mnote-meta">paper, 2026 · no full text</span></p>
-<p><a href="https://www.congress.gov/116/crpt/hrpt617/CRPT-116hrpt617.pdf">National Artificial Intelligence Initiative Act</a> <span class="mnote-meta">other · 1,225,188w</span></p>
-</div></div></section>
+<p><a href="https://www.nber.org/papers/w35451">AI Premium (NBER)</a> <span class="mnote-meta">paper, 2026 · 29,748w</span></p>
+<p><strong>Paul Goldsmith-Pinkham</strong> · <a href="https://paulgp.substack.com/p/integration-and-collaboration-in">Integration and Collaboration in AI Research Work</a> <span class="mnote-meta">guide, 2026 · 3,804w</span></p>
+<p><strong>Claes Bäckman</strong> · <a href="https://github.com/claesbackman/AI-research-feedback">AI Research Feedback: Claude Code Skills for Peer Review</a> <span class="mnote-meta">tool, 2026 · 2,155w</span></p>
+<p><strong>Luka Šikić</strong> · <a href="https://lusiki.github.io/AI_workshop_wiiw/">AI in Economics Research: From Frontier Ideas to a Working Agentic Pipeline (wiiw seminar)</a> <span class="mnote-meta">guide, 2026 · 3,626w</span></p>
+<p><strong>Brian Albrecht</strong> · <a href="https://www.economicforces.xyz/p/where-the-returns-to-ai-go">Where the Returns to AI Go</a> <span class="mnote-meta">article, 2026 · 3,515w</span></p>
+<p><strong>Gabor Bekes, Eduardo Arino de la Rubia</strong> · <a href="https://podcasts.ceu.edu/content/teaching-analytics-age-ai-gabor-bekes">Teaching Analytics in the Age of AI - Gabor Bekes (CEU Podcasts, Episode 1)</a> <span class="mnote-meta">other, 2026 · 5,963w</span></p>
+<p><strong>Elliott Ash, Sergio Galletta, Joachim Voth, David Yanagizawa-Drott</strong> · <a href="https://lawecon.ethz.ch/conferences-workshops/workshop-in-ai-and-economics.html">Zurich Workshop in AI &amp; Applied Economics (ETH Zurich / University of Zurich)</a> <span class="mnote-meta">other, 2026 · 197w</span></p>
+</div></div><hr>
+</section>
+</section>
+<section id="part-3-the-mechanism-and-the-objections" class="level1 page-columns page-full">
+<h1>Part 3 · The mechanism, and the objections</h1>
+<section id="one-sentence-and-why-the-structure-follows-from-it" class="level2">
+<h2 class="anchored" data-anchor-id="one-sentence-and-why-the-structure-follows-from-it">One sentence, and why the structure follows from it</h2>
+<p><strong>Intelligence became cheap and trust did not, so the new scarce factor is verified judgment.</strong> When a judgment task, whether classifying, screening, advising, drafting or refereeing, becomes almost free, its old price turns out to have been quietly paying for quality control. Once the task costs nothing, the value and the risk move to whoever still checks the work.</p>
+<p>The register structure is what that looks like once institutions get hold of it. Knowing how to actually get a machine to do the work goes stale in months, so it settled in the fast, undated, open registers. Claims about the world have to hold up for years, so they stayed in the slow, dated, gated one. The reason the two barely cite each other is not snobbery. It is that the credit system was built for claims that last and has no way of handling know how that does not. Every recommendation in Part 5 is an attempt to work that gap.</p>
+<div class="refrain">
+<p>Producing a result got cheap. Trusting one did not. Every institution in this field is now reorganising around that single price change, and the register structure is the first visible consequence.</p>
+</div>
+</section>
 <section id="where-the-evidence-argues-back" class="level2 page-columns page-full">
 <h2 class="anchored" data-anchor-id="where-the-evidence-argues-back">Where the evidence argues back</h2>
-<p>A thesis this clean invites objections, and the strongest ones are sitting in the same collection. Three are worth answering before the forecast, because the evidence supplies both the challenge and the reply.</p>
-<p><em>The bottleneck is taste, not checking.</em> Ning Li’s <a href="https://arxiv.org/abs/2604.03338">The Ideation Bottleneck</a> decomposes the quality gap between AI-generated and human research and attributes the large majority of it, on its own numbers roughly 71%, to <em>idea</em> quality, not execution. If the binding constraint is ideation, then verification is not the scarce factor and this whole document is aimed at the wrong problem. The reply concedes ground but holds the line. You cannot make a rule that people have good taste; you can make a rule that work gets checked. So institutions organize around the thing they can enforce. Verified judgment is where the <em>rules</em> bind, even if taste is where the <em>frontier</em> moves.</p>
-<p><em>Trust got cheap too.</em> The pricing here is sharp. Alejandro Lopez-Lira’s <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6687378">ZeroPaper</a> generates a full research paper for about two dollars. <a href="https://coarse.ink/">Coarse</a>, an AI referee, returns a report for under two dollars. A skeptic reads that symmetry as fatal: if checking is as cheap as producing, verification is not scarce either. The reply is that a cheap check just moves the problem up one level. Who checks the checker? An unchecked AI filter is just more cheap intelligence, so the scarce thing is not the filter but the <em>anchor</em> it rests on: a human-labelled benchmark, a pipeline that reruns, a check somebody stands behind. Alexis Akira Toda <a href="https://arxiv.org/abs/2606.05383">ran the controlled test</a>: no model refuted a false economic theory unguided, and human-plus-machine beat both the unaided machine and, in that setting, peer review.</p>
-<p><em>The map is the author’s own workflow.</em> The collection leans toward methods and tooling, which is partly the curator studying his own trade. But it also carries a development-economics thread the thesis never touches, a living evidence bank on <a href="https://voxdev.org/topic/ai-and-development-economics-early-evidence-and-how-keep">AI in development</a>, work on the welfare cost of targeting bias, a tax-benefit microsimulation skill, and that thread widens the claim. Where labour is scarce, full automation can help more, and the scarce-trust story has to share the stage with a scarce-labour one. Disclosed, not hidden, because a map that only covers its author’s desk should say so.</p>
+<p>Three objections are strong enough to state properly, and the collection supplies both the challenge and the reply.</p>
+<p><em>The bottleneck is taste, not checking.</em> Ning Li’s <a href="https://arxiv.org/abs/2604.03338">Ideation Bottleneck</a> breaks down the quality gap between research generated by AI and research written by people, and puts most of it, roughly 71% on its own numbers, down to the quality of the <em>idea</em> rather than the execution. If ideas are what binds, then checking is not the scarce thing. The reply gives ground and holds the line at the same time. You cannot make a rule that people have good taste, but you can make a rule that work gets checked, so institutions organise around the thing they can enforce. Brynjolfsson more or less splits the difference by leaving the human both the question and the judgement of the answer.</p>
+<p><em>Trust got cheap too.</em> Alejandro Lopez-Lira’s <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6687378">ZeroPaper</a> generates a full research paper for about two dollars, and <a href="https://coarse.ink/">Coarse</a>, an AI referee, returns a report for under two. If checking is as cheap as producing, then checking is not scarce either. The reply is that a cheap check only moves the problem up a level. Who checks the checker? The scarce thing is not the filter but what it rests on, a benchmark labelled by hand, a pipeline that reruns, a check somebody stands behind. Alexis Akira Toda <a href="https://arxiv.org/abs/2606.05383">ran the controlled test</a>. No model refuted a false economic theory on its own, and human plus machine beat both the unaided machine and, in that setting, peer review.</p>
+<p><em>The map is the mapmaker’s.</em> This collection leans toward methods and tooling, partly because the curator studies his own trade. It also carries a development economics thread the argument never touches, including a living evidence bank on <a href="https://voxdev.org/topic/ai-and-development-economics-early-evidence-and-how-keep">AI in development</a>, and that thread widens things. Where labour is scarce, full automation can help more, and the story about scarce trust has to share the stage with a story about scarce labour. Said out loud rather than hidden.</p>
 
 <div class="no-row-height column-margin column-container"><div class="mnote">
 <p><span class="mnote-h">The rivals</span></p>
@@ -517,61 +799,73 @@ Figure&nbsp;1
 </div></div><hr>
 </section>
 </section>
-<section id="part-2-the-forecast" class="level1">
-<h1>Part 2 · The forecast</h1>
-<p>The history above was measured. The forecast below is not, and the difference is deliberate. What follows assumes the tools that already exist keep spreading. Each claim is numbered, dated, and carries a probability in steps of 0.05. Each is written so that a person in 2027 or 2028 can mark it true or false, most of them from public pages and several from this database directly. The full set is mirrored in the <a href="./supplements/predictions.html">Predictions scoreboard</a>, which is the only page that changes after this document is released.</p>
+<section id="part-4-what-to-expect" class="level1">
+<h1>Part 4 · What to expect</h1>
+<p>The history above was measured. What follows is not, and the difference is deliberate. Each claim is numbered, dated, and carries a probability in steps of 0.05, written so a reader in 2028 can mark it true or false. The full set is mirrored in the <a href="./supplements/predictions.html">Predictions scoreboard</a>.</p>
 <section id="the-rest-of-2026" class="level2">
 <h2 class="anchored" data-anchor-id="the-rest-of-2026">The rest of 2026</h2>
-<p>The near term is mostly the present, continued. The referee factory keeps filling because the incentive that built it, checking is now the expensive step, has not moved. The first formal institutional responses appear. A journal or data editor states a policy on machine use, and the reporting-standard idea that has been circulating as a proposal gets a name.</p>
+<p>The near term is the present, carried on. Verification tooling keeps growing because the incentive that built it has not moved. The first formal responses from institutions appear. A journal or data editor states a policy on machine use, and the reporting standard idea that has been circulating as a proposal gets a name.</p>
 <div class="prediction">
-<p><span class="prob">p = 0.85</span><span class="pid">P1.</span> By the frozen gold labels, verification and referee tools stay the largest single kind of AI-for-research tool the field builds. The audited share holds at or above 25%. <span class="pmeta"><span class="tag">scored from the database</span> Resolves by 2026-12-31. <span class="pstatus">At tag, already close to true at tag (28.9%, 11 of 38).</span> <em>Reference class.</em> Once a tool category is the largest of its kind it rarely halves within a year.</span></p>
+<p><span class="prob">p = 0.85</span><span class="pid">P1.</span> The referee kind grows into the three largest tool kinds in the collection, and the verification family does not shrink below the 15 tools it holds at the freeze. <span class="pmeta"><span class="tag">scored from the database</span> Resolves by 31 December 2026. <em>What does not count.</em> Tool rows marked dup=1 in tool_labels.csv do not count. They are the same work as another row, since the five Backman skill files are one bundle, gh-davidvandijcke-coarse is the repository behind coarse.ink, and the Elicit org, channel and PyPI pages are one product. Counting them is what made this claim’s first baseline wrong. <em>Reference class.</em> A kind sitting fourth and tied rarely climbs two places in six months, unless the collection is actively sweeping that kind, which it is.</span></p>
 </div>
 <div class="prediction">
-<p><span class="prob">p = 0.90</span><span class="pid">P2.</span> At least one top-five journal (AER, Econometrica, JPE, QJE, REStud) or the AEA Data Editor carries an explicit written policy on LLM use in submissions. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2026-12-31. <span class="pstatus">At tag, plausibly already satisfied, since journal AI policies moved fast in 2024 and 2025.</span> <em>Reference class.</em> Base rate is high, because disclosure policies spread faster than enforcement.</span></p>
+<p><span class="prob">p = 0.30</span><span class="pid">P2.</span> Beyond disclosure, at least one of the venues frozen in policy_venues.csv reaches rung 2 of the four rung ladder by the resolve date, meaning it requires an archived prompt and a pinned model version for a variable derived from an LLM and used in results. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2026. <em>What does not count.</em> Policies that require disclosure and nothing more do not count, and that is the bar this claim sits above. The AER already bars AI authorship and requires disclosure by both authors and reviewers. Ordinary data and code replication materials do not count either, which is what QJE already requires. The requirement must attach to EVIDENCE for the variable derived from an LLM. The Economic Journal and AJPS are named comparators rather than scorers, since AJPS carries an AI policy and political science is a neighbouring discipline, exactly as Organization Science is for P6. Neither can resolve this claim. <em>Reference class.</em> Disclosure rules spread fast and cheaply. Evidentiary requirements move at the speed of enforcement capacity, which is far slower.</span></p>
 </div>
 <div class="prediction">
-<p><span class="prob">p = 0.75</span><span class="pid">P3.</span> The named cast (Cunningham, Panjwani, Sant’Anna, Backman, Goldsmith-Pinkham) publishes at least three new guides on their own sites or public repos, verifiable independently of this corpus. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2026-12-31. <em>Reference class.</em> These five have each shipped multiple guides since 2025, so supply is elastic.</span></p>
+<p><span class="prob">p = 0.20</span><span class="pid">P3.</span> At least one of the field’s informal method guides acquires a citable identity, meaning a DOI through Zenodo, JOSS or a journal, AND is cited in a peer reviewed economics article, closing the return path this map says does not exist. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2026. <em>What does not count.</em> A work that was a peer reviewed journal article from the start does not count. Korinek’s JEL survey carries a DOI and reads like a guide, but a journal article is not an informal guide ACQUIRING an identity. To qualify, the guide must have circulated informally first, on an author site, a public repository or a course page, and then get a DOI. Self citation does not count, so the citing article must share no author with the guide, because the guide’s own author citing it is a formality rather than the return path this claim is about. An NBER working paper is not a peer reviewed economics article here. And a DOI minted automatically by a preprint server does not count as ACQUIRING a citable identity, because the deposit must be deliberate, through Zenodo, JOSS or a journal, or else the claim resolves on infrastructure rather than on the field changing its mind. <em>Reference class.</em> No informal economics guide has yet crossed into the citation economy, so the base rate is near zero and the claim is a genuine test of the asymmetry.</span></p>
 </div>
 <div class="prediction">
-<p><span class="prob">p = 0.55</span><span class="pid">P4.</span> A named, numbered reporting checklist of at least eight items, scoped to LLM-based measurement in economics, is released as a preprint or peer-reviewed article. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2026-12-31. <em>Reference class.</em> PRISMA and CONSORT took a small team and a panic, and the trigger of template papers already exists.</span></p>
+<p><span class="prob">p = 0.40</span><span class="pid">P4.</span> A named, numbered reporting checklist of at least eight items for measurement based on LLMs, scoped specifically to economics rather than to a broader field that includes economics, is released as a preprint or peer reviewed article. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2026. <em>What does not count.</em> Two existing checklists are excluded and neither can satisfy this claim. ELEVATE-GenAI, published by ISPOR in Value in Health in 2025, is scoped to health economics and outcomes research. GUIDE-LLM, in Nature Human Behaviour, is a 14 item peer reviewed checklist for behavioural and social science, developed with economics experts among others, which makes it economics INCLUSIVE rather than economics scoped. A qualifying checklist must name economics as its scope, not as one discipline among several. The eight item threshold is arbitrary. It is frozen here rather than defended, precisely so that whoever scores this cannot quietly bend it. <em>Reference class.</em> A field usually gets its reporting standard from its most regulated corner first. Health economics already has one, and economics has the same trigger without the same regulator.</span></p>
 </div>
 </section>
 <section id="section" class="level2">
 <h2 class="anchored" data-anchor-id="section">2027</h2>
-<p>By 2027 the pressure reaches the gatekeepers. Submissions climb against refereeing capacity that cannot climb with them, so desk rejection and triage harden, and at least one editor says so in public. The verification norm starts to show up where careers are decided, in what a research-assistant or predoc posting asks for, and the scattered personal toolkits begin to consolidate into maintained suites, because a standard that outlives its author has to.</p>
-<div class="refrain">
-<p>Every prediction here is a bet on the same mechanism. The cost of producing a result keeps falling, the cost of trusting one does not, and institutions reorganize around the gap.</p>
+<p>Pressure reaches the gatekeepers. Submissions climb against refereeing capacity that cannot climb with them, so desk rejection and triage harden and at least one editor says so publicly. The verification norm starts appearing where careers are decided, in what a predoc posting asks for, and scattered personal toolkits consolidate into maintained suites, because a standard that outlives its author has to. Brynjolfsson’s pyramid problem is the labour market version of the same clock. If the junior rung disappears before anyone rebuilds the training, the shortage of people who can supervise a machine arrives right on time.</p>
+<div class="prediction">
+<p><span class="prob">p = 0.65</span><span class="pid">P5.</span> The AEA Data Editor or at least one top five journal reaches tier 2 or higher on the frozen ladder for agent checking, meaning an agent performs the first pass reproduction of submission code with human sign off, stated publicly, on standard accepted submissions rather than a one off pilot. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2027. <em>What does not count.</em> One off pilots, hackathons and demonstrations do not count, because the system must run on standard accepted submissions. Automated or containerized re-execution without an LLM or an agent doing the checking does not count either, because the AEA already has that. A human reproducibility team using AI tools ad hoc does not count, because that is tier 1 and this claim needs tier 2. <em>Reference class.</em> Reproduction by data editors already exists, so checking driven by an agent is the new step rather than the new institution.</span></p>
 </div>
 <div class="prediction">
-<p><span class="prob">p = 0.55</span><span class="pid">P5.</span> The AEA Data Editor or at least one top-five journal adopts an LLM or agent system that autonomously executes and checks submission code, applied to standard accepted submissions rather than a one-off pilot. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2027-12-31. <em>Reference class.</em> Data-editor reproduction already exists, and agent-driven checking is the new step.</span></p>
+<p><span class="prob">p = 0.70</span><span class="pid">P6.</span> At least one top five economics journal or a named economics data editor publicly reports a rise in submissions or in desk rejection rate that it attributes to manuscripts generated by AI. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2027. <em>What does not count.</em> Statements from outside economics do not count. The Organization Science finding is real, with a 42% submission surge, AI use detected in the majority of manuscripts by February 2026, and much higher desk rejection rates for papers heavy in AI use, and it is the precedent this claim sits above, but it is a management journal. A press interview with an editor speaking personally does not count, because it must be a journal or data editor statement. A named economics data editor means one of the offices frozen in policy_venues.csv rather than any journal that has appointed one. <em>Reference class.</em> The precedent now exists next door and with hard numbers, which usually shortens the lag rather than lengthening it.</span></p>
 </div>
 <div class="prediction">
-<p><span class="prob">p = 0.60</span><span class="pid">P6.</span> At least one top-five journal or a named data editor publicly reports a rise in submissions or in desk-rejection rate that it attributes to AI-generated manuscripts. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2027-12-31. <em>Reference class.</em> Submission-volume complaints are already common, and attribution to AI is the new part.</span></p>
+<p><span class="prob">p = 0.65</span><span class="pid">P7.</span> Postings for research assistants or predocs from at least three top 20 departments or named labs require experience auditing, validating or verifying AI or LLM output specifically, as distinct from replication and reproducibility work in general. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2027. <em>What does not count.</em> Generic replication and reproducibility language does not count, and this is exactly what retired the first version of this claim. LBS with ‘replication of results’, Dartmouth with ‘constructing replication materials’ and Cornell with ‘Replication Lab Coordinator and Research Assistant’ already carried that vocabulary before the claim was written, and none of it was motivated by AI. The posting must name AI or LLM output as the thing being checked. Three postings from one department count once. If total captured postings from the frame fall by more than 25% against the first full cycle, this claim resolves VOID rather than false, because the channel closed, and a vocabulary cannot spread through a channel that is no longer there. <em>Reference class.</em> Job advertisement language tracks tooling with a lag, and audit vocabulary specific to AI is newer than the replication vocabulary it will sit beside.</span></p>
 </div>
 <div class="prediction">
-<p><span class="prob">p = 0.65</span><span class="pid">P7.</span> Research-assistant or predoc postings from at least three top-20 departments or named labs carry explicit reproducibility, replication, verification, or audit language. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2027-12-31. <em>Reference class.</em> Job-ad language tracks tooling with a lag, and verification vocabulary is new since 2026.</span></p>
+<p><span class="prob">p = 0.55</span><span class="pid">P8.</span> At least two validation suites for measurement with LLMs, scoped to economics and written by more than one author, exist, each with two or more credited authors, a commit within the trailing 12 months, and rOpenSci review or a place on JOSS or CRAN. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2027. <em>What does not count.</em> General purpose suites do not count, however usable they are by economists, and naming them is what makes this claim scorable at all. quallmer, on CRAN with two authors, covering qualitative measurement with LLMs against a gold standard, and oolong, on CRAN and JOSS with two authors, covering validation for automated content analysis, were both updated in May and June 2026 and both fail on scope alone. A qualifying suite must be documented for economics measurement tasks, or published by authors with economics affiliations in an economics venue. The two suites must have DISJOINT author groups, because one prolific lab shipping two packages is not the field converging on a standard, and P12 learned that lesson expensively. A package that qualified at any point in the window counts even if CRAN later archives it over an unanswered maintainer email, because archival is a maintenance event rather than a verdict on the field. <em>Reference class.</em> Fragmented tools consolidate once a standard exists, and rOpenSci review is the usual gate, but scoping a suite to one discipline is a decision someone has to make deliberately.</span></p>
 </div>
 <div class="prediction">
-<p><span class="prob">p = 0.55</span><span class="pid">P8.</span> At least two multi-author validation suites exist for economics LLM measurement, each with two or more credited authors, a commit within the trailing 12 months, and rOpenSci review or a place on JOSS or CRAN. <span class="pmeta"><span class="tag">scored from the database</span> Resolves by 2027-12-31. <em>Reference class.</em> Fragmented tools consolidate once a standard exists, and rOpenSci review is the usual gate.</span></p>
+<p><span class="prob">p = 0.60</span><span class="pid">P9.</span> The standalone category keeps dissolving, so at least two of the coding assistants still independent at the freeze, meaning the cohort marked independent in coding_assistants_2026.csv, are discontinued, acquired, or folded into a general agent platform by the resolve date. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2027. <em>What does not count.</em> Four events that had already happened at the freeze are named and excluded, because this claim has now twice been at risk of being true when written. Windsurf was acquired by Cognition and folded into the Devin family as Devin Desktop, reported on 2 June 2026. A Cursor acquisition was reported to close in Q3 2026. Continue.dev was acquired by Cursor. And Cody was superseded by Amp. Aider is excluded for the opposite reason, since it is reported dormant, and going quiet is not an announcement, which makes it the named precedent for that rule. The premise that agent coding becomes a platform default is excluded as already true, because GitHub, VS Code and JetBrains all ship agents on by default. <em>Reference class.</em> Capabilities that become platform defaults stop being separately marketed, and the products built around them are usually absorbed rather than left to compete.</span></p>
 </div>
 <div class="prediction">
-<p><span class="prob">p = 0.55</span><span class="pid">P9.</span> Leading agent-coding capabilities ship as defaults in mainstream developer tools, so the share of newly released AI-for-research tools that are standalone coding assistants falls relative to 2026. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2027-12-31. <em>Reference class.</em> Capabilities that become platform defaults stop being separately marketed.</span></p>
+<p><span class="prob">p = 0.45</span><span class="pid">P14.</span> The verification tooling shifts from checking prose to checking results, so tools that re-run or score an analysis reach at least a quarter of the verification family and at least 6 tools in absolute count, up from 3 of 15. <span class="pmeta"><span class="tag">scored from the database</span> Resolves by 31 December 2027. <em>What does not count.</em> The evaluation kind counts toward the family but toward NEITHER side of the split, because it grades a model rather than a manuscript or an analysis. Naming it matters, because the published baseline read 17 manuscript and 3 results out of 21, which loses rows twice over, once to the unassigned evaluation kind and once to six same work duplicates. Tool rows marked dup=1 do not count. <em>Reference class.</em> Tooling follows the cheap check first, and re-running an analysis is far more expensive to build than reading a draft.</span></p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.55</span><span class="pid">P18.</span> At least one of the venues frozen in policy_venues.csv reports a rise in submissions of 20% or more from one year to the next, for 2026 or 2027, whether or not it attributes the rise to anything. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2027. <em>What does not count.</em> A rise reported by a journal outside the frozen venue list does not count. A rise in DESK REJECTIONS without a rise in submissions does not count either, because that is P6’s territory, and conflating the two is how a capacity story gets told with the wrong number. <em>Reference class.</em> Organization Science reported a 42% surge, well above this threshold, in a neighbouring field. Economics submission volumes move more slowly, but the shock is the same shock.</span></p>
 </div>
 </section>
 <section id="section-1" class="level2">
 <h2 class="anchored" data-anchor-id="section-1">2028</h2>
-<p>The two-to-five-year horizon is where the working papers embargoed today come out of embargo on their own, coverage of the record recovers, and the standards question is settled one way or the other, either a reporting standard is being cited in real methods sections, or it is not. Whether that standard exists, and whether anyone is required to follow it, is the thesis playing out in real time: the field either puts a price on verified judgment, or leaves it unpriced.</p>
+<p>Working papers embargoed today come out of embargo on their own, coverage of the record recovers, and the standards question settles one way or the other. Either a reporting standard is cited in real methods sections, or it is not. That is the asymmetry between registers either closing or setting hard. A standard that gets cited is the informal layer finally finding a way back into the credit economy.</p>
 <div class="prediction">
-<p><span class="prob">p = 0.70</span><span class="pid">P10.</span> At least half of the NBER working papers embargoed at v1.0 have a findable open mirror by the end of 2028, discoverable by the stated resolution procedure, whether or not this corpus has re-fetched them. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2028-12-31. <em>Reference class.</em> Embargoes of about 18 months lapse, and author self-posting is common in economics.</span></p>
+<p><span class="prob">p = 0.70</span><span class="pid">P10.</span> At least half of the 47 NBER working papers listed in scenario/data/frozen/nber_embargoed.csv have a findable open mirror by the end of 2028, discoverable by the stated resolution procedure, whether or not this corpus has re-fetched them. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2028. <em>What does not count.</em> A copy behind the NBER paywall does not count, and neither does this corpus successfully fetching one, because the claim is about the world rather than about our access. The cohort is closed at the freeze. Papers embargoed after it do not join, and papers added to the corpus later are irrelevant to it. An open access PUBLISHED version DOES count as a mirror, because the claim is about whether the work became readable without paying rather than about which version did it. That is decided here rather than in 2028 with a score riding on it. <em>Reference class.</em> Embargoes of about 18 months lapse on their own, and authors posting their own work is common in economics.</span></p>
 </div>
 <div class="prediction">
-<p><span class="prob">p = 0.50</span><span class="pid">P11.</span> The reporting standard defined in P4 is cited in the methods section of at least one peer-reviewed economics article. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2028-12-31. <em>Reference class.</em> Conditional on P4, a standard that exists gets cited within a couple of years.</span></p>
+<p><span class="prob">p = 0.50</span><span class="pid">P11.</span> A named reporting checklist for measurement with LLMs is cited in the methods section of a peer reviewed economics article outside health economics. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2028. <em>What does not count.</em> Health economics is out of scope in the CITING article rather than merely in the checklist. Any named checklist counts as the thing cited, including ELEVATE-GenAI and GUIDE-LLM, so it does not have to be the one P4 predicts. A mention in a literature review, a footnote or a related work paragraph does not count, because it must sit in the methods section, as the standard the paper followed. Self citation does not count, so the citing article must share no author with the checklist. The methods section includes a methods appendix or supplementary methods, so a paper cannot fail this claim merely by moving its methods online. <em>Reference class.</em> A standard that exists gets cited within a couple of years, but crossing a subfield boundary adds a lag.</span></p>
 </div>
 <div class="prediction">
-<p><span class="prob">p = 0.45</span><span class="pid">P12.</span> A public repository of human-validated gold-labelled datasets for recurring economics text-classification tasks, other than this site’s own tool-labels set, exists and has at least one citation in a peer-reviewed economics article. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2028-12-31. <em>Reference class.</em> Benchmark repositories emerge where a field repeats a classification task, and economics is early.</span></p>
+<p><span class="prob">p = 0.45</span><span class="pid">P12.</span> Benchmark building enters the field’s credit economy, so a gold labelled economics text dataset built by economists is used as the evaluation set in at least two peer reviewed economics articles whose author lists are disjoint from the original team. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2028. <em>What does not count.</em> The EXISTENCE of such a dataset is excluded, because it already happened. BeigeSage, in Applied Economics and online on 24 March 2026, released a public OSF dataset of 1,000 Beige Book passages labelled by hand for a recurring task in economic sentiment, by authors with economics and business economics affiliations in an economics venue, satisfying every written condition of the version this replaces. Corpora from the NLP community remain excluded as before, since the World Central Banks corpus and Financial PhraseBank were built by NLP groups at NLP venues. Self citation by the dataset’s own authors does not count, which is what the disjoint author condition is for. The two citing articles must be disjoint from the original team AND from each other, because one lab adopting the dataset twice is one lab. A paper that fine tunes on part of the gold labels and evaluates on the rest DOES count, because the labels are still doing evaluative work. <em>Reference class.</em> Economics has the domain knowledge and the repeated task, but it exports measurement expertise slowly, and a dataset is credited only once it is reused.</span></p>
 </div>
 <div class="prediction">
-<p><span class="prob">p = 0.50</span><span class="pid">P13.</span> Audit-style pedagogy adopted explicitly as an AI-integrity measure appears in graduate economics syllabi at three distinct institutions, whether as planted-error assignments, AI-output audits, or oral examination newly introduced for that purpose. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 2028-12-31. <em>Reference class.</em> Audit pedagogy follows the tool, and oral exams pre-date AI, so only AI-motivated adoption counts.</span></p>
+<p><span class="prob">p = 0.50</span><span class="pid">P13.</span> Audit style pedagogy adopted explicitly as a measure of AI integrity appears in graduate economics syllabi at three distinct institutions, whether as planted error assignments, audits of AI output, or oral examination newly introduced for that purpose. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2028. <em>What does not count.</em> Oral examination that predates the AI question does not count, because many programmes have always had it, so the syllabus must state a motivation of AI integrity. Undergraduate courses do not count. Three such courses at one institution count once. Evidence sufficiency is decided here. An assignment whose TEXT requires auditing, correcting or replicating AI output counts even when the syllabus never states a motive of AI integrity, because syllabi almost never explain why an assignment exists. Demanding the confession as well as the assignment would score a false negative on a true phenomenon. <em>Reference class.</em> Audit pedagogy follows the tool, and oral exams predate AI, so only adoption motivated by AI counts.</span></p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.40</span><span class="pid">P15.</span> The method layer stops being single vendor, so the share of the guides and tools register naming the Anthropic stack falls below half, or documents naming an open weight model rise from the 19 held at the freeze to at least 40. <span class="pmeta"><span class="tag">scored from the database</span> Resolves by 31 December 2028. <em>What does not count.</em> The papers register is not part of this claim. It leans the other way, with OpenAI ahead of Anthropic, and reporting the two side by side is what produced the wrong baseline, because the published figure of 30 of 43 guides used the guides denominator for a claim written over guides and tools. Tool rows marked dup=1 do not count. Commentary is deliberately OUT of the register, and the cost is stated rather than hidden, since all three parts of Kustov’s series were written with Claude Code and say so, and they sit in the article register, outside this denominator. The register is guides and tools because those are the artifacts a practitioner installs and follows, and counting commentary would measure enthusiasm rather than dependency. <em>Reference class.</em> Tooling monocultures break when either a cheaper substitute reaches parity or the incumbent’s pricing changes, and open weight models are closing.</span></p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.35</span><span class="pid">P16.</span> A paper in a peer reviewed economics journal is retracted or formally corrected, with the notice naming content generated or fabricated by AI as a cause, by the resolve date. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2028. <em>What does not count.</em> A correction for an ordinary coding error does not count even if a model wrote the code, because the notice must attribute the defect to CONTENT GENERATED BY AI. A preprint withdrawal does not count, because a preprint has no editorial process to fail. A retraction in a management venue, a finance adjacent venue or a general science venue does not count, for the same reason Organization Science cannot resolve P6. <em>Reference class.</em> Rates of fabricated citations are rising fast and are now measured, while retraction machinery is slow and economics retracts less than the life sciences. The gap between those two is where this probability sits.</span></p>
+</div>
+<div class="prediction">
+<p><span class="prob">p = 0.25</span><span class="pid">P17.</span> The mean number of credited authors per NBER working paper issued in 2028 is below the 2024 mean. <span class="pmeta"><span class="tag pub">scored from public pages</span> Resolves by 31 December 2028. <em>What does not count.</em> A revision does not count as a new paper, because the issue year is the working paper’s own. Credited authors only, so acknowledgements, research assistant credits and data provider notes are not authorship. Papers issued outside the NBER working paper series do not count, however similar. <em>Reference class.</em> Co-authorship in economics has risen for decades under incentives such as credit inflation, multi site data and specialisation, none of which have anything to do with AI. A reversal within four years would be fast even if the mechanism is real.</span></p>
 </div>
 <div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -583,35 +877,70 @@ The ground gets soft here
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Everything to 2028 mostly assumes tools that already exist keep spreading, and the error bars are narrow enough to grade. Everything past 2028 depends on a choice by institutions, not on what the models can do, and the error bars widen accordingly. The models will keep improving. That is not the uncertain part. The uncertain part is whether the field’s gatekeepers decide to reward verification before the flood of plausible machine text outruns the humans left to check it. The next section is that choice, and the two endings are the two ways it goes.</p>
+<p>Everything to 2028 assumes tools that already exist keep spreading, and the error bars are narrow enough to grade. Everything past 2028 depends on an institutional choice rather than on what the models can do. The models will keep improving, and that is not the uncertain part. The uncertain part is whether the field’s gatekeepers reward verification before the flood of plausible machine text outruns the humans left to check it.</p>
 </div>
 </div>
 <hr>
 </section>
 </section>
+<section id="where-to-stand" class="level1">
+<h1>Part 5 · Where to stand</h1>
+<p>This is the part a map owes its reader. It follows from what was measured rather than from temperament, and every position below works the same gap. <strong>Method knowledge flows into the informal registers and has no way back into the credit economy.</strong></p>
+<section id="four-positions-and-what-each-costs" class="level2">
+<h2 class="anchored" data-anchor-id="four-positions-and-what-each-costs">Four positions, and what each costs</h2>
+<p><strong>The translator.</strong> Be one of the 34. Write in more than one register about the same work, the paper <em>and</em> the guide, the result <em>and</em> the repo. The measurement says fewer than one credited person in ten does this, which is why the ones who do are cited out of all proportion. The cost is real. A second register is a second body of work with its own conventions, and the informal half earns attention rather than formal credit. It pays when that attention turns into invitations, collaborations, students, and consulting.</p>
+<p>The catch is worth stating plainly, because the data states it. 7 of the 10 deepest bridge crossers are also among the 10 most credited people here. This is a position that costs the credit secure very little and the credit insecure a great deal. If you are pre tenure, the honest version of this advice is not “write more guides.” It is to pick <em>one</em> thing, make it citable, which is the next position, and let it do the work of both registers at once.</p>
+<p><strong>The instrument builder.</strong> Papers now send 21% of their in corpus links to tools, the one channel where an informal artifact is acquiring a citation path. Building the thing others measure with, whether a validation package, a benchmark, or a labelled gold set, buys a durable position because whoever hosts the benchmark quietly referees the field. The cost is maintenance, which is the quiet killer of research software, and the discipline it takes is unglamorous. Version it, test it, document it, and expect to still be answering issues in three years.</p>
+<p><strong>The verifier.</strong> Verification is already the largest single kind of tool the field builds, and the 2026 evidence agrees that how helpful something <em>feels</em> is not the same as being right, in <a href="https://arxiv.org/abs/2601.13379">radiology</a>, in <a href="https://www.nber.org/papers/w34660">healthcare delivery</a>, and in <a href="https://www.anthropic.com/research/coding-agents-social-sciences">coding audits</a>. The open ground is not another AI referee, of which there are plenty. It is the <strong>anchor</strong> underneath, the ground truth labelled by hand that a machine check rests on, along with the economics of the audit market itself, who is liable for model error, and how you design certification when the auditors use the same models as the audited. That literature barely exists, and regulation is creating demand for it.</p>
+<p>The measured version of that opening is sharper than the argument for it. Only 3 of 15 verification tools check a <em>result</em> rather than a manuscript, and not one of the 15 has been benchmarked against human referees. Two concrete projects follow directly, both unclaimed and both small enough for one person. The first is to <strong>benchmark the referees</strong>, running the existing AI reviewers against a set of papers whose referee outcomes are known and publishing the agreement statistics. The second is to <strong>build the results checker</strong> the field skipped. The first is a paper economists are unusually well equipped to write, because inter rater agreement and error propagation are old furniture in this discipline and new in AI evaluation. It is also the clearest case of something economics can export, a method it already owns, aimed at a problem the AI field has not solved.</p>
+<p><strong>The domain holder.</strong> The general “AI and labour” space is crowded, and the work in it is becoming interchangeable. What does not become interchangeable is access nobody else has, a firm register, an administrative dataset, a language, a regional network. Adoption gaps across countries are now something people measure, and whoever holds a good national registry holds the scarce input for exactly that question. The cost is that access of this kind is institutional, slow, and cannot be taken with you, which is also exactly why it is hard to compete with.</p>
+</section>
+<section id="practical-rules-the-evidence-supports" class="level2">
+<h2 class="anchored" data-anchor-id="practical-rules-the-evidence-supports">Practical rules the evidence supports</h2>
+<p><strong>Read down, publish up.</strong> Take method from the fast registers, the guides and repos and threads, because that is where current practice actually lives and it is 98% readable. Put claims in the slow register, because that is still where credit is conferred. Do not confuse the two directions.</p>
+<p><strong>Treat the podcast as literature.</strong> A talk in this field transcribes to roughly 10,090 words, and senior people say things there they will not put in print, as the Acemoglu and Brynjolfsson interviews show. Skipping them because they are not typeset means losing real information.</p>
+<p><strong>Build the audit habit before you need it.</strong> Redo a machine produced result by hand from time to time and log your own error rate. This is the individual version of the whole argument, it needs no journal mandate, and the <a href="https://ai-project-website.github.io/AI-assistance-reduces-persistence/">persistence</a> evidence says the skill erodes exactly when you stop practising it.</p>
+<p><strong>Version everything, because the agent makes you.</strong> Agents work well only in projects that are versioned, tested and documented, so adopting them smuggles software engineering discipline in through the back door. A decade of being urged to do open science achieved less than the tool did.</p>
+<p><strong>Prefer counts to shares whenever you control the denominator.</strong> This page had to correct its own headline statistic on exactly this ground, which is documented on the <a href="./supplements/method.html">Method</a> page.</p>
+<p><strong>Do not let your method knowledge belong to one vendor.</strong> 23 of 122 guides and tools here name one company’s stack and no other. Write the <em>technique</em> down separately from the product that currently implements it, so the gold set, the agreement statistic and the pipeline that reruns are written where they will survive a release note.</p>
+<p><strong>Check before you forecast.</strong> The set of predictions on this page lost four claims that turned out to be true already, one of them by eighteen months. Checking cost an afternoon.</p>
+</section>
+<section id="what-this-map-still-cannot-measure" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-map-still-cannot-measure">What this map still cannot measure</h2>
+<p>One number in this document is inherited rather than measured, and it should be named as such. The claim that practice knowledge reaches economics <strong>six to eighteen months</strong> after the software world is folklore. It is repeated across the informal register, it matches the shape of what is here, and nothing in this collection establishes it. It breaks the rule the rest of the page runs on.</p>
+<p>It is also measurable with what is already in the database, which is the interesting part. The corpus holds dated documents across every register and a full text search index over all of them, so the first appearance of a term such as <em>agent</em>, <em>skill</em>, <em>instruction file</em>, <em>MCP</em> or <em>evaluation harness</em> can be dated <strong>register by register</strong>. The gap between a word’s first appearance in a thread or guide and its first appearance in a working paper is the lag, measured concept by concept rather than asserted once for all of them. Two pairs already visible here suggest the lag is longer than the folklore says. <em>Generative AI at Work</em> circulated from 2023 and reached the <em>Quarterly Journal of Economics</em> in 2025, and “agent” moved from the practice guides of early 2025 to the title of an NBER working paper in September 2025.</p>
+<p>That table is the most obviously missing chart on this site, and it is the next thing to build. Until it exists, treat “six to eighteen months” as the placeholder it is.</p>
+</section>
+<section id="if-you-are-early-in-your-career" class="level2">
+<h2 class="anchored" data-anchor-id="if-you-are-early-in-your-career">If you are early in your career</h2>
+<p>The structural news is bad and specific, and it comes from the two interviews rather than from any paper. Entry level roles in the most exposed occupations are shrinking, and the junior rung was how senior judgment used to get made. Brynjolfsson calls the result a coordination problem, sensible for each employer on its own and ruinous for all of them together. Do not expect anyone to solve that for you soon.</p>
+<p>What follows from the structure is that the replaceable skill is <em>doing the work</em>, which is exactly what agents took, and the scarce ones are the two ends Brynjolfsson names, asking the right question and judging the answer. Acemoglu gets to the same place from the other side. The models lack judgment and context, so those remain yours to supply. In practice that argues for building the skill of checking early rather than the skill of producing fast, for owning a dataset or an instrument rather than a technique, and for getting known in a second register while the bridge is still only 34 people wide.</p>
+<hr>
+</section>
+</section>
 <section id="the-branch-end-of-2028" class="level1">
 <h1>The branch, end of 2028</h1>
-<p>One question decides which ending unfolds, and it is not a question about AI.</p>
+<p>One question decides how this resolves, and it is not a question about AI.</p>
 <blockquote class="blockquote">
 <p><strong>Do the field’s gatekeepers, journals, funders, and data editors, make machine verification mandatory and rewarded, or not?</strong></p>
 </blockquote>
-<p>Both endings start from the same facts, printed word-for-word at the top of each, and differ only on the answer to that one question. Having called the question decisive, it would be a dodge not to bet on it, so here is the bet, with the wide error bars the box above warns about. By 2030, <strong>Ending A</strong>, machine verification made mandatory and rewarded at a top-five journal or by the AEA Data Editor, gets probability <strong>0.35</strong>. <strong>Ending B</strong>, machine-written submissions outrunning the referees with no working check in place, gets <strong>0.30</strong>. The remaining <strong>0.35</strong> goes to the middle path: journals move slowly while private services sell verification in the meantime, something Ending B already hints at. So the single most likely 2030 is not either clean ending but a mix of the two, and the endings are written as the pure cases because the mix is easiest to understand as a blend of them. Pick one to read. Expect some of both.</p>
+<p>Both endings start from the same facts, printed word for word at the top of each, and differ only on the answer. Having called the question decisive, it would be a dodge not to bet. By 2030, <strong>Ending A</strong>, verification made mandatory and rewarded at a top five journal or by the AEA Data Editor, gets <strong>0.35</strong>. <strong>Ending B</strong>, machine written submissions outrunning the referees with no working check, gets <strong>0.30</strong>. The remaining <strong>0.35</strong> goes to the middle path, where journals move slowly while private services sell verification in the meantime. The most likely 2030 is not either clean ending but a mix of them. They are written as pure cases because a mix is easiest to understand once you know what it is a mix of.</p>
 <div class="fork">
 <a class="ending-a" href="endings/audit.html">
   <h3 class="anchored" data-anchor-id="the-branch-end-of-2028">Ending A · The audit</h3>
-  <p>Verification infrastructure catches up the way preregistration did. Agent-checked
+  <p>Verification infrastructure catches up the way preregistration did. Agent checked
   replication becomes a submission gate, the published literature grows more reliable than
   it was in 2020, and the unit of contribution drifts from the paper toward the dataset and
   the living document.</p>
 </a>
 <a class="ending-b" href="endings/flood.html">
   <h3 class="anchored">Ending B · The flood</h3>
-  <p>Plausible machine-written papers outrun refereeing capacity. Trust retreats to
+  <p>Plausible machine written papers outrun refereeing capacity. Trust retreats to
   reputation and network whitelists, insiders win, and the apprenticeship that used to
   produce verifiers erodes exactly when verification became the scarce input.</p>
 </a>
 </div>
-<p><em>Both endings, and every figure above, are recomputed from the underlying database. The retrospective charts extend themselves as the collection grows. The forecast text is frozen at release and graded later. See the <a href="./supplements/method.html">Method</a> page for what this document can and cannot verify.</em></p>
+<p><em>Every figure above is recomputed from the underlying database at build time. The history extends itself as the collection grows, while the forecast text freezes at release and is graded later. See the <a href="./supplements/method.html">Method</a> page for what this document can and cannot verify.</em></p>
 
 
 </section>

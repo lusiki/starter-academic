@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Luka Šikić">
-<meta name="dcterms.date" content="2026-07-23">
+<meta name="dcterms.date" content="2026-07-28">
 
-<title>The predictions scoreboard – Cheap Intelligence, Scarce Trust</title>
+<title>The predictions scoreboard – How Economics Absorbed AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -113,6 +79,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta property="og:url" content="https://www.lukasikic.info/ai/supplements/predictions.html">
 <meta property="og:image" content="https://www.lukasikic.info/og.jpg">
 <meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://www.lukasikic.info/ai/supplements/predictions.html">
 <!-- lukasikic.info theme -->
 <style>
@@ -184,7 +151,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     --ls-accent: #60A5FA;
   }
 </style>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 
 <body class="nav-fixed">
@@ -195,7 +161,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Cheap Intelligence, Scarce Trust</span>
+    <span class="navbar-title">How Economics Absorbed AI</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -207,6 +173,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Scenario</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../catalog.html"> 
+<span class="menu-text">Catalog</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-endings" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -238,11 +208,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
         <li>
     <a class="dropdown-item" href="../supplements/coverage.html">
- <span class="dropdown-text">Coverage</span></a>
+ <span class="dropdown-text">What can be read</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../supplements/timeline.html">
- <span class="dropdown-text">Timeline</span></a>
+ <span class="dropdown-text">Timeline and its gaps</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../supplements/method.html">
@@ -279,7 +249,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#how-scoring-works" id="toc-how-scoring-works" class="nav-link active" data-scroll-target="#how-scoring-works">How scoring works</a></li>
+  <li><a href="#the-whole-register-in-one-picture" id="toc-the-whole-register-in-one-picture" class="nav-link active" data-scroll-target="#the-whole-register-in-one-picture">The whole register, in one picture</a></li>
+  <li><a href="#the-claims" id="toc-the-claims" class="nav-link" data-scroll-target="#the-claims">The claims</a></li>
+  <li><a href="#why-any-of-this-can-be-trusted" id="toc-why-any-of-this-can-be-trusted" class="nav-link" data-scroll-target="#why-any-of-this-can-be-trusted">Why any of this can be trusted</a></li>
+  <li><a href="#how-it-will-be-graded" id="toc-how-it-will-be-graded" class="nav-link" data-scroll-target="#how-it-will-be-graded">How it will be graded</a></li>
   </ul>
 </nav>
     </div>
@@ -289,7 +262,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">The predictions scoreboard</h1>
-<p class="subtitle lead">Every forecast claim, dated, measurable, and gradeable</p>
+<p class="subtitle lead">Eighteen dated bets, each with a probability, each written so it can be marked wrong</p>
   <div class="quarto-categories">
     <div class="quarto-category">Supplement</div>
   </div>
@@ -309,7 +282,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 23, 2026</p>
+      <p class="date">July 28, 2026</p>
     </div>
   </div>
   
@@ -321,258 +294,760 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This is the scoreboard, and it is the <strong>only page that changes after the document is tagged <code>v1.0</code></strong>. The forecast prose freezes at release. The retrospective charts keep extending themselves as the corpus grows, and this table gains a resolution (a date, a verdict, and an evidence link) as each claim comes due.</p>
-<p>Every prediction obeys the same rules. It is dated. It is binary or numerically measurable. It carries a probability in steps of 0.05. It names how it will be scored, whether from public pages or from this database directly. There are no hedged verbs anywhere in the set, and a claim that cannot be marked true or false does not belong here.</p>
+<p>The rest of this site counts things that already happened. This page does the opposite, and it is the only page that changes after publication. 18 claims about the next two to five years are written down here in advance, each with a probability, each phrased so that a reader in 2028 can mark it true or false without having to ask the author what he meant.</p>
+<p>The rules are dull and they are the whole point. A claim has to name a <strong>date</strong>. It has to carry a <strong>probability</strong>. It has to say <strong>what would count</strong> and, harder, what would not. It has to be checked against the world first, because a forecast that is already true is not a win, it just makes the forecaster look better calibrated than he is. Six claims were thrown out on exactly that ground before this page was published.</p>
+<section id="the-whole-register-in-one-picture" class="level2">
+<h2 class="anchored" data-anchor-id="the-whole-register-in-one-picture">The whole register, in one picture</h2>
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/predictions.csv"</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>lab <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"rest-2026"</span> <span class="ot">=</span> <span class="st">"rest of 2026"</span>, <span class="st">"2027"</span> <span class="ot">=</span> <span class="st">"2027"</span>, <span class="st">"2028"</span> <span class="ot">=</span> <span class="st">"2028"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  p <span class="sc">|&gt;</span> <span class="fu">transmute</span>(</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">ID =</span> id,</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">Horizon =</span> <span class="fu">unname</span>(lab[period]),</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">Prediction =</span> text,</span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">p =</span> <span class="fu">sprintf</span>(<span class="st">"%.2f"</span>, prob),</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Scored from</span><span class="st">`</span> <span class="ot">=</span> <span class="fu">ifelse</span>(tag <span class="sc">==</span> <span class="st">"pub"</span>, <span class="st">"public pages"</span>, <span class="st">"database"</span>),</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">`</span><span class="at">Resolve by</span><span class="st">`</span> <span class="ot">=</span> resolve_by,</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">Status =</span> status),</span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">align =</span> <span class="st">"lllccll"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="predictions_files/figure-html/overview-1.png" class="img-fluid figure-img" alt="Dot plot of all eighteen claims by probability, grouped by when they resolve. Probabilities run from 0.20 to 0.85." width="825"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Read the spread rather than any single dot. Nothing sits at 0.95, because a claim that certain is not worth making, and nothing sits at 0.05, because a claim that unlikely is not worth checking. The confident end is where today’s trend simply continues. The uncertain end is where an institution has to decide something.</p>
+</section>
+<section id="the-claims" class="level2">
+<h2 class="anchored" data-anchor-id="the-claims">The claims</h2>
+<p>Each one gets a plain heading, then the claim exactly as it was frozen, in the deliberately fussy wording that makes it scoreable. The fine print underneath, how it will be scored, what does not count, the closest thing to it that has already happened, is folded away and one click from view.</p>
+<section id="by-the-end-of-2026" class="level3">
+<h3 class="anchored" data-anchor-id="by-the-end-of-2026">By the end of 2026</h3>
+<div class="prediction">
+<p><span class="prob">p = 0.85</span><span class="pid">P1 · Referee tooling keeps growing</span></p>
+<p>The referee kind grows into the three largest tool kinds in the collection, and the verification family does not shrink below the 15 tools it holds at the freeze.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from this collection. Scored from tool_kinds.csv, rebuilt by build_metrics.R from the frozen hand labels. Counts and rank only, never a share, because the tool denominator moves with whatever the collection sweeps in, so a share claim would measure curation rather than the field. Rank uses competition ranking, so tied kinds share the better rank and a tie for third resolves this claim TRUE. That is stated here rather than argued in December, when referee sits one tool away from a tie. The result must also survive dropping any single source_doc, which must not undo it. And the claim carries a pre commitment that no acquisition sweep aimed at referee tools runs between the freeze and resolution. Scoring it without honouring that pre commitment is scoring a shopping list.</p>
+<p><strong>What does not count.</strong> Tool rows marked dup=1 in tool_labels.csv do not count. They are the same work as another row, since the five Backman skill files are one bundle, gh-davidvandijcke-coarse is the repository behind coarse.ink, and the Elicit org, channel and PyPI pages are one product. Counting them is what made this claim’s first baseline wrong.</p>
+<p><strong>The closest thing that has already happened.</strong> Referee holds 9 tools at rank 4, tied with workflow, while data leads at 17 and literature at 13. One tool separates referee from a tie at third, and the tie rule above says a tie counts.</p>
+<p><strong>How this could come true for the wrong reason.</strong> The collection is curated by the forecaster, so the numerator moves with acquisition. The pre commitment against a targeted sweep and the check that dropping any single source does not undo the result both exist because without them this forecasts shopping rather than the field. If either is broken the claim is VOID rather than false.</p>
+<p><strong>Checked not to be true already, on 27 July 2026.</strong> False at the freeze, and the version it replaces was worse than open, because it was wrong. It said verification was already the largest single kind at 21 tools, ahead of data at 18 and literature at 17. Both halves fail. The counts double counted six same work rows, and verification was a family of seven kinds being compared against single kinds, which it could hardly lose. Honestly counted, the family is 15, referee is 9 and fourth of 25 kinds, tied with workflow, and data leads at 17.</p>
+<p><strong>Where the numbers stood when this was frozen.</strong> <code>verif_family_n</code> = 15, <code>referee_n</code> = 9, <code>referee_rank</code> = 4, <code>kind_top_n</code> = 17, <code>referee_n_freeze</code> = 9, <code>referee_rank_freeze</code> = 4, <code>kind_top_n_freeze</code> = 17. Each one is recounted every time the page is built.</p>
 </details>
+<div class="prediction">
+<p><span class="prob">p = 0.30</span><span class="pid">P2 · A journal asks for the prompt and the model version</span></p>
+<p>Beyond disclosure, at least one of the venues frozen in policy_venues.csv reaches rung 2 of the four rung ladder by the resolve date, meaning it requires an archived prompt and a pinned model version for a variable derived from an LLM and used in results.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. The four rungs are fixed here. Rung 0 is silent, rung 1 is disclosure of AI use, rung 2 requires an archived prompt and a pinned model version for a variable derived from an LLM, and rung 3 requires evidence of agreement against human labels. Rung is read from author guidelines, the editorial policy page, a submission form field, a data editor policy page or an annual report, and from nothing else, so a conference remark or a personal blog post does not move a venue. A policy in force at any point in the window counts even if it is later softened, because the ladder records the high water mark with its date. Scoring the rung rather than the summit means the register learns something in the years when the answer is still no.</p>
+<p><strong>What does not count.</strong> Policies that require disclosure and nothing more do not count, and that is the bar this claim sits above. The AER already bars AI authorship and requires disclosure by both authors and reviewers. Ordinary data and code replication materials do not count either, which is what QJE already requires. The requirement must attach to EVIDENCE for the variable derived from an LLM. The Economic Journal and AJPS are named comparators rather than scorers, since AJPS carries an AI policy and political science is a neighbouring discipline, exactly as Organization Science is for P6. Neither can resolve this claim.</p>
+<p><strong>The closest thing that has already happened.</strong> The AER sits at rung 1, with disclosure by authors and reviewers and no evidentiary requirement for a variable derived from an LLM. One rung short, and that rung is the whole distance this claim measures.</p>
+<p><strong>How this could come true for the wrong reason.</strong> Kustov’s Part III argues that disclosure is not a stable equilibrium, since disclosers bear a reputational cost while quiet users free ride, so pressure runs toward LESS disclosure. If that holds, rung 1 decays instead of advancing and this claim fails for a reason the ladder itself records.</p>
+<p><strong>Checked not to be true already, on 28 July 2026.</strong> Open at rung 1. The AER requires disclosure of AI use by authors and reviewers and holds authors responsible for accuracy, which is rung 1 and no further. The QJE requires ordinary replication materials with no clause specific to LLMs, which is rung 0 for this purpose. The version this replaces was a single yes or no over the same ground, so it could report nothing at all until it flipped.</p>
+<p><strong>Where the numbers stood when this was frozen.</strong> <code>policy_venue_n</code> = 7, <code>policy_rung_max</code> = 1. Each one is recounted every time the page is built.</p>
+</details>
+<div class="prediction">
+<p><span class="prob">p = 0.20</span><span class="pid">P3 · An informal guide becomes citable, and gets cited</span></p>
+<p>At least one of the field’s informal method guides acquires a citable identity, meaning a DOI through Zenodo, JOSS or a journal, AND is cited in a peer reviewed economics article, closing the return path this map says does not exist.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. Zenodo, JOSS or a DOI registry establishes the citable identity, and a citation search in peer reviewed economics journals establishes the citation. The roster is closed at the freeze, so a guide that first circulates afterwards cannot resolve this claim, because a claim whose population grows is a claim that gets easier with time.</p>
+<p><strong>What does not count.</strong> A work that was a peer reviewed journal article from the start does not count. Korinek’s JEL survey carries a DOI and reads like a guide, but a journal article is not an informal guide ACQUIRING an identity. To qualify, the guide must have circulated informally first, on an author site, a public repository or a course page, and then get a DOI. Self citation does not count, so the citing article must share no author with the guide, because the guide’s own author citing it is a formality rather than the return path this claim is about. An NBER working paper is not a peer reviewed economics article here. And a DOI minted automatically by a preprint server does not count as ACQUIRING a citable identity, because the deposit must be deliberate, through Zenodo, JOSS or a journal, or else the claim resolves on infrastructure rather than on the field changing its mind.</p>
+<p><strong>The closest thing that has already happened.</strong> Korinek’s JEL survey reads like a guide and carries a DOI, but it was a journal article from the start, so it tests nothing this claim is about. On the roster itself there are ten guides and no DOI observed.</p>
+<p><strong>How this could come true for the wrong reason.</strong> The roster is drawn from what this corpus can see, which is heavy on Substack. If the return path opens somewhere the corpus does not look, such as a working paper series or a teaching repository, this scores false while the phenomenon happens.</p>
+<p><strong>Checked not to be true already, on 28 July 2026.</strong> Open, over a roster that now exists. The version this replaces named the field’s informal method guides without ever writing down which guides, so one in five and one in fifty would have scored identically. Ten are now named with their URLs and their DOI status at the freeze, and none carries a DOI.</p>
+<p><strong>Where the numbers stood when this was frozen.</strong> <code>guides_roster_n</code> = 10. Each one is recounted every time the page is built.</p>
+</details>
+<div class="prediction">
+<p><span class="prob">p = 0.40</span><span class="pid">P4 · An economics checklist for measuring with LLMs appears</span></p>
+<p>A named, numbered reporting checklist of at least eight items for measurement based on LLMs, scoped specifically to economics rather than to a broader field that includes economics, is released as a preprint or peer reviewed article.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. Three mechanical conditions are fixed here so resolution does not turn on an adjective. The checklist must carry eight or more numbered items. The word economics or economic must appear in its title or in its own stated scope. And a majority of credited authors must hold economics affiliations. Any public version during the window counts, so a preprint that reaches eight items on revision qualifies from that revision onward. The NUMBER of qualifying checklists is recorded rather than only the yes or no, because two rival checklists confirm the underlying thesis more strongly than one, and the register should be able to say so.</p>
+<p><strong>What does not count.</strong> Two existing checklists are excluded and neither can satisfy this claim. ELEVATE-GenAI, published by ISPOR in Value in Health in 2025, is scoped to health economics and outcomes research. GUIDE-LLM, in Nature Human Behaviour, is a 14 item peer reviewed checklist for behavioural and social science, developed with economics experts among others, which makes it economics INCLUSIVE rather than economics scoped. A qualifying checklist must name economics as its scope, not as one discipline among several. The eight item threshold is arbitrary. It is frozen here rather than defended, precisely so that whoever scores this cannot quietly bend it.</p>
+<p><strong>The closest thing that has already happened.</strong> GUIDE-LLM has 14 numbered items, is peer reviewed, and had economics experts on its panel. It fails the scope condition alone, being written for behavioural and social science. ELEVATE-GenAI fails the same condition from the health economics side.</p>
+<p><strong>How this could come true for the wrong reason.</strong> A field can acquire its reporting standard by adopting a neighbour’s rather than writing its own. If economics simply cites GUIDE-LLM, this claim fails while the need it names is met, which is exactly why P11 scores the citation and this one scores the artifact.</p>
+<p><strong>Checked not to be true already, on 27 July 2026.</strong> Open as narrowed. The version this replaces said general economics without saying whether a checklist that merely includes economics counted, which made it unscorable rather than merely uncertain, since GUIDE-LLM satisfies one reading of that phrase and fails the other. The wording now says which reading applies.</p>
+</details>
+</section>
+<section id="during-2027" class="level3">
+<h3 class="anchored" data-anchor-id="during-2027">During 2027</h3>
+<div class="prediction">
+<p><span class="prob">p = 0.65</span><span class="pid">P5 · An agent does the first-pass replication check</span></p>
+<p>The AEA Data Editor or at least one top five journal reaches tier 2 or higher on the frozen ladder for agent checking, meaning an agent performs the first pass reproduction of submission code with human sign off, stated publicly, on standard accepted submissions rather than a one off pilot.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. The ladder is fixed here. Tier 0 has no model in the checking path. Tier 1 is a human team using AI tools ad hoc. Tier 2 has an agent performing the first pass with human sign off, stated publicly. Tier 3 has the agent checking autonomously. Tier 2 or higher resolves this true, and the tier reached is recorded with its date. Buying counts as adopting, so a journal contracting a vendor whose product is reproduction run by an agent is tier 2 or tier 3 depending on sign off, because the bet is that journals ACQUIRE agent checking rather than that they build it. The public tell is the AEA Data Editor’s own repositories, since a release that imports an LLM SDK into the reproducibility path is evidence anyone can check.</p>
+<p><strong>What does not count.</strong> One off pilots, hackathons and demonstrations do not count, because the system must run on standard accepted submissions. Automated or containerized re-execution without an LLM or an agent doing the checking does not count either, because the AEA already has that. A human reproducibility team using AI tools ad hoc does not count, because that is tier 1 and this claim needs tier 2.</p>
+<p><strong>The closest thing that has already happened.</strong> The AEA already runs automated containerised re-execution. The distance to tier 2 is a model call inside a pipeline that already exists rather than a new institution.</p>
+<p><strong>How this could come true for the wrong reason.</strong> Tier 3 may never be publicly distinguishable from tier 2, because no institution advertises that nobody reads the output. Scoring the ladder rather than the word autonomously is what stops that ambiguity deciding the claim.</p>
+<p><strong>Checked not to be true already, on 28 July 2026.</strong> Open at tier 0. The AEA Data Editor runs automated, containerised re-execution with no model in the checking path, and the Economic Journal assigns its checks to a human team. The version this replaces asked only about tier 3, which no institution would ever advertise, since nobody announces that a human has stopped reading the output.</p>
+<p><strong>Where the numbers stood when this was frozen.</strong> <code>policy_venue_n</code> = 7. Each one is recounted every time the page is built.</p>
+</details>
+<div class="prediction">
+<p><span class="prob">p = 0.70</span><span class="pid">P6 · An editor blames AI for a surge in submissions</span></p>
+<p>At least one top five economics journal or a named economics data editor publicly reports a rise in submissions or in desk rejection rate that it attributes to manuscripts generated by AI.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. A quotable public statement or annual note from an economics editor or data editor. This claim scores the SENTENCE. Its numeric twin is P18, which scores the submission count and needs no attribution. They are separated deliberately, because the likely world is one where submissions rise and no editor says why, and a register that cannot represent that world learns nothing from it.</p>
+<p><strong>What does not count.</strong> Statements from outside economics do not count. The Organization Science finding is real, with a 42% submission surge, AI use detected in the majority of manuscripts by February 2026, and much higher desk rejection rates for papers heavy in AI use, and it is the precedent this claim sits above, but it is a management journal. A press interview with an editor speaking personally does not count, because it must be a journal or data editor statement. A named economics data editor means one of the offices frozen in policy_venues.csv rather than any journal that has appointed one.</p>
+<p><strong>The closest thing that has already happened.</strong> Organization Science reports submissions up 42%, AI use in a majority of manuscripts by February 2026, and much higher desk rejection rates for papers heavy in AI use. It is a management journal, so it is the precedent and not the resolution.</p>
+<p><strong>How this could come true for the wrong reason.</strong> Attribution is a speech act and editors have every reason to avoid it, since naming AI as the cause invites a fight with their own authors. The number can rise for two years while nobody says the word, which is what P18 exists to catch.</p>
+<p><strong>Checked not to be true already, on 27 July 2026.</strong> Open for economics. The management field got there first, with hard numbers. No qualifying statement from a top five economics editor or a named economics data editor was found.</p>
+<p><strong>Where the numbers stood when this was frozen.</strong> <code>policy_venue_n</code> = 7. Each one is recounted every time the page is built.</p>
+</details>
+<div class="prediction">
+<p><span class="prob">p = 0.65</span><span class="pid">P7 · Predoc adverts ask for AI-auditing experience</span></p>
+<p>Postings for research assistants or predocs from at least three top 20 departments or named labs require experience auditing, validating or verifying AI or LLM output specifically, as distinct from replication and reproducibility work in general.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. Postings are captured from the twenty departments frozen in departments_frame.csv over one full hiring cycle, from August to February, because predoc hiring is seasonal and a December sample catches the middle of a cycle while a June sample catches nothing. Every posting is archived with its URL and the date of capture, because postings die within weeks and the evidence for a null result evaporates exactly as fast as the evidence for a positive one. The TOTAL number of postings captured is recorded beside the count carrying audit language about AI, so the denominator is visible.</p>
+<p><strong>What does not count.</strong> Generic replication and reproducibility language does not count, and this is exactly what retired the first version of this claim. LBS with ‘replication of results’, Dartmouth with ‘constructing replication materials’ and Cornell with ‘Replication Lab Coordinator and Research Assistant’ already carried that vocabulary before the claim was written, and none of it was motivated by AI. The posting must name AI or LLM output as the thing being checked. Three postings from one department count once. If total captured postings from the frame fall by more than 25% against the first full cycle, this claim resolves VOID rather than false, because the channel closed, and a vocabulary cannot spread through a channel that is no longer there.</p>
+<p><strong>The closest thing that has already happened.</strong> A 2026 Notre Dame postdoc advertisement asks explicitly for interest in agentic AI tools. It fails three ways, being a postdoc rather than a research assistant or predoc, asking for interest in tools rather than for auditing their output, and coming from outside the top 20 frame, but it dates the vocabulary’s arrival at March 2026 and is the closest case observed.</p>
+<p><strong>How this could come true for the wrong reason.</strong> Kustov states plainly that he no longer envisions a research assistant role in his workflow. If that spreads, the audit vocabulary can be diffusing while the postings vanish, and a claim that counts only the numerator would read the collapse of the apprenticeship channel as evidence against change driven by AI.</p>
+<p><strong>Checked not to be true already, on 27 July 2026.</strong> Open as rewritten. The version this replaces asked only for three postings containing reproducibility or verification vocabulary and did not require the language to be new or motivated by AI, so it was already true the day it was written, satisfied by postings that predate the AI question entirely.</p>
+<p><strong>Where the numbers stood when this was frozen.</strong> <code>dept_frame_n</code> = 20. Each one is recounted every time the page is built.</p>
+</details>
+<div class="prediction">
+<p><span class="prob">p = 0.55</span><span class="pid">P8 · Two maintained validation packages exist</span></p>
+<p>At least two validation suites for measurement with LLMs, scoped to economics and written by more than one author, exist, each with two or more credited authors, a commit within the trailing 12 months, and rOpenSci review or a place on JOSS or CRAN.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. Scored from the rOpenSci, JOSS and CRAN registries, on each package’s own stated scope. Corpus tool rows are corroborating only and never decisive. The conditions are mechanical and read off registry pages, requiring two or more credited authors, a commit within the trailing twelve months, and either an economics term in the CRAN or JOSS description or a published application in an economics venue.</p>
+<p><strong>What does not count.</strong> General purpose suites do not count, however usable they are by economists, and naming them is what makes this claim scorable at all. quallmer, on CRAN with two authors, covering qualitative measurement with LLMs against a gold standard, and oolong, on CRAN and JOSS with two authors, covering validation for automated content analysis, were both updated in May and June 2026 and both fail on scope alone. A qualifying suite must be documented for economics measurement tasks, or published by authors with economics affiliations in an economics venue. The two suites must have DISJOINT author groups, because one prolific lab shipping two packages is not the field converging on a standard, and P12 learned that lesson expensively. A package that qualified at any point in the window counts even if CRAN later archives it over an unanswered maintainer email, because archival is a maintenance event rather than a verdict on the field.</p>
+<p><strong>The closest thing that has already happened.</strong> quallmer and oolong satisfy every condition except scope, with two authors each, both current on CRAN, both updated in May and June 2026, and neither documented for economics measurement.</p>
+<p><strong>How this could come true for the wrong reason.</strong> Economics may never scope a suite to itself and may instead adopt a general one with an economics vignette, satisfying the need this claim names while failing its letter.</p>
+<p><strong>Checked not to be true already, on 27 July 2026.</strong> Open as narrowed, and the narrowing was necessary rather than cosmetic. As first written, validation suites for economics measurement with LLMs did not say whether a general suite usable by economists counted. Under the loose reading quallmer and oolong already satisfy it, which would have made this a fifth claim that was already true.</p>
+</details>
+<div class="prediction">
+<p><span class="prob">p = 0.60</span><span class="pid">P9 · Standalone coding assistants keep being absorbed</span></p>
+<p>The standalone category keeps dissolving, so at least two of the coding assistants still independent at the freeze, meaning the cohort marked independent in coding_assistants_2026.csv, are discontinued, acquired, or folded into a general agent platform by the resolve date.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. The cohort is the rows marked independent in the frozen file. Any one of these public signals counts as the event, whether an end of life notice, an acquisition announcement, the product URL redirecting to a parent platform’s page, or the source repository archived by its owner. A product that keeps its brand but becomes a MODE inside a platform does count, because the claim is about the category dissolving rather than about a trademark disappearing.</p>
+<p><strong>What does not count.</strong> Four events that had already happened at the freeze are named and excluded, because this claim has now twice been at risk of being true when written. Windsurf was acquired by Cognition and folded into the Devin family as Devin Desktop, reported on 2 June 2026. A Cursor acquisition was reported to close in Q3 2026. Continue.dev was acquired by Cursor. And Cody was superseded by Amp. Aider is excluded for the opposite reason, since it is reported dormant, and going quiet is not an announcement, which makes it the named precedent for that rule. The premise that agent coding becomes a platform default is excluded as already true, because GitHub, VS Code and JetBrains all ship agents on by default.</p>
+<p><strong>The closest thing that has already happened.</strong> Aider has effectively stopped without anyone announcing anything. It is the exact shape this claim refuses to count, and the reason repository archival is on the signal list above.</p>
+<p><strong>How this could come true for the wrong reason.</strong> The evidence is secondary reporting rather than vendor announcements, and the accounts conflict, since one describes Cognition acquiring Windsurf in December 2025 and another OpenAI acquiring it in March 2026. If that reporting is wrong then the exclusions are wrong and the cohort is cut in the wrong place.</p>
+<p><strong>Checked not to be true already, on 28 July 2026.</strong> Open over the remaining cohort, and the version it replaces was at or past the line. Secondary reporting describes two qualifying absorptions inside 2026, with Windsurf going into Devin Desktop and Continue.dev into Cursor, plus a Cursor acquisition reported to close in Q3. Under the previous wording, which asked for two products shipped in 2026 to be discontinued, acquired or folded in, that is arguably already satisfied. Rather than retire a third claim for being true when written, the cohort is now the products STILL independent at the freeze, and the four absorbed ones are named as exclusions. The same fix also closes the hole that retired the first version, which named products that shipped during 2026 without ever listing them, and that is the accidental sample problem in a smaller disguise.</p>
+<p><strong>Where the numbers stood when this was frozen.</strong> <code>assistants_cohort_n</code> = 6, <code>assistants_excluded_n</code> = 5. Each one is recounted every time the page is built.</p>
+</details>
+<div class="prediction">
+<p><span class="prob">p = 0.45</span><span class="pid">P14 · Verification shifts from checking prose to checking results</span></p>
+<p>The verification tooling shifts from checking prose to checking results, so tools that re-run or score an analysis reach at least a quarter of the verification family and at least 6 tools in absolute count, up from 3 of 15.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from this collection. The gold kind labels in tool_labels.csv, mapped through the frozen subgroup vocabulary in scenario/data/frozen/verif_subgroups.csv and counted by build_metrics.R. The share is computed over the family of 15 frozen in metric_freeze.csv rather than over the live family, so growth in the collection cannot move the percentage by itself, and the live family is reported beside it. A tool that BOTH reads a draft and re-runs the analysis is a results checker, and that tie break is written into verif_subgroups.csv, added while no tool carried the label and it could not yet move the score. Subgroup labels for new tools are assigned before their effect on the score is computed.</p>
+<p><strong>What does not count.</strong> The evaluation kind counts toward the family but toward NEITHER side of the split, because it grades a model rather than a manuscript or an analysis. Naming it matters, because the published baseline read 17 manuscript and 3 results out of 21, which loses rows twice over, once to the unassigned evaluation kind and once to six same work duplicates. Tool rows marked dup=1 do not count.</p>
+<p><strong>The closest thing that has already happened.</strong> 3 of 15 is 20%, against a threshold of 25% plus an absolute floor of 6 tools. Two new results checkers clear the percentage, and three clear both.</p>
+<p><strong>How this could come true for the wrong reason.</strong> Kustov’s Part II reports that the AI written Part I passed every major AI detector as 100% human. If checking on the manuscript side is failing at its flagship task, tools may migrate to results checking for exactly the reason this claim predicts, or the whole verification family may stall because nobody trusts any of it.</p>
+<p><strong>Checked not to be true already, on 27 July 2026.</strong> Open, and considerably closer to true than the published baseline made it look. Honestly counted the split is 11 manuscript, 3 results and 1 neither out of 15, so results checking already stands at 20% rather than the 14% that 3 of 21 implied. That is why the threshold gained an absolute floor, because at a family of 15 a single new results checker would cross 25% by itself, and a forecast one tool wide is not a forecast.</p>
+<p><strong>Where the numbers stood when this was frozen.</strong> <code>verif_family_n</code> = 15, <code>verif_manuscript</code> = 11, <code>verif_results</code> = 3, <code>verif_neither</code> = 1, <code>verif_results_pct</code> = 20, <code>verif_family_freeze</code> = 15, <code>verif_results_freeze</code> = 3, <code>verif_results_pct_freeze</code> = 20. Each one is recounted every time the page is built.</p>
+</details>
+<div class="prediction">
+<p><span class="prob">p = 0.55</span><span class="pid">P18 · Submissions jump by a fifth at a named venue</span></p>
+<p>At least one of the venues frozen in policy_venues.csv reports a rise in submissions of 20% or more from one year to the next, for 2026 or 2027, whether or not it attributes the rise to anything.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. Annual reports, editors’ reports and AEA editorial notes. No attribution is required, because this claim scores the COUNT while P6 scores the sentence. Where a venue publishes submissions only as a total, that total is the series.</p>
+<p><strong>What does not count.</strong> A rise reported by a journal outside the frozen venue list does not count. A rise in DESK REJECTIONS without a rise in submissions does not count either, because that is P6’s territory, and conflating the two is how a capacity story gets told with the wrong number.</p>
+<p><strong>The closest thing that has already happened.</strong> Organization Science at 42%, which is above the threshold but in the wrong discipline.</p>
+<p><strong>How this could come true for the wrong reason.</strong> Not every journal publishes submission counts, and those that do may stop. This can fail on data availability rather than on the world, which is the mirror image of P6’s failure mode.</p>
+<p><strong>Checked not to be true already, on 28 July 2026.</strong> Open, and its main weakness is stated rather than hidden. The submission baselines were NOT captured at the freeze, which policy_venues.csv records honestly in its submissions_baseline column. The first resolution round must capture the base year before this can be scored at all.</p>
+<p><strong>Where the numbers stood when this was frozen.</strong> <code>policy_venue_n</code> = 7. Each one is recounted every time the page is built.</p>
+</details>
+</section>
+<section id="by-the-end-of-2028" class="level3">
+<h3 class="anchored" data-anchor-id="by-the-end-of-2028">By the end of 2028</h3>
+<div class="prediction">
+<p><span class="prob">p = 0.70</span><span class="pid">P10 · Half the embargoed papers become findable</span></p>
+<p>At least half of the 47 NBER working papers listed in scenario/data/frozen/nber_embargoed.csv have a findable open mirror by the end of 2028, discoverable by the stated resolution procedure, whether or not this corpus has re-fetched them.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. The frozen cohort file, searched paper by paper over the world, meaning the author site, the NBER open chapter series and institutional working paper series, and NOT this corpus’s fetch lane. Each mirror found is recorded in the cohort file’s resolved_on and resolved_mirror_url columns, so the score is a count of filled rows. The search effort is fixed here so a motivated searcher in 2028 cannot make this true by looking harder. Per paper, check the author’s own site, RePEc, and Google Scholar’s list of all versions, for up to ten minutes, then stop and record the outcome either way.</p>
+<p><strong>What does not count.</strong> A copy behind the NBER paywall does not count, and neither does this corpus successfully fetching one, because the claim is about the world rather than about our access. The cohort is closed at the freeze. Papers embargoed after it do not join, and papers added to the corpus later are irrelevant to it. An open access PUBLISHED version DOES count as a mirror, because the claim is about whether the work became readable without paying rather than about which version did it. That is decided here rather than in 2028 with a score riding on it.</p>
+<p><strong>The closest thing that has already happened.</strong> 0 of 47 at the freeze. All 47 sit in lane=manual with handler=nber_embargo and no successful fetch.</p>
+<p><strong>How this could come true for the wrong reason.</strong> Embargo lapse and authors posting their own work are the mechanism, but if NBER changes its embargo terms the whole cohort could resolve at once for a reason that has nothing to do with the AI story this scoreboard is about.</p>
+<p><strong>Checked not to be true already, on 27 July 2026.</strong> Open, with 0 of 47 mirrors found at the freeze. Until this rewrite the claim named the NBER working papers embargoed at v1.0, which was a set nobody had written down, pinned to a tag nobody had cut. It is now a file with 47 rows, two empty resolution columns, and a SHA-256 in the freeze manifest.</p>
+<p><strong>Where the numbers stood when this was frozen.</strong> <code>nber_cohort_n</code> = 47, <code>nber_open_mirrors</code> = 0. Each one is recounted every time the page is built.</p>
+</details>
+<div class="prediction">
+<p><span class="prob">p = 0.50</span><span class="pid">P11 · A reporting checklist is cited in a methods section</span></p>
+<p>A named reporting checklist for measurement with LLMs is cited in the methods section of a peer reviewed economics article outside health economics.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. A citation search in peer reviewed economics methods sections. P4 and P11 are a ladder, where the standard exists and then the standard gets used, and their probabilities should be read together. P11 sits above P4 only because GUIDE-LLM and ELEVATE-GenAI already exist as citable objects, so this claim does not depend on P4 resolving true.</p>
+<p><strong>What does not count.</strong> Health economics is out of scope in the CITING article rather than merely in the checklist. Any named checklist counts as the thing cited, including ELEVATE-GenAI and GUIDE-LLM, so it does not have to be the one P4 predicts. A mention in a literature review, a footnote or a related work paragraph does not count, because it must sit in the methods section, as the standard the paper followed. Self citation does not count, so the citing article must share no author with the checklist. The methods section includes a methods appendix or supplementary methods, so a paper cannot fail this claim merely by moving its methods online.</p>
+<p><strong>The closest thing that has already happened.</strong> Both checklists exist and are citable. No peer reviewed economics article outside health economics was found citing either in its methods.</p>
+<p><strong>How this could come true for the wrong reason.</strong> Economics may cite a checklist in a robustness appendix or a referee response rather than in methods, satisfying the spirit while failing the letter.</p>
+<p><strong>Checked not to be true already, on 27 July 2026.</strong> Open. GUIDE-LLM and ELEVATE-GenAI both exist and are citable, and no peer reviewed economics article outside health economics was found citing either in its methods section.</p>
+</details>
+<div class="prediction">
+<p><span class="prob">p = 0.45</span><span class="pid">P12 · Someone else’s benchmark gets reused</span></p>
+<p>Benchmark building enters the field’s credit economy, so a gold labelled economics text dataset built by economists is used as the evaluation set in at least two peer reviewed economics articles whose author lists are disjoint from the original team.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. A citation and reuse search from the dataset record, checking each citing article’s author list against the original team’s.</p>
+<p><strong>What does not count.</strong> The EXISTENCE of such a dataset is excluded, because it already happened. BeigeSage, in Applied Economics and online on 24 March 2026, released a public OSF dataset of 1,000 Beige Book passages labelled by hand for a recurring task in economic sentiment, by authors with economics and business economics affiliations in an economics venue, satisfying every written condition of the version this replaces. Corpora from the NLP community remain excluded as before, since the World Central Banks corpus and Financial PhraseBank were built by NLP groups at NLP venues. Self citation by the dataset’s own authors does not count, which is what the disjoint author condition is for. The two citing articles must be disjoint from the original team AND from each other, because one lab adopting the dataset twice is one lab. A paper that fine tunes on part of the gold labels and evaluates on the rest DOES count, because the labels are still doing evaluative work.</p>
+<p><strong>The closest thing that has already happened.</strong> BeigeSage exists, with 1,000 Beige Book passages labelled by hand and a public OSF release. Independent reuse is none found.</p>
+<p><strong>How this could come true for the wrong reason.</strong> Reuse may happen inside industry or central bank research that never reaches a peer reviewed economics journal, so this can fail while the benchmark is genuinely adopted.</p>
+<p><strong>Checked not to be true already, on 27 July 2026.</strong> Open as rewritten, and this is the second time this claim has been retired for being already true, which is the same clock error made twice on the same question. The first version asked whether such a benchmark existed, and it did, built by NLP groups. The second asked whether ECONOMISTS would build one, and they had, four months before the claim was drafted. What is genuinely open is whether anyone else uses it, which is the harder half, because benchmark building carries little disciplinary credit until someone does.</p>
+</details>
+<div class="prediction">
+<p><span class="prob">p = 0.50</span><span class="pid">P13 · Audit-style teaching reaches graduate syllabi</span></p>
+<p>Audit style pedagogy adopted explicitly as a measure of AI integrity appears in graduate economics syllabi at three distinct institutions, whether as planted error assignments, audits of AI output, or oral examination newly introduced for that purpose.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. The frame is the twenty departments frozen in departments_frame.csv, whose graduate methods and econometrics course pages are snapshotted at the freeze and checked at the same addresses at resolution. Deciding where to look before looking is what makes a null result mean anything, because most syllabi were never public, and an open ended search that finds nothing mostly measures the opacity of course materials.</p>
+<p><strong>What does not count.</strong> Oral examination that predates the AI question does not count, because many programmes have always had it, so the syllabus must state a motivation of AI integrity. Undergraduate courses do not count. Three such courses at one institution count once. Evidence sufficiency is decided here. An assignment whose TEXT requires auditing, correcting or replicating AI output counts even when the syllabus never states a motive of AI integrity, because syllabi almost never explain why an assignment exists. Demanding the confession as well as the assignment would score a false negative on a true phenomenon.</p>
+<p><strong>The closest thing that has already happened.</strong> A Bath economics assignment requires students to critique AI output. That is one institution, and not a graduate syllabus.</p>
+<p><strong>How this could come true for the wrong reason.</strong> Most syllabi are not public. A null over the frame may measure that opacity rather than the absence of the practice, which is why the frame is fixed and snapshotted rather than searched afresh each time.</p>
+<p><strong>Checked not to be true already, on 27 July 2026.</strong> Open. The closest case found is a Bath economics assignment requiring students to critique AI output, which is one institution and not a graduate syllabus. No set of three institutions was found.</p>
+<p><strong>Where the numbers stood when this was frozen.</strong> <code>dept_frame_n</code> = 20. Each one is recounted every time the page is built.</p>
+</details>
+<div class="prediction">
+<p><span class="prob">p = 0.40</span><span class="pid">P15 · The method layer stops belonging to one vendor</span></p>
+<p>The method layer stops being single vendor, so the share of the guides and tools register naming the Anthropic stack falls below half, or documents naming an open weight model rise from the 19 held at the freeze to at least 40.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from this collection. Recomputed by build_metrics.R over document body text with the patterns frozen in vendor_regex.csv and the extractor pinned to the toolchain named in MANIFEST.md. That pinning is not decoration, because this project has already watched a pdftools upgrade change document bodies extracted from byte identical blobs, so a regex over re-extracted text could move these counts with no document having changed. The frozen register in vendor_register_freeze.csv is the baseline the change is measured FROM rather than the population it is measured OVER, because freezing the population would make the claim vacuous, since the same 117 documents will never change what they say. Three guards replace that. The shift must hold on the live register AND among documents added after the freeze. It must survive dropping any single source. And no acquisition sweep aimed at a vendor may run between the freeze and resolution.</p>
+<p><strong>What does not count.</strong> The papers register is not part of this claim. It leans the other way, with OpenAI ahead of Anthropic, and reporting the two side by side is what produced the wrong baseline, because the published figure of 30 of 43 guides used the guides denominator for a claim written over guides and tools. Tool rows marked dup=1 do not count. Commentary is deliberately OUT of the register, and the cost is stated rather than hidden, since all three parts of Kustov’s series were written with Claude Code and say so, and they sit in the article register, outside this denominator. The register is guides and tools because those are the artifacts a practitioner installs and follows, and counting commentary would measure enthusiasm rather than dependency.</p>
+<p><strong>The closest thing that has already happened.</strong> 58.1% Anthropic against a 50% threshold, and 19 open weight documents against a floor of 40. Neither condition is near.</p>
+<p><strong>How this could come true for the wrong reason.</strong> This is the claim whose outcome the maintainer can most easily move, because ingesting thirty open weight tool pages would satisfy the second condition without anything changing in the field. The test on documents added after the freeze, the check that dropping any single source does not undo the result, and the pre commitment against a targeted sweep are what stand between this claim and a shopping list, and they are weaker guards than a frozen cohort. If they are broken the claim is VOID.</p>
+<p><strong>Checked not to be true already, on 27 July 2026.</strong> Open, and neither condition holds. On the register the claim names, which is guides plus tools, the FROZEN baseline is 117 documents with full text, of which 68 name the Anthropic stack at 58.1%, 63 name OpenAI and 19 name an open weight model at 16.2%. The LIVE register has already moved to 122 documents, with 71 naming Anthropic at 58.2% and 19 naming an open weight model at 15.6%, after the acquisition round of 28 July 2026, and that first drift is worth reading, because the open weight share fell from 16.2% to 15.6% purely because the documents swept in named the incumbents. Both sets of numbers are carried on purpose. The frozen pair is what the claim is measured from, and the live pair sits in the baseline so that growth FIRES the gate and forces a deliberate re-baseline instead of a silent one. The published figure this replaces, 30 of 43 guides, was the right direction on the wrong denominator.</p>
+<p><strong>Where the numbers stood when this was frozen.</strong> <code>vend_prac_docs</code> = 122, <code>vend_prac_anthropic</code> = 71, <code>vend_prac_openai</code> = 65, <code>vend_prac_openweight</code> = 19, <code>vend_prac_anthropic_pct</code> = 58.2, <code>vend_prac_openweight_pct</code> = 15.6, <code>vend_frozen_docs</code> = 117, <code>vend_frozen_anthropic</code> = 68, <code>vend_frozen_openweight</code> = 19. Each one is recounted every time the page is built.</p>
+</details>
+<div class="prediction">
+<p><span class="prob">p = 0.35</span><span class="pid">P16 · A paper is retracted over AI-generated content</span></p>
+<p>A paper in a peer reviewed economics journal is retracted or formally corrected, with the notice naming content generated or fabricated by AI as a cause, by the resolve date.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. Retraction Watch, the publisher’s own notice, and Crossref retraction metadata. The notice must name content generated or fabricated by AI, whether a fabricated citation, a hallucinated result or an invented dataset, as a cause, in an economics journal.</p>
+<p><strong>What does not count.</strong> A correction for an ordinary coding error does not count even if a model wrote the code, because the notice must attribute the defect to CONTENT GENERATED BY AI. A preprint withdrawal does not count, because a preprint has no editorial process to fail. A retraction in a management venue, a finance adjacent venue or a general science venue does not count, for the same reason Organization Science cannot resolve P6.</p>
+<p><strong>The closest thing that has already happened.</strong> A Kyiv School of Economics researcher wrote an article generated by ChatGPT about a fictional Pacific country and submitted it to a journal in early 2026. That is an experiment rather than a retraction, and the venue was not an economics journal.</p>
+<p><strong>How this could come true for the wrong reason.</strong> Journals can handle content fabricated by AI quietly, through a correction that never names the cause, or by desk rejecting before publication. The scandal can therefore happen without leaving the public notice this claim requires.</p>
+<p><strong>Checked not to be true already, on 28 July 2026.</strong> Open, and added deliberately as the accelerant the rest of the register assumes away. P2, P5 and P6 all quietly assume institutions move under gradual pressure. Research integrity policy historically moves after a scandal, as with Stapel, Hauser and Gino, rather than before one. If this fires, those three become substantially more likely, which is the point of carrying it, because it makes a hidden correlation in the portfolio visible instead of leaving it to surprise whoever scores it.</p>
+</details>
+<div class="prediction">
+<p><span class="prob">p = 0.25</span><span class="pid">P17 · Author counts per paper fall</span></p>
+<p>The mean number of credited authors per NBER working paper issued in 2028 is below the 2024 mean.</p>
+</div>
+<details>
+<summary>
+The fine print
+</summary>
+<p><strong>How it will be scored</strong>, from public pages. NBER’s public working paper series, all papers issued in each calendar year, mean credited authors per paper. Both years are computed with the same script at resolution. The 2024 figure is not recorded here because it is a closed historical quantity that cannot move, so computing it later does not weaken the claim, and pretending to freeze it would be theatre.</p>
+<p><strong>What does not count.</strong> A revision does not count as a new paper, because the issue year is the working paper’s own. Credited authors only, so acknowledgements, research assistant credits and data provider notes are not authorship. Papers issued outside the NBER working paper series do not count, however similar.</p>
+<p><strong>The closest thing that has already happened.</strong> None yet. The 2024 baseline has not been computed, and the first resolution round establishes it.</p>
+<p><strong>How this could come true for the wrong reason.</strong> AI could raise co-authorship instead, because cheaper collaboration and larger feasible projects both push the other way, and the same technology can plausibly produce either sign. This claim is a genuine coin flip on mechanism rather than only on timing.</p>
+<p><strong>Checked not to be true already, on 28 July 2026.</strong> Open, and added because the register had no claim that is both quantitative and entirely outside the maintainer’s control. NBER’s series is public, large, and completely unaffected by what this corpus ingests, which makes it the only clean calibration anchor here. Kustov’s Part I supplies the mechanism, because if AI absorbs the research assistant and junior collaborator role, the decades long rise in co-authorship should stall or reverse.</p>
+</details>
+</section>
+</section>
+<section id="why-any-of-this-can-be-trusted" class="level2">
+<h2 class="anchored" data-anchor-id="why-any-of-this-can-be-trusted">Why any of this can be trusted</h2>
+<p>Three things stand behind the register, and each exists because something went wrong without it.</p>
+<p><strong>The rules are enforced by a script, not by memory.</strong> The first version of this page announced its rules and then checked them once, by hand, on the day it was written. An outside review months later found fifteen defects, and not one of them was a bad guess about the world. Every single one was a rule that had been written down and then forgotten: a baseline nobody recomputed, a claim that named a resolution set nobody had ever written down, a sentence claiming the page was frozen when nothing was. So the rules became 9 automatic checks that run before this page is allowed to build, and a stale number now breaks the build instead of quietly shipping.</p>
+<p><strong>The freeze is a file rather than a phrase.</strong> Two claims used to resolve over a set, the embargoed papers and the 2026 tool cohort, that nobody had written down, so at scoring time there would have been no way to recover which items were meant. A forecast whose population is reconstructed afterwards is not a forecast. Those sets are now files, pinned along with 14 others by checksum on 28 July 2026, and a scoring input cannot be edited quietly.</p>
+<p><strong>Withdrawn claims stay on the page.</strong> 15 versions of claims have been retired, mostly for being <strong>already true</strong> when written. That failure is worth publishing, because it has a pattern: the forecaster’s error was never the direction, it was always the clock. The informal, fast moving parts of this change had already happened while the formal parts had not, which is the same split between registers the <a href="../index.html">main essay</a> is about, showing up inside its own forecast.</p>
+<details>
+<summary>
+The checks, the withdrawals, and the frozen numbers
+</summary>
+<div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
-<colgroup>
-<col style="width: 1%">
-<col style="width: 4%">
-<col style="width: 81%">
-<col style="width: 1%">
-<col style="width: 4%">
-<col style="width: 3%">
-<col style="width: 2%">
-</colgroup>
+<caption>Every check, run on 28 July 2026. A single failure and this page would not exist.</caption>
 <thead>
 <tr class="header">
-<th style="text-align: left;">ID</th>
-<th style="text-align: left;">Horizon</th>
-<th style="text-align: left;">Prediction</th>
-<th style="text-align: center;">p</th>
-<th style="text-align: center;">Scored from</th>
-<th style="text-align: left;">Resolve by</th>
-<th style="text-align: left;">Status</th>
+<th style="text-align: left;">Check</th>
+<th style="text-align: right;">Passed</th>
+<th style="text-align: right;">Failed</th>
+<th style="text-align: right;">Not applicable</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">P1</td>
-<td style="text-align: left;">rest of 2026</td>
-<td style="text-align: left;">By the frozen gold labels, verification and referee tools stay the largest single kind of AI-for-research tool the field builds. The audited share holds at or above 25%.</td>
-<td style="text-align: center;">0.85</td>
-<td style="text-align: center;">database</td>
-<td style="text-align: left;">2026-12-31</td>
-<td style="text-align: left;">open</td>
+<td style="text-align: left;">G0 schema</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">P2</td>
-<td style="text-align: left;">rest of 2026</td>
-<td style="text-align: left;">At least one top-five journal (AER, Econometrica, JPE, QJE, REStud) or the AEA Data Editor carries an explicit written policy on LLM use in submissions.</td>
-<td style="text-align: center;">0.90</td>
-<td style="text-align: center;">public pages</td>
-<td style="text-align: left;">2026-12-31</td>
-<td style="text-align: left;">open</td>
+<td style="text-align: left;">G1 baseline</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">6</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">P3</td>
-<td style="text-align: left;">rest of 2026</td>
-<td style="text-align: left;">The named cast (Cunningham, Panjwani, Sant’Anna, Backman, Goldsmith-Pinkham) publishes at least three new guides on their own sites or public repos, verifiable independently of this corpus.</td>
-<td style="text-align: center;">0.75</td>
-<td style="text-align: center;">public pages</td>
-<td style="text-align: left;">2026-12-31</td>
-<td style="text-align: left;">open</td>
+<td style="text-align: left;">G2 falsity</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">P4</td>
-<td style="text-align: left;">rest of 2026</td>
-<td style="text-align: left;">A named, numbered reporting checklist of at least eight items, scoped to LLM-based measurement in economics, is released as a preprint or peer-reviewed article.</td>
-<td style="text-align: center;">0.55</td>
-<td style="text-align: center;">public pages</td>
-<td style="text-align: left;">2026-12-31</td>
-<td style="text-align: left;">open</td>
+<td style="text-align: left;">G3 artifact</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">P5</td>
-<td style="text-align: left;">2027</td>
-<td style="text-align: left;">The AEA Data Editor or at least one top-five journal adopts an LLM or agent system that autonomously executes and checks submission code, applied to standard accepted submissions rather than a one-off pilot.</td>
-<td style="text-align: center;">0.55</td>
-<td style="text-align: center;">public pages</td>
-<td style="text-align: left;">2027-12-31</td>
-<td style="text-align: left;">open</td>
+<td style="text-align: left;">G4 excludes</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">P6</td>
-<td style="text-align: left;">2027</td>
-<td style="text-align: left;">At least one top-five journal or a named data editor publicly reports a rise in submissions or in desk-rejection rate that it attributes to AI-generated manuscripts.</td>
-<td style="text-align: center;">0.60</td>
-<td style="text-align: center;">public pages</td>
-<td style="text-align: left;">2027-12-31</td>
-<td style="text-align: left;">open</td>
+<td style="text-align: left;">G5 references</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">P7</td>
-<td style="text-align: left;">2027</td>
-<td style="text-align: left;">Research-assistant or predoc postings from at least three top-20 departments or named labs carry explicit reproducibility, replication, verification, or audit language.</td>
-<td style="text-align: center;">0.65</td>
-<td style="text-align: center;">public pages</td>
-<td style="text-align: left;">2027-12-31</td>
-<td style="text-align: left;">open</td>
+<td style="text-align: left;">G6 freeze</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">P8</td>
-<td style="text-align: left;">2027</td>
-<td style="text-align: left;">At least two multi-author validation suites exist for economics LLM measurement, each with two or more credited authors, a commit within the trailing 12 months, and rOpenSci review or a place on JOSS or CRAN.</td>
-<td style="text-align: center;">0.55</td>
-<td style="text-align: center;">database</td>
-<td style="text-align: left;">2027-12-31</td>
-<td style="text-align: left;">open</td>
+<td style="text-align: left;">G7 nearest</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">P9</td>
-<td style="text-align: left;">2027</td>
-<td style="text-align: left;">Leading agent-coding capabilities ship as defaults in mainstream developer tools, so the share of newly released AI-for-research tools that are standalone coding assistants falls relative to 2026.</td>
-<td style="text-align: center;">0.55</td>
-<td style="text-align: center;">public pages</td>
-<td style="text-align: left;">2027-12-31</td>
-<td style="text-align: left;">open</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">P10</td>
-<td style="text-align: left;">2028</td>
-<td style="text-align: left;">At least half of the NBER working papers embargoed at v1.0 have a findable open mirror by the end of 2028, discoverable by the stated resolution procedure, whether or not this corpus has re-fetched them.</td>
-<td style="text-align: center;">0.70</td>
-<td style="text-align: center;">public pages</td>
-<td style="text-align: left;">2028-12-31</td>
-<td style="text-align: left;">open</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">P11</td>
-<td style="text-align: left;">2028</td>
-<td style="text-align: left;">The reporting standard defined in P4 is cited in the methods section of at least one peer-reviewed economics article.</td>
-<td style="text-align: center;">0.50</td>
-<td style="text-align: center;">public pages</td>
-<td style="text-align: left;">2028-12-31</td>
-<td style="text-align: left;">open</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">P12</td>
-<td style="text-align: left;">2028</td>
-<td style="text-align: left;">A public repository of human-validated gold-labelled datasets for recurring economics text-classification tasks, other than this site’s own tool-labels set, exists and has at least one citation in a peer-reviewed economics article.</td>
-<td style="text-align: center;">0.45</td>
-<td style="text-align: center;">public pages</td>
-<td style="text-align: left;">2028-12-31</td>
-<td style="text-align: left;">open</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">P13</td>
-<td style="text-align: left;">2028</td>
-<td style="text-align: left;">Audit-style pedagogy adopted explicitly as an AI-integrity measure appears in graduate economics syllabi at three distinct institutions, whether as planted-error assignments, AI-output audits, or oral examination newly introduced for that purpose.</td>
-<td style="text-align: center;">0.50</td>
-<td style="text-align: center;">public pages</td>
-<td style="text-align: left;">2028-12-31</td>
-<td style="text-align: left;">open</td>
+<td style="text-align: left;">G8 counter</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<section id="how-scoring-works" class="level2">
-<h2 class="anchored" data-anchor-id="how-scoring-works">How scoring works</h2>
-<p>The cheapest claims to grade are the ones this database answers by itself. When the corpus is rebuilt each quarter, <code>build_metrics.R</code> recomputes the numbers that three of these predictions turn on. Those three are the verification-tool share (<strong>P1</strong>), the Coding-with-AI entry share (<strong>P9</strong>), and the embargo-resolution rate (<strong>P10</strong>), so scoring them is a script run, not a judgment call. The rest resolve from public pages. These are journal and data-editor policies, editor reports, job postings, syllabi, and citation searches, each named in the <code>scoring</code> column of <code>predictions.csv</code>.</p>
+<p>Each check is itself broken on purpose in the test suite, to confirm it actually stops the build. A check that has never been seen to fail is a decoration.</p>
 <div class="cell">
-<details class="code-fold">
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  p <span class="sc">|&gt;</span> <span class="fu">transmute</span>(<span class="at">ID =</span> id, <span class="st">`</span><span class="at">How it will be scored</span><span class="st">`</span> <span class="ot">=</span> scoring),</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">align =</span> <span class="st">"ll"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
+<caption>Claims withdrawn before or at the freeze.</caption>
 <colgroup>
 <col style="width: 2%">
-<col style="width: 97%">
+<col style="width: 17%">
+<col style="width: 80%">
 </colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">ID</th>
-<th style="text-align: left;">How it will be scored</th>
+<th style="text-align: left;">Claim</th>
+<th style="text-align: left;">Why it was withdrawn</th>
+<th style="text-align: left;">What it had said</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">P1</td>
-<td style="text-align: left;">frozen gold labels in tool_labels.csv, an index-composition proxy that is disclosed as such</td>
+<td style="text-align: left;">P2 v1</td>
+<td style="text-align: left;">already true before drafting</td>
+<td style="text-align: left;">At least one top five journal or the AEA Data Editor carries an explicit written policy on LLM use in submissions.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">P2</td>
-<td style="text-align: left;">Author guidelines or editorial pages of AER, Econometrica, JPE, QJE, REStud, or the AEA Data Editor</td>
+<td style="text-align: left;">P3 v1</td>
+<td style="text-align: left;">already true before drafting</td>
+<td style="text-align: left;">The named cast publishes at least three new guides on their own sites or public repositories.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">P3</td>
-<td style="text-align: left;">the five authors’ own sites and public repos, archived at capture, regardless of indexing</td>
+<td style="text-align: left;">P4 v1</td>
+<td style="text-align: left;">already true before drafting</td>
+<td style="text-align: left;">A named, numbered reporting checklist of at least eight items, scoped to measurement based on LLMs in economics, is released as a preprint or peer reviewed article.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">P4</td>
-<td style="text-align: left;">Preprint and journal search. This is the shared reporting-standard definition reused by P11</td>
+<td style="text-align: left;">P12 v1</td>
+<td style="text-align: left;">already true before drafting</td>
+<td style="text-align: left;">A public repository of gold labelled datasets validated by humans for recurring economics text classification tasks exists and has at least one citation in a peer reviewed economics article.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">P5</td>
-<td style="text-align: left;">AEA Data Editor and top-five journal policy pages</td>
+<td style="text-align: left;">P4 v2</td>
+<td style="text-align: left;">unscorable as written</td>
+<td style="text-align: left;">A named, numbered reporting checklist of at least eight items for measurement based on LLMs, scoped to general economics rather than to health economics, is released as a preprint or peer reviewed article.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">P6</td>
-<td style="text-align: left;">A quotable public editor statement or annual data-editor note</td>
+<td style="text-align: left;">P7 v1</td>
+<td style="text-align: left;">already true before drafting</td>
+<td style="text-align: left;">Postings for research assistants or predocs from at least three top 20 departments or named labs carry explicit reproducibility, replication, verification, or audit language.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">P7</td>
-<td style="text-align: left;">RA and predoc postings, archived with URL and date at capture (postings are not retrievable later)</td>
+<td style="text-align: left;">P9 v1</td>
+<td style="text-align: left;">half already true, half unscorable in principle</td>
+<td style="text-align: left;">Leading agent coding capabilities ship as defaults in mainstream developer tools, so the share of newly released research tools that are standalone coding assistants falls relative to 2026.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">P8</td>
-<td style="text-align: left;">rOpenSci, JOSS, and CRAN registries plus corpus tool rows</td>
+<td style="text-align: left;">P12 v2</td>
+<td style="text-align: left;">already true before drafting</td>
+<td style="text-align: left;">Economists build their own benchmark, meaning a public gold labelled dataset for a recurring economics text classification task, released by authors with economics affiliations in an economics venue, distinct from the existing corpora built by NLP groups.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">P9</td>
-<td style="text-align: left;">public product changelogs (Claude Code, Codex, Cursor, and the like) plus a hand-labelled sample of new tools</td>
+<td style="text-align: left;">P9 v2</td>
+<td style="text-align: left;">at risk of already true</td>
+<td style="text-align: left;">At least two AI coding assistants that shipped as separate products during 2026 are publicly discontinued, acquired, or folded into a general agent platform, each announced by the vendor.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">P10</td>
-<td style="text-align: left;">the NBER working-paper ids embargoed at v1.0, scored by a stated procedure over the world (author site, NBER open-chapter series, institutional WP series), not this corpus’s fetch lane</td>
+<td style="text-align: left;">P2 v2</td>
+<td style="text-align: left;">replaced by a ladder</td>
+<td style="text-align: left;">Beyond disclosure, at least one top five journal or the AEA Data Editor requires, in writing, that empirical work using an LLM to produce a variable used in results supply validation evidence, such as agreement against human labels or an archived prompt and pinned model version.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">P11</td>
-<td style="text-align: left;">Citation search in peer-reviewed methods sections, using the standard defined in P4</td>
+<td style="text-align: left;">P5 v2</td>
+<td style="text-align: left;">replaced by a ladder</td>
+<td style="text-align: left;">The AEA Data Editor or at least one top five journal adopts an LLM or agent system that autonomously executes and checks submission code, applied to standard accepted submissions rather than a one off pilot.</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">P12</td>
-<td style="text-align: left;">Repository search plus a peer-reviewed citation check, excluding this site’s own tool-labels set</td>
+<td style="text-align: left;">P15 v1</td>
+<td style="text-align: left;">replaced because the outcome was movable by the maintainer</td>
+<td style="text-align: left;">The method layer stops being single vendor, so the share of guides and tools in the collection naming the Anthropic stack falls below half, or open weight models overtake either proprietary stack in that register.</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;">P13</td>
-<td style="text-align: left;">Publicly archived graduate syllabi from distinct institutions</td>
+<td style="text-align: left;">P1 v2</td>
+<td style="text-align: left;">rewritten in place, recorded late</td>
+<td style="text-align: left;">Verification is already the largest single kind of tool in the collection, at 21 tools, ahead of data at 18 and literature at 17.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P8 v1</td>
+<td style="text-align: left;">rewritten in place, recorded late</td>
+<td style="text-align: left;">At least two validation suites for economics measurement with LLMs exist, each with two or more credited authors, a commit within the trailing 12 months, and rOpenSci review or a place on JOSS or CRAN.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P14 v1</td>
+<td style="text-align: left;">rewritten in place, recorded late</td>
+<td style="text-align: left;">The verification tooling shifts from checking prose to checking results, so tools that re-run or score an analysis reach at least a quarter of the verification family, up from 3 of 21.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<div class="callout callout-style-simple callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
+<div class="cell">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>The 36 numbers the claims rest on, recounted at every build. All still agree with the frozen values.</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Claim</th>
+<th style="text-align: left;">Measure</th>
+<th style="text-align: right;">When frozen</th>
+<th style="text-align: right;">Recounted now</th>
+<th style="text-align: center;">Agrees</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">P1</td>
+<td style="text-align: left;">verif_family_n</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P1</td>
+<td style="text-align: left;">referee_n</td>
+<td style="text-align: right;">9.0</td>
+<td style="text-align: right;">9.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P1</td>
+<td style="text-align: left;">referee_rank</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P1</td>
+<td style="text-align: left;">kind_top_n</td>
+<td style="text-align: right;">17.0</td>
+<td style="text-align: right;">17.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P1</td>
+<td style="text-align: left;">referee_n_freeze</td>
+<td style="text-align: right;">9.0</td>
+<td style="text-align: right;">9.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P1</td>
+<td style="text-align: left;">referee_rank_freeze</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: right;">4.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P1</td>
+<td style="text-align: left;">kind_top_n_freeze</td>
+<td style="text-align: right;">17.0</td>
+<td style="text-align: right;">17.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P2</td>
+<td style="text-align: left;">policy_venue_n</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P2</td>
+<td style="text-align: left;">policy_rung_max</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P3</td>
+<td style="text-align: left;">guides_roster_n</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P5</td>
+<td style="text-align: left;">policy_venue_n</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P6</td>
+<td style="text-align: left;">policy_venue_n</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P7</td>
+<td style="text-align: left;">dept_frame_n</td>
+<td style="text-align: right;">20.0</td>
+<td style="text-align: right;">20.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P9</td>
+<td style="text-align: left;">assistants_cohort_n</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P9</td>
+<td style="text-align: left;">assistants_excluded_n</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P10</td>
+<td style="text-align: left;">nber_cohort_n</td>
+<td style="text-align: right;">47.0</td>
+<td style="text-align: right;">47.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P10</td>
+<td style="text-align: left;">nber_open_mirrors</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P13</td>
+<td style="text-align: left;">dept_frame_n</td>
+<td style="text-align: right;">20.0</td>
+<td style="text-align: right;">20.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P14</td>
+<td style="text-align: left;">verif_family_n</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P14</td>
+<td style="text-align: left;">verif_manuscript</td>
+<td style="text-align: right;">11.0</td>
+<td style="text-align: right;">11.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P14</td>
+<td style="text-align: left;">verif_results</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P14</td>
+<td style="text-align: left;">verif_neither</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P14</td>
+<td style="text-align: left;">verif_results_pct</td>
+<td style="text-align: right;">20.0</td>
+<td style="text-align: right;">20.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P14</td>
+<td style="text-align: left;">verif_family_freeze</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P14</td>
+<td style="text-align: left;">verif_results_freeze</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: right;">3.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P14</td>
+<td style="text-align: left;">verif_results_pct_freeze</td>
+<td style="text-align: right;">20.0</td>
+<td style="text-align: right;">20.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P15</td>
+<td style="text-align: left;">vend_prac_docs</td>
+<td style="text-align: right;">122.0</td>
+<td style="text-align: right;">122.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P15</td>
+<td style="text-align: left;">vend_prac_anthropic</td>
+<td style="text-align: right;">71.0</td>
+<td style="text-align: right;">71.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P15</td>
+<td style="text-align: left;">vend_prac_openai</td>
+<td style="text-align: right;">65.0</td>
+<td style="text-align: right;">65.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P15</td>
+<td style="text-align: left;">vend_prac_openweight</td>
+<td style="text-align: right;">19.0</td>
+<td style="text-align: right;">19.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P15</td>
+<td style="text-align: left;">vend_prac_anthropic_pct</td>
+<td style="text-align: right;">58.2</td>
+<td style="text-align: right;">58.2</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P15</td>
+<td style="text-align: left;">vend_prac_openweight_pct</td>
+<td style="text-align: right;">15.6</td>
+<td style="text-align: right;">15.6</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P15</td>
+<td style="text-align: left;">vend_frozen_docs</td>
+<td style="text-align: right;">117.0</td>
+<td style="text-align: right;">117.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P15</td>
+<td style="text-align: left;">vend_frozen_anthropic</td>
+<td style="text-align: right;">68.0</td>
+<td style="text-align: right;">68.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">P15</td>
+<td style="text-align: left;">vend_frozen_openweight</td>
+<td style="text-align: right;">19.0</td>
+<td style="text-align: right;">19.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">P18</td>
+<td style="text-align: left;">policy_venue_n</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: center;">yes</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</details>
+</section>
+<section id="how-it-will-be-graded" class="level2">
+<h2 class="anchored" data-anchor-id="how-it-will-be-graded">How it will be graded</h2>
+<div class="callout callout-style-simple callout-note">
+<div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-title-container flex-fill">
-The probabilities are the maintainer’s to set
+<div class="callout-body-container">
+<p>Assigning probabilities and never doing the arithmetic is decoration, so the commitment is made here, before anything resolves. Every claim that resolves will be scored, and the register will report its running average error. A claim whose measuring instrument breaks, meaning the channel it was to be counted through closes, is reported separately rather than quietly folded in.</p>
+<p>18 claims is a thin sample and the timing is lumpy, with 4 resolving this year and the rest across 2027 and 2028, so the score will be noisy for years. Publishing it anyway is the point.</p>
+<p>One caution when the tally arrives. These are not 18 independent bets. 5 of them are about journal policy, so if journals simply sit still they fail together, and a naive hit rate would read that as 5 bad calls when it was really one. Read the record by group first, and only then in total.</p>
 </div>
-</div>
-<div class="callout-body-container callout-body">
-<p>These probabilities are a first pass and are meant to be reviewed before the <code>v1.0</code> freeze. Once tagged, they do not change, because a forecast you can revise after the fact is not a forecast. Freezing also pins the <em>definitions</em>. The verification keyword classifier (<code>VERIF_RE</code>), the 2026 H1 baseline P9 measures against (12.4%), the embargoed-id list P10 tracks, and the shared reporting-standard definition P4 and P11 both use are all fixed at the tag, so a prediction cannot be scored against a moved goalpost. The document is designed to be graded in 2028 and again in 2031, and being wrong on the record is the point of writing them down.</p>
 </div>
 </div>
 
@@ -1153,7 +1628,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>By <a href="https://www.lukasikic.info/">Luka Šikić</a></p>
 </div>   
     <div class="nav-footer-center">
-<p>Every figure recomputed from <code>data/aiecon.sqlite</code>, none asserted.</p>
+<p>Every figure recomputed from the underlying database, none asserted.</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;

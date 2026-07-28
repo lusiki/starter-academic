@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Luka Šikić">
-<meta name="dcterms.date" content="2026-07-23">
+<meta name="dcterms.date" content="2026-07-28">
 
-<title>How this was built, and what it cannot verify – Cheap Intelligence, Scarce Trust</title>
+<title>How this was built, and what it cannot verify – How Economics Absorbed AI</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,40 +21,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -113,6 +79,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <meta property="og:url" content="https://www.lukasikic.info/ai/supplements/method.html">
 <meta property="og:image" content="https://www.lukasikic.info/og.jpg">
 <meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="canonical" href="https://www.lukasikic.info/ai/supplements/method.html">
 <!-- lukasikic.info theme -->
 <style>
@@ -184,7 +151,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     --ls-accent: #60A5FA;
   }
 </style>
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
 </head>
 
 <body class="nav-fixed">
@@ -195,7 +161,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">Cheap Intelligence, Scarce Trust</span>
+    <span class="navbar-title">How Economics Absorbed AI</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
@@ -207,6 +173,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Scenario</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../catalog.html"> 
+<span class="menu-text">Catalog</span></a>
   </li>  
   <li class="nav-item dropdown ">
     <a class="nav-link dropdown-toggle" href="#" id="nav-menu-endings" role="link" data-bs-toggle="dropdown" aria-expanded="false">
@@ -238,11 +208,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>  
         <li>
     <a class="dropdown-item" href="../supplements/coverage.html">
- <span class="dropdown-text">Coverage</span></a>
+ <span class="dropdown-text">What can be read</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../supplements/timeline.html">
- <span class="dropdown-text">Timeline</span></a>
+ <span class="dropdown-text">Timeline and its gaps</span></a>
   </li>  
         <li>
     <a class="dropdown-item" href="../supplements/method.html">
@@ -279,16 +249,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul class="collapse">
-  <li><a href="#the-data-seam" id="toc-the-data-seam" class="nav-link active" data-scroll-target="#the-data-seam">The data seam</a></li>
-  <li><a href="#the-census-reconciled" id="toc-the-census-reconciled" class="nav-link" data-scroll-target="#the-census-reconciled">The census, reconciled</a></li>
-  <li><a href="#the-flagship-number-audited" id="toc-the-flagship-number-audited" class="nav-link" data-scroll-target="#the-flagship-number-audited">The flagship number, audited</a></li>
-  <li><a href="#the-whale-is-mislabelled" id="toc-the-whale-is-mislabelled" class="nav-link" data-scroll-target="#the-whale-is-mislabelled">The whale is mislabelled</a></li>
-  <li><a href="#the-four-hygiene-rules" id="toc-the-four-hygiene-rules" class="nav-link" data-scroll-target="#the-four-hygiene-rules">The four hygiene rules</a></li>
-  <li><a href="#the-metrics-strip-and-its-forecast-band" id="toc-the-metrics-strip-and-its-forecast-band" class="nav-link" data-scroll-target="#the-metrics-strip-and-its-forecast-band">The metrics strip, and its forecast band</a></li>
-  <li><a href="#what-this-document-cannot-verify" id="toc-what-this-document-cannot-verify" class="nav-link" data-scroll-target="#what-this-document-cannot-verify">What this document cannot verify</a></li>
-  <li><a href="#publishability" id="toc-publishability" class="nav-link" data-scroll-target="#publishability">Publishability</a></li>
-  <li><a href="#rebuilding" id="toc-rebuilding" class="nav-link" data-scroll-target="#rebuilding">Rebuilding</a></li>
-  <li><a href="#indexing-policy" id="toc-indexing-policy" class="nav-link" data-scroll-target="#indexing-policy">Indexing policy</a></li>
+  <li><a href="#where-the-numbers-come-from" id="toc-where-the-numbers-come-from" class="nav-link active" data-scroll-target="#where-the-numbers-come-from">Where the numbers come from</a></li>
+  <li><a href="#three-things-that-went-wrong" id="toc-three-things-that-went-wrong" class="nav-link" data-scroll-target="#three-things-that-went-wrong">Three things that went wrong</a></li>
+  <li><a href="#what-this-page-cannot-verify" id="toc-what-this-page-cannot-verify" class="nav-link" data-scroll-target="#what-this-page-cannot-verify">What this page cannot verify</a></li>
+  <li><a href="#what-gets-in-and-what-gets-published" id="toc-what-gets-in-and-what-gets-published" class="nav-link" data-scroll-target="#what-gets-in-and-what-gets-published">What gets in, and what gets published</a></li>
   <li><a href="#colophon" id="toc-colophon" class="nav-link" data-scroll-target="#colophon">Colophon</a></li>
   </ul>
 </nav>
@@ -319,7 +283,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 23, 2026</p>
+      <p class="date">July 28, 2026</p>
     </div>
   </div>
   
@@ -331,103 +295,85 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p>This document has two kinds of claim and no third kind. Claims about the past are recomputed from a database. Claims about the future carry a probability. This page describes the machinery behind the first kind and states plainly what it cannot support.</p>
-<section id="the-data-seam" class="level2">
-<h2 class="anchored" data-anchor-id="the-data-seam">The data seam</h2>
-<p>One script, <code>scenario/R/build_metrics.R</code>, reads <code>data/aiecon.sqlite</code> (SELECT-only, it never writes the database) and emits tidy CSVs into <code>scenario/data/derived/</code>. The <code>.qmd</code> pages read <strong>only those CSVs</strong>, never the database. Renders stay fast, continuous integration needs no database logic, and a CSV diff makes every data change visible in git. Every number in the prose resolves to one of these files through the accessors in <code>scenario/R/fig_helpers.R</code>. None is typed by hand. The evidence blocks under each retrospective section are rendered from <code>citations.csv</code>, so the cited titles come from the database rather than from a writer’s memory. <code>ev()</code> fails loudly if a cited id is not in the corpus, which makes a fabricated citation impossible to ship silently.</p>
+<p>This site makes two kinds of claim and no third kind. Claims about the past are counted from a collection of documents. Claims about the future carry a probability. This page says where the first kind comes from, what had to be corrected along the way, and where the whole thing stops.</p>
+<section id="where-the-numbers-come-from" class="level2">
+<h2 class="anchored" data-anchor-id="where-the-numbers-come-from">Where the numbers come from</h2>
+<p>Behind the site sits a collection of 661 items on AI and economics: working papers, journal articles, commentary, guides, tools, courses, talks and threads. 530 of them have their full text attached, obtained wherever that could legitimately be done. Some arrived through an automatic watcher of the places this field publishes, the rest were added by hand.</p>
+<p>Every figure in the prose is counted from that collection when the page is built, and none is typed in from memory. Every work cited in the margins is looked up by its record, so a reference that does not exist stops the build instead of reaching the reader. A fabricated citation cannot ship quietly.</p>
+<p>The collection is also <strong>frozen</strong> for this release. It keeps growing underneath the site, and a document claiming that every figure is measured cannot have its figures shift overnight while someone is reading it. This release was pinned on 27 July 2026. Re-pinning is a deliberate step, not something a sync does by accident.</p>
 </section>
-<section id="the-census-reconciled" class="level2">
-<h2 class="anchored" data-anchor-id="the-census-reconciled">The census, reconciled</h2>
-<p>This snapshot is pinned. The tree is Dropbox-synced and the corpus grew from 385 to over 650 resources during a single work session. A document that claims <em>“every figure recomputed, none asserted”</em> cannot have its figures move with a sync, so <code>build_metrics.R</code> is frozen to a fixed id manifest (<code>scenario/data/snapshot_ids.txt</code>). The mapping runs 385 indexed resources → 2 exact url_norm duplicates folded (coarse.ink twice, a Sant’Anna page under two titles) → title-dedup → <strong>375 distinct works</strong>, of which <strong>287</strong> carry extracted full text. An earlier audit of this same corpus, run days before, reported a smaller census (294) because the corpus was smaller then. That number is superseded, not contradicted. The AEA-2026 webcast page hosts two distinct talks (Li on the labour market, Ash on language models) sharing one URL. Those are kept as two works, not folded, because a shared landing page is not a shared work.</p>
-</section>
-<section id="the-flagship-number-audited" class="level2">
-<h2 class="anchored" data-anchor-id="the-flagship-number-audited">The flagship number, audited</h2>
-<p>The essay’s most quotable statistic, how much of the AI-research tooling is <em>verification</em>, was first produced by a keyword classifier (<code>review|referee|replicat|reproduc|citation|audit|verif|integrity</code>, frozen as <code>VERIF_RE</code>). Held to the discipline the essay preaches, that classifier fails an audit. Hand-labelled against a frozen gold set (<code>scenario/data/tool_labels.csv</code>, one row per tool with a verdict and a one-word kind), the audited numbers appear below.</p>
+<section id="three-things-that-went-wrong" class="level2">
+<h2 class="anchored" data-anchor-id="three-things-that-went-wrong">Three things that went wrong</h2>
+<p>The site’s own argument is that cheap results still need checking, so it would be a poor advert for that argument to hide the checks that failed here.</p>
+<p><strong>A keyword filter got the headline number wrong.</strong> The most quotable statistic on the site is how much of the field’s AI tooling exists to <em>verify</em> something. It was first produced by matching tool titles against words like <em>review</em>, <em>replication</em> and <em>audit</em>. Reading all 99 tools one by one instead, and recording a verdict for each, gives a different answer.</p>
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th style="text-align: left;">Measure</th>
-<th style="text-align: center;">Verification share</th>
-<th style="text-align: center;">n / tools</th>
+<th style="text-align: left;">How it was counted</th>
+<th style="text-align: left;">Verification tools</th>
+<th style="text-align: center;">Share</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Keyword classifier (VERIF_RE)</td>
-<td style="text-align: center;">65.8%</td>
-<td style="text-align: center;">~25 / 38</td>
+<td style="text-align: left;">By matching words in the title</td>
+<td style="text-align: left;">~10 of 99</td>
+<td style="text-align: center;">10.1%</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Audited gold labels</td>
-<td style="text-align: center;">28.9%</td>
-<td style="text-align: center;">11 / 38</td>
+<td style="text-align: left;">By reading every tool</td>
+<td style="text-align: left;">15 of 99</td>
+<td style="text-align: center;">15.2%</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<p>Against the gold labels the keyword classifier has precision 36% and recall 81.8%. The 16 false positives are literature-search aids (Elicit, Scholara, Google Scholar Labs), a LaTeX workspace, and even <em>academic-humanizer</em>, a tool whose purpose is to strip the tells verifiers look for. The 2 false negatives are an adversarial-research loop and a replication-scoring agent it misses. The audited share, <strong>28.9%</strong>, is what the prose and prediction <strong>P1</strong> now use. That the essay had to correct a number it asserted is not an embarrassment to hide. It is the thesis running on the document itself, because an unaudited filter is just more cheap intelligence. The gold labels are a small public dataset shipped with the site. Adjust them and the number moves, in the open.</p>
+<p>The filter missed 6 verifiers whose names say nothing about what they do, and wrongly caught one literature screener with the word <em>review</em> in its title. What a thing is called is not what it does. The audited count is the one the site reports, and the hand labels ship with the site so anyone can disagree with a row.</p>
+<p><strong>Six things were counted twice.</strong> The same work can appear as several web pages: a set of skill files that are one bundle, a tool and the repository behind it, a product with an organisation page and a package page. Those were marked by hand as duplicates and then, for a while, the site read past that marking and counted them separately. Three published numbers were wrong as a result. 15 rows now fold together wherever tools are counted.</p>
+<p><strong>Several works sat in the wrong year.</strong> The site was reading the date each source happened to supply rather than the corrected date the pipeline had already worked out. One eleven month error moved a well known paper half a year along the timeline, and it also switched off the estimator that fills other gaps, so 43 further papers silently lost their dates. The repair replaced guessing with reading: every NBER paper’s issue date is now taken from that paper’s own page. Dated works rose from 188 to 278.</p>
+<div class="callout callout-style-simple callout-warning callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Read the count, not the share
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Between two releases the verification share of tools <em>fell</em>. The field did not build fewer referees. The count of verification tools roughly doubled while the number of tools counted nearly tripled, because the automatic watcher started sweeping in general AI infrastructure that is not economics research tooling at all. The share is a fact about this collection. The count is a fact about the field.</p>
+</div>
+</div>
 </section>
-<section id="the-whale-is-mislabelled" class="level2">
-<h2 class="anchored" data-anchor-id="the-whale-is-mislabelled">The whale is mislabelled</h2>
-<p>The single largest document, 33.4% of all extracted characters, is indexed as “National Artificial Intelligence Initiative Act.” It is not that Act. Its bytes are House Report 116-617, the full committee report accompanying the FY2021 National Defense Authorization Act, of which the AI Initiative Act is one division. So a third of the corpus’s raw text is a mostly off-topic legislative document under a too-flattering title. The word headline is reported three ways. It is 3,671,256 uncapped, 2,446,068 with the whale removed, and 2,057,167 with the whale and the 388,901-word course-playlist transcript removed. Every <em>per-document</em> text statistic on this site caps document weight at the 95th percentile (172,284 characters) so the whale cannot drive an average.</p>
+<section id="what-this-page-cannot-verify" class="level2">
+<h2 class="anchored" data-anchor-id="what-this-page-cannot-verify">What this page cannot verify</h2>
+<p><strong>A collection is not a census.</strong> This is one curator’s map, and it leans toward methods and tooling because that is what the curator works on. 55.3% of dated works fall in the first half of 2026, which is partly the field flooding and partly the newest material being easiest to find.</p>
+<p><strong>Some counts are judgments.</strong> Every tool was classified by reading it, against one question: does it check another machine’s output? A screener for systematic reviews, a meta analysis extractor and a paper generator that contains a reviewer are genuinely hard cases, and another reader would call two or three of them differently.</p>
+<p><strong>The missing dates are not random.</strong> 273 items (41.4%) carry no usable date, and they are mostly the living guides, tool pages and homepages that are revised rather than published. Those never had a date and never will. So every chart of time on this site under counts exactly the fast moving layer the argument says matters, and no reweighting fixes it, because the missing dates do not exist. They are shown as a visible residual on the <a href="../supplements/timeline.html">Timeline</a> page rather than quietly dropped.</p>
+<p><strong>The story is not in the database.</strong> The collection supplies counts, dates, titles and links. Which paper argues what, and what it all means, is reading and interpretation. Those are two different kinds of claim and the site tries not to blur them.</p>
+<p><strong>The forecast is not measurement.</strong> Nothing past 2028 is measured, and most of it turns on choices institutions make rather than on what the models can do. The error bars are meant to be read as wide. What is promised instead is that the bets are written down in advance, in public, and graded later on the <a href="../supplements/predictions.html">Predictions scoreboard</a>.</p>
 </section>
-<section id="the-four-hygiene-rules" class="level2">
-<h2 class="anchored" data-anchor-id="the-four-hygiene-rules">The four hygiene rules</h2>
-<p><strong>1. The version graph.</strong> The same work shows up as a working paper, a journal version, a video, and a thread. <code>resources_clean.csv</code> dedupes by normalized title before counting works, which folds 10 duplicate versions and leaves 375 works from 385 rows. Coverage keeps <strong>all</strong> rows, because coverage measures the index, not the field.</p>
-<p><strong>2. The whale.</strong> One document, a piece of AI legislation, holds 33.4% of all extracted characters. Any text-volume statistic caps per-document weight at the 95th percentile of character counts (172,284 characters). The headline word count (3,671,256) is kept uncapped to match the project’s measured claims passport, while every per-document average uses the capped figure (1,977,820). An uncapped average measures the whale.</p>
-<p><strong>3. Canonical names.</strong> Author names are diacritic-stripped and case-folded before distinct people are counted, so “Bäckman” and “Backman” are one person.</p>
-<p><strong>4. Dates.</strong> Roughly half the corpus (199 of 385 rows, 52%) carries no usable date. Undated rows are excluded from every time series and reported as a visible residual on the <a href="../supplements/timeline.html">Timeline</a> page, never silently dropped. The database is not version-controlled (it is rebuilt wholesale each run), so there is no git history to recover approximate dates from. The undated rows stay undated and stay counted.</p>
+<section id="what-gets-in-and-what-gets-published" class="level2">
+<h2 class="anchored" data-anchor-id="what-gets-in-and-what-gets-published">What gets in, and what gets published</h2>
+<p>Anything on AI and economics worth a record goes in, from any source, refereed or not. A Substack guide and an NBER working paper are both records here. Full text goes in wherever it can legitimately be obtained, and where it cannot, the gap is recorded row by row rather than waved away. A page that merely points at content, with nothing of its own to read, is marked as such and licenses no claim about what lies behind it.</p>
+<p>The site publishes counts, titles, authors, dates and tags. It never publishes the curator’s private notes or the fetched text of anyone’s document. Titles appear because a title is a bibliographic fact. The documents themselves do not.</p>
 </section>
-<section id="the-metrics-strip-and-its-forecast-band" class="level2">
-<h2 class="anchored" data-anchor-id="the-metrics-strip-and-its-forecast-band">The metrics strip, and its forecast band</h2>
-<p>The strip is measured through 2026 H1. After that, panels 2-4 draw an <strong>illustrative</strong> forecast band, a widening envelope from the last measured point to a range at 2028 H2. The bands are not themselves scored predictions. They are a visual aid, and their endpoints are set by the direction of the numbered predictions:</p>
-<ul>
-<li><strong>Tool share</strong> trends down (capabilities become product defaults), the direction of <strong>P9</strong>.</li>
-<li><strong>Verification share of tools</strong> trends up (the referee factory keeps growing), <strong>P1</strong>, <strong>P11</strong>.</li>
-<li><strong>Coverage</strong> recovers (embargoes lapse), <strong>P10</strong>.</li>
-</ul>
-<p>Panel 1 (cumulative works by category) shows no projection at all past the measured data, because projecting a per-category stack would be a guess dressed as a measurement.</p>
-</section>
-<section id="what-this-document-cannot-verify" class="level2">
-<h2 class="anchored" data-anchor-id="what-this-document-cannot-verify">What this document cannot verify</h2>
-<ul>
-<li><strong>Curation is not coverage of the field.</strong> A curated corpus measures the curator’s map as much as the territory. The 65.2% of dated works landing in 2026 H1 is partly the field flooding and partly the newest material being the easiest to find. Where the distinction changes a number, the retrospective says so.</li>
-<li><strong>The verification-tool count is a keyword heuristic.</strong> A tool counts as verification tooling when its title or description matches <code>review|referee|replicat|reproduc|citation|audit|verif|integrity</code>. The classifier is used only to bucket a row and emit a count, no description text is published, and it is a legible heuristic, not a taxonomy. It will catch a literature-review tool that is verification-adjacent and miss one described in other words.</li>
-<li><strong>The narrative substance is not in the database.</strong> The story beats, which papers say what, are drawn from a separate analysis (<code>docs/ai_in_economics_discussion_notes.md</code>) and grounded in corpus rows by title. The database supplies the <em>counts and dates</em>. It does not adjudicate the interpretation.</li>
-<li><strong>The forecast is extrapolation.</strong> Nothing past 2028 is measured, and the claims there depend on institutional choices rather than model capability. That is stated at the branch, and the error bars are meant to be read as wide.</li>
-</ul>
-</section>
-<section id="publishability" class="level2">
-<h2 class="anchored" data-anchor-id="publishability">Publishability</h2>
-<p>This site is designed to be publishable, so it obeys the same line the corpus’s own report obeys: <strong>aggregates and bibliographic facts only</strong>, counts, titles, authors, dates, tags. It never publishes the curator’s descriptions or fetched body text. Titles appear because they are bibliographic facts. The underlying documents do not.</p>
-</section>
-<section id="rebuilding" class="level2">
-<h2 class="anchored" data-anchor-id="rebuilding">Rebuilding</h2>
-<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># refresh the numbers from the database, then render the site</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">Rscript</span> scenario/R/build_metrics.R      <span class="co"># SQLite -&gt; scenario/data/derived/*.csv</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">quarto</span> render scenario                   <span class="co"># CSVs -&gt; _site/</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>The CSVs are committed, so the site renders in continuous integration without the database (the database is gitignored). Refreshing the numbers needs the machine that holds the corpus. Rendering does not.</p>
+<section id="colophon" class="level2">
+<h2 class="anchored" data-anchor-id="colophon">Colophon</h2>
+<p>The prose was drafted and revised with AI coding agents, which is worth saying on a site about exactly that. Every past claim resolves to a record in the collection, every number is recounted when the page is built, the tool classification was done by hand against a fixed list, and the forecast layer is pinned to a manifest that records the freeze date and a checksum for every file a score depends on. Still owed, and owned by the curator: an outside panel to grade the scoreboard, a browsable copy of the collection, and the hand labels published as a dataset in their own right.</p>
 <div class="callout callout-style-simple callout-note">
 <div class="callout-body d-flex">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>Every figure on this site is recomputed from <code>data/aiecon.sqlite</code> at build time, and none is asserted. If the prose and the database disagree, the database is right.</p>
+<p>If the prose and the underlying collection ever disagree, the collection is right.</p>
 </div>
 </div>
 </div>
-</section>
-<section id="indexing-policy" class="level2">
-<h2 class="anchored" data-anchor-id="indexing-policy">Indexing policy</h2>
-<p>What gets into the corpus, stated once so the “curator’s map” caveat has teeth. <strong>In:</strong> any resource on AI and economics worth a record, papers, working papers, guides, tools, courses, talks, threads, from any source, added through the seed feed or the hand-curated overlay. <strong>Full text in</strong> wherever it can be legitimately obtained. Where it cannot, the gap is recorded row by row rather than hidden. <strong>Out:</strong> nothing on topic is excluded for being informal or un-refereed, a Substack guide and an NBER working paper are both records, but a resource that is a <em>door</em> (a landing page pointing at content it does not itself contain) is marked as such and licenses no claim about what lies behind it. <strong>Changelog:</strong> the corpus is append-only. The frozen snapshot for this release is <code>scenario/data/snapshot_ids.txt</code>, and later releases re-pin deliberately, never by accident.</p>
-</section>
-<section id="colophon" class="level2">
-<h2 class="anchored" data-anchor-id="colophon">Colophon</h2>
-<p>This document practises the four rules it describes. <strong>Machine assistance:</strong> the prose was drafted and revised with AI coding agents. Every past claim resolves to a corpus row through <code>ev()</code>, which fails the build on a fabricated id, and every number is recomputed by <code>build_metrics.R</code> rather than typed. <strong>Verified how:</strong> the tool classification was hand-labelled against a frozen gold set and its keyword classifier audited against it (above). The reconciliation, dedup, and whale relabelling were checked against the database. <strong>Where the gold sets live:</strong> <code>scenario/data/tool_labels.csv</code> and the snapshot manifest ship with the repository, so a reader can recompute the headline numbers. <strong>Frozen at:</strong> this release pins to the snapshot manifest. The tagged commit hash belongs here, and the forecast prose freezes at the tag while the retrospective and the <a href="../supplements/predictions.html">predictions scoreboard</a> keep updating. <strong>Not yet done, and owned by the curator:</strong> an external adjudication panel for the scoreboard, a browsable copy of the database, and publishing the gold set as a standalone dataset.</p>
 
 
 </section>
@@ -1006,7 +952,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <p>By <a href="https://www.lukasikic.info/">Luka Šikić</a></p>
 </div>   
     <div class="nav-footer-center">
-<p>Every figure recomputed from <code>data/aiecon.sqlite</code>, none asserted.</p>
+<p>Every figure recomputed from the underlying database, none asserted.</p>
 </div>
     <div class="nav-footer-right">
       &nbsp;
