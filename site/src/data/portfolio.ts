@@ -22,8 +22,8 @@ export const currentWork: CurrentWorkItem[] = [
       hr: "Kako je ekonomija usvojila umjetnu inteligenciju",
     },
     body: {
-      en: "An evidence-based retrospective and forecast built from 385 sources, with falsifiable predictions about how AI is changing economic research.",
-      hr: "Retrospektiva i prognoza utemeljena na 385 izvora, s provjerljivim predviđanjima o tome kako umjetna inteligencija mijenja ekonomska istraživanja. Sadržaj je na engleskom.",
+      en: "A field map built from a corpus of 661 sources, read through the formats the discipline argues in — papers, guides, tools, podcasts — with falsifiable predictions about what comes next.",
+      hr: "Karta područja utemeljena na korpusu od 661 izvora, čitana kroz formate u kojima disciplina raspravlja — radove, vodiče, alate i podcaste — s provjerljivim predviđanjima o tome što slijedi. Sadržaj je na engleskom.",
     },
     href: "/ai/",
     featured: true,
