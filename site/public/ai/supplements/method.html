@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Luka Šikić">
-<meta name="dcterms.date" content="2026-07-27">
+<meta name="dcterms.date" content="2026-07-28">
 
 <title>How this was built, and what it cannot verify – How Economics Absorbed AI</title>
 <style>
@@ -104,87 +104,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<!-- lukasikic.info integration -->
-<meta name="description" content="An evidence-based retrospective and forecast of how economics is absorbing artificial intelligence.">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Luka Šikić">
-<meta property="og:title" content="How Economics Absorbed AI">
-<meta property="og:description" content="An evidence-based retrospective and forecast of how economics is absorbing artificial intelligence.">
-<meta property="og:url" content="https://www.lukasikic.info/ai/supplements/method.html">
-<meta property="og:image" content="https://www.lukasikic.info/og.jpg">
-<meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="canonical" href="https://www.lukasikic.info/ai/supplements/method.html">
-<!-- lukasikic.info theme -->
-<style>
-  @font-face {
-    font-family: "Geist";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 100 900;
-    src: url("/fonts/geist-latin-wght-normal.woff2") format("woff2-variations");
-  }
-  @font-face {
-    font-family: "Geist Mono";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 100 900;
-    src: url("/fonts/geist-mono-latin-wght-normal.woff2") format("woff2-variations");
-  }
-  :root {
-    --ls-bg: #FFFFFF;
-    --ls-surface: #FAFAFA;
-    --ls-body: #171717;
-    --ls-muted: #737373;
-    --ls-hairline: #E5E5E5;
-    --ls-accent: #2563EB;
-  }
-  body {
-    background: var(--ls-bg) !important;
-    color: var(--ls-body) !important;
-    font-family: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif !important;
-  }
-  h1, h2, h3, h4, h5, h6, .navbar-brand, .menu-text {
-    font-family: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif !important;
-  }
-  code, pre, kbd, samp {
-    font-family: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace !important;
-  }
-  a, .nav-link:hover, .nav-link:focus, .sidebar-link:hover { color: var(--ls-accent); }
-  .navbar {
-    background: color-mix(in oklab, var(--ls-bg) 94%, transparent) !important;
-    border-bottom: 1px solid var(--ls-hairline) !important;
-    backdrop-filter: saturate(160%) blur(8px);
-  }
-  .navbar-title, .nav-link, .menu-text { color: var(--ls-body) !important; }
-  #quarto-sidebar, .sidebar, .quarto-title-banner { background: var(--ls-surface) !important; }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --ls-bg: #0A0A0A;
-      --ls-surface: #111111;
-      --ls-body: #EDEDED;
-      --ls-muted: #8A8A8A;
-      --ls-hairline: #1F1F1F;
-      --ls-accent: #60A5FA;
-    }
-  }
-  body.quarto-light {
-    --ls-bg: #FFFFFF;
-    --ls-surface: #FAFAFA;
-    --ls-body: #171717;
-    --ls-muted: #737373;
-    --ls-hairline: #E5E5E5;
-    --ls-accent: #2563EB;
-  }
-  body.quarto-dark {
-    --ls-bg: #0A0A0A;
-    --ls-surface: #111111;
-    --ls-body: #EDEDED;
-    --ls-muted: #8A8A8A;
-    --ls-hairline: #1F1F1F;
-    --ls-accent: #60A5FA;
-  }
-</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+
+
 </head>
 
 <body class="nav-fixed">
@@ -256,11 +180,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="/" aria-label="Return to lukasikic.info">
-      <span class="menu-text">lukasikic.info</span>
-    </a>
-  </li>
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/lusiki/AI_econ_resources"> <i class="bi bi-github" role="img" aria-label="Repository">
 </i> 
@@ -324,7 +243,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 27, 2026</p>
+      <p class="date">July 28, 2026</p>
     </div>
   </div>
   
@@ -344,7 +263,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="the-census-reconciled" class="level2">
 <h2 class="anchored" data-anchor-id="the-census-reconciled">The census, reconciled</h2>
 <p>This snapshot is pinned. The tree is Dropbox-synced and the corpus grows underneath it, so a document that claims <em>“every figure recomputed, none asserted”</em> cannot have its figures move with a sync. <code>build_metrics.R</code> is frozen to a fixed id manifest (<code>scenario/data/snapshot_ids.txt</code>), and re-pinning is a deliberate release step with its own script (<code>scenario/R/repin_snapshot.R</code>) that prints the old and new census side by side. This release re-pinned on <strong>2026-07-27</strong>, from 385 resources to 661, and nothing was dropped, because the corpus is append-only.</p>
-<p>The mapping runs 661 indexed resources → 2 exact url_norm duplicates folded → title-dedup → <strong>625 distinct works</strong>, of which <strong>490</strong> carry extracted full text. Earlier audits of this same corpus reported smaller censuses (294, then 385) because the corpus was smaller then. Those numbers are superseded, not contradicted. The AEA-2026 webcast page hosts two distinct talks (Li on the labour market, Ash on language models) sharing one URL. Those are kept as two works, not folded, because a shared landing page is not a shared work.</p>
+<p>The mapping runs 661 indexed resources → 2 exact url_norm duplicates folded → title-dedup → <strong>625 distinct works</strong>, of which <strong>530</strong> carry extracted full text. Earlier audits of this same corpus reported smaller censuses (294, then 385) because the corpus was smaller then. Those numbers are superseded, not contradicted. The AEA-2026 webcast page hosts two distinct talks (Li on the labour market, Ash on language models) sharing one URL. Those are kept as two works, not folded, because a shared landing page is not a shared work.</p>
 </section>
 <section id="the-flagship-number-audited" class="level2">
 <h2 class="anchored" data-anchor-id="the-flagship-number-audited">The flagship number, audited</h2>
@@ -362,19 +281,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">Keyword classifier (VERIF_RE)</td>
-<td style="text-align: center;">13.2%</td>
-<td style="text-align: center;">~15 / 114</td>
+<td style="text-align: center;">10.1%</td>
+<td style="text-align: center;">~10 / 99</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">Audited gold labels</td>
-<td style="text-align: center;">18.4%</td>
-<td style="text-align: center;">21 / 114</td>
+<td style="text-align: center;">15.2%</td>
+<td style="text-align: center;">15 / 99</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
-<p>Against the gold labels the keyword classifier has precision 93.3% and recall 66.7%. It now matches <strong>titles only</strong>, because a resource’s description is curator’s notes and never enters anything this site publishes, and that restriction is what makes it fail. The 7 false negatives are verifiers whose names say nothing about what they do (<em>coarse</em>, <em>GPTZero</em>, <em>Thesify</em>, <em>Refine.ink</em>, an adversarial research loop, a model leaderboard, an idea-evaluation pipeline), while the 1 false positive is a systematic-review screening platform with “Review” in its title that screens literature for humans rather than checking a machine. What a thing is called is not what it does. The audited share, <strong>18.4%</strong>, is what the prose and prediction <strong>P1</strong> use.</p>
+<p>Against the gold labels the keyword classifier has precision 90% and recall 60%. It now matches <strong>titles only</strong>, because a resource’s description is curator’s notes and never enters anything this site publishes, and that restriction is what makes it fail. The 6 false negatives are verifiers whose names say nothing about what they do (<em>coarse</em>, <em>GPTZero</em>, <em>Thesify</em>, <em>Refine.ink</em>, an adversarial research loop, a model leaderboard, an idea-evaluation pipeline), while the 1 false positive is a systematic-review screening platform with “Review” in its title that screens literature for humans rather than checking a machine. What a thing is called is not what it does. The audited share, <strong>15.2%</strong>, is what the prose reports. <strong>P1</strong> deliberately does not use it: a share whose denominator this collection controls is not a forecast, so P1 scores on counts and rank instead.</p>
+<section id="the-third-label-column-and-what-ignoring-it-cost" class="level3">
+<h3 class="anchored" data-anchor-id="the-third-label-column-and-what-ignoring-it-cost">The third label column, and what ignoring it cost</h3>
+<p><code>tool_labels.csv</code> carries <strong>three</strong> hand columns, not two. Alongside <code>verif</code> and <code>kind</code> sits <code>dup</code>, marking a row that is the <em>same work</em> as another — the five Backman skill files that are one bundle, the source repository behind <code>coarse.ink</code>, the Elicit org, channel and PyPI pages that are one product. <code>url_norm</code> deduplication cannot catch these, since they differ in both host and title, which is precisely why the column was hand-authored in the first place.</p>
+<p><code>build_metrics.R</code> joined this file for <code>verif</code> and <code>kind</code> and read straight past <code>dup</code> until 2026-07-27. Six same-work rows were therefore counted as six tools, and three published numbers were wrong as a result: verification tooling read 15 as 21, the <code>referee</code> kind read 9 as 16, and the manuscript/results split read 11/3 as 17/3. The fold is now applied everywhere tools are counted, and 15 rows come out.</p>
+<p>One residual is disclosed rather than fixed. <code>resources_clean.csv</code> counts works, and 12 of these hand-marked duplicates still sit in it as separate works, because folding them there would move the headline work count and every chart built on it. That is a deliberate re-baseline rather than a bug fix, and it has not been done. The number is published here so nobody has to discover it the way this one was discovered.</p>
 <p>That the essay had to correct a number it asserted, twice now, is not an embarrassment to hide. It is the thesis running on the document itself, because an unaudited filter is just more cheap intelligence. The gold labels are a small public dataset shipped with the site (<code>scenario/data/tool_labels.csv</code>, one row per tool with a verdict, a one-word kind, and a note). Adjust them and the number moves, in the open.</p>
 <div class="callout callout-style-simple callout-warning callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -386,20 +310,21 @@ Read the count, not the share, across releases
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>The verification share fell from a published 11-in-38 to 21-in-114 between releases. That is <strong>not</strong> the field building fewer referees. The count of verification tools roughly doubled while the tool denominator nearly tripled, because the automated watcher began sweeping in general-purpose AI infrastructure (foundation models, agent frameworks, OCR engines, data APIs) that is not economics-research tooling at all. The share is a fact about what this collection happens to hold. The count is a fact about the field. Compare counts across releases, not shares.</p>
+<p>The verification share fell from a published 11-in-38 to 15-in-99 between releases. That is <strong>not</strong> the field building fewer referees. The count of verification tools roughly doubled while the tool denominator nearly tripled, because the automated watcher began sweeping in general-purpose AI infrastructure (foundation models, agent frameworks, OCR engines, data APIs) that is not economics-research tooling at all. The share is a fact about what this collection happens to hold. The count is a fact about the field. Compare counts across releases, not shares.</p>
 </div>
 </div>
 </section>
+</section>
 <section id="the-whale-is-mislabelled" class="level2">
 <h2 class="anchored" data-anchor-id="the-whale-is-mislabelled">The whale is mislabelled</h2>
-<p>The single largest document, 25% of all extracted characters, is indexed as “National Artificial Intelligence Initiative Act.” It is not that Act. Its bytes are House Report 116-617, the full committee report accompanying the FY2021 National Defense Authorization Act, of which the AI Initiative Act is one division. So a third of the corpus’s raw text is a mostly off-topic legislative document under a too-flattering title. The word headline is reported three ways. It is 4,909,337 uncapped, 3,684,149 with the whale removed, and 3,295,248 with the whale and the 388,901-word course-playlist transcript removed. Every <em>per-document</em> text statistic on this site caps document weight at the 95th percentile (151,151 characters) so the whale cannot drive an average.</p>
+<p>The single largest document, 20.5% of all extracted characters, is indexed as “National Artificial Intelligence Initiative Act.” It is not that Act. Its bytes are House Report 116-617, the full committee report accompanying the FY2021 National Defense Authorization Act, of which the AI Initiative Act is one division. So a third of the corpus’s raw text is a mostly off-topic legislative document under a too-flattering title. The word headline is reported three ways. It is 5,980,973 uncapped, 4,755,786 with the whale removed, and 4,366,885 with the whale and the 388,901-word course-playlist transcript removed. Every <em>per-document</em> text statistic on this site caps document weight at the 95th percentile (167,745 characters) so the whale cannot drive an average.</p>
 </section>
 <section id="the-four-hygiene-rules" class="level2">
 <h2 class="anchored" data-anchor-id="the-four-hygiene-rules">The four hygiene rules</h2>
 <p><strong>1. The version graph.</strong> The same work shows up as a working paper, a journal version, a video, and a thread. <code>resources_clean.csv</code> dedupes by normalized title before counting works, which folds 36 duplicate versions and leaves 625 works from 661 rows. Coverage keeps <strong>all</strong> rows, because coverage measures the index, not the field.</p>
-<p><strong>2. The whale.</strong> One document, a piece of AI legislation, holds 25% of all extracted characters. Any text-volume statistic caps per-document weight at the 95th percentile of character counts (151,151 characters). The headline word count (4,909,337) is kept uncapped to match the project’s measured claims passport, while every per-document average uses the capped figure (3,106,969). An uncapped average measures the whale.</p>
+<p><strong>2. The whale.</strong> One document, a piece of AI legislation, holds 20.5% of all extracted characters. Any text-volume statistic caps per-document weight at the 95th percentile of character counts (167,745 characters). The headline word count (5,980,973) is kept uncapped to match the project’s measured claims passport, while every per-document average uses the capped figure (4,010,211). An uncapped average measures the whale.</p>
 <p><strong>3. Canonical names.</strong> Author names are diacritic-stripped and case-folded before distinct people are counted, so “Bäckman” and “Backman” are one person.</p>
-<p><strong>4. Dates.</strong> 382 of 661 rows (58%) carry no usable date. Undated rows are excluded from every time series and reported as a visible residual on the <a href="../supplements/timeline.html">Timeline</a> page, never silently dropped. A large part of that residual is not a gap at all. A tool homepage, a course catalogue and a living personal guide have no publication date and never will, so the pipeline records them as <em>not applicable</em> rather than <em>missing</em>. The rest stay undated and stay counted. A further 8 rows are known only to a <strong>year</strong>. They carry a January day-filler and therefore sort into that year’s first half, which is a sorting convention rather than a fact about when they appeared.</p>
+<p><strong>4. Dates.</strong> 273 of 661 rows (41.4%) carry no usable date. Undated rows are excluded from every time series and reported as a visible residual on the <a href="../supplements/timeline.html">Timeline</a> page, never silently dropped. A large part of that residual is not a gap at all. A tool homepage, a course catalogue and a living personal guide have no publication date and never will, so the pipeline records them as <em>not applicable</em> rather than <em>missing</em>. The rest stay undated and stay counted. A further 27 rows are known only to a <strong>year</strong>. They carry a January day-filler and therefore sort into that year’s first half, which is a sorting convention rather than a fact about when they appeared.</p>
 </section>
 <section id="the-date-repair-2026-07-27" class="level2">
 <h2 class="anchored" data-anchor-id="the-date-repair-2026-07-27">The date repair (2026-07-27)</h2>
@@ -412,16 +337,16 @@ Read the count, not the share, across releases
 <h2 class="anchored" data-anchor-id="the-metrics-strip-and-its-forecast-band">The metrics strip, and its forecast band</h2>
 <p>The strip is measured through 2026 H1. After that, panels 2-4 draw an <strong>illustrative</strong> forecast band, a widening fan from the last measured point to a range at 2028 H2. The bands are not themselves scored predictions. They are a visual aid, and where they end is set by the direction of the numbered predictions.</p>
 <ul>
-<li><strong>Tool share</strong> trends down (capabilities become product defaults), the direction of <strong>P9</strong>.</li>
-<li><strong>Verification share of tools</strong> trends up (the referee factory keeps growing), <strong>P1</strong>, <strong>P11</strong>.</li>
-<li><strong>Coverage</strong> recovers (embargoes lapse), <strong>P10</strong>.</li>
+<li><strong>Tool share</strong> trends down, as capabilities become product defaults. This was the direction of the claim <strong>P9</strong> made before it was rewritten twice. The share its first version named turned out to be unmeasurable — most tool rows carry no release date and never will. Its second version scored public vendor announcements instead, and was itself rewritten on 2026-07-28 once the consolidation it forecast turned out to have started: P9 now runs over a named cohort of the products <em>still independent</em> at the freeze, with the ones already absorbed listed as exclusions. The band’s direction is unchanged throughout; it was never tied to a share.</li>
+<li><strong>Verification share of tools</strong> trends up, as the referee factory keeps growing — the direction of <strong>P1</strong>, though P1 itself is now scored on counts and rank rather than on this share.</li>
+<li><strong>Coverage</strong> recovers as embargoes lapse, <strong>P10</strong>.</li>
 </ul>
 <p>Panel 1 (cumulative works by category) shows no projection at all past the measured data, because projecting a per-category stack would be a guess dressed as a measurement.</p>
 </section>
 <section id="what-this-document-cannot-verify" class="level2">
 <h2 class="anchored" data-anchor-id="what-this-document-cannot-verify">What this document cannot verify</h2>
 <ul>
-<li><strong>Curation is not coverage of the field.</strong> A curated corpus measures the curator’s map as much as the territory. The 59.8% of dated works landing in 2026 H1 is partly the field flooding and partly the newest material being the easiest to find. Where the distinction changes a number, the retrospective says so.</li>
+<li><strong>Curation is not coverage of the field.</strong> A curated corpus measures the curator’s map as much as the territory. The 55.3% of dated works landing in 2026 H1 is partly the field flooding and partly the newest material being the easiest to find. Where the distinction changes a number, the retrospective says so.</li>
 <li><strong>The verification-tool count is a hand judgment, not a measurement.</strong> Every tool was labelled by reading it, against one test. Does it check another machine’s output? That test has genuinely hard cases (a systematic-review screener, a meta-analysis extractor, a paper generator that contains a reviewer), and a different reader would call two or three of them the other way. The gold file ships with the site so a disagreement can be settled by editing a row rather than by argument.</li>
 <li><strong>The undated residual is not random.</strong> It falls hardest on exactly the material this page argues moves fastest, the living guides on personal sites, which are revised rather than published and so carry no date by nature. Every time series here therefore under-represents the informal layer, and no reweighting fixes that, because the missing dates do not exist.</li>
 <li><strong>The narrative substance is not in the database.</strong> The story beats, which papers say what, are drawn from a separate analysis (<code>docs/ai_in_economics_discussion_notes.md</code>) and tied back to corpus rows by title. The database supplies the <em>counts and dates</em>. It does not settle the interpretation.</li>
@@ -455,7 +380,7 @@ Read the count, not the share, across releases
 </section>
 <section id="colophon" class="level2">
 <h2 class="anchored" data-anchor-id="colophon">Colophon</h2>
-<p>This document practises the four rules it describes. <strong>Machine assistance.</strong> The prose was drafted and revised with AI coding agents. Every past claim resolves to a corpus row through <code>ev()</code>, which fails the build on a fabricated id, and every number is recomputed by <code>build_metrics.R</code> rather than typed. <strong>How it was verified.</strong> The tool classification was hand-labelled against a frozen gold set and its keyword classifier audited against that set (above). The reconciliation, dedup, and whale relabelling were checked against the database. <strong>Where the gold sets live.</strong> <code>scenario/data/tool_labels.csv</code> and the snapshot manifest ship with the repository, so a reader can recompute the headline numbers. <strong>What it is frozen at.</strong> This release pins to the snapshot manifest. The tagged commit hash belongs here, and the forecast prose freezes at the tag while the history and the <a href="../supplements/predictions.html">predictions scoreboard</a> keep updating. <strong>Not yet done, and owned by the curator.</strong> An external adjudication panel for the scoreboard, a browsable copy of the database, and publishing the gold set as a standalone dataset.</p>
+<p>This document practises the four rules it describes. <strong>Machine assistance.</strong> The prose was drafted and revised with AI coding agents. Every past claim resolves to a corpus row through <code>ev()</code>, which fails the build on a fabricated id, and every number is recomputed by <code>build_metrics.R</code> rather than typed. <strong>How it was verified.</strong> The tool classification was hand-labelled against a frozen gold set and its keyword classifier audited against that set (above). The reconciliation, dedup, and whale relabelling were checked against the database. <strong>Where the gold sets live.</strong> <code>scenario/data/tool_labels.csv</code> and the snapshot manifest ship with the repository, so a reader can recompute the headline numbers. <strong>What it is frozen at.</strong> This release pins to the snapshot manifest, and the forecast layer pins separately to <code>scenario/data/frozen/MANIFEST.md</code>, which records the freeze date, the commit, and a SHA-256 for every file a score depends on. Earlier drafts said the forecast froze “at tag <code>v1.0</code>” while the repository had no tags at all; the manifest replaces that promise with an object, and <code>score_predictions.R</code> re-checks every hash on every build. The history and the <a href="../supplements/predictions.html">predictions scoreboard</a> keep updating. <strong>Not yet done, and owned by the curator.</strong> An external adjudication panel for the scoreboard, a browsable copy of the database, publishing the gold set as a standalone dataset, and setting the seven carried-over probabilities the scoreboard currently marks as awaiting review.</p>
 
 
 </section>
