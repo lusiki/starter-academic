@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Luka Šikić">
-<meta name="dcterms.date" content="2026-07-28">
+<meta name="dcterms.date" content="2026-07-29">
 
 <title>The predictions scoreboard – How Economics Absorbed AI</title>
 <style>
@@ -282,7 +282,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 28, 2026</p>
+      <p class="date">July 29, 2026</p>
     </div>
   </div>
   
@@ -599,7 +599,7 @@ The checks, the withdrawals, and the frozen numbers
 <div class="cell">
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
-<caption>Every check, run on 28 July 2026. A single failure and this page would not exist.</caption>
+<caption>Every check, run on 29 July 2026. A single failure and this page would not exist.</caption>
 <thead>
 <tr class="header">
 <th style="text-align: left;">Check</th>
@@ -1045,6 +1045,8 @@ The checks, the withdrawals, and the frozen numbers
 </div>
 <div class="callout-body-container">
 <p>Assigning probabilities and never doing the arithmetic is decoration, so the commitment is made here, before anything resolves. Every claim that resolves will be scored, and the register will report its running average error. A claim whose measuring instrument breaks, meaning the channel it was to be counted through closes, is reported separately rather than quietly folded in.</p>
+<p><strong>The rule, named now rather than after the results are in.</strong> “Average error” is not a scoring rule, and choosing one after seeing which claims resolved would be the same failure this page spends its length guarding against. So it is fixed here: the <strong>Brier score</strong>, the mean squared difference between the stated probability and the outcome coded 1 or 0, reported alongside the base rate of a claim always predicted at the historical resolution frequency, so a reader can tell skill from luck. Lower is better; 0.25 is what a coin flip earns.</p>
+<p>It will be reported <strong>three ways</strong>: over all resolved claims; <strong>clustered</strong>, one score per correlated group with each group’s claims averaged before scoring, so the 5 journal policy claims count once rather than 5 times; and split by whether the claim was scored from this collection or from public pages, because those two carry different conflicts of interest. The clustered figure is the headline. Where a claim resolves partially against a stated ladder, the tier reached is mapped to the fraction of the ladder completed and scored as a partial outcome, rather than being rounded to a win or a loss.</p>
 <p>18 claims is a thin sample and the timing is lumpy, with 4 resolving this year and the rest across 2027 and 2028, so the score will be noisy for years. Publishing it anyway is the point.</p>
 <p>One caution when the tally arrives. These are not 18 independent bets. 5 of them are about journal policy, so if journals simply sit still they fail together, and a naive hit rate would read that as 5 bad calls when it was really one. Read the record by group first, and only then in total.</p>
 </div>

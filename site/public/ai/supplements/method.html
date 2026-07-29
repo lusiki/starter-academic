@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Luka Šikić">
-<meta name="dcterms.date" content="2026-07-28">
+<meta name="dcterms.date" content="2026-07-29">
 
 <title>How this was built, and what it cannot verify – How Economics Absorbed AI</title>
 <style>
@@ -251,6 +251,8 @@ ul.task-list li input[type="checkbox"] {
   <ul class="collapse">
   <li><a href="#where-the-numbers-come-from" id="toc-where-the-numbers-come-from" class="nav-link active" data-scroll-target="#where-the-numbers-come-from">Where the numbers come from</a></li>
   <li><a href="#three-things-that-went-wrong" id="toc-three-things-that-went-wrong" class="nav-link" data-scroll-target="#three-things-that-went-wrong">Three things that went wrong</a></li>
+  <li><a href="#observability" id="toc-observability" class="nav-link" data-scroll-target="#observability">How much of the link graph is observable</a></li>
+  <li><a href="#sensitivity" id="toc-sensitivity" class="nav-link" data-scroll-target="#sensitivity">What moves when an acquisition source is dropped</a></li>
   <li><a href="#what-this-page-cannot-verify" id="toc-what-this-page-cannot-verify" class="nav-link" data-scroll-target="#what-this-page-cannot-verify">What this page cannot verify</a></li>
   <li><a href="#what-gets-in-and-what-gets-published" id="toc-what-gets-in-and-what-gets-published" class="nav-link" data-scroll-target="#what-gets-in-and-what-gets-published">What gets in, and what gets published</a></li>
   <li><a href="#colophon" id="toc-colophon" class="nav-link" data-scroll-target="#colophon">Colophon</a></li>
@@ -283,7 +285,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">July 28, 2026</p>
+      <p class="date">July 29, 2026</p>
     </div>
   </div>
   
@@ -348,9 +350,175 @@ Read the count, not the share
 </div>
 </div>
 </section>
+<section id="observability" class="level2">
+<h2 class="anchored" data-anchor-id="observability">How much of the link graph is observable</h2>
+<p>The link structure in Part 1 is the most load-bearing descriptive claim on this site, and it is computed on the smallest denominator. A share like “half of a paper’s links land on another paper” counts only links that resolve to something <strong>already in the collection</strong>. Everything else a work points at is invisible to it.</p>
+<div id="tbl-observability" class="cell anchored">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 32%">
+<col style="width: 20%">
+<col style="width: 25%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Register</th>
+<th style="text-align: right;">External links</th>
+<th style="text-align: right;">Land in the corpus</th>
+<th style="text-align: right;">Share observable</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">commentary / Substack</td>
+<td style="text-align: right;">2,519</td>
+<td style="text-align: right;">156</td>
+<td style="text-align: right;">6.2%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">working paper / article</td>
+<td style="text-align: right;">2,407</td>
+<td style="text-align: right;">69</td>
+<td style="text-align: right;">2.9%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">other</td>
+<td style="text-align: right;">1,311</td>
+<td style="text-align: right;">314</td>
+<td style="text-align: right;">24%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">tool / skill</td>
+<td style="text-align: right;">760</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">5.4%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">guide / how-to</td>
+<td style="text-align: right;">527</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">5.9%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">course</td>
+<td style="text-align: right;">279</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">12.2%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">talk / podcast</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">thread</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5.3%</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Corpus wide that is 646 observable links out of 7,912, or <strong>8.2%</strong>. The register that carries the most weight in the argument, papers, is the least observable at 2.9%. Recorded talks have 0 observable outbound links, so no statement about how talks link is supported by anything.</p>
+<p>The visible slice is also not a random sample of the field’s links. It is precisely the subset that points at material the curator already collected, so a high self linking rate is partly a restatement of what was gathered. This is the same endogeneity the forecast layer guards against with leave one source out checks, applied here to the descriptive half.</p>
+</section>
+<section id="sensitivity" class="level2">
+<h2 class="anchored" data-anchor-id="sensitivity">What moves when an acquisition source is dropped</h2>
+<p>The collection is assembled from named acquisition sources. Recomputing the descriptive headline numbers with each source removed shows which of them are facts about the field and which are facts about the collector.</p>
+<div id="tbl-sensitivity" class="cell anchored">
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<colgroup>
+<col style="width: 49%">
+<col style="width: 16%">
+<col style="width: 15%">
+<col style="width: 19%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Measure</th>
+<th style="text-align: right;">All sources</th>
+<th style="text-align: right;">Drop local</th>
+<th style="text-align: right;">Drop upstream</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Rows</td>
+<td style="text-align: right;">605.0</td>
+<td style="text-align: right;">177.0</td>
+<td style="text-align: right;">428.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Full text held (%)</td>
+<td style="text-align: right;">82.3</td>
+<td style="text-align: right;">86.4</td>
+<td style="text-align: right;">80.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Papers (% of rows)</td>
+<td style="text-align: right;">35.7</td>
+<td style="text-align: right;">29.4</td>
+<td style="text-align: right;">38.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tools (% of rows)</td>
+<td style="text-align: right;">16.4</td>
+<td style="text-align: right;">14.1</td>
+<td style="text-align: right;">17.3</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Paper → paper links (%)</td>
+<td style="text-align: right;">50.7</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">50.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">…observable edges behind it</td>
+<td style="text-align: right;">69.0</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">22.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tool → tool links (%)</td>
+<td style="text-align: right;">58.5</td>
+<td style="text-align: right;">—</td>
+<td style="text-align: right;">54.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">…observable edges behind it</td>
+<td style="text-align: right;">41.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">22.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Practice-layer docs</td>
+<td style="text-align: right;">123.0</td>
+<td style="text-align: right;">38.0</td>
+<td style="text-align: right;">85.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Anthropic share, practice layer (%)</td>
+<td style="text-align: right;">59.3</td>
+<td style="text-align: right;">78.9</td>
+<td style="text-align: right;">50.6</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Read the spread across the row, not the level: this table is recomputed by <code>scenario/R/build_guards.R</code> without the duplicate folding <code>build_metrics.R</code> applies, so the “all sources” column is its own baseline rather than the headline figure.</p>
+<p>Three readings matter. <strong>Full text coverage and register composition are robust</strong>, moving a few points at most, so the shape of the collection is not an artifact of one feed. <strong>The vendor share is not</strong>: the Anthropic share of the practice layer swings from 50.6% to 78.9% depending on which source is dropped, which is a wide enough band that P15 should be read as a claim about this collection rather than about practice. <strong>And the self linking rates do not survive the test at all</strong> — not because the share moves, but because the denominator collapses. Dropping the hand added source leaves 1 observable paper edge and 0 tool edges. There is no measurement left to be robust or fragile.</p>
+<p>These guards were measured over the 605 pinned records still present in the database, against the 661 the frozen census names; see the note on the frozen cohort below.</p>
+</section>
 <section id="what-this-page-cannot-verify" class="level2">
 <h2 class="anchored" data-anchor-id="what-this-page-cannot-verify">What this page cannot verify</h2>
 <p><strong>A collection is not a census.</strong> This is one curator’s map, and it leans toward methods and tooling because that is what the curator works on. 55.3% of dated works fall in the first half of 2026, which is partly the field flooding and partly the newest material being easiest to find.</p>
+<p><strong>The frozen census no longer fully reproduces.</strong> Every database scored number on this site is measured over a pinned list of 661 records, so that a forecast cannot be moved by the collection growing underneath it. 56 of those records are no longer in the database, because the curation ledger records explicit removals while the pin is a silent filter. Nothing published here has moved — the figures are committed files — but a rebuild today would quietly compute them over a smaller cohort. The freeze needs either a re-cut with a stated reason or a loud failure when a pinned record goes missing. Recorded here rather than repaired quietly, because a canary that fires is a decision, not a number to bump.</p>
 <p><strong>Some counts are judgments.</strong> Every tool was classified by reading it, against one question: does it check another machine’s output? A screener for systematic reviews, a meta analysis extractor and a paper generator that contains a reviewer are genuinely hard cases, and another reader would call two or three of them differently.</p>
 <p><strong>The missing dates are not random.</strong> 273 items (41.4%) carry no usable date, and they are mostly the living guides, tool pages and homepages that are revised rather than published. Those never had a date and never will. So every chart of time on this site under counts exactly the fast moving layer the argument says matters, and no reweighting fixes it, because the missing dates do not exist. They are shown as a visible residual on the <a href="../supplements/timeline.html">Timeline</a> page rather than quietly dropped.</p>
 <p><strong>The story is not in the database.</strong> The collection supplies counts, dates, titles and links. Which paper argues what, and what it all means, is reading and interpretation. Those are two different kinds of claim and the site tries not to blur them.</p>
