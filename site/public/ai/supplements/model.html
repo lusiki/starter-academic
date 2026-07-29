@@ -41,8 +41,8 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-abba37111a90094c810d6d81738f004c.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-6747ae0308e14b7ba509f3e87cec1a5c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-7d5974a88db6441316dd1ce1db64f680.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-8f76d58ba7228262a30b7a5aa8ef58a7.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-2b789b399d5051fdda82d7b771c6c36a.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,7 +70,11 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;700&amp;family=Source+Sans+3:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <script type="text/javascript">
@@ -100,87 +104,6 @@ window.Quarto = {
 };
 </script>
 
-<!-- lukasikic.info integration -->
-<meta name="description" content="An evidence-based retrospective and forecast of how economics is absorbing artificial intelligence.">
-<meta property="og:type" content="article">
-<meta property="og:site_name" content="Luka Šikić">
-<meta property="og:title" content="How Economics Absorbed AI">
-<meta property="og:description" content="An evidence-based retrospective and forecast of how economics is absorbing artificial intelligence.">
-<meta property="og:url" content="https://www.lukasikic.info/ai/supplements/model.html">
-<meta property="og:image" content="https://www.lukasikic.info/og.jpg">
-<meta property="og:image:type" content="image/jpeg"><meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="/favicon.svg" type="image/svg+xml">
-<link rel="canonical" href="https://www.lukasikic.info/ai/supplements/model.html">
-<!-- lukasikic.info theme -->
-<style>
-  @font-face {
-    font-family: "Geist";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 100 900;
-    src: url("/fonts/geist-latin-wght-normal.woff2") format("woff2-variations");
-  }
-  @font-face {
-    font-family: "Geist Mono";
-    font-style: normal;
-    font-display: swap;
-    font-weight: 100 900;
-    src: url("/fonts/geist-mono-latin-wght-normal.woff2") format("woff2-variations");
-  }
-  :root {
-    --ls-bg: #FFFFFF;
-    --ls-surface: #FAFAFA;
-    --ls-body: #171717;
-    --ls-muted: #737373;
-    --ls-hairline: #E5E5E5;
-    --ls-accent: #2563EB;
-  }
-  body {
-    background: var(--ls-bg) !important;
-    color: var(--ls-body) !important;
-    font-family: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif !important;
-  }
-  h1, h2, h3, h4, h5, h6, .navbar-brand, .menu-text {
-    font-family: "Geist", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif !important;
-  }
-  code, pre, kbd, samp {
-    font-family: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace !important;
-  }
-  a, .nav-link:hover, .nav-link:focus, .sidebar-link:hover { color: var(--ls-accent); }
-  .navbar {
-    background: color-mix(in oklab, var(--ls-bg) 94%, transparent) !important;
-    border-bottom: 1px solid var(--ls-hairline) !important;
-    backdrop-filter: saturate(160%) blur(8px);
-  }
-  .navbar-title, .nav-link, .menu-text { color: var(--ls-body) !important; }
-  #quarto-sidebar, .sidebar, .quarto-title-banner { background: var(--ls-surface) !important; }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --ls-bg: #0A0A0A;
-      --ls-surface: #111111;
-      --ls-body: #EDEDED;
-      --ls-muted: #8A8A8A;
-      --ls-hairline: #1F1F1F;
-      --ls-accent: #60A5FA;
-    }
-  }
-  body.quarto-light {
-    --ls-bg: #FFFFFF;
-    --ls-surface: #FAFAFA;
-    --ls-body: #171717;
-    --ls-muted: #737373;
-    --ls-hairline: #E5E5E5;
-    --ls-accent: #2563EB;
-  }
-  body.quarto-dark {
-    --ls-bg: #0A0A0A;
-    --ls-surface: #111111;
-    --ls-body: #EDEDED;
-    --ls-muted: #8A8A8A;
-    --ls-hairline: #1F1F1F;
-    --ls-accent: #60A5FA;
-  }
-</style>
 </head>
 
 <body class="nav-fixed">
@@ -252,11 +175,6 @@ window.Quarto = {
   </li>
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="/" aria-label="Return to lukasikic.info">
-      <span class="menu-text">lukasikic.info</span>
-    </a>
-  </li>
   <li class="nav-item compact">
     <a class="nav-link" href="https://github.com/lusiki/AI_econ_resources"> <i class="bi bi-github" role="img" aria-label="Repository">
 </i> 
@@ -333,7 +251,7 @@ window.Quarto = {
 <i class="callout-icon"></i>
 </div>
 <div class="callout-body-container">
-<p>This is a formal sketch rather than a finished result. It turns the essay’s central claim, that generation got cheap while verification stayed dear, into the smallest model that makes the ending a comparative static rather than a mood. The economics is the author’s to own and refine. The parameters are illustrative, and the propositions are stated as sketches a referee would still want to break.</p>
+<p>This is a formal sketch rather than a finished result. It turns the essay’s central claim, that generation got cheap while verification stayed dear, into the smallest model that makes the ending a comparative static rather than a mood. The economics is mine to own and refine. The parameters are illustrative, and the propositions are stated as sketches a referee would still want to break.</p>
 </div>
 </div>
 </div>
@@ -402,7 +320,7 @@ a_{\text{real}} = \min\!\big(a,\, R/N\big),
 <p><span class="math display">\[
 a_{\text{real}} = \min\!\big(a,\ \delta R / N\big), \qquad 0 &lt; \delta &lt; 1,
 \]</span></p>
-<p>where <span class="math inline">\(\delta\)</span> is the fraction of machine flagged work that a human actually clears. The qualitative result survives — capacity still scales where it did not before — but the flood ending is no longer defeated by capability alone. It is defeated by capability <em>times</em> whatever sign off throughput institutions are willing to staff, and <span class="math inline">\(\delta\)</span> is a policy variable, not a technical one.</p>
+<p>where <span class="math inline">\(\delta\)</span> is the fraction of machine flagged work that a human actually clears. The qualitative result survives, since capacity still scales where it did not before, but the flood ending is no longer defeated by capability alone. It is defeated by capability <em>times</em> whatever sign off throughput institutions are willing to staff, and <span class="math inline">\(\delta\)</span> is a policy variable, not a technical one.</p>
 
 <div class="no-row-height column-margin column-container"><div class="mnote">
 <p><span class="mnote-h">Why the discount is there</span></p>
@@ -415,7 +333,7 @@ a_{\text{real}} = \min\!\big(a,\ \delta R / N\big), \qquad 0 &lt; \delta &lt; 1,
 </section>
 <section id="a-hybrid-where-trust-is-priced-in-a-certification-market" class="level2">
 <h2 class="anchored" data-anchor-id="a-hybrid-where-trust-is-priced-in-a-certification-market">A hybrid where trust is priced in a certification market</h2>
-<p>There is a third region between the two endings. Suppose a private certifier offers audit at price <span class="math inline">\(p\)</span> per paper while the journal lags at <span class="math inline">\(a &lt; a^{*}\)</span>. High quality authors buy certification to separate. Low quality authors do not, because for them the expected value of inviting scrutiny is below <span class="math inline">\(p\)</span>. Costly certification then re-manufactures the separating equilibrium the journal failed to enforce, so trust becomes a good with a price, sold outside the journal. Whether this substitutes for gatekeeping or corrodes it, leaving a two tier literature of certified and merely published work, is a market structure question, and the market structure around AI is where <em>Artificial Intelligence, Competition, and Welfare (NBER WP 34444)</em> locates the welfare stakes. The scarce factor of the essay’s title, trust, is in this region literally a priced input.</p>
+<p>There is a third region between the two endings. Suppose a private certifier offers audit at price <span class="math inline">\(p\)</span> per paper while the journal lags at <span class="math inline">\(a &lt; a^{*}\)</span>. High quality authors buy certification to separate. Low quality authors do not, because for them the expected value of inviting scrutiny is below <span class="math inline">\(p\)</span>. Costly certification then re-manufactures the separating equilibrium the journal failed to enforce, so trust becomes a good with a price, sold outside the journal. This may substitute for gatekeeping or corrode it, leaving a two tier literature of certified and merely published work. Which one it does is a market structure question, and the market structure around AI is where <em>Artificial Intelligence, Competition, and Welfare (NBER WP 34444)</em> locates the welfare stakes. The scarce factor of the essay’s title, trust, is in this region literally a priced input.</p>
 </section>
 <section id="what-would-move-the-result" class="level2">
 <h2 class="anchored" data-anchor-id="what-would-move-the-result">What would move the result</h2>
