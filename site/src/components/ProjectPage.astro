@@ -16,6 +16,11 @@ const d = entry.data;
 const title = (lang === 'hr' && d.title_hr) ? d.title_hr : d.title;
 const summary = (lang === 'hr' && d.summary_hr) ? d.summary_hr : d.summary;
 const role = (lang === 'hr' && d.role_hr) ? d.role_hr : d.role;
+const pick = (en: string | undefined, hr: string | undefined) =>
+  (lang === 'hr' && hr) ? hr : en;
+const hasActions = Boolean(
+  d.url_app || d.external_link || d.url_overview || d.url_code || d.url_pdf,
+);
 ---
 <Base title={`${title} — Luka Šikić`} description={summary} lang={lang}>
   <article class="prose detail-page">
@@ -27,12 +32,28 @@ const role = (lang === 'hr' && d.role_hr) ? d.role_hr : d.role;
     <h1 class="detail-page__title">{title}</h1>
     {summary && <p class="hero__lede detail-page__summary">{summary}</p>}
 
-    <div class="detail-page__actions">
-      {d.external_link && <a class="btn btn--primary" href={d.external_link} target="_blank" rel="noopener">{s.projects.visit}</a>}
-      {d.url_overview && <a class="btn" href={d.url_overview} target="_blank" rel="noopener">{lang === 'hr' ? 'Izvršni pregled' : 'Executive overview'}</a>}
-      {d.url_code && <a class="btn" href={d.url_code} target="_blank" rel="noopener">{lang === 'hr' ? 'Kod' : 'Code'}</a>}
-      {d.url_pdf && <a class="btn" href={d.url_pdf} target="_blank" rel="noopener">PDF</a>}
-    </div>
+    {hasActions && (
+      <div class="detail-page__actions">
+        {/* When a project ships a working tool, the tool is the headline, not the write-up. */}
+        {d.url_app && <a class="btn btn--primary" href={d.url_app} target="_blank" rel="noopener">{lang === 'hr' ? 'Otvori aplikaciju →' : 'Open the application →'}</a>}
+        {d.external_link && <a class={d.url_app ? 'btn' : 'btn btn--primary'} href={d.external_link} target="_blank" rel="noopener">{s.projects.visit}</a>}
+        {d.url_overview && <a class="btn" href={d.url_overview} target="_blank" rel="noopener">{lang === 'hr' ? 'Izvršni pregled' : 'Executive overview'}</a>}
+        {d.url_code && <a class="btn" href={d.url_code} target="_blank" rel="noopener">{lang === 'hr' ? 'Kod' : 'Code'}</a>}
+        {d.url_pdf && <a class="btn" href={d.url_pdf} target="_blank" rel="noopener">PDF</a>}
+      </div>
+    )}
+
+    {d.facts.length > 0 && (
+      <div class="stats detail-page__facts">
+        {d.facts.map(fact => (
+          <div class="stats__cell">
+            <div class="stats__label">{pick(fact.label, fact.label_hr)}</div>
+            <div class="stats__value">{pick(fact.value, fact.value_hr)}</div>
+            {fact.sub && <span class="stats__sub">{pick(fact.sub, fact.sub_hr)}</span>}
+          </div>
+        ))}
+      </div>
+    )}
 
     {d.tags.length > 0 && (
       <div class="detail-page__tags">
@@ -41,5 +62,21 @@ const role = (lang === 'hr' && d.role_hr) ? d.role_hr : d.role;
     )}
 
     {lang === 'hr' && d.body_hr ? <p>{d.body_hr}</p> : <Content />}
+
+    {d.partners.length > 0 && (
+      <>
+        <div class="eyebrow detail-page__section-label">{lang === 'hr' ? 'Partneri' : 'Partners'}</div>
+        <ul class="partners">
+          {d.partners.map(partner => (
+            <li class="partners__item">
+              {partner.href
+                ? <a class="partners__name" href={partner.href} target="_blank" rel="noopener">{pick(partner.name, partner.name_hr)}</a>
+                : <span class="partners__name">{pick(partner.name, partner.name_hr)}</span>}
+              {partner.role && <span class="partners__role">{pick(partner.role, partner.role_hr)}</span>}
+            </li>
+          ))}
+        </ul>
+      </>
+    )}
   </article>
 </Base>

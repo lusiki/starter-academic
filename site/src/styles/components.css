@@ -458,6 +458,31 @@ a.pub__title:hover, .pub__title a:hover { color: var(--accent); }
   flex-wrap: wrap;
 }
 .detail-page__section-label { margin: var(--s-7) 0 var(--s-3); }
+.detail-page__facts { margin-bottom: var(--s-7); }
+/* Project facts are short phrases and dates, not headline KPI numbers, and the
+   Croatian strings run longer than the English — step the value down so four
+   cells hold at the measure width without clipping. */
+.detail-page__facts .stats__value { font-size: 24px; line-height: 1.15; }
+
+/* ---------- Project partners ---------- */
+.partners { list-style: none; padding: 0; margin: 0; }
+.partners__item {
+  padding: var(--s-4) 0;
+  margin-bottom: 0;
+  border-top: var(--bw) solid var(--hairline);
+}
+.partners__item:last-child { border-bottom: var(--bw) solid var(--hairline); }
+.partners__name { color: var(--body); font-weight: var(--w-medium); }
+.partners__name[href] { border-bottom: 0; }
+.partners__name[href]:hover { color: var(--accent); }
+.partners__role {
+  display: block;
+  max-width: 60ch;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: var(--fs-body-sm);
+  line-height: 1.55;
+}
 
 /* ---------- Not found ---------- */
 .error-page { min-height: 65vh; }

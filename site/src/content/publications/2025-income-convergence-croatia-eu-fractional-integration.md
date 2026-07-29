@@ -15,7 +15,6 @@ tags:
   - "time series"
 publication_type: "Journal article"
 url_pdf: "https://hrcak.srce.hr/file/480633"
-url_project: "/projects/convergence/"
 url_code: "https://github.com/lusiki/Convergence"
 doi: "10.62366/crebss.2025.1.003"
 selected: true

@@ -18,6 +18,7 @@ const href = `${prefix}/projects/${entry.id}/`;
     {summary && <span class="pub__venue">{summary}</span>}
   </div>
   <div class="pub__links">
+    {d.url_app && <a href={d.url_app} target="_blank" rel="noopener">APP</a>}
     {d.url_code && <a href={d.url_code} target="_blank" rel="noopener">CODE</a>}
     {d.url_pdf && <a href={d.url_pdf} target="_blank" rel="noopener">PDF</a>}
   </div>

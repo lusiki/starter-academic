@@ -49,10 +49,37 @@ const projects = defineCollection({
     tags: z.array(z.string()).default([]),
     external_link: z.string().optional(),
     url_overview: z.string().optional(),
+    url_app: z.string().optional(),
     url_code: z.string().optional(),
     url_pdf: z.string().optional(),
     url_slides: z.string().optional(),
     url_video: z.string().optional(),
+    /* Renders as a four-up band above the body, so supply exactly four —
+       fewer leaves a stray cell border on the grid. */
+    facts: z
+      .array(
+        z.object({
+          label: z.string(),
+          label_hr: z.string().optional(),
+          value: z.string(),
+          value_hr: z.string().optional(),
+          sub: z.string().optional(),
+          sub_hr: z.string().optional(),
+        }),
+      )
+      .default([]),
+    /* Consortium members, lead first. */
+    partners: z
+      .array(
+        z.object({
+          name: z.string(),
+          name_hr: z.string().optional(),
+          href: z.string().optional(),
+          role: z.string().optional(),
+          role_hr: z.string().optional(),
+        }),
+      )
+      .default([]),
   }),
 });
 

@@ -65,8 +65,8 @@ export const strings = {
     projects: {
       title: "Projects — Luka Šikić",
       eyebrow: "03 — Projects",
-      heroTitle: "Open research projects",
-      hero: "Code, data, and writing released in the open.",
+      heroTitle: "Research projects",
+      hero: "Applied research and the tools it produces, with the partners and code behind each.",
       sectionLabel: (n: number) => `${n} items`,
       sectionTitle: "All projects",
       back: "← All projects",
@@ -154,8 +154,8 @@ export const strings = {
     projects: {
       title: "Projekti — Luka Šikić",
       eyebrow: "03 — Projekti",
-      heroTitle: "Otvoreni istraživački projekti",
-      hero: "Kod, podaci i tekstovi — sve javno objavljeno.",
+      heroTitle: "Istraživački projekti",
+      hero: "Primijenjena istraživanja i alati koji iz njih nastaju, s partnerima i kodom iza svakoga.",
       sectionLabel: (n: number) => `${n} stavki`,
       sectionTitle: "Svi projekti",
       back: "← Svi projekti",

@@ -77,7 +77,7 @@ export const currentWork: CurrentWorkItem[] = [
       en: "Network, sentiment, and topic analysis of 11,503 Reddit comments around the 2024 elections. With Tamara Kunić. Medijska istraživanja (2026).",
       hr: "Mrežna analiza, analiza sentimenta i tema na 11.503 komentara u kontekstu izbora 2024. S Tamarom Kunić. Medijska istraživanja (2026.).",
     },
-    href: "/projects/connected-but-divided/",
+    href: "/publications/2026-connected-but-divided-croatian-reddit/",
     featured: true,
   },
   {
@@ -90,7 +90,7 @@ export const currentWork: CurrentWorkItem[] = [
       en: "Machine-learning forecasts of weekly returns from 1,100+ features on 2000–2024 data. With Mislav Šagovac and Petra Palić.",
       hr: "Strojno učenje za predviđanje tjednih prinosa iz više od 1.100 značajki na podacima 2000.–2024. S Mislavom Šagovcem i Petrom Palić.",
     },
-    href: "/projects/zse-ml/",
+    href: "https://lusiki.github.io/zseML/",
     featured: true,
   },
   {
@@ -142,7 +142,7 @@ export const currentWork: CurrentWorkItem[] = [
       en: "Fractional integration and long-memory time-series methods. Open source.",
       hr: "Frakcionalna integracija i metode dugog pamćenja u vremenskim serijama. Otvoreni kod.",
     },
-    href: "/projects/convergence/",
+    href: "/publications/2025-income-convergence-croatia-eu-fractional-integration/",
     featured: false,
   },
   {

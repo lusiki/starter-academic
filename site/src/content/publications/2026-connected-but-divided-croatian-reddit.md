@@ -16,7 +16,7 @@ tags:
   - "Reddit"
 publication_type: "Journal article"
 url_pdf: "https://hrcak.srce.hr/file/502190"
-url_project: "/projects/connected-but-divided/"
+url_project: "https://lusiki.github.io/Connected-but-divided/"
 url_code: "https://github.com/lusiki/Connected-but-divided"
 doi: "10.22572/mi.32.1.2"
 selected: true
