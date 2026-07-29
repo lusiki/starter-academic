@@ -44,6 +44,19 @@ export const currentWork: CurrentWorkItem[] = [
   {
     year: { en: "2026", hr: "2026." },
     title: {
+      en: "DigiKat — seminar at the Complexity Science Hub, Vienna",
+      hr: "DigiKat — seminar u Complexity Science Hubu, Beč",
+    },
+    body: {
+      en: "Executive overview of the project: 710,307 posts across nine platforms, 2021–2026, read through five layers — publisher archetypes, thematic streams, tone and conflict, event spikes, and how influence disperses over time.",
+      hr: "Izvršni pregled projekta: 710.307 objava na devet platformi, 2021.–2026., čitanih kroz pet slojeva — arhetipove objavljivača, tematske tokove, ton i konfliktnost, skokove oko događaja te raspršivanje utjecaja kroz vrijeme.",
+    },
+    href: "https://lusiki.github.io/DigiKat/pages/pregled/izvrsni-pregled.html",
+    featured: true,
+  },
+  {
+    year: { en: "2026", hr: "2026." },
+    title: {
       en: "Everything You Want to Know About the State and Public Policies in Croatia",
       hr: "Sve što želite znati o državi i javnim politikama u Hrvatskoj",
     },
@@ -268,6 +281,36 @@ export interface Workshop {
 }
 
 export const workshops: Workshop[] = [
+  {
+    term: { en: "2026", hr: "2026." },
+    code: { en: "Seminar", hr: "Seminar" },
+    title: {
+      en: "DigiKat — Catholic themes in Croatian digital media",
+      hr: "DigiKat — katoličke teme u hrvatskim digitalnim medijima",
+    },
+    institution: {
+      en: "Complexity Science Hub, Vienna",
+      hr: "Complexity Science Hub, Beč",
+    },
+    description: {
+      en: "Executive overview of the project, presented as a seminar: 710,307 posts across nine platforms filtered on 95 Croatian religious terms, 2021–2026. Five analytical layers — publisher archetypes, sixteen thematic streams, tone and conflict intensity, event-driven spikes, and how influence disperses across the ecosystem over time.",
+      hr: "Izvršni pregled projekta, predstavljen na seminaru: 710.307 objava na devet platformi filtriranih prema 95 hrvatskih religijskih pojmova, 2021.–2026. Pet analitičkih slojeva — arhetipovi objavljivača, šesnaest tematskih tokova, ton i intenzitet konflikta, skokovi oko događaja te raspršivanje utjecaja u ekosustavu kroz vrijeme.",
+    },
+    links: [
+      {
+        label: { en: "Executive overview →", hr: "Izvršni pregled →" },
+        href: "https://lusiki.github.io/DigiKat/pages/pregled/izvrsni-pregled.html",
+      },
+      {
+        label: { en: "Project →", hr: "Projekt →" },
+        href: "https://lusiki.github.io/DigiKat/",
+      },
+      {
+        label: { en: "GitHub →", hr: "GitHub →" },
+        href: "https://github.com/lusiki/DigiKat",
+      },
+    ],
+  },
   {
     term: { en: "2026", hr: "2026." },
     code: { en: "Seminar", hr: "Seminar" },

@@ -22,7 +22,6 @@ export const strings = {
       title: "Luka Šikić — Data Science · Econometrics · Applied Statistics",
       description:
         "Luka Šikić is an Assistant Professor of Statistics and Data Science working in econometrics, finance, digital media, and the use of AI in economic research.",
-      eyebrow: "Profile",
       bio1: `I'm an Assistant Professor of Statistics and Data Science at the <a href="https://www.unicath.hr/">Croatian Catholic University</a> in Zagreb. My work sits where quantitative methods meet finance, economics, and digital media. I teach statistics, data science, and digital media, and lead research that connects these fields.`,
       bio2: `Outside the university, I've worked in financial markets and algorithmic trading, and partnered with firms and research institutes on applied work — financial and time-series econometrics, machine learning, NLP-driven media monitoring, and digital analytics. Most of my current attention goes to <strong>AI in economic research</strong>: how large language models and agentic pipelines change the way empirical work actually gets done, and which parts of the craft they can't replace. Explore <a href="/ai/"><em>How Economics Absorbed AI</em></a>, my evidence-based retrospective and forecast, or the <a href="https://lusiki.github.io/AI_workshop_wiiw/" target="_blank" rel="noopener">open seminar and research pipeline</a> behind this work.`,
       metaRole: "Assistant Professor",
@@ -112,7 +111,6 @@ export const strings = {
         "Luka Šikić — Znanost o podacima · Ekonometrija · Primijenjena statistika",
       description:
         "Luka Šikić docent je statistike i znanosti o podacima, a bavi se ekonometrijom, financijama, digitalnim medijima i umjetnom inteligencijom u ekonomskim istraživanjima.",
-      eyebrow: "Profil",
       bio1: `Docent sam statistike i znanosti o podacima na <a href="https://www.unicath.hr/">Hrvatskom katoličkom sveučilištu</a> u Zagrebu. Moj je rad na sjecištu kvantitativnih metoda, financija, ekonomije i digitalnih medija. Predajem statistiku, znanost o podacima i digitalne medije te vodim istraživanja koja povezuju ta područja.`,
       bio2: `Izvan sveučilišta radio sam na financijskim tržištima i u algoritamskom trgovanju te surađivao s tvrtkama i istraživačkim institutima na primijenjenim projektima iz financijske ekonometrije i ekonometrije vremenskih serija, strojnog učenja, praćenja medija temeljenog na obradi prirodnog jezika te digitalne analitike. Trenutačno sam najviše usmjeren na <strong>umjetnu inteligenciju u ekonomskim istraživanjima</strong>: kako veliki jezični modeli i agentski sustavi mijenjaju način na koji se empirijski rad zapravo provodi te koje dijelove istraživačkog zanata ne mogu zamijeniti. Pogledajte <a href="/ai/"><em>How Economics Absorbed AI</em></a>, moju retrospektivu i prognozu utemeljenu na dokazima, ili <a href="https://lusiki.github.io/AI_workshop_wiiw/" target="_blank" rel="noopener">otvoreni seminar i istraživački sustav</a> koji stoje iza tog rada.`,
       metaRole: "Docent",

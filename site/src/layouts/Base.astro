@@ -89,7 +89,9 @@ const personSchema = {
   <link rel="preload" href={geistLatin} as="font" type="font/woff2" crossorigin />
   <link rel="preload" href={geistMonoLatin} as="font" type="font/woff2" crossorigin />
   <title>{title}</title>
+  <link rel="icon" href="/favicon.ico" sizes="32x32" />
   <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <slot name="head" />
   <script is:inline type="application/ld+json" set:html={JSON.stringify(personSchema)} />
   <script is:inline>

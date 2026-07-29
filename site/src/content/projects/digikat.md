@@ -15,6 +15,7 @@ tags:
   - "natural language processing"
   - "data science"
 external_link: "https://lusiki.github.io/DigiKat/"
+url_overview: "https://lusiki.github.io/DigiKat/pages/pregled/izvrsni-pregled.html"
 url_code: "https://github.com/lusiki/DigiKat"
 ---
 

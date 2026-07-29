@@ -48,6 +48,7 @@ const projects = defineCollection({
     date: z.coerce.date().optional(),
     tags: z.array(z.string()).default([]),
     external_link: z.string().optional(),
+    url_overview: z.string().optional(),
     url_code: z.string().optional(),
     url_pdf: z.string().optional(),
     url_slides: z.string().optional(),
