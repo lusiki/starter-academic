@@ -29,6 +29,8 @@ portfolio data lives in `site/src/data/portfolio.ts`; interface copy lives in
 - `site/public/media-intelligence/` is the standalone media research service
   page at `/media-intelligence/`. Edit its `index.html` directly; styles and
   interactions are embedded. Keep the portrait and original Rimac PDF beside it.
+  Its Croatian version is `site/public/hr/media-intelligence/index.html`,
+  published at `/hr/media-intelligence/` and using the same portrait and PDF.
   Integration notes and evidence documentation are in `docs/media-intelligence/`.
 - `docs/archive/` contains historical documentation from the retired
   Hugo/Wowchemy implementation.

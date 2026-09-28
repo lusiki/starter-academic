@@ -3,7 +3,10 @@
 Published at `https://www.lukasikic.info/media-intelligence/` from
 `site/public/media-intelligence/index.html`. The page is a standalone document
 with embedded CSS and JavaScript; Astro copies it and its assets unchanged.
-Both language versions of the main site link to this English page.
+The Croatian version is published at `/hr/media-intelligence/` from
+`site/public/hr/media-intelligence/index.html`. Each language version of the
+main site links to the matching subsite. Both subsites offer a language switch
+and reciprocal `hreflang` metadata, with a separate canonical URL per language.
 
 ## Source
 
@@ -22,9 +25,10 @@ The unused DigiKat timeline image and promotional film are not included.
 
 ## Maintenance
 
-Edit the subsite HTML directly. Keep `luka-sikic.webp` and
+Edit both language versions of the subsite HTML directly. Keep `luka-sikic.webp` and
 `rimac-research-brief.pdf` alongside it so relative links continue to work.
-The subsite URL is explicitly listed in `site/astro.config.mjs` for the sitemap.
+The Croatian page references these same assets by absolute site paths.
+Both subsite URLs are explicitly listed in `site/astro.config.mjs` for the sitemap.
 Navigation and consulting copy live in the main site's bilingual string file.
 
 Run `npm run validate` from `site/` before deployment. Also check the subsite
@@ -49,3 +53,22 @@ missing images or JavaScript errors occurred. All five lenses, all methods and
 FAQ disclosures, menu open/close and Escape, section anchors, PDF response,
 canonical/indexing metadata and sitemap inclusion passed. Desktop and mobile
 screenshots were inspected. Email links were checked without sending messages.
+
+## Croatian version
+
+Added on 28 September 2026. The translation covers page copy, navigation,
+chart labels, methodological qualifications, metadata, accessibility labels,
+all five interactive lenses and email enquiry subjects and templates.
+Displayed percentages use decimal commas and counts use Croatian separators;
+the underlying chart geometry, reported estimates, sample sizes and intervals
+are unchanged. The original Croatian Rimac PDF remains shared by both pages.
+Named publications and repository titles retain their original names.
+
+The full validation pipeline passed. Chromium checks covered both subsites and
+both homepages at 1440, 1280, 1024, 959, 768, 740, 390 and 320 pixels (32
+combinations), with no horizontal overflow, clipped tested labels, navigation
+overlap or browser errors. Screenshots of the translated page and research
+charts were inspected. Keyboard activation of all five translated lenses,
+mobile navigation and Escape, disclosures, email templates, language switches,
+locale-specific homepage links, canonical/alternate metadata, shared PDF and
+sitemap inclusion passed. Chart geometry matches the English version exactly.

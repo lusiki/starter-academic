@@ -105,7 +105,7 @@ export const strings = {
       projects: "03 Projekti",
       teaching: "04 Nastava + radionice",
       ai: "05 AI studija (EN)",
-      media: "06 Medijska analitika (EN)",
+      media: "06 Medijska analitika",
       theme: "Promijeni temu boja",
     },
 
@@ -134,7 +134,7 @@ export const strings = {
 
       contact: "D — Kontakt",
       contactTitle: "Radionice, konzultacije, suradnje",
-      mediaBody: `Za komunikacijske timove, brendove i stručnjake za javne poslove nudim neovisna medijska istraživanja: preglede medijskog praćenja, analizu narativa i prezentacije nalaza. <a href="/media-intelligence/" hreflang="en">Istražite usluge medijske analitike (na engleskom) →</a>`,
+      mediaBody: `Za komunikacijske timove, brendove i stručnjake za javne poslove nudim neovisna medijska istraživanja: preglede medijskog praćenja, analizu narativa i prezentacije nalaza. <a href="/hr/media-intelligence/">Istražite usluge medijske analitike →</a>`,
       contactBody: `Osmišljavam praktične radionice o umjetnoj inteligenciji u istraživanju, primijenjenoj analitici i reproducibilnim postupcima za sveučilišta, institute i timove. <a href="/hr/teaching/#workshops">Pogledajte prethodne radionice i javne materijale</a> ili se javite na <a href="mailto:luka.sikic@unicath.hr">luka.sikic@unicath.hr</a> radi dogovora o projektu.`,
       btnEmail: "E-pošta",
       btnGithub: "GitHub",

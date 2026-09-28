@@ -8,6 +8,7 @@ export default defineConfig({
     sitemap({
       customPages: [
         "https://www.lukasikic.info/media-intelligence/",
+        "https://www.lukasikic.info/hr/media-intelligence/",
         "https://www.lukasikic.info/ai/",
         "https://www.lukasikic.info/ai/endings/audit.html",
         "https://www.lukasikic.info/ai/endings/flood.html",
