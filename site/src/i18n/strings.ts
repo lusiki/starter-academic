@@ -15,6 +15,7 @@ export const strings = {
       projects: "03 Projects",
       teaching: "04 Teaching + workshops",
       ai: "05 AI study",
+      media: "06 Media intelligence",
       theme: "Toggle color theme",
     },
 
@@ -42,6 +43,7 @@ export const strings = {
 
       contact: "D — Get in touch",
       contactTitle: "Workshops, consulting, collaborations",
+      mediaBody: `For communications, brands and public affairs, I offer independent media research: coverage reviews, narrative analysis and evidence briefings. <a href="/media-intelligence/">Explore media intelligence services →</a>`,
       contactBody: `I design hands-on workshops in AI for research, applied analytics, and reproducible workflows for universities, institutes, and teams. <a href="/teaching/#workshops">See previous workshops and public materials</a>, or write to <a href="mailto:luka.sikic@unicath.hr">luka.sikic@unicath.hr</a> to discuss a project.`,
       btnEmail: "Email",
       btnGithub: "GitHub",
@@ -103,6 +105,7 @@ export const strings = {
       projects: "03 Projekti",
       teaching: "04 Nastava + radionice",
       ai: "05 AI studija (EN)",
+      media: "06 Medijska analitika (EN)",
       theme: "Promijeni temu boja",
     },
 
@@ -131,6 +134,7 @@ export const strings = {
 
       contact: "D — Kontakt",
       contactTitle: "Radionice, konzultacije, suradnje",
+      mediaBody: `Za komunikacijske timove, brendove i stručnjake za javne poslove nudim neovisna medijska istraživanja: preglede medijskog praćenja, analizu narativa i prezentacije nalaza. <a href="/media-intelligence/" hreflang="en">Istražite usluge medijske analitike (na engleskom) →</a>`,
       contactBody: `Osmišljavam praktične radionice o umjetnoj inteligenciji u istraživanju, primijenjenoj analitici i reproducibilnim postupcima za sveučilišta, institute i timove. <a href="/hr/teaching/#workshops">Pogledajte prethodne radionice i javne materijale</a> ili se javite na <a href="mailto:luka.sikic@unicath.hr">luka.sikic@unicath.hr</a> radi dogovora o projektu.`,
       btnEmail: "E-pošta",
       btnGithub: "GitHub",

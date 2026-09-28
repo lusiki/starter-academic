@@ -26,6 +26,10 @@ portfolio data lives in `site/src/data/portfolio.ts`; interface copy lives in
   personal contact details and generated files outside the public repository.
 - `site/public/ai/` is a generated Quarto microsite published at `/ai/`.
   Its README records the source and reproduction details.
+- `site/public/media-intelligence/` is the standalone media research service
+  page at `/media-intelligence/`. Edit its `index.html` directly; styles and
+  interactions are embedded. Keep the portrait and original Rimac PDF beside it.
+  Integration notes and evidence documentation are in `docs/media-intelligence/`.
 - `docs/archive/` contains historical documentation from the retired
   Hugo/Wowchemy implementation.
 - `starter-academic/`, when present locally, is the retired nested repository.

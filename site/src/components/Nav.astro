@@ -12,6 +12,7 @@ const links = [
   { href: `${prefix}/teaching/`, label: s.nav.teaching },
   // Static Quarto site served verbatim from public/ai/ — English only, so no locale prefix.
   { href: '/ai/', label: s.nav.ai },
+  { href: '/media-intelligence/', label: s.nav.media },
 ];
 const isActive = (p: string) => {
   if (p === `${prefix}/`) return pathname === p;

@@ -1,0 +1,99 @@
+{
+  "reviewed": "2026-09-26",
+  "rimac": {
+    "source": "rimac-research-brief.pdf",
+    "pages": [
+      2,
+      6
+    ],
+    "period": [
+      "2021-01-01",
+      "2026-09-10"
+    ],
+    "media_n": 297,
+    "comments_n": 282,
+    "media": {
+      "support": 31,
+      "support_ci": [
+        24,
+        38
+      ],
+      "criticism": 6,
+      "criticism_ci": [
+        3,
+        10
+      ]
+    },
+    "comments": {
+      "support": 13,
+      "support_ci": [
+        8,
+        18
+      ],
+      "criticism": 54,
+      "criticism_ci": [
+        46,
+        61
+      ]
+    },
+    "status": "Report-derived, weighted model-coded estimates; manual validation pending; not independently rerun"
+  },
+  "euro": {
+    "source": "https://github.com/lusiki/Einfuhrung_des_Euro/tree/1ff02b68e381b5cae1a50ff2a66471c3c66c0084",
+    "december_n": 94,
+    "january_n": 142,
+    "administrative_counts": [
+      75,
+      78
+    ],
+    "social_counts": [
+      5,
+      33
+    ]
+  },
+  "native": {
+    "source": "https://hrcak.srce.hr/en/clanak/495017",
+    "n": 543,
+    "counts": {
+      "Uncertainty": 241,
+      "No clickbait": 114,
+      "Multiple techniques": 75,
+      "Other formats": 113
+    },
+    "other_components": {
+      "numbers": 51,
+      "emotion": 32,
+      "vague_pronouns": 27,
+      "reverse_narrative": 3
+    }
+  },
+  "hnb": {
+    "source": "https://github.com/lusiki/HNB_Media_Attention/tree/fd26489896d05b39a3b9e49ca2ea69d1125c4426/media-hub",
+    "denominator": 33235,
+    "top5": [
+      {
+        "source": "tportal.hr",
+        "count": 1694
+      },
+      {
+        "source": "index.hr",
+        "count": 1651
+      },
+      {
+        "source": "poslovni.hr",
+        "count": 1582
+      },
+      {
+        "source": "jutarnji.hr",
+        "count": 1508
+      },
+      {
+        "source": "novilist.hr",
+        "count": 1506
+      }
+    ],
+    "top5_total": 7941,
+    "top5_share": 23.89348578306003,
+    "status": "Public research draft; author review and independent validation pending"
+  }
+}

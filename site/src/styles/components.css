@@ -34,11 +34,13 @@
 .nav__inner {
   display: flex; align-items: center; justify-content: space-between;
   height: 100%;
-  max-width: var(--content-max);
+  max-width: 1280px;
   margin: 0 auto;
   padding: 0 var(--gutter);
 }
 .nav__brand {
+  flex-shrink: 0;
+  white-space: nowrap;
   font-family: var(--font-mono);
   font-size: var(--fs-mono-body);
   letter-spacing: var(--tracking-mono-s);
@@ -51,6 +53,7 @@
 }
 .nav__links { display: flex; align-items: center; gap: var(--s-5); }
 .nav__link {
+  white-space: nowrap;
   font-family: var(--font-mono);
   font-size: var(--fs-mono-label);
   letter-spacing: var(--tracking-mono);
@@ -509,10 +512,8 @@ a.pub__title:hover, .pub__title a:hover { color: var(--accent); }
   .hero__title { font-size: var(--fs-h1); }
 }
 
-/* ---------- Mobile nav: keep the page static, shrink the tabs ---------- */
-@media (max-width: 600px) {
-  :root { --gutter: 16px; }
-
+/* ---------- Let the expanded navigation wrap on smaller screens ---------- */
+@media (max-width: 1280px) {
   .nav { height: auto; }
   .nav__inner {
     flex-wrap: wrap;
@@ -525,6 +526,9 @@ a.pub__title:hover, .pub__title a:hover { color: var(--accent); }
     flex-wrap: wrap;
     gap: var(--s-3) var(--s-4);
   }
+}
+@media (max-width: 600px) {
+  :root { --gutter: 16px; }
   .nav__link { font-size: 10px; }
 }
 
