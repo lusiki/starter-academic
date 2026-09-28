@@ -25,7 +25,7 @@ export const currentWork: CurrentWorkItem[] = [
       en: "Interactive evidence on HNB's media visibility, inflation and household expectations, January 2021–May 2026. With Petra Palić; includes English and Croatian research briefs.",
       hr: "Interaktivni prikaz nalaza o medijskoj vidljivosti HNB-a, inflaciji i očekivanjima kućanstava od siječnja 2021. do svibnja 2026. S Petrom Palić; uključuje istraživačke sažetke na hrvatskom i engleskom.",
     },
-    href: "https://lusiki.github.io/HNB_Media_Attention/",
+    href: "https://lusiki.github.io/HNB_Media_Attention/media/",
     featured: true,
   },
   {
