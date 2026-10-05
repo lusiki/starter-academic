@@ -1,0 +1,631 @@
+---
+import {
+  sectorNames,
+  reportEditions,
+  sectorReports,
+  reportId,
+  reportPdf,
+  type ReportLanguage,
+} from "../data/sector-reports";
+
+interface Props {
+  lang: ReportLanguage;
+}
+const { lang } = Astro.props;
+const hr = lang === "hr";
+const t = (en: string, croatian: string) => (hr ? croatian : en);
+const home = hr ? "/hr/media-intelligence/" : "/media-intelligence/";
+const path = `${home}sectors/`;
+const origin = "https://www.lukasikic.info";
+const title = t("Sectors in Croatian Media", "Sektori u hrvatskim medijima");
+const description = t(
+  "Explore sector reports on Croatian media coverage. A Merkat Media series with analysis by Luka Šikić: findings, context and original Croatian PDFs.",
+  "Istražite sektorske izvještaje o hrvatskim medijima. Serija Merkat Media, analiza Luke Šikića: nalazi, kontekst i izvorni izvještaji u PDF-u.",
+);
+const format = (value: number, digits = 0) =>
+  value.toLocaleString(hr ? "hr-HR" : "en-GB", {
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits,
+  });
+const sectors = [...new Set(sectorReports.map((r) => r.sector))];
+const editions = [...new Set(sectorReports.map((r) => r.edition))];
+const featured = sectorReports.find(
+  (r) => r.sector === "energy" && r.edition === "autumn-2026",
+)!;
+const themes = [
+  { label: t("Prices & costs", "Cijene i troškovi"), value: 51.1 },
+  { label: t("Supply & imports", "Opskrba i uvoz"), value: 29.9 },
+  { label: t("Energy transition", "Energetska tranzicija"), value: 22.7 },
+];
+const guide = [
+  {
+    title: t(
+      "Does more coverage mean more influence?",
+      "Znači li više objava i veći utjecaj?",
+    ),
+    body: t(
+      "A mention measures presence in the selected coverage. It does not establish influence, audience reach or trust. Start with the count, then examine the context, source and role of the company in the story.",
+      "Spominjanje mjeri prisutnost u odabranim objavama. Ne dokazuje utjecaj, doseg ili povjerenje. Krenite od broja objava, a zatim ispitajte kontekst, izvor i ulogu kompanije u priči.",
+    ),
+  },
+  {
+    title: t(
+      "When are several articles one story?",
+      "Kada je više objava zapravo jedna priča?",
+    ),
+    body: t(
+      "Several outlets may carry closely related versions of one announcement. Count the publications, but also examine distinct stories. The food-and-beverage report illustrates this with coverage of Mlinar’s results.",
+      "Više portala može prenijeti bliske inačice iste objave. Uz broj objava potrebno je ispitati i broj različitih priča. Izvještaj o hrani i piću to pokazuje na primjeru izvještavanja o Mlinarovim rezultatima.",
+    ),
+  },
+  {
+    title: t(
+      "What makes a fair comparison over time?",
+      "Kako uspoređivati različita razdoblja?",
+    ),
+    body: t(
+      "Use clearly defined periods and comparable source coverage. A stable panel of outlets helps, although collection gaps and differences in available text still matter. Each report specifies its own comparison panels; the headline figures here describe its selected portal articles.",
+      "Koristite jasno određena razdoblja i usporediv obuhvat izvora. Stalan skup portala pomaže, no praznine u prikupljanju i razlike u dostupnosti teksta i dalje su važne. Svaki izvještaj određuje vlastite skupove portala za usporedbu, a ovdje istaknute brojke opisuju odabrane objave na portalima.",
+    ),
+  },
+  {
+    title: t(
+      "How does a finding become a useful brief?",
+      "Kako nalaz pretvoriti u koristan analitički pregled?",
+    ),
+    body: t(
+      "Keep three steps visible: what the evidence shows, how you interpret it, and what action you suggest. A rise in price-related coverage might prompt a clearer customer explanation; it does not by itself establish a reputational crisis.",
+      "Razlikujte tri koraka: što podaci pokazuju, kako ih tumačite i koju aktivnost predlažete. Rast objava o cijenama može potaknuti jasnije objašnjenje za kupce, ali sam po sebi ne dokazuje reputacijsku krizu.",
+    ),
+  },
+];
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} — Luka Šikić</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href={`${origin}${path}`} />
+    <link
+      rel="alternate"
+      hreflang="en"
+      href={`${origin}/media-intelligence/sectors/`}
+    />
+    <link
+      rel="alternate"
+      hreflang="hr"
+      href={`${origin}/hr/media-intelligence/sectors/`}
+    />
+    <link
+      rel="alternate"
+      hreflang="x-default"
+      href={`${origin}/media-intelligence/sectors/`}
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Luka Šikić" />
+    <meta property="og:title" content={`${title} — Luka Šikić`} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={`${origin}${path}`} />
+    <meta property="og:locale" content={hr ? "hr_HR" : "en_US"} />
+    <meta property="og:locale:alternate" content={hr ? "en_US" : "hr_HR"} />
+    <meta
+      property="og:image"
+      content={`${origin}/media-intelligence/luka-sikic.webp`}
+    />
+    <meta property="og:image:alt" content="Luka Šikić" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={`${title} — Luka Šikić`} />
+    <meta name="twitter:description" content={description} />
+    <meta
+      name="twitter:image"
+      content={`${origin}/media-intelligence/luka-sikic.webp`}
+    />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/media-intelligence/sectors.css" />
+  </head>
+  <body class="sector-page">
+    <a class="sector-skip" href="#main"
+      >{t("Skip to content", "Preskoči na sadržaj")}</a
+    >
+    <div class="sector-return">
+      <div class="sector-wrap">
+        <a href={home}
+          >← {
+            t(
+              "Media intelligence & research",
+              "Medijska analitika i istraživanja",
+            )
+          }</a
+        >
+        <a
+          data-language-switch
+          href={hr
+            ? "/media-intelligence/sectors/"
+            : "/hr/media-intelligence/sectors/"}
+          hreflang={hr ? "en" : "hr"}
+          lang={hr ? "en" : "hr"}>{hr ? "English" : "Hrvatski"}</a
+        >
+      </div>
+    </div>
+    <header class="sector-header">
+      <nav
+        class="sector-wrap"
+        aria-label={t("Main navigation", "Glavna navigacija")}
+      >
+        <a class="sector-brand" href={home}
+          ><span class="sector-monogram">LŠ</span><span
+            >Luka Šikić<small
+              >{
+                t(
+                  "Media intelligence & research",
+                  "Medijska analitika i istraživanja",
+                )
+              }</small
+            ></span
+          ></a
+        >
+        <div class="sector-nav">
+          <a href="#reports">{t("Reports", "Izvještaji")}</a><a href="#guide"
+            >{t("Reading the evidence", "Kako čitati nalaze")}</a
+          ><a class="sector-nav-contact" href="#enquiry"
+            >{t("Discuss your sector", "Razgovarajmo o sektoru")}
+            <span aria-hidden="true">↗</span></a
+          >
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <section class="sector-hero sector-wrap" aria-labelledby="sector-title">
+        <div>
+          <p class="sector-eyebrow">
+            Merkat Media / {t("Sector report series", "Sektorski izvještaji")}
+          </p>
+          <h1 id="sector-title">
+            {t("Sectors in", "Sektori u")}<br /><em
+              >{t("Croatian media.", "hrvatskim medijima.")}</em
+            >
+          </h1>
+          <p class="sector-lead">
+            {
+              t(
+                "A closer look at the industries behind the headlines. Explore how companies, prices and public concerns shape the media conversation.",
+                "Pogled na sektore iza medijskih naslova. Istražite kako kompanije, cijene i pitanja važna javnosti oblikuju medijsku raspravu.",
+              )
+            }
+          </p>
+          <div class="sector-actions">
+            <a class="sector-button" href="#reports"
+              >{t("Explore the reports", "Istražite izvještaje")}
+              <span aria-hidden="true">↘</span></a
+            ><a class="sector-textlink" href="#guide"
+              >{t("How to read the evidence", "Kako čitati nalaze")}</a
+            >
+          </div>
+          <p class="sector-byline">
+            {
+              t(
+                "A Merkat Media series · Analysis by Luka Šikić, PhD",
+                "Serija Merkat Media · Analizu izradio dr. sc. Luka Šikić",
+              )
+            }
+          </p>
+        </div>
+        <figure class="sector-feature">
+          <figcaption>
+            <span class="sector-eyebrow"
+              >{
+                t("Inside the energy report", "Iz izvještaja o energetici")
+              }</span
+            ><span class="sector-feature-period"
+              >{reportEditions[featured.edition].period[lang]}</span
+            ><h2>
+              {t("Prices lead the conversation.", "Cijene vode raspravu.")}<br
+              /><em>{t("What comes next?", "Što slijedi?")}</em>
+            </h2>
+          </figcaption>
+          {
+            themes.map((theme, i) => (
+              <div class="sector-bar">
+                <>
+                  <div>
+                    <>
+                      <span>{theme.label}</span>
+                      <strong>
+                        {format(theme.value, 1)}
+                        {hr ? " %" : "%"}
+                      </strong>
+                    </>
+                  </div>
+                  <div class="sector-bar-track" aria-hidden="true">
+                    <span
+                      style={`width:${theme.value}%;opacity:${1 - i * 0.2}`}
+                    />
+                  </div>
+                </>
+              </div>
+            ))
+          }
+          <p class="sector-chart-note">
+            {
+              t(
+                "Share of 40,027 selected portal articles · 0–100% scale. Selected themes; an article can mention more than one.",
+                "Udio u 40.027 odabranih objava na portalima · Ljestvica 0–100 %. Odabrane teme; jedna objava može spominjati više tema.",
+              )
+            }
+            {" "}<a href={`${reportPdf(featured)}#page=5`}
+              >{
+                t("Source: Energy report, p. 5.", "Izvor: Energetika, str. 5.")
+              }</a
+            >
+          </p>
+          <a class="sector-feature-link" href={`#${reportId(featured)}`}
+            >{
+              t(
+                "Explore the energy report",
+                "Pogledajte izvještaj o energetici",
+              )
+            }
+            <span aria-hidden="true">↗</span></a
+          >
+        </figure>
+      </section>
+      <div class="sector-strip">
+        <div class="sector-wrap">
+          <span>{t("Sector visibility", "Vidljivost sektora")}</span><span
+            >{t("Themes & narratives", "Teme i narativi")}</span
+          ><span>{t("Company context", "Kontekst kompanije")}</span><span
+            >{t("Evidence for communication", "Nalazi za komunikaciju")}</span
+          >
+        </div>
+      </div>
+      <section
+        id="reports"
+        class="sector-library sector-wrap"
+        aria-labelledby="library-title"
+      >
+        <div class="sector-section-head">
+          <div>
+            <p class="sector-eyebrow">
+              01 / {t("The report library", "Biblioteka izvještaja")}
+            </p><h2 id="library-title">
+              {t("Find your sector.", "Pronađite svoj sektor.")}
+            </h2><p>
+              {
+                t(
+                  "A shared set of questions. Different stories, pressures and priorities.",
+                  "Zajednička pitanja. Različite priče, pritisci i prioriteti.",
+                )
+              }
+            </p>
+          </div><span class="sector-edition-note"
+            >{
+              t(
+                "Original reports in Croatian",
+                "Izvorni izvještaji na hrvatskom",
+              )
+            }<br />{
+              t(
+                "Web summaries in English & Croatian",
+                "Mrežni sažeci na hrvatskom i engleskom",
+              )
+            }</span
+          >
+        </div>
+        <div class="sector-toolbar" data-filters hidden>
+          <div class="sector-filter-fields">
+            <label
+              >{t("Sector", "Sektor")}<select id="sector-filter"
+                ><option value="all">{t("All sectors", "Svi sektori")}</option>{
+                  sectors.map((sector) => (
+                    <option value={sector}>{sectorNames[sector][lang]}</option>
+                  ))
+                }</select
+              ></label
+            >
+            {
+              editions.length > 1 && (
+                <label>
+                  {t("Edition", "Izdanje")}
+                  <select id="edition-filter">
+                    <option value="all">
+                      {t("All editions", "Sva izdanja")}
+                    </option>
+                    {editions.map((edition) => (
+                      <option value={edition}>
+                        {reportEditions[edition].name[lang]}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+              )
+            }
+          </div>
+          <p role="status" aria-live="polite" aria-atomic="true">
+            {t("Reports shown:", "Prikazani izvještaji:")}
+            <span id="report-count">{sectorReports.length}</span>
+          </p>
+        </div>
+        <div class="sector-report-grid">
+          {
+            sectorReports.map((report, i) => (
+              <article
+                class="sector-report"
+                id={reportId(report)}
+                data-sector={report.sector}
+                data-edition={report.edition}
+                aria-labelledby={`${reportId(report)}-title`}
+              >
+                <div class="sector-card-meta">
+                  <>
+                    <span>{String(i + 1).padStart(2, "0")}</span>
+                    <span>{reportEditions[report.edition].name[lang]}</span>
+                  </>
+                </div>
+                <h3 id={`${reportId(report)}-title`}>
+                  {sectorNames[report.sector][lang]}
+                </h3>
+                <p class="sector-card-deck">{report.deck[lang]}</p>
+                <div class="sector-stat">
+                  <>
+                    <strong>
+                      {format(report.percentage, 1)}
+                      <span>{hr ? " %" : "%"}</span>
+                    </strong>
+                    <p>{report.metric[lang]}</p>
+                  </>
+                </div>
+                <p class="sector-sample">
+                  {format(report.articles)}{" "}
+                  {t(
+                    "selected portal articles",
+                    "odabranih objava na portalima",
+                  )}
+                </p>
+                <p class="sector-card-scope">
+                  {report.companies[lang]}
+                  <br />
+                  {reportEditions[report.edition].period[lang]}
+                </p>
+                <details class="sector-overview">
+                  <>
+                    <summary>
+                      {t("Read the overview", "Pročitajte sažetak")}
+                    </summary>
+                    <div>
+                      <>
+                        <p>{report.overview[lang]}</p>
+                        <p class="sector-source">
+                          {t(
+                            `Source: report summary, p. ${report.summaryPage}.`,
+                            `Izvor: sažetak izvještaja, str. ${report.summaryPage}.`,
+                          )}
+                        </p>
+                        <h4>
+                          {t(
+                            "A question to take further",
+                            "Pitanje za daljnju analizu",
+                          )}
+                        </h4>
+                        <p>{report.question[lang]}</p>
+                      </>
+                    </div>
+                  </>
+                </details>
+                <div class="sector-card-footer">
+                  <>
+                    <a
+                      href={reportPdf(report)}
+                      aria-label={`${t("Open PDF:", "Otvorite PDF:")} ${sectorNames[report.sector][lang]}, ${reportEditions[report.edition].name[lang]}`}
+                    >
+                      {t("Open report", "Otvorite izvještaj")}{" "}
+                      <span aria-hidden="true">↗</span>
+                    </a>
+                    <span>
+                      PDF · {report.pages} {t("pages", "str.")} · HR
+                    </span>
+                  </>
+                </div>
+              </article>
+            ))
+          }
+        </div>
+        <p class="sector-empty" hidden>
+          {
+            t(
+              "No report matches this combination. Try another sector or edition.",
+              "Nema izvještaja za odabranu kombinaciju. Odaberite drugi sektor ili izdanje.",
+            )
+          }
+        </p>
+        <p class="sector-library-note">
+          {
+            t(
+              "Each figure describes its report’s selected coverage. Topics may overlap, and source sets differ across sectors. These shares are not a ranking of industries or a measure of public opinion.",
+              "Svaka brojka opisuje odabrane objave u pripadajućem izvještaju. Teme se mogu preklapati, a skupovi izvora razlikuju se među sektorima. Ovi udjeli nisu rangiranje sektora ni mjera javnog mnijenja.",
+            )
+          }
+        </p>
+      </section>
+      <section class="sector-guide" id="guide" aria-labelledby="guide-title">
+        <div class="sector-wrap sector-guide-grid">
+          <div>
+            <p class="sector-eyebrow">
+              02 / {t("Reading the evidence", "Kako čitati nalaze")}
+            </p><h2 id="guide-title">
+              {t("A little context", "Malo konteksta")}<br />{
+                t("changes the reading.", "mijenja tumačenje.")
+              }
+            </h2><p class="sector-guide-intro">
+              {
+                t(
+                  "Practical questions to ask before turning a media finding into a communication decision.",
+                  "Praktična pitanja prije nego što medijski nalaz pretvorite u komunikacijsku odluku.",
+                )
+              }
+            </p>
+          </div>
+          <div>
+            {
+              guide.map((item) => (
+                <details>
+                  <>
+                    <summary>{item.title}</summary>
+                    <p>{item.body}</p>
+                  </>
+                </details>
+              ))
+            }
+          </div>
+        </div>
+      </section>
+      <section
+        class="sector-method sector-wrap"
+        id="method"
+        aria-labelledby="method-title"
+      >
+        <div>
+          <p class="sector-eyebrow">
+            03 / {t("Behind the findings", "Iza nalaza")}
+          </p><h2 id="method-title">
+            {t("From media records", "Od medijskih zapisa")}<br />{
+              t("to a useful question.", "do korisnog pitanja.")
+            }
+          </h2>
+        </div><div>
+          <p>
+            {
+              t(
+                "The reports combine structured analysis with close reading of selected stories. They trace company mentions, recurring themes and changes over time, then connect those patterns to communication questions.",
+                "Izvještaji povezuju strukturiranu analizu s pažljivim čitanjem odabranih priča. Prate spominjanja kompanija, ponavljajuće teme i promjene kroz vrijeme te ih povezuju s komunikacijskim pitanjima.",
+              )
+            }
+          </p><p>
+            {
+              t(
+                "Every result belongs to a defined period and source set. Text availability, selection rules and validation differ by report. The original PDFs document the methods and limitations; the archive is not a census of all Croatian media coverage.",
+                "Svaki rezultat odnosi se na određeno razdoblje i skup izvora. Dostupnost teksta, pravila odabira i provjera razlikuju se po izvještajima. Izvorni PDF-ovi opisuju metode i ograničenja; arhiva nije popis svih objava hrvatskih medija.",
+              )
+            }
+          </p><a class="sector-textlink" href={`${home}#research`}
+            >{t("Explore the wider research", "Pogledajte ostala istraživanja")} →</a
+          >
+        </div>
+      </section>
+      <section class="sector-enquiry" id="enquiry">
+        <div class="sector-wrap">
+          <div>
+            <p class="sector-eyebrow">
+              {
+                t(
+                  "From your sector to your company",
+                  "Od sektora do vaše kompanije",
+                )
+              }
+            </p><h2>
+              {t("Where does your", "Gdje je vaša")}<br />{
+                t("company fit in?", "kompanija u toj priči?")
+              }
+            </h2><p>
+              {
+                t(
+                  "Use the sector picture as a starting point. We can define a focused study around your company, comparison group and next decision.",
+                  "Sektorski pregled može biti polazište. Zajedno možemo odrediti istraživanje usmjereno na vašu kompaniju, skupinu za usporedbu i sljedeću odluku.",
+                )
+              }
+            </p>
+          </div><div>
+            <a
+              class="sector-button"
+              href={`mailto:luka.sikic@unicath.hr?subject=${encodeURIComponent(t("Sector media analysis enquiry", "Upit za sektorsku medijsku analizu"))}`}
+              >{t("Discuss a sector analysis", "Dogovorite sektorsku analizu")}
+              <span aria-hidden="true">↗</span></a
+            ><span class="sector-enquiry-credit"
+              >{
+                t(
+                  "Direct collaboration with Luka Šikić",
+                  "Izravna suradnja s Lukom Šikićem",
+                )
+              }</span
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="sector-footer sector-wrap">
+      <span>Merkat Media · {title}</span><span
+        >{
+          t("Analysis by Luka Šikić, PhD", "Analizu izradio dr. sc. Luka Šikić")
+        }</span
+      ><a href={home}
+        >{
+          t(
+            "Media intelligence & research",
+            "Medijska analitika i istraživanja",
+          )
+        } →</a
+      >
+    </footer>
+    <script>
+      const sectorFilter =
+        document.querySelector<HTMLSelectElement>("#sector-filter");
+      const editionFilter =
+        document.querySelector<HTMLSelectElement>("#edition-filter");
+      const cards = [
+        ...document.querySelectorAll<HTMLElement>(".sector-report"),
+      ];
+      const toolbar = document.querySelector<HTMLElement>("[data-filters]");
+      const count = document.querySelector("#report-count");
+      const empty = document.querySelector<HTMLElement>(".sector-empty");
+      function filterReports() {
+        let shown = 0;
+        cards.forEach((card) => {
+          card.hidden =
+            (sectorFilter?.value !== "all" &&
+              sectorFilter?.value !== card.dataset.sector) ||
+            (!!editionFilter &&
+              editionFilter.value !== "all" &&
+              editionFilter.value !== card.dataset.edition);
+          if (!card.hidden) shown++;
+        });
+        if (count) count.textContent = String(shown);
+        if (empty) empty.hidden = shown !== 0;
+      }
+      if (toolbar) toolbar.hidden = false;
+      sectorFilter?.addEventListener("change", filterReports);
+      editionFilter?.addEventListener("change", filterReports);
+      function revealLinkedReport(hash = location.hash) {
+        const card = cards.find((item) => `#${item.id}` === hash);
+        if (card?.hidden) {
+          if (sectorFilter) sectorFilter.value = "all";
+          if (editionFilter) editionFilter.value = "all";
+          filterReports();
+          card.scrollIntoView({ block: "start" });
+        }
+        const languageSwitch = document.querySelector<HTMLAnchorElement>(
+          "[data-language-switch]",
+        );
+        if (languageSwitch) languageSwitch.hash = hash;
+      }
+      window.addEventListener("hashchange", () => revealLinkedReport());
+      // A link to the current fragment does not fire hashchange. Reveal its
+      // report before native navigation, even if a filter has since hidden it.
+      document.addEventListener("click", (event) => {
+        const link =
+          event.target instanceof Element
+            ? event.target.closest<HTMLAnchorElement>('a[href^="#"]')
+            : null;
+        if (link?.hash) revealLinkedReport(link.hash);
+      });
+      window.addEventListener("pageshow", () => {
+        filterReports();
+        revealLinkedReport();
+      });
+      filterReports();
+      revealLinkedReport();
+    </script>
+  </body>
+</html>

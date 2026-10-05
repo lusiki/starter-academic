@@ -1,0 +1,2 @@
+# Preserve report bytes across platforms, including PDFs without early NUL bytes.
+*.pdf binary
