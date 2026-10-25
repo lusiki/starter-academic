@@ -18,6 +18,19 @@ export const currentWork: CurrentWorkItem[] = [
   {
     year: { en: "2026", hr: "2026." },
     title: {
+      en: "Statistika 101 — an intuitive introduction to data analysis",
+      hr: "Statistika 101 — intuitivni uvod u analizu podataka",
+    },
+    body: {
+      en: "Open statistics textbook for social-science students, built around simulation before formulas, estimation over ritual, interactive in-browser demonstrations, and disciplined work with AI assistants. With Petra Palić. In Croatian.",
+      hr: "Otvoreni udžbenik statistike za studente društvenih znanosti: simulacija prije formula, procjena umjesto rituala, interaktivne demonstracije u pregledniku i discipliniran rad s AI asistentom. S Petrom Palić.",
+    },
+    href: "https://lusiki.github.io/statistika-knjiga/",
+    featured: true,
+  },
+  {
+    year: { en: "2026", hr: "2026." },
+    title: {
       en: "HNB in Croatia's inflation debate",
       hr: "HNB u hrvatskoj raspravi o inflaciji",
     },
